@@ -1,0 +1,143 @@
+name: Env. - Ubuntu, Coder - Andrey
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: I. Building environment and testing the capital.com website
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Check out this repo
+        uses: actions/checkout@v3
+        continue-on-error: true
+
+      - name: 2.1. Install Python
+        if: always()
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: 3.1. Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: 3.2. Install Neofetch
+        if: always()
+        run: brew install neofetch
+
+      - name: 4. install Poetry
+        if: always()
+        run: pip3 install poetry
+
+      - name: 5. install dependencies
+        if: always()
+        run: poetry update
+
+      - name: 6. Check code for errors by flake8 and format code with black
+        uses: ricardochaves/python-lint@v1.4.0
+        with:
+          python-root-list: ""
+          use-pylint: false
+          use-pycodestyle: false
+          use-flake8: true
+          use-black: false
+          use-mypy: false
+          use-isort: false
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: "--count --benchmark --ignore=E501,F401,W503,F631,W191"
+          extra-black-options: ". -S --line-length 120"
+          extra-mypy-options: ""
+          extra-isort-options: ""
+
+      - name: 7. Run hwinfo.py
+        if: always()
+        run: poetry run python3 tests/hwinfo.py
+
+      - name: 8. Run US_11-01-04_pre_test (Сулейман/Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04_spread_betting_guide_pre_test.py
+        continue-on-error: true
+      - name: 8. Run US_11-01-04 (Сулейман/Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04_spread_betting_guide_test.py
+        continue-on-error: true
+
+      - name: 8. Run US_11-01-06 (Сулейман/Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
+        continue-on-error: true
+#
+      - name: 8. Run US_11-02-06_pre_test (Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-06_Indices_trading/us_11-02-06_indices_trading_pre_test.py
+        continue-on-error: true
+      - name: 8. Run US_11-02-06 (Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-06_Indices_trading/us_11-02-06_indices_trading_test.py
+        continue-on-error: true
+      
+#      - name: ls- la
+#        if: always()
+#        run:
+#          ls -ls
+#          cd tests
+#          ls -la
+#          cd ..
+#          ls -la tests/US_11_Education/US_11-02-06_Indices_trading
+#
+#      - name: 9. Upload artifact "pytest.log"
+#        if: always()
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: pytest.log
+#          path: pytest.log
+      
+      - name: 8. Run tests for us_11-03-02 (Andrey)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-02_Day_trading/us_11-03-02_day_trading_test.py
+        continue-on-error: true
+
+      - name: 8. Run US_11-03-04 (Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-04_Position_Trading/US_11-03-04_Position_Trading_test.py
+        continue-on-error: true
+
+      - name: 8. Run US_11-03-05 (Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-05_Swing_Trading/US_11-03-05_Swing_Trading_test.py
+        continue-on-error: true
+
+      - name: 8. Run US_11-03-07 (Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py
+        continue-on-error: true
+
+      - name: 9. Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: 10. Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+#        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          allure_report: allure-report
+          gh_pages: gh-pages
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 30
+
+      - name: 11. Commit (Deploy) allure_report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: allure-history

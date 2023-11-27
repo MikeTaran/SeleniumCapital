@@ -1,0 +1,105 @@
+name: Env. - Ubuntu, Coder - Pavel A.
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: I. Building environment and testing the capital.com website
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Check out this repo
+        uses: actions/checkout@v3
+        continue-on-error: true
+
+      - name: 2.1. Install Python
+        if: always()
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+#      - name: Install Chrome
+#        uses: browser-actions/setup-chrome@latest
+#      - name: Install Firefox
+#        uses: riccione/setup_firefox@v1
+#      - name: Check Chromium version
+#        run: chromium-browser --version
+
+      - name: 3.1. Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: 3.2. Install Neofetch
+        if: always()
+        run: brew install neofetch
+
+      - name: 4. install Poetry
+        if: always()
+        run: pip3 install poetry
+
+      - name: 5. install dependencies
+        if: always()
+        run: poetry update
+
+      - name: 6. Check code for errors by flake8 and format code with black
+        uses: ricardochaves/python-lint@v1.4.0
+        with:
+          python-root-list: ""
+          use-pylint: false
+          use-pycodestyle: false
+          use-flake8: true
+          use-black: false
+          use-mypy: false
+          use-isort: false
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: "--count --benchmark --ignore=E501,F401,W503,F631,W191"
+          extra-black-options: ". -S --line-length 120"
+          extra-mypy-options: ""
+          extra-isort-options: ""
+
+      - name: 7. Run hwinfo.py
+        if: always()
+        run: poetry run python3 tests/hwinfo.py
+
+      # - name: 8. Run US_11-02-02 test (Pavel A)
+      #   if: always()
+      #   run: poetry run pytest --no-summary -v ???
+      #   continue-on-error: true
+      - name: 8. Run US_11-02-02-01 pre_test (Pavel A)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+        continue-on-error: true
+      - name: 8. Run US_11-02-02-01 test (Pavel A)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+        continue-on-error: true
+
+      - name: 9. Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: 10. Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+#        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          allure_report: allure-report
+          gh_pages: gh-pages
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 30
+
+      - name: 11. Commit (Deploy) allure_report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: allure-history
+          commit_message: ${{ github.event.head_commit.message }}
