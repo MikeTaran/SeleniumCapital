@@ -13,14 +13,14 @@ jobs:
 #     runs-on: macos-latest
     runs-on: ubuntu-latest
     steps:
-#      - name: 1. Check out this repo
-#        uses: actions/checkout@v3
-#        continue-on-error: true
-#
-      - name: 1. Check out this repo, master branch
-        uses: actions/checkout@v4
-        with:
-          ref: master
+      - name: 1. Check out this repo
+        uses: actions/checkout@v3
+        continue-on-error: true
+
+#      - name: 1. Check out this repo, master branch
+#        uses: actions/checkout@v4
+#        with:
+#          ref: master
 
 #      - name: Install Chrome
 #        uses: browser-actions/setup-chrome@latest
