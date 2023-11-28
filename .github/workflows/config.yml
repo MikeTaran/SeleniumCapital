@@ -57,7 +57,7 @@ jobs:
 
       - name: Generate Allure report
         run: |
-          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+          sudo /bin/sh -c "allure generate allure-results --clean -o allure-report"
 
 #      - name: Update Allure history
 #        run: |
