@@ -5,9 +5,10 @@ on:
   push:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
+  issues: write
 
 jobs:
   test:
@@ -42,11 +43,13 @@ jobs:
 #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
 #        continue-on-error: true
 #
-      - name: Upload Allure Result
-        uses: actions/upload-artifact@v2
+      - name: 8. Upload artifact "allure-results"
+        if: always()
+        uses: actions/upload-artifact@v3
         with:
           name: allure-results
-          path: allure-results
+          path: allure-results/
+          retention-days: 1
 
 
 
