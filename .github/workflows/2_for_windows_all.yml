@@ -42,12 +42,20 @@ jobs:
 
       - name: 8. Run US_11-02-02 test (Михаил)
         if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py --alluredir=allure-results
         continue-on-error: true
 #      - name: 8. Run US_11-02-02-01 test (Михаил)
 #        if: always()
 #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
 #        continue-on-error: true
+
+      - name: Store allure-results
+        uses: actions/upload-artifact@v3
+        with:
+            name: allure-results
+            path:
+              allure-results
+            retention-days: 1
 
   Allure:
     name: I. Building  and deploying Allure Reports
@@ -57,6 +65,17 @@ jobs:
     needs: tests
 
     steps:
+      - name: 3.1. Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: 3.3. Install Neofetch
+        if: always()
+        run: brew install neofetch
+
+      - name: Download all WF run artifacts
+        uses: actions/download-artifact@v3
+
       - name: 9. Get Allure history
         uses: actions/checkout@v3
         if: always()
