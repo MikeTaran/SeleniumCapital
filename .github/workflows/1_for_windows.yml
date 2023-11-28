@@ -71,6 +71,10 @@ jobs:
     needs: tests
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Download artifacts
         uses: actions/download-artifact@v3
