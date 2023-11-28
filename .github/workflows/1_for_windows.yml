@@ -65,55 +65,52 @@ jobs:
         with:
           ref: master
 
-      - name: Install Allure Command-Line
-        run: |
-          sudo apt-get install default-jre
-          wget https://github.com/allure-framework/allure2/releases/download/2.18.1/allure_2.18.1-1_all.deb
-          sudo dpkg -i allure_2.18.1-1_all.deb
+#      - name: Install Allure Command-Line
+#        run: |
+#          sudo apt-get install default-jre
+#          wget https://github.com/allure-framework/allure2/releases/download/2.18.1/allure_2.18.1-1_all.deb
+#          sudo dpkg -i allure_2.18.1-1_all.deb
 
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
           name: allure-results
 
-      - name: Generate Allure Report
-        run: |
-          allure generate allure-results --clean -o allure-report
+      - name: 9. Get Allure history
+        uses: actions/checkout@v3
+        if: always()
         continue-on-error: true
-
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v3
         with:
-          name: allure-report
-          path: allure-report
+          ref: gh-pages
+          path: gh-pages
 
-  publish:
-    name: Publish Allure Report to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: allure-report
-
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-      issues: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: 10. Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
         with:
-          ref: master
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: allure-history
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 28
 
-      - name: Download Allure Report artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: allure-report
-          path: allure-report
-
-      - name: Deploy to GitHub Pages
+            #      - name: 11.1 Deploy report to Github Pages
+            #        if: always()
+            #        uses: peaceiris/actions-gh-pages@v2
+            #        env:
+            #          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            #          PUBLISH_BRANCH: gh-pages
+            #          PUBLISH_DIR: allure-history
+            #
+      - name: 11.1 Deploy allure_report to Github Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          publish_dir: ./allure-report
+          publish_dir: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
+
