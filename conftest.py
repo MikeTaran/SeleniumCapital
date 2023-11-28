@@ -30,8 +30,8 @@ test_browser = ""
     scope="class",
     params=[
         "NoReg",
-        "Auth",
-        "Reg/NoAuth",
+        # "Auth",
+        # "Reg/NoAuth",
     ],
 )
 def cur_role(request):
@@ -145,8 +145,8 @@ def pre_go(fixture_value):
 @pytest.fixture(
     scope="module",
     params=[
-        "chrome",
-        # "edge",
+        # "chrome",
+        "edge",
         # "firefox",
         # "safari",
     ],

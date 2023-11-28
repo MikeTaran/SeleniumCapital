@@ -1,0 +1,111 @@
+name: Env. - Ubuntu, All Coders, All tests
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+
+jobs:
+  tests:
+    name: I. Building environment and testing the capital.com website
+#    runs-on: macos-latest
+#    runs-on: ubuntu-latest
+    runs-on: windows-latest
+
+    steps:
+#      - name: 1. Check out this repo
+#        uses: actions/checkout@v3
+#        continue-on-error: true
+
+      - name: 1. Check out this repo, master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+#
+      - name: 2.1. Install Python
+        if: always()
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.6"
+
+      - name: 4. install Poetry
+        if: always()
+        run: pip3 install poetry
+
+      - name: 5. install dependencies
+        if: always()
+        run: poetry update
+
+      - name: 8. Run US_11-02-02 test (Михаил)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+        continue-on-error: true
+#      - name: 8. Run US_11-02-02-01 test (Михаил)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+#        continue-on-error: true
+
+  Allure:
+    name: I. Building  and deploying Allure Reports
+    #    runs-on: macos-latest
+    runs-on: ubuntu-latest
+#    runs-on: windows-latest
+
+    steps:
+      - name: 9. Get Allure history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: 10. Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: allure-history
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 28
+
+#      - name: 11.1 Deploy report to Github Pages
+#        if: always()
+#        uses: peaceiris/actions-gh-pages@v2
+#        env:
+#          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          PUBLISH_BRANCH: gh-pages
+#          PUBLISH_DIR: allure-history
+#
+      - name: 11.1 Deploy allure_report to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: ./allure-history
+          commit_message: ${{ github.event.head_commit.message }}
+
+#      - name: 12. Send telegram message on push
+#        uses: appleboy/telegram-action@master
+#        if: always()
+#        with:
+#          to: ${{ secrets.TELEGRAM_TO_ALEXTOM22 }}
+##           to: ${{ secrets.TELEGRAM_TO }}
+#          token: ${{ secrets.TELEGRAM_TOKEN }}
+##           disable_web_page_preview: true
+#          message: |
+#            Message from GitHub CI Actions
+#
+#            Testing of the "Capital.com" web application in the "macOS/Chrome" environment is completed!
+#
+#            See allure-result testing: https://${{ github.actor }}.github.io/TestCapitalCom/
+##             Tests Repository: https://github.com/${{ github.repository }}
