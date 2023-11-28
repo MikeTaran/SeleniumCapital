@@ -1,0 +1,108 @@
+
+
+
+Current test role - Reg/NoAuth
+{'width': 1280, 'height': 7647}
+
+2023-11-28 14:15:20.668066   worker_id = master
+
+2023-11-28 14:15:20.668087   0. Allure grouping
+
+
+2023-11-28 14:15:20.668360   START PRECONDITIONS =>
+
+
+2023-11-28 14:15:20.668399   {'width': 1280, 'height': 7647}
+
+2023-11-28 14:15:20.670058   Set windows position at (320, 180) =>
+
+2023-11-28 14:15:20.671137   Set resolution 1280 * 720 =>
+
+2023-11-28 14:15:20.674203   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-11-28 14:15:25.680113   Капчи нет. Тестим дальше
+
+2023-11-28 14:15:25.680164   Prev. Role: Auth
+
+2023-11-28 14:15:25.680174   Run preconditions: set "Reg/NoAuth" Role =>
+2023-11-28 14:15:26.227276   Load page https://capital.com
+
+2023-11-28 14:15:26.237797   => All cookies are deleted
+2023-11-28 14:15:26.684716   Load page https://capital.com
+
+2023-11-28 14:15:26.684973   Click button [Accept all cookies]
+2023-11-28 14:15:26.684998   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-11-28 14:15:30.771697   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-11-28 14:15:30.773684   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-11-28 14:15:30.773706   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-11-28 14:15:30.783863   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-11-28 14:15:32.010590   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-11-28 14:15:32.010628   => Accepted All Cookies
+
+2023-11-28 14:15:32.010816   Start Autorization
+
+2023-11-28 14:15:32.010890   2. Act
+2023-11-28 14:15:32.010903   Start Click button [Log in] =>
+2023-11-28 14:15:32.012680   BUTTON_LOGIN scroll =>
+2023-11-28 14:15:32.015089   Is BUTTON_LOGIN clickable? =>
+2023-11-28 14:15:32.026938   => BUTTON_LOGIN is clickable
+2023-11-28 14:15:32.026966   BUTTON_LOGIN click =>
+2023-11-28 14:15:32.245402   => BUTTON_LOGIN is clicked!
+2023-11-28 14:15:32.245499   => 'Login' form is opened
+2023-11-28 14:15:32.325924   => "login" and "password" are inputted
+2023-11-28 14:15:32.325967   Click [Continue] button on [Login] form =>
+2023-11-28 14:15:32.612468   => [Continue] button on [Login] form is clicked
+2023-11-28 14:15:33.617977   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2023-11-28 14:15:33.618022   Set timeout = 30
+2023-11-28 14:15:33.618041   Wait until load page with special title =>
+2023-11-28 14:15:33.619154   => Page with title "Trading Platform | Capital.com" is loaded
+2023-11-28 14:15:33.619179   Is present LOGO on this page? =>
+2023-11-28 14:15:34.790714   => LOGO is visible on this page
+2023-11-28 14:15:34.790813   -> "Capital.com" logo is present on trading platform page
+
+2023-11-28 14:15:35.215595   Start DeAuthorisation
+2023-11-28 14:15:35.215726   1. Start Click button [My account]:
+2023-11-28 14:15:35.215746   2. BUTTON_MY_ACCOUNT is present? =>
+2023-11-28 14:15:35.218978   => 2. BUTTON_MY_ACCOUNT is present on this page
+2023-11-28 14:15:36.036309   => 3. BUTTON_MY_ACCOUNT is selected
+2023-11-28 14:15:36.036351   4. BUTTON_MY_ACCOUNT is clickable? =>
+2023-11-28 14:15:36.053757   => 4. BUTTON_MY_ACCOUNT is clickable. Click =>
+2023-11-28 14:15:36.868116   => 5. User panel [My account] is opened
+
+2023-11-28 14:15:36.868429   Start Click [Logout] button:
+2023-11-28 14:15:36.868446   BUTTON_LOGOUT is present? =>
+2023-11-28 14:15:36.870712   => BUTTON_LOGOUT is present
+2023-11-28 14:15:36.870734   Is visible BUTTON_LOGOUT? =>
+2023-11-28 14:15:36.879857   BUTTON_LOGOUT is clickable? =>
+2023-11-28 14:15:36.891296   BUTTON_LOGOUT click =>
+2023-11-28 14:15:37.456800   => BUTTON_LOGOUT is clicked
+
+2023-11-28 14:15:37.456963   Current role: Reg/NoAuth
+
+2023-11-28 14:15:37.456977   Prev language: ?
+
+2023-11-28 14:15:37.456986   Run preconditions: set "fr" language =>
+
+
+2023-11-28 14:15:37.459798   => Language and Country menu is present
+
+
+2023-11-28 14:15:37.515704   => Language and Country menu is visible
+
+
+2023-11-28 14:15:39.282441   => Focus is moved on Language and Country menu 
+
+2023-11-28 14:15:40.150512   => Current language: fr
+
+2023-11-28 14:15:40.150560   Prev country: ?
+
+2023-11-28 14:15:40.150574   Run preconditions: set "au" country =>
+
+
+2023-11-28 14:15:40.152677   => Language and Country menu is present
+
+
+2023-11-28 14:15:40.165609   => Language and Country menu is visible
+
+
+2023-11-28 14:15:41.945895   => Focus is moved on Language and Country menu 
