@@ -87,11 +87,11 @@ jobs:
       - name: 10. Generate allure report
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report
+        #id: allure-report
         with:
           allure_results: allure-results
-          allure_report: allure-report
-          gh_pages: gh-pages
+          #allure_report: allure-report
+          #gh_pages: gh-pages
           allure_history: allure-history
           ref: gh-pages
           path: gh-pages
