@@ -1,0 +1,59 @@
+
+2023-11-28 12:35:32.651188   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x7f30110e1d90> с именем TC_11.02.02.01_04
+{'width': 1280, 'height': 599}
+
+2023-11-28 12:35:32.652922   worker_id = master
+
+2023-11-28 12:35:32.652936   0. Allure grouping
+
+
+2023-11-28 12:35:32.653096   START PRECONDITIONS =>
+
+
+2023-11-28 12:35:32.653110   {'width': 1280, 'height': 599}
+
+2023-11-28 12:35:32.654436   Set windows position at (320, 180) =>
+
+2023-11-28 12:35:32.756902   Set resolution 1280 * 720 =>
+
+2023-11-28 12:35:32.859937   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-11-28 12:35:36.880309   Капчи нет. Тестим дальше
+
+2023-11-28 12:35:36.880353   Prev. Role: Auth
+
+2023-11-28 12:35:36.880363   Current role: Auth
+
+2023-11-28 12:35:36.880371   Prev language: fr
+
+2023-11-28 12:35:36.880379   => Current language: fr
+
+2023-11-28 12:35:36.880387   Prev country: au
+
+2023-11-28 12:35:36.880395   => Current country: au
+
+2023-11-28 12:35:36.880402   => THE END PRECONDITIONS
+
+2023-11-28 12:35:36.880458   1. Arrange_v0
+2023-11-28 12:35:37.523179   Load page https://capital.com/fr/trading-canopy-growth
+2023-11-28 12:35:37.523234   BUTTON_BUY_IN_CONTENT_BLOCK is located on the page? =>
+2023-11-28 12:35:37.590828   => BUTTON_BUY_IN_CONTENT_BLOCK is located on the page!
+2023-11-28 12:35:37.591040   Start Checking that form [Sign up] popped up on the page =>
+2023-11-28 12:35:42.364549   '[Sign up]' form was not popped up
+
+2023-11-28 12:35:42.364788   2. Act_v0
+2023-11-28 12:35:42.398629   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>
+2023-11-28 12:35:42.398666   => BUTTON_BUY_IN_CONTENT_BLOCK is present on the page
+2023-11-28 12:35:42.398675   BUTTON_BUY_IN_CONTENT_BLOCK scroll =>
+2023-11-28 12:35:42.413958   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled
+2023-11-28 12:35:42.414014   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>
+2023-11-28 12:35:42.468939   BUTTON_BUY_IN_CONTENT_BLOCK CLICK =>
+2023-11-28 12:35:42.695235   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!
+
+2023-11-28 12:35:42.710496   3. Assert_v4
+2023-11-28 12:35:42.710659   Checking that the trading platform page has opened (v4) =>
+2023-11-28 12:35:43.261870   => Current page title: Trading Platform | Capital.com
+2023-11-28 12:35:43.261996   Checking that the Trading platform LOGO is present on the page =>
+2023-11-28 12:35:43.934194   Checking that the Trading platform opened in LIVE mode =>
+2023-11-28 12:35:43.959020   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-11-28 12:35:43.959056   => Opened page with https://capital.com/trading/platform url for corresponding trading instrument 'Canopy Growth'
