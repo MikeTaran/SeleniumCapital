@@ -50,18 +50,18 @@ jobs:
       #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
       #        continue-on-error: true
 
-      - name: Copy history from gh-pages to allure-results
-        run: |
-          sudo mkdir -p allure-results/history  # Создает директорию для истории Allure
-          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
+#      - name: Copy history from gh-pages to allure-results
+#        run: |
+#          sudo mkdir -p allure-results/history  # Создает директорию для истории Allure
+#          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
 
       - name: Generate Allure report
         run: |
           sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
 
-      - name: Update Allure history
-        run: |
-          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
+#      - name: Update Allure history
+#        run: |
+#          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
