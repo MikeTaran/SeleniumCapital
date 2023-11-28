@@ -57,6 +57,24 @@ jobs:
       #        if: always()
       #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
       #        continue-on-error: true
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results
+
+  allure:
+    name: I. Building allure
+    #    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    #    runs-on: windows-latest
+
+    steps:
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-results
 
       - name: 9. Get Allure history
         uses: actions/checkout@v3
