@@ -1,30 +1,45 @@
-name: Run Tests and Generate Allure Report Windows
-
+name: Env. - Ubuntu, Mike
 on:
+  #  push:
   workflow_dispatch:
-  #push:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-  issues: write
+
+#  schedule:
+#    - cron: '00 13 * * *'
+#    - cron: '10 06 * * *'
 
 jobs:
-  test:
-    name: Run Tests
-    runs-on: windows-latest
+  tests:
+    name: I. Building environment and testing the capital.com website
+    #    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    #    runs-on: windows-latest
 
     steps:
-      - name: 1. Checkout repository
+      #      - name: 1. Check out this repo
+      #        uses: actions/checkout@v3
+      #        continue-on-error: true
+
+      - name: 1. Check out this repo, master branch
         uses: actions/checkout@v4
         with:
           ref: master
-
-      - name: 2. Set up Python
+      #
+      - name: 2.1. Install Python
+        if: always()
         uses: actions/setup-python@v4
         with:
           python-version: "3.11.6"
+
+      - name: 3.1. Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: 3.3. Install Neofetch
+        if: always()
+        run: brew install neofetch
 
       - name: 4. install Poetry
         if: always()
@@ -38,43 +53,10 @@ jobs:
         if: always()
         run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
         continue-on-error: true
-#      - name: 8. Run US_11-02-02-01 test (Михаил)
-#        if: always()
-#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
-#        continue-on-error: true
-#
-      - name: 8. Upload artifact "allure-results"
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-results
-          path: allure-results
-          retention-days: 1
-
-
-
-
-  allure-report:
-    name: Generate Allure Report
-    runs-on: ubuntu-latest
-    needs: test
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: master
-
-#      - name: Install Allure Command-Line
-#        run: |
-#          sudo apt-get install default-jre
-#          wget https://github.com/allure-framework/allure2/releases/download/2.18.1/allure_2.18.1-1_all.deb
-#          sudo dpkg -i allure_2.18.1-1_all.deb
-
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: allure-results
+      #      - name: 8. Run US_11-02-02-01 test (Михаил)
+      #        if: always()
+      #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+      #        continue-on-error: true
 
       - name: 9. Get Allure history
         uses: actions/checkout@v3
@@ -87,24 +69,16 @@ jobs:
       - name: 10. Generate allure report
         uses: simple-elf/allure-report-action@master
         if: always()
-        #id: allure-report
+        id: allure-report
         with:
           allure_results: allure-results
-          #allure_report: allure-report
-          #gh_pages: gh-pages
+          allure_report: allure-report
+          gh_pages: gh-pages
           allure_history: allure-history
           ref: gh-pages
           path: gh-pages
           keep_reports: 28
 
-            #      - name: 11.1 Deploy report to Github Pages
-            #        if: always()
-            #        uses: peaceiris/actions-gh-pages@v2
-            #        env:
-            #          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            #          PUBLISH_BRANCH: gh-pages
-            #          PUBLISH_DIR: allure-history
-            #
       - name: 11.1 Deploy allure_report to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         if: always()
@@ -113,4 +87,3 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           publish_dir: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
-
