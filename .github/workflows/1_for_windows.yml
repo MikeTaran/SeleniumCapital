@@ -1,0 +1,96 @@
+name: Run Tests and Generate Allure Report Windows
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: windows-latest
+
+    steps:
+      - name: 1. Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: 2. Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.6"
+
+      - name: 4. install Poetry
+        if: always()
+        run: pip3 install poetry
+
+      - name: 5. install dependencies
+        if: always()
+        run: poetry update
+
+      - name: 8. Run US_11-02-02 test (Михаил)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py --alluredir=allure-results
+        continue-on-error: true
+#      - name: 8. Run US_11-02-02-01 test (Михаил)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+#        continue-on-error: true
+
+  allure-report:
+    name: Generate Allure Report
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Install Allure Command-Line
+        run: |
+          sudo apt-add-repository ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install allure
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-results
+
+      - name: Generate Allure Report
+        run: |
+          allure generate allure-results --clean -o allure-report
+        continue-on-error: true
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
+
+  publish:
+    name: Publish Allure Report to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: allure-report
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Download Allure Report artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: ./allure-report
+          commit_message: ${{ github.event.head_commit.message }}
