@@ -1,6 +1,6 @@
 name: Env. - Windows, Mike
 on:
-  push:
+#  push:
   workflow_dispatch:
 
 permissions:
@@ -117,18 +117,18 @@ jobs:
           name: allure_report
           path: allure_report
 
-      - name: 12. Send telegram message on push
-        uses: appleboy/telegram-action@master
-        if: always()
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-#           to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-#           disable_web_page_preview: true
-          message: |
-            Message from GitHub CI Actions
-
-            Testing of the "Capital.com" web application in the "macOS/Chrome" environment is completed!
-
-            See allure-result testing: https://${{ github.actor }}.github.io/TestCapitalCom/
-#             Tests Repository: https://github.com/${{ github.repository }}
+#      - name: 12. Send telegram message on push
+#        uses: appleboy/telegram-action@master
+#        if: always()
+#        with:
+#          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+##           to: ${{ secrets.TELEGRAM_TO }}
+#          token: ${{ secrets.TELEGRAM_TOKEN }}
+##           disable_web_page_preview: true
+#          message: |
+#            Message from GitHub CI Actions
+#
+#            Testing of the "Capital.com" web application in the "macOS/Chrome" environment is completed!
+#
+#            See allure-result testing: https://${{ github.actor }}.github.io/TestCapitalCom/
+##             Tests Repository: https://github.com/${{ github.repository }}
