@@ -1,0 +1,59 @@
+
+2023-11-29 14:09:52.266673   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002D6B69B9E50> с именем TC_11.02.02.01_01
+{'width': 1216, 'height': 582}
+
+2023-11-29 14:09:52.266673   worker_id = master
+
+2023-11-29 14:09:52.266673   0. Allure grouping
+
+
+2023-11-29 14:09:52.266673   START PRECONDITIONS =>
+
+
+2023-11-29 14:09:52.266673   {'width': 1216, 'height': 582}
+
+2023-11-29 14:09:52.266673   Set windows position at (320, 180) =>
+
+2023-11-29 14:09:52.385281   Set resolution 1280 * 720 =>
+
+2023-11-29 14:09:52.495010   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-11-29 14:09:57.545768   Капчи нет. Тестим дальше
+
+2023-11-29 14:09:57.545768   Prev. Role: Reg/NoAuth
+
+2023-11-29 14:09:57.545768   Current role: Reg/NoAuth
+
+2023-11-29 14:09:57.545768   Prev language: fr
+
+2023-11-29 14:09:57.545768   => Current language: fr
+
+2023-11-29 14:09:57.545768   Prev country: au
+
+2023-11-29 14:09:57.545768   => Current country: au
+
+2023-11-29 14:09:57.545768   => THE END PRECONDITIONS
+
+2023-11-29 14:09:57.545768   1. Arrange_v0
+2023-11-29 14:09:58.461374   Load page https://capital.com/fr/trading-netflix
+2023-11-29 14:09:58.551612   BUTTON_START_TRADING scroll =>
+2023-11-29 14:09:59.202320   BUTTON_START_TRADING is visible? =>
+2023-11-29 14:09:59.287483   => BUTTON_START_TRADING is visible on the page!
+
+2023-11-29 14:09:59.287483   2. Act_v0
+2023-11-29 14:09:59.287483   Start Click button [Start Trading] =>
+2023-11-29 14:09:59.299947   BUTTON_START_TRADING is clickable? =>
+2023-11-29 14:09:59.387021   BUTTON_START_TRADING click =>
+2023-11-29 14:09:59.584907   => BUTTON_START_TRADING clicked
+
+2023-11-29 14:09:59.584907   3. Assert_v0
+2023-11-29 14:10:05.356300   'Login' form not opened
+2023-11-29 14:10:05.356300   'Login' page not opened
+2023-11-29 14:10:08.461849   'Login' form on trading platform not opened
+2023-11-29 14:10:08.461849   Start step Check that form [Sign up] opened
+2023-11-29 14:10:08.464378   'Sign up' form opened
+2023-11-29 14:10:08.464378   Assert SIGNUP_HEADER =>
+2023-11-29 14:10:08.495658   Assert SIGNUP_REF_LOGIN =>
+2023-11-29 14:10:08.511288   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-11-29 14:10:08.526910   => SIGNUP_PRIVACY_POLICY_ALL
+2023-11-29 14:10:08.526910   => 'Signup' form is checked
