@@ -1,0 +1,112 @@
+name: Env. - Ubuntu, Mike
+on:
+  #  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+#  schedule:
+#    - cron: '00 13 * * *'
+#    - cron: '10 06 * * *'
+
+jobs:
+  tests:
+    name: I. Building environment and testing the capital.com website
+    #    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    #    runs-on: windows-latest
+
+    steps:
+      #      - name: 1. Check out this repo
+      #        uses: actions/checkout@v3
+      #        continue-on-error: true
+
+      - name: 1. Check out this repo, master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+      #
+      - name: 2.1. Install Python
+        if: always()
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.6"
+
+      - name: 3.1. Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: 3.3. Install Neofetch
+        if: always()
+        run: brew install neofetch
+
+      - name: 4. install Poetry
+        if: always()
+        run: pip3 install poetry
+
+      - name: 5. install dependencies
+        if: always()
+        run: poetry update
+
+      - name: 8. Run US_11-02-02 test (Михаил)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+        continue-on-error: true
+      #      - name: 8. Run US_11-02-02-01 test (Михаил)
+      #        if: always()
+      #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+      #        continue-on-error: true
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results
+
+  allure:
+    name: I. Building allure
+    #    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    #    runs-on: windows-latest
+    needs: tests
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-results
+
+      - name: 9. Get Allure history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: 10. Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: allure-history
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 28
+
+      - name: 11.1 Deploy allure_report to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: ./allure-history
+          commit_message: ${{ github.event.head_commit.message }}
