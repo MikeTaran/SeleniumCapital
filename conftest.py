@@ -30,8 +30,8 @@ test_browser = ""
     scope="class",
     params=[
         "NoReg",
-        # "Auth",
-        # "Reg/NoAuth",
+        "Auth",
+        "Reg/NoAuth",
     ],
 )
 def cur_role(request):

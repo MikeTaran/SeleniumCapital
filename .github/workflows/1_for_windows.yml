@@ -41,22 +41,23 @@ jobs:
 #        if: always()
 #        run: brew install neofetch
 
-      - name: 4. install Poetry
+      - name: 2.2. install Poetry
         if: always()
         run: pip3 install poetry
 
-      - name: 5. install dependencies
+      - name: 2.3. install dependencies
         if: always()
         run: poetry update
 
-      - name: 8. Run US_11-02-02 test (Михаил)
+      - name: 3. Run US_11-02-02 test (Михаил)
         if: always()
         run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
         continue-on-error: true
-      #      - name: 8. Run US_11-02-02-01 test (Михаил)
-      #        if: always()
-      #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
-      #        continue-on-error: true
+      - name: 8. Run US_11-02-02-01 test (Михаил)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+        continue-on-error: true
+
       - name: Upload artifact "allure-results"
         if: always()
         uses: actions/upload-artifact@v3
@@ -87,7 +88,7 @@ jobs:
           name: allure-results
           path: allure-results
 
-      - name: 3. Test marketplace action
+      - name: 3. Create Allure report
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
@@ -109,7 +110,7 @@ jobs:
           PUBLISH_DIR: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
 
-      - name: 5. Archive code coverage results
+      - name: 5. Archive testing results
         if: always()
         uses: actions/upload-artifact@v3
         with:
