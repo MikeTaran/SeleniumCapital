@@ -1,0 +1,96 @@
+
+2023-11-29 18:47:23.388544   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x00000202C4062850> с именем TC_11.02.02_06
+{'width': 1216, 'height': 13505}
+
+2023-11-29 18:47:23.391539   worker_id = master
+
+2023-11-29 18:47:23.391539   0. Allure grouping
+
+
+2023-11-29 18:47:23.391539   START PRECONDITIONS =>
+
+
+2023-11-29 18:47:23.391539   {'width': 1216, 'height': 13505}
+
+2023-11-29 18:47:23.393537   Set windows position at (320, 180) =>
+
+2023-11-29 18:47:23.498399   Set resolution 1280 * 720 =>
+
+2023-11-29 18:47:23.607585   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-11-29 18:47:28.659805   Капчи нет. Тестим дальше
+
+2023-11-29 18:47:28.659805   Prev. Role: Reg/NoAuth
+
+2023-11-29 18:47:28.659805   Current role: Reg/NoAuth
+
+2023-11-29 18:47:28.659805   Prev language: cn
+
+2023-11-29 18:47:28.659805   => Current language: cn
+
+2023-11-29 18:47:28.659805   Prev country: au
+
+2023-11-29 18:47:28.659805   => Current country: au
+
+2023-11-29 18:47:28.659805   => THE END PRECONDITIONS
+
+2023-11-29 18:47:28.659805   0. Arrange_0
+2023-11-29 18:47:29.337976   Load page https://capital.com/cn
+2023-11-29 18:47:29.421174   => Education menu is present
+2023-11-29 18:47:29.675540   => Education menu is visible
+2023-11-29 18:47:31.451026   => Education menu focus moved
+
+
+2023-11-29 18:47:33.026052   => Shares trading sub-menu clicked
+
+2023-11-29 18:47:33.080931   Clear Top Chart list =>
+2023-11-29 18:47:34.957559   Load page https://capital.com/trading/platform/charting/
+
+2023-11-29 18:47:45.051691   1. Arrange_v4
+2023-11-29 18:47:45.759689   Load page https://capital.com/cn/trade-stocks
+2023-11-29 18:47:45.759689   MOST_TRADED is visible? =>
+2023-11-29 18:47:45.922658   => MOST_TRADED is visible on the page!
+2023-11-29 18:47:45.922658   => Found 5 elements in block MOST_TRADED
+
+2023-11-29 18:47:45.922658   Testing Most traded random element #1
+
+2023-11-29 18:47:45.922658   2. Act_v4
+2023-11-29 18:47:45.922658   MOST_TRADED delete js-mostTraded class =>
+2023-11-29 18:47:46.056580   MOST_TRADED scroll =>
+2023-11-29 18:47:46.061588   MOST_TRADED click for 'Coinbase Global Inc' trading instrument =>
+2023-11-29 18:47:46.255899   => MOST_TRADED clicked!
+
+2023-11-29 18:47:46.255899   3. Assert_v0
+2023-11-29 18:47:46.460637   'Login' form opened
+2023-11-29 18:47:46.460637   Assert LOGIN_REF_SIGNUP =>
+2023-11-29 18:47:46.490660   Assert LOGIN_CHECKBOX =>
+2023-11-29 18:47:46.523921   Assert LOGIN_PASS_FORGOT =>
+2023-11-29 18:47:46.551546   => 'Login' form is checked
+2023-11-29 18:47:46.597419   Click 'Close' button on 'Login' form =>
+2023-11-29 18:47:46.695162   => 'Login' form closed
+
+2023-11-29 18:47:46.695162   Clear Top Chart list =>
+2023-11-29 18:47:48.148856   Load page https://capital.com/trading/platform/charting/
+
+2023-11-29 18:47:58.217982   1. Arrange_v4
+2023-11-29 18:47:58.851401   Load page https://capital.com/cn/trade-stocks
+2023-11-29 18:47:58.851401   MOST_TRADED is visible? =>
+2023-11-29 18:47:58.916543   => MOST_TRADED is visible on the page!
+2023-11-29 18:47:58.916543   => Found 5 elements in block MOST_TRADED
+
+2023-11-29 18:47:58.916543   Testing Most traded random element #2
+
+2023-11-29 18:47:58.916543   2. Act_v4
+2023-11-29 18:47:58.916543   MOST_TRADED delete js-mostTraded class =>
+2023-11-29 18:47:59.245565   MOST_TRADED scroll =>
+2023-11-29 18:47:59.251985   MOST_TRADED click for 'GameStop Corp' trading instrument =>
+2023-11-29 18:47:59.356873   => MOST_TRADED clicked!
+
+2023-11-29 18:47:59.356873   3. Assert_v0
+2023-11-29 18:47:59.504516   'Login' form opened
+2023-11-29 18:47:59.504516   Assert LOGIN_REF_SIGNUP =>
+2023-11-29 18:47:59.520566   Assert LOGIN_CHECKBOX =>
+2023-11-29 18:47:59.580159   Assert LOGIN_PASS_FORGOT =>
+2023-11-29 18:47:59.606557   => 'Login' form is checked
+2023-11-29 18:47:59.641735   Click 'Close' button on 'Login' form =>
+2023-11-29 18:47:59.713836   => 'Login' form closed
