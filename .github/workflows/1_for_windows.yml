@@ -14,8 +14,8 @@ jobs:
   tests:
     name: I. Building environment and testing the capital.com website
     #    runs-on: macos-latest
-    runs-on: ubuntu-latest
-    #    runs-on: windows-latest
+    #    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       #      - name: 1. Check out this repo
@@ -33,13 +33,13 @@ jobs:
         with:
           python-version: "3.11.6"
 
-      - name: 3.1. Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-
-      - name: 3.3. Install Neofetch
-        if: always()
-        run: brew install neofetch
+#      - name: 3.1. Set up Homebrew
+#        id: set-up-homebrew
+#        uses: Homebrew/actions/setup-homebrew@master
+#
+#      - name: 3.3. Install Neofetch
+#        if: always()
+#        run: brew install neofetch
 
       - name: 4. install Poetry
         if: always()
@@ -57,31 +57,22 @@ jobs:
       #        if: always()
       #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
       #        continue-on-error: true
-      - name: Upload Allure Report
+      - name: Upload artifact "allure-results"
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: allure-results
-          path: allure-results
+          path: build/allure-results/
+          retention-days: 10
 
-  allure:
-    name: I. Building allure
-    #    runs-on: macos-latest
+
+  generate_report:
+    name: II. Generate & Deploy Allure report
     runs-on: ubuntu-latest
-    #    runs-on: windows-latest
-    needs: tests
-
+    if: always()
+    needs: [ tests ]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: master
-
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: allure-results
-
-      - name: 9. Get Allure history
+      - name: 1. Get Allure history
         uses: actions/checkout@v3
         if: always()
         continue-on-error: true
@@ -89,24 +80,38 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: 10. Generate allure report
+      - name: 2. Download Artifacts
+        uses: actions/download-artifact@v3
+        id: download
+        with:
+          name: allure-results
+          path: allure-results
+
+      - name: 3. Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
           allure_results: allure-results
+          allure_history: allure-history
           allure_report: allure-report
           gh_pages: gh-pages
-          allure_history: allure-history
-          ref: gh-pages
-          path: gh-pages
-          keep_reports: 28
+          #ref: gh-pages
+          #path: gh-pages
+          keep_reports: 30
 
-      - name: 11.1 Deploy allure_report to Github Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: 4. Deploy report to Github Pages
         if: always()
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          publish_dir: ./allure-history
+          PUBLISH_DIR: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
+
+      - name: 5. Archive code coverage results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure_report
+          path: allure_report
