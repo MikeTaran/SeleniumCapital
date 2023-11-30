@@ -1,0 +1,50 @@
+2023-11-29 23:59:13 ERROR Unable to initialize WebDriver
+2023-11-29 23:59:13 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF709332602+60402]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7092B7352+253666]
+	(No symbol) [0x00007FF709089C99]
+	(No symbol) [0x00007FF7090D9FD4]
+	(No symbol) [0x00007FF7090DA10A]
+	(No symbol) [0x00007FF7091181D7]
+	(No symbol) [0x00007FF7090FBACF]
+	(No symbol) [0x00007FF7090CD766]
+	(No symbol) [0x00007FF709115111]
+	(No symbol) [0x00007FF7090FB863]
+	(No symbol) [0x00007FF7090CC585]
+	(No symbol) [0x00007FF7090CB993]
+	(No symbol) [0x00007FF7090CCD14]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7095134A4+1161924]
+	(No symbol) [0x00007FF70914E5F6]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF70920B083+37459]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF709202C4D+3613]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7095121E4+1157124]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7092C16A8+295480]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7092BCB74+276228]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7092BCCA2+276530]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7092AFA91+222753]
+	BaseThreadInitThunk [0x00007FF8C1494DE0+16]
+	RtlUserThreadStart [0x00007FF8C28DED9B+43]
+
+2023-11-29 23:59:16 ERROR Unable to initialize WebDriver
+2023-11-29 23:59:16 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message:

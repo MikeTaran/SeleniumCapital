@@ -1,0 +1,55 @@
+
+2023-11-30 00:15:24.526355   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000145C5711590> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-11-30 00:15:24.533860   worker_id = master
+
+2023-11-30 00:15:24.533860   0. Allure grouping
+
+
+2023-11-30 00:15:24.533860   START PRECONDITIONS =>
+
+
+2023-11-30 00:15:24.533860   {'width': 1280, 'height': 720}
+
+2023-11-30 00:15:24.535873   Set windows position at (320, 180) =>
+
+2023-11-30 00:15:24.650449   Set resolution 1280 * 720 =>
+
+2023-11-30 00:15:24.754672   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-11-30 00:15:29.788791   Капчи нет. Тестим дальше
+
+2023-11-30 00:15:29.788791   Prev. Role: Auth
+
+2023-11-30 00:15:29.788791   Current role: Auth
+
+2023-11-30 00:15:29.788791   Prev language: en
+
+2023-11-30 00:15:29.788791   => Current language: en
+
+2023-11-30 00:15:29.788791   Prev country: ae
+
+2023-11-30 00:15:29.788791   => Current country: ae
+
+2023-11-30 00:15:29.788791   => THE END PRECONDITIONS
+
+2023-11-30 00:15:29.788791   1. Arrange_v0
+2023-11-30 00:15:30.605774   Load page https://capital.com/trade-google
+2023-11-30 00:15:30.690196   BUTTON_START_TRADING scroll =>
+2023-11-30 00:15:30.817819   BUTTON_START_TRADING is visible? =>
+2023-11-30 00:15:30.942049   => BUTTON_START_TRADING is visible on the page!
+
+2023-11-30 00:15:30.942049   2. Act_v0
+2023-11-30 00:15:30.942049   Start Click button [Start Trading] =>
+2023-11-30 00:15:31.016474   BUTTON_START_TRADING is clickable? =>
+2023-11-30 00:15:31.034857   BUTTON_START_TRADING click =>
+2023-11-30 00:15:31.304250   => BUTTON_START_TRADING clicked
+
+2023-11-30 00:15:31.304250   3. Assert_v4
+2023-11-30 00:15:31.305250   Checking that the trading platform page has opened (v4) =>
+2023-11-30 00:15:31.861895   => Current page title: Trading Platform | Capital.com
+2023-11-30 00:15:31.861895   Checking that the Trading platform LOGO is present on the page =>
+2023-11-30 00:15:33.024242   Checking that the Trading platform opened in LIVE mode =>
+2023-11-30 00:15:33.049522   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-11-30 00:15:33.708088   Load page https://capital.com/trade-google
