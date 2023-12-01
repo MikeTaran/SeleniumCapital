@@ -7,6 +7,8 @@
 from datetime import datetime
 import pytest
 import allure
+
+from pages.Signup_login.signup_login import SignupLogin
 from pages.base_page import BasePage
 from pages.Elements.testing_elements_locators import QRCodeLocators
 # from selenium.common.exceptions import ElementClickInterceptedException, NoSuchElementException
@@ -47,6 +49,7 @@ class QRCodeDecode(BasePage):
                 locator_link = QRCodeLocators.QR_CODE_CAPITAL_LINK
 
         print(f"{datetime.now()}   QR_CODE is visible? =>")
+
         if self.element_is_visible(locator, 30):
             print(f"{datetime.now()}   => QR_CODE_{self.qr_code.upper()} is visible on the page!")
         else:
