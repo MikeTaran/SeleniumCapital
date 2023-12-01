@@ -1,0 +1,37 @@
+2023-12-01 20:38:02 ERROR Unable to initialize WebDriver
+2023-12-01 20:38:02 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A33C25A2+60402]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7A33472F2+253618]
+	(No symbol) [0x00007FF7A3119C99]
+	(No symbol) [0x00007FF7A3169FD4]
+	(No symbol) [0x00007FF7A316A10A]
+	(No symbol) [0x00007FF7A31A81D7]
+	(No symbol) [0x00007FF7A318BACF]
+	(No symbol) [0x00007FF7A315D766]
+	(No symbol) [0x00007FF7A31A5111]
+	(No symbol) [0x00007FF7A318B863]
+	(No symbol) [0x00007FF7A315C585]
+	(No symbol) [0x00007FF7A315B993]
+	(No symbol) [0x00007FF7A315CD14]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7A35A3444+1161924]
+	(No symbol) [0x00007FF7A31DE5F6]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF7A329B083+37459]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF7A3292C4D+3613]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7A35A2184+1157124]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7A3351648+295432]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7A334CB14+276180]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7A334CC42+276482]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7A333FA31+222705]
+	BaseThreadInitThunk [0x00007FFDB0494DE0+16]
+	RtlUserThreadStart [0x00007FFDB25BED9B+43]

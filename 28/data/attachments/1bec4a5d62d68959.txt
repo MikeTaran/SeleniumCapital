@@ -1,0 +1,103 @@
+
+
+
+Current test role - NoReg
+
+2023-12-01 23:27:50.233952   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000022D727F1990> с именем TC_11.01.06_01
+{'width': 1280, 'height': 720}
+
+2023-12-01 23:27:50.286969   browser = msedge
+
+2023-12-01 23:27:50.286969   worker_id = master
+
+2023-12-01 23:27:50.286969   Start TC_11.01.06_01
+
+2023-12-01 23:27:50.286969   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000022D727F1990>.None
+
+2023-12-01 23:27:50.286969   0. Arrange
+
+
+2023-12-01 23:27:50.287977   START PRECONDITIONS =>
+
+
+2023-12-01 23:27:50.287977   {'width': 1280, 'height': 720}
+
+2023-12-01 23:27:50.464760   Set windows position at (320, 180) =>
+
+2023-12-01 23:27:50.574418   Set resolution 1280 * 720 =>
+
+2023-12-01 23:27:50.680608   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-01 23:27:55.733870   Капчи нет. Тестим дальше
+
+2023-12-01 23:27:55.733870   Prev. Role: Auth
+
+2023-12-01 23:27:55.733870   Run preconditions: set "NoReg" Role =>
+2023-12-01 23:27:56.525572   Load page https://capital.com
+
+2023-12-01 23:27:57.290381   => All cookies are deleted
+2023-12-01 23:27:57.922444   Load page https://capital.com
+
+2023-12-01 23:27:57.923814   Click button [Accept all cookies]
+2023-12-01 23:27:57.923852   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-01 23:28:01.998095   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-01 23:28:02.006102   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-01 23:28:02.006102   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-01 23:28:02.021944   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-01 23:28:03.082196   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-01 23:28:03.082196   => Accepted All Cookies
+
+2023-12-01 23:28:03.082196   Current role: NoReg
+
+2023-12-01 23:28:03.082196   Prev language: ?
+
+2023-12-01 23:28:03.082196   Run preconditions: set "fr" language =>
+
+
+2023-12-01 23:28:03.092352   => Language and Country menu is present
+
+
+2023-12-01 23:28:03.109347   => Language and Country menu is visible
+
+
+2023-12-01 23:28:04.898370   => Focus is moved on Language and Country menu 
+
+2023-12-01 23:28:06.514779   => Current language: fr
+
+2023-12-01 23:28:06.514779   Prev country: ?
+
+2023-12-01 23:28:06.514779   Run preconditions: set "au" country =>
+
+
+2023-12-01 23:28:06.525969   => Language and Country menu is present
+
+
+2023-12-01 23:28:06.541316   => Language and Country menu is visible
+
+
+2023-12-01 23:28:08.332612   => Focus is moved on Language and Country menu 
+
+2023-12-01 23:28:11.593446   => Current country: au
+
+2023-12-01 23:28:11.593446   => THE END PRECONDITIONS
+
+2023-12-01 23:28:11.593446   1. Arrange
+
+2023-12-01 23:28:11.593446   Testing the qr code: INVESTMATE
+2023-12-01 23:28:12.481340   Load page https://capital.com/fr/investmate
+2023-12-01 23:28:12.481340   QR_CODE is visible? =>
+2023-12-01 23:28:12.802501   => QR_CODE_INVESTMATE is visible on the page!
+2023-12-01 23:28:12.802501   QR_CODE_LINK is present on the page? =>
+2023-12-01 23:28:12.821845   => QR_CODE_LINK INVESTMATE is on the page!
+
+2023-12-01 23:28:12.823072   2. Act
+2023-12-01 23:28:12.823072   Determining the QR_CODE link
+2023-12-01 23:28:12.860192   QR_CODE link: https://investmate.onelink.me/G4om?pid=website&cp_device_id=bczdmrex-uyyp-n5us-w1hv-y8unlo0t8g7x                                                                                                                            
+2023-12-01 23:28:14.208162   Load page https://investmate.onelink.me/G4om?pid=website&cp_device_id=bczdmrex-uyyp-n5us-w1hv-y8unlo0t8g7x                                                                                                                            
+
+2023-12-01 23:28:14.209168   3. Assert_v0
+2023-12-01 23:28:14.209168   Checking that the App Store page has opened
+2023-12-01 23:28:14.220771   => Current page title: Investmate — learn to trade on the App Store
+2023-12-01 23:28:14.220771   Checking that the App Store app title
+2023-12-01 23:28:14.247833   Checking that the App Store specifies provider
+2023-12-01 23:28:14.793563   Load page https://capital.com/fr/investmate

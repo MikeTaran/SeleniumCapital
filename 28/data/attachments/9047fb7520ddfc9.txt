@@ -1,0 +1,91 @@
+
+
+
+Current test role - NoReg
+
+2023-12-01 21:29:31.936962   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000022D727F0350> с именем TC_11.01.06_01
+{'width': 1280, 'height': 720}
+
+2023-12-01 21:29:31.956433   browser = msedge
+
+2023-12-01 21:29:31.956433   worker_id = master
+
+2023-12-01 21:29:31.956433   Start TC_11.01.06_01
+
+2023-12-01 21:29:31.956433   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000022D727F0350>.None
+
+2023-12-01 21:29:31.956433   0. Arrange
+
+
+2023-12-01 21:29:31.957430   START PRECONDITIONS =>
+
+
+2023-12-01 21:29:31.957430   {'width': 1280, 'height': 720}
+
+2023-12-01 21:29:32.021163   Set windows position at (320, 180) =>
+
+2023-12-01 21:29:32.224580   Set resolution 1280 * 720 =>
+
+2023-12-01 21:29:32.332947   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-01 21:29:37.390815   Капчи нет. Тестим дальше
+
+2023-12-01 21:29:37.390815   Prev. Role: Auth
+
+2023-12-01 21:29:37.390815   Run preconditions: set "NoReg" Role =>
+2023-12-01 21:29:38.174654   Load page https://capital.com
+
+2023-12-01 21:29:39.051176   => All cookies are deleted
+2023-12-01 21:29:39.574115   Load page https://capital.com
+
+2023-12-01 21:29:39.574115   Click button [Accept all cookies]
+2023-12-01 21:29:39.574115   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-01 21:29:43.629977   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-01 21:29:43.637995   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-01 21:29:43.638978   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-01 21:29:43.653304   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-01 21:29:44.709766   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-01 21:29:44.709766   => Accepted All Cookies
+
+2023-12-01 21:29:44.710767   Current role: NoReg
+
+2023-12-01 21:29:44.710767   Prev language: ?
+
+2023-12-01 21:29:44.710767   Run preconditions: set "fr" language =>
+
+
+2023-12-01 21:29:44.719764   => Language and Country menu is present
+
+
+2023-12-01 21:29:44.737162   => Language and Country menu is visible
+
+
+2023-12-01 21:29:46.515140   => Focus is moved on Language and Country menu 
+
+2023-12-01 21:29:48.090315   => Current language: fr
+
+2023-12-01 21:29:48.090315   Prev country: ?
+
+2023-12-01 21:29:48.090315   Run preconditions: set "de" country =>
+
+
+2023-12-01 21:29:48.102646   => Language and Country menu is present
+
+
+2023-12-01 21:29:48.167837   => Language and Country menu is visible
+
+
+2023-12-01 21:29:49.959667   => Focus is moved on Language and Country menu 
+
+2023-12-01 21:29:53.370488   => Current country: de
+
+2023-12-01 21:29:53.370488   => THE END PRECONDITIONS
+
+2023-12-01 21:29:53.370488   1. Arrange
+
+2023-12-01 21:29:53.371488   Testing the qr code: INVESTMATE
+2023-12-01 21:29:54.087714   Load page https://capital.com/fr/investmate
+2023-12-01 21:29:54.087714   QR_CODE is visible? =>
+2023-12-01 21:30:24.273568   => QR_CODE_INVESTMATE is not visible on the page!
+2023-12-01 21:30:24.273912   QR_CODE_LINK is present on the page? =>
+2023-12-01 21:30:54.602364   => QR_CODE_LINK INVESTMATE is not on the page!

@@ -1,0 +1,93 @@
+
+2023-12-01 20:37:02.453646   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x0000024A2F89E390> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-01 20:37:02.453646   worker_id = master
+
+2023-12-01 20:37:02.453646   0. Allure grouping
+
+
+2023-12-01 20:37:02.453646   START PRECONDITIONS =>
+
+
+2023-12-01 20:37:02.453646   {'width': 1280, 'height': 720}
+
+2023-12-01 20:37:02.453646   Set windows position at (320, 180) =>
+
+2023-12-01 20:37:02.572865   Set resolution 1280 * 720 =>
+
+2023-12-01 20:37:02.686278   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-01 20:37:07.703341   Капчи нет. Тестим дальше
+
+2023-12-01 20:37:07.703341   Prev. Role: Auth
+
+2023-12-01 20:37:07.703341   Current role: Auth
+
+2023-12-01 20:37:07.703341   Prev language: fr
+
+2023-12-01 20:37:07.703341   => Current language: fr
+
+2023-12-01 20:37:07.703341   Prev country: ae
+
+2023-12-01 20:37:07.703341   => Current country: ae
+
+2023-12-01 20:37:07.703341   => THE END PRECONDITIONS
+
+2023-12-01 20:37:07.703341   Clear Top Chart list =>
+2023-12-01 20:37:09.402290   Load page https://capital.com/trading/platform/charting/
+
+2023-12-01 20:37:16.699820   1. Arrange_v4
+2023-12-01 20:37:17.512987   Load page https://capital.com/fr/trading-apple
+2023-12-01 20:37:17.512987   MOST_TRADED is visible? =>
+2023-12-01 20:37:17.788090   => MOST_TRADED is visible on the page!
+2023-12-01 20:37:17.788090   => Found 5 elements in block MOST_TRADED
+
+2023-12-01 20:37:17.788090   Testing Most traded random element #1
+
+2023-12-01 20:37:17.788090   2. Act_v4
+2023-12-01 20:37:17.788090   MOST_TRADED delete js-mostTraded class =>
+2023-12-01 20:37:17.900958   MOST_TRADED scroll =>
+2023-12-01 20:37:17.917089   MOST_TRADED click for 'Amazon.com Inc' trading instrument =>
+2023-12-01 20:37:18.455785   => MOST_TRADED clicked!
+
+2023-12-01 20:37:18.455785   3. Assert_v4
+2023-12-01 20:37:18.455785   Checking that the trading platform page has opened (v4) =>
+2023-12-01 20:37:18.504750   => Current page title: Trading Platform | Capital.com
+2023-12-01 20:37:18.504750   Checking that the Trading platform LOGO is present on the page =>
+2023-12-01 20:37:20.077709   Checking that the Trading platform opened in LIVE mode =>
+2023-12-01 20:37:20.105299   => The page with https://capital.com/trading/platform/spotlight/1361805280629956?side=buy url was opened in lIVE mode
+2023-12-01 20:37:20.105299   => Opened page with https://capital.com/trading/platform/spotlight/1361805280629956?side=buy url for corresponding trading instrument 'Amazon.com Inc'
+2023-12-01 20:37:20.105299   Trading Platform for 'Amazon.com Inc' trading instrument is opened
+2023-12-01 20:37:20.301866   Trade instrument 'Amazon.com Inc' is on the Top Charts List
+2023-12-01 20:37:20.331585   Trade instrument 'Amazon.com Inc' is on the Top Charts List and selected
+2023-12-01 20:37:21.096008   Load page https://capital.com/fr/trading-apple
+
+2023-12-01 20:37:21.097008   Clear Top Chart list =>
+2023-12-01 20:37:22.720600   Load page https://capital.com/trading/platform/charting/
+
+2023-12-01 20:37:29.301707   1. Arrange_v4
+2023-12-01 20:37:30.104413   Load page https://capital.com/fr/trading-apple
+2023-12-01 20:37:30.104413   MOST_TRADED is visible? =>
+2023-12-01 20:37:30.268669   => MOST_TRADED is visible on the page!
+2023-12-01 20:37:30.268669   => Found 5 elements in block MOST_TRADED
+
+2023-12-01 20:37:30.268669   Testing Most traded random element #2
+
+2023-12-01 20:37:30.268669   2. Act_v4
+2023-12-01 20:37:30.268669   MOST_TRADED delete js-mostTraded class =>
+2023-12-01 20:37:30.585697   MOST_TRADED scroll =>
+2023-12-01 20:37:30.598650   MOST_TRADED click for 'GameStop Corp' trading instrument =>
+2023-12-01 20:37:31.083804   => MOST_TRADED clicked!
+
+2023-12-01 20:37:31.084805   3. Assert_v4
+2023-12-01 20:37:31.084805   Checking that the trading platform page has opened (v4) =>
+2023-12-01 20:37:31.131165   => Current page title: Trading Platform | Capital.com
+2023-12-01 20:37:31.131165   Checking that the Trading platform LOGO is present on the page =>
+2023-12-01 20:37:32.910132   Checking that the Trading platform opened in LIVE mode =>
+2023-12-01 20:37:32.942922   => The page with https://capital.com/trading/platform/spotlight/126740190024900?side=buy url was opened in lIVE mode
+2023-12-01 20:37:32.942922   => Opened page with https://capital.com/trading/platform/spotlight/126740190024900?side=buy url for corresponding trading instrument 'GameStop Corp'
+2023-12-01 20:37:32.942922   Trading Platform for 'GameStop Corp' trading instrument is opened
+2023-12-01 20:37:33.119525   Trade instrument 'GameStop Corp' is on the Top Charts List
+2023-12-01 20:37:33.153274   Trade instrument 'GameStop Corp' is on the Top Charts List and selected
+2023-12-01 20:37:33.949849   Load page https://capital.com/fr/trading-apple

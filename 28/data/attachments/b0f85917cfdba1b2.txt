@@ -1,0 +1,93 @@
+
+2023-12-01 20:40:02.558998   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x0000024A2F8A84D0> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-01 20:40:02.561472   worker_id = master
+
+2023-12-01 20:40:02.561472   0. Allure grouping
+
+
+2023-12-01 20:40:02.561472   START PRECONDITIONS =>
+
+
+2023-12-01 20:40:02.562522   {'width': 1280, 'height': 720}
+
+2023-12-01 20:40:02.563534   Set windows position at (320, 180) =>
+
+2023-12-01 20:40:02.668821   Set resolution 1280 * 720 =>
+
+2023-12-01 20:40:02.775618   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-01 20:40:07.814932   Капчи нет. Тестим дальше
+
+2023-12-01 20:40:07.814932   Prev. Role: Auth
+
+2023-12-01 20:40:07.814932   Current role: Auth
+
+2023-12-01 20:40:07.814932   Prev language: fr
+
+2023-12-01 20:40:07.814932   => Current language: fr
+
+2023-12-01 20:40:07.814932   Prev country: ae
+
+2023-12-01 20:40:07.814932   => Current country: ae
+
+2023-12-01 20:40:07.814932   => THE END PRECONDITIONS
+
+2023-12-01 20:40:07.814932   Clear Top Chart list =>
+2023-12-01 20:40:09.474763   Load page https://capital.com/trading/platform/charting/
+
+2023-12-01 20:40:16.659340   1. Arrange_v4
+2023-12-01 20:40:17.627673   Load page https://capital.com/fr/trading-facebook
+2023-12-01 20:40:17.627673   MOST_TRADED is visible? =>
+2023-12-01 20:40:17.789727   => MOST_TRADED is visible on the page!
+2023-12-01 20:40:17.789727   => Found 5 elements in block MOST_TRADED
+
+2023-12-01 20:40:17.789727   Testing Most traded random element #1
+
+2023-12-01 20:40:17.789727   2. Act_v4
+2023-12-01 20:40:17.789727   MOST_TRADED delete js-mostTraded class =>
+2023-12-01 20:40:18.032448   MOST_TRADED scroll =>
+2023-12-01 20:40:18.040985   MOST_TRADED click for 'Tesla Inc' trading instrument =>
+2023-12-01 20:40:18.574837   => MOST_TRADED clicked!
+
+2023-12-01 20:40:18.575832   3. Assert_v4
+2023-12-01 20:40:18.575832   Checking that the trading platform page has opened (v4) =>
+2023-12-01 20:40:18.612353   => Current page title: Trading Platform | Capital.com
+2023-12-01 20:40:18.612353   Checking that the Trading platform LOGO is present on the page =>
+2023-12-01 20:40:20.204418   Checking that the Trading platform opened in LIVE mode =>
+2023-12-01 20:40:20.228845   => The page with https://capital.com/trading/platform/spotlight/22855552501634244?side=buy url was opened in lIVE mode
+2023-12-01 20:40:20.228845   => Opened page with https://capital.com/trading/platform/spotlight/22855552501634244?side=buy url for corresponding trading instrument 'Tesla Inc'
+2023-12-01 20:40:20.228845   Trading Platform for 'Tesla Inc' trading instrument is opened
+2023-12-01 20:40:20.492652   Trade instrument 'Tesla Inc' is on the Top Charts List
+2023-12-01 20:40:20.516419   Trade instrument 'Tesla Inc' is on the Top Charts List and selected
+2023-12-01 20:40:21.457940   Load page https://capital.com/fr/trading-facebook
+
+2023-12-01 20:40:21.457940   Clear Top Chart list =>
+2023-12-01 20:40:23.042554   Load page https://capital.com/trading/platform/charting/
+
+2023-12-01 20:40:29.892747   1. Arrange_v4
+2023-12-01 20:40:30.710838   Load page https://capital.com/fr/trading-facebook
+2023-12-01 20:40:30.710838   MOST_TRADED is visible? =>
+2023-12-01 20:40:30.880037   => MOST_TRADED is visible on the page!
+2023-12-01 20:40:30.880037   => Found 5 elements in block MOST_TRADED
+
+2023-12-01 20:40:30.880037   Testing Most traded random element #2
+
+2023-12-01 20:40:30.880037   2. Act_v4
+2023-12-01 20:40:30.880037   MOST_TRADED delete js-mostTraded class =>
+2023-12-01 20:40:31.143809   MOST_TRADED scroll =>
+2023-12-01 20:40:31.175539   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-01 20:40:31.617001   => MOST_TRADED clicked!
+
+2023-12-01 20:40:31.618004   3. Assert_v4
+2023-12-01 20:40:31.618004   Checking that the trading platform page has opened (v4) =>
+2023-12-01 20:40:31.664263   => Current page title: Trading Platform | Capital.com
+2023-12-01 20:40:31.665268   Checking that the Trading platform LOGO is present on the page =>
+2023-12-01 20:40:34.235906   Checking that the Trading platform opened in LIVE mode =>
+2023-12-01 20:40:34.255084   => The page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url was opened in lIVE mode
+2023-12-01 20:40:34.255084   => Opened page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url for corresponding trading instrument 'NVIDIA Corp'
+2023-12-01 20:40:34.255084   Trading Platform for 'NVIDIA Corp' trading instrument is opened
+2023-12-01 20:40:34.441166   Trade instrument 'NVIDIA Corp' is on the Top Charts List
+2023-12-01 20:40:34.462959   Trade instrument 'NVIDIA Corp' is on the Top Charts List and selected
+2023-12-01 20:40:35.189084   Load page https://capital.com/fr/trading-facebook

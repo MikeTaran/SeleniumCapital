@@ -1,0 +1,63 @@
+
+2023-12-01 21:55:19.812431   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000022D7282D310> с именем TC_11.01.06_07
+{'width': 1201, 'height': 3135}
+
+2023-12-01 21:55:19.812431   browser = msedge
+
+2023-12-01 21:55:19.812431   worker_id = master
+
+2023-12-01 21:55:19.812431   Start TC_11.01.06_05
+
+2023-12-01 21:55:19.812431   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000022D7282D310>.None
+
+2023-12-01 21:55:19.812431   0. Arrange
+
+
+2023-12-01 21:55:19.812431   START PRECONDITIONS =>
+
+
+2023-12-01 21:55:19.812431   {'width': 1201, 'height': 3135}
+
+2023-12-01 21:55:19.812431   Set windows position at (320, 180) =>
+
+2023-12-01 21:55:19.926636   Set resolution 1280 * 720 =>
+
+2023-12-01 21:55:20.044264   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-01 21:55:25.047896   Капчи нет. Тестим дальше
+
+2023-12-01 21:55:25.047896   Prev. Role: Reg/NoAuth
+
+2023-12-01 21:55:25.047896   Current role: Reg/NoAuth
+
+2023-12-01 21:55:25.047896   Prev language: fr
+
+2023-12-01 21:55:25.047896   => Current language: fr
+
+2023-12-01 21:55:25.047896   Prev country: de
+
+2023-12-01 21:55:25.047896   => Current country: de
+
+2023-12-01 21:55:25.047896   => THE END PRECONDITIONS
+
+2023-12-01 21:55:25.047896   1. Arrange
+2023-12-01 21:55:26.424996   Load page https://capital.com/fr/investmate
+2023-12-01 21:55:26.424996   CREATE_ACCOUNT_BUTTON is visible? =>
+2023-12-01 21:55:26.799369   => CREATE_ACCOUNT_BUTTON is visible on the page!
+
+2023-12-01 21:55:26.799369   2. Act
+2023-12-01 21:55:26.799369   CREATE_ACCOUNT_BUTTON is present? =>
+2023-12-01 21:55:26.836330   => CREATE_ACCOUNT_BUTTON is present on the page!
+2023-12-01 21:55:26.836330   CREATE_ACCOUNT_BUTTON scroll =>
+2023-12-01 21:55:26.982205   => CREATE_ACCOUNT_BUTTON clicked!
+
+2023-12-01 21:55:26.982205   3. Assert_v0
+2023-12-01 21:55:26.982205   Start step Check that form [Sign up] opened
+2023-12-01 21:55:27.246712   'Sign up' form opened
+2023-12-01 21:55:27.246712   Assert SIGNUP_HEADER =>
+2023-12-01 21:55:27.267203   Assert SIGNUP_REF_LOGIN =>
+2023-12-01 21:55:27.289485   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-01 21:55:27.308338   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-01 21:55:27.308338   => 'Signup' form is checked
+2023-12-01 21:55:27.308338   Start step Close [Sign up] form =>
+2023-12-01 21:55:27.390088   => 'Signup' form closed
