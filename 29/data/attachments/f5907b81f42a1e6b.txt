@@ -1,0 +1,93 @@
+
+2023-12-02 11:21:43.239419   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000001736807A450> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-02 11:21:43.355940   worker_id = master
+
+2023-12-02 11:21:43.355940   0. Allure grouping
+
+
+2023-12-02 11:21:43.355940   START PRECONDITIONS =>
+
+
+2023-12-02 11:21:43.355940   {'width': 1280, 'height': 720}
+
+2023-12-02 11:21:43.405871   Set windows position at (320, 180) =>
+
+2023-12-02 11:21:43.835731   Set resolution 1280 * 720 =>
+
+2023-12-02 11:21:43.947591   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-02 11:21:48.982719   Капчи нет. Тестим дальше
+
+2023-12-02 11:21:48.982719   Prev. Role: Auth
+
+2023-12-02 11:21:48.982719   Current role: Auth
+
+2023-12-02 11:21:48.982719   Prev language: it
+
+2023-12-02 11:21:48.982719   => Current language: it
+
+2023-12-02 11:21:48.982964   Prev country: ae
+
+2023-12-02 11:21:48.982992   => Current country: ae
+
+2023-12-02 11:21:48.982992   => THE END PRECONDITIONS
+
+2023-12-02 11:21:48.982992   Clear Top Chart list =>
+2023-12-02 11:21:50.546491   Load page https://capital.com/trading/platform/charting/
+
+2023-12-02 11:21:58.630810   1. Arrange_v4
+2023-12-02 11:21:59.622558   Load page https://capital.com/it/trade-google
+2023-12-02 11:21:59.622558   MOST_TRADED is visible? =>
+2023-12-02 11:21:59.739377   => MOST_TRADED is visible on the page!
+2023-12-02 11:21:59.739377   => Found 5 elements in block MOST_TRADED
+
+2023-12-02 11:21:59.739377   Testing Most traded random element #1
+
+2023-12-02 11:21:59.739377   2. Act_v4
+2023-12-02 11:21:59.739377   MOST_TRADED delete js-mostTraded class =>
+2023-12-02 11:22:00.364956   MOST_TRADED scroll =>
+2023-12-02 11:22:00.375165   MOST_TRADED click for 'Amazon.com Inc' trading instrument =>
+2023-12-02 11:22:00.923293   => MOST_TRADED clicked!
+
+2023-12-02 11:22:00.923293   3. Assert_v4
+2023-12-02 11:22:00.923293   Checking that the trading platform page has opened (v4) =>
+2023-12-02 11:22:01.224348   => Current page title: Trading Platform | Capital.com
+2023-12-02 11:22:01.224348   Checking that the Trading platform LOGO is present on the page =>
+2023-12-02 11:22:03.227651   Checking that the Trading platform opened in LIVE mode =>
+2023-12-02 11:22:03.368023   => The page with https://capital.com/trading/platform/spotlight/1361805280629956?side=buy url was opened in lIVE mode
+2023-12-02 11:22:03.368023   => Opened page with https://capital.com/trading/platform/spotlight/1361805280629956?side=buy url for corresponding trading instrument 'Amazon.com Inc'
+2023-12-02 11:22:03.368023   Trading Platform for 'Amazon.com Inc' trading instrument is opened
+2023-12-02 11:22:03.702127   Trade instrument 'Amazon.com Inc' is on the Top Charts List
+2023-12-02 11:22:03.809638   Trade instrument 'Amazon.com Inc' is on the Top Charts List and selected
+2023-12-02 11:22:04.694959   Load page https://capital.com/it/trade-google
+
+2023-12-02 11:22:04.694959   Clear Top Chart list =>
+2023-12-02 11:22:06.341673   Load page https://capital.com/trading/platform/charting/
+
+2023-12-02 11:22:13.563141   1. Arrange_v4
+2023-12-02 11:22:14.504684   Load page https://capital.com/it/trade-google
+2023-12-02 11:22:14.504684   MOST_TRADED is visible? =>
+2023-12-02 11:22:14.616543   => MOST_TRADED is visible on the page!
+2023-12-02 11:22:14.616543   => Found 5 elements in block MOST_TRADED
+
+2023-12-02 11:22:14.616543   Testing Most traded random element #2
+
+2023-12-02 11:22:14.616543   2. Act_v4
+2023-12-02 11:22:14.617549   MOST_TRADED delete js-mostTraded class =>
+2023-12-02 11:22:15.311681   MOST_TRADED scroll =>
+2023-12-02 11:22:15.326816   MOST_TRADED click for 'Coinbase Global Inc' trading instrument =>
+2023-12-02 11:22:15.921682   => MOST_TRADED clicked!
+
+2023-12-02 11:22:15.922679   3. Assert_v4
+2023-12-02 11:22:15.922679   Checking that the trading platform page has opened (v4) =>
+2023-12-02 11:22:16.147764   => Current page title: Trading Platform | Capital.com
+2023-12-02 11:22:16.147764   Checking that the Trading platform LOGO is present on the page =>
+2023-12-02 11:22:18.124392   Checking that the Trading platform opened in LIVE mode =>
+2023-12-02 11:22:18.313315   => The page with https://capital.com/trading/platform/spotlight/3644116541985988?side=buy url was opened in lIVE mode
+2023-12-02 11:22:18.313315   => Opened page with https://capital.com/trading/platform/spotlight/3644116541985988?side=buy url for corresponding trading instrument 'Coinbase Global Inc'
+2023-12-02 11:22:18.313315   Trading Platform for 'Coinbase Global Inc' trading instrument is opened
+2023-12-02 11:22:18.342049   Trade instrument 'Coinbase Global Inc' is on the Top Charts List
+2023-12-02 11:22:18.474670   Trade instrument 'Coinbase Global Inc' is on the Top Charts List and selected
+2023-12-02 11:22:19.455568   Load page https://capital.com/it/trade-google
