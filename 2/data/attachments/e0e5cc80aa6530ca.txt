@@ -1,0 +1,120 @@
+{'width': 1004, 'height': 708}
+autouse fixture edge
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - NoReg
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+
+2023-12-02 12:53:54.607995   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x000002225140EB10> с именем TC_11.01.06_01
+{'width': 1004, 'height': 708}
+
+2023-12-02 12:53:54.611495   browser = msedge
+
+2023-12-02 12:53:54.611495   worker_id = master
+
+2023-12-02 12:53:54.611495   Start TC_11.01.06_01
+
+2023-12-02 12:53:54.611495   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x000002225140EB10>.None
+
+2023-12-02 12:53:54.611495   0. Arrange
+
+
+2023-12-02 12:53:54.611495   START PRECONDITIONS =>
+
+2023-12-02 12:53:59.550743   Load page https://capital.com
+
+2023-12-02 12:53:59.550743   {'width': 1004, 'height': 708}
+
+2023-12-02 12:53:59.572180   Set windows position at (320, 180) =>
+
+2023-12-02 12:53:59.677923   Set resolution 1280 * 720 =>
+
+2023-12-02 12:53:59.785620   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-02 12:54:04.811645   Капчи нет. Тестим дальше
+
+2023-12-02 12:54:04.811645   Prev. Role: ?
+
+2023-12-02 12:54:04.811645   Run preconditions: set "NoReg" Role =>
+2023-12-02 12:54:05.212006   Load page https://capital.com
+
+2023-12-02 12:54:06.159977   => All cookies are deleted
+2023-12-02 12:54:06.531849   Load page https://capital.com
+
+2023-12-02 12:54:06.531849   Click button [Accept all cookies]
+2023-12-02 12:54:06.531849   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-02 12:54:10.583212   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-02 12:54:10.594609   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-02 12:54:10.594609   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-02 12:54:10.613050   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-02 12:54:11.663002   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-02 12:54:11.663002   => Accepted All Cookies
+
+2023-12-02 12:54:11.663002   Current role: NoReg
+
+2023-12-02 12:54:11.663002   Prev language: ?
+
+2023-12-02 12:54:11.663002   Run preconditions: set "it" language =>
+
+
+2023-12-02 12:54:11.674113   => Language and Country menu is present
+
+
+2023-12-02 12:54:11.691308   => Language and Country menu is visible
+
+
+2023-12-02 12:54:13.973144   => Focus is moved on Language and Country menu 
+
+2023-12-02 12:54:15.600843   => Current language: it
+
+2023-12-02 12:54:15.600843   Prev country: ?
+
+2023-12-02 12:54:15.600843   Run preconditions: set "gb" country =>
+
+
+2023-12-02 12:54:15.627922   => Language and Country menu is present
+
+
+2023-12-02 12:54:15.645083   => Language and Country menu is visible
+
+
+2023-12-02 12:54:17.434280   => Focus is moved on Language and Country menu 
+
+2023-12-02 12:54:20.761225   => Current country: gb
+
+2023-12-02 12:54:20.761225   => THE END PRECONDITIONS
+2023-12-02 12:54:21.007073   => Education menu is present
+2023-12-02 12:54:21.028325   => Education menu is visible
+2023-12-02 12:54:22.812580   => Education menu focus moved
+
+
+2023-12-02 12:54:24.017321   => 'Investmate App' menu click
+
+2023-12-02 12:54:24.077314   1. Arrange
+
+2023-12-02 12:54:24.077314   Testing the qr code: INVESTMATE
+2023-12-02 12:54:24.385317   Start Checking that form [Sign up] popped up on the page =>
+2023-12-02 12:54:29.901090   '[Sign up]' form was not popped up
+2023-12-02 12:54:29.901090   QR_CODE is located in the DOM? =>
+2023-12-02 12:54:29.918783   => QR_CODE_INVESTMATE is located in the DOM
+2023-12-02 12:54:29.918783   QR_CODE_LINK is visible on the page? =>
+2023-12-02 12:54:30.450990   => QR_CODE_LINK INVESTMATE is on the page!
+
+2023-12-02 12:54:30.450990   2. Act
+2023-12-02 12:54:30.450990   Determining the QR_CODE_TITLE link
+2023-12-02 12:54:30.462004   QR_CODE_TITLE link: https://investmate.onelink.me/G4om?pid=website&cp_device_id=w3m4sl3f-hn9s-sil3-sa0o-1to60y7ur4bb                                                                                                                            
+QR_CODE_LINK=  
+QR_CODE_LINK=  []
+QR_CODE_LINK=  ('https://investmate.onelink.me/G4om?pid=website&cp_device_id=w3m4sl3f-hn9s-sil3-sa0o-1to60y7ur4bb                                                                                                                            ',)
+2023-12-02 12:54:37.164943   Load page https://investmate.onelink.me/G4om?pid=website&cp_device_id=w3m4sl3f-hn9s-sil3-sa0o-1to60y7ur4bb                                                                                                                            
+
+2023-12-02 12:54:37.164943   3. Assert_v0
+2023-12-02 12:54:37.165939   Checking that the App Store page has opened
+2023-12-02 12:54:37.205874   => Current page title: Investmate — learn to trade on the App Store
+2023-12-02 12:54:37.205874   Checking that the App Store app title
+2023-12-02 12:54:37.220949   Checking that the App Store specifies provider
+2023-12-02 12:54:37.741977   Load page https://capital.com/it/investmate
