@@ -1,0 +1,63 @@
+
+2023-12-02 15:10:22.491072   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x000001E96FA1EA50> с именем TC_11.02.02.00_09
+{'width': 1280, 'height': 720}
+
+2023-12-02 15:10:22.544461   worker_id = master
+
+2023-12-02 15:10:22.544461   0. Allure grouping
+
+
+2023-12-02 15:10:22.545462   START PRECONDITIONS =>
+
+
+2023-12-02 15:10:22.545462   {'width': 1280, 'height': 720}
+
+2023-12-02 15:10:22.664856   Set windows position at (320, 180) =>
+
+2023-12-02 15:10:22.797693   Set resolution 1280 * 720 =>
+
+2023-12-02 15:10:22.908638   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-02 15:10:27.960773   Капчи нет. Тестим дальше
+
+2023-12-02 15:10:27.960773   Prev. Role: Auth
+
+2023-12-02 15:10:27.960773   Current role: Auth
+
+2023-12-02 15:10:27.960773   Prev language: it
+
+2023-12-02 15:10:27.960773   => Current language: it
+
+2023-12-02 15:10:27.960773   Prev country: au
+
+2023-12-02 15:10:27.960773   => Current country: au
+
+2023-12-02 15:10:27.960773   => THE END PRECONDITIONS
+
+2023-12-02 15:10:27.960773   0. Arrange_0
+2023-12-02 15:10:28.806592   Load page https://capital.com/it
+2023-12-02 15:10:28.869013   => Education menu is present
+2023-12-02 15:10:29.197534   => Education menu is visible
+2023-12-02 15:10:30.978833   => Education menu focus moved
+
+
+2023-12-02 15:10:32.553962   => Shares trading sub-menu clicked
+
+2023-12-02 15:10:32.615167   1. Arrange
+2023-12-02 15:10:32.836886   BUTTON_ON_HOR_BANNER is visible? =>
+2023-12-02 15:10:32.877488   => BUTTON_ON_HOR_BANNER is visible on the page!
+2023-12-02 15:10:32.877488   Start Checking that form [Sign up] popped up on the page =>
+2023-12-02 15:10:38.383283   '[Sign up]' form was not popped up
+
+2023-12-02 15:10:38.383283   2. Act
+2023-12-02 15:10:38.383283   BUTTON_ON_HOR_BANNER is present? =>
+2023-12-02 15:10:38.392327   => BUTTON_ON_HOR_BANNER is present on the page!
+2023-12-02 15:10:38.392327   BUTTON_ON_HOR_BANNER scroll =>
+2023-12-02 15:10:44.339689   => BUTTON_ON_HOR_BANNER clicked!
+2023-12-02 15:10:44.339689   For Horizontal banner [type-id=252] Trading platform should be open in Demo Mode =>
+
+2023-12-02 15:10:44.339689   3. Assert_v4
+2023-12-02 15:10:44.339689   Checking that the trading platform page has opened (v4) =>
+2023-12-02 15:10:48.692909   => Current page title: Trading Platform | Capital.com
+2023-12-02 15:10:48.693918   Checking that the Trading platform LOGO is present on the page =>
+2023-12-02 15:10:50.094902   Checking that the Trading platform opened in DEMO mode =>
