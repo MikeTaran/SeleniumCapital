@@ -1,0 +1,65 @@
+
+2023-12-03 20:06:58.579984   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000025C0E9BB7D0> с именем TC_11.02.02_02
+{'width': 1280, 'height': 720}
+
+2023-12-03 20:06:58.583561   worker_id = master
+
+2023-12-03 20:06:58.583561   0. Allure grouping
+
+
+2023-12-03 20:06:58.583561   START PRECONDITIONS =>
+
+
+2023-12-03 20:06:58.583561   {'width': 1280, 'height': 720}
+
+2023-12-03 20:06:58.585564   Set windows position at (320, 180) =>
+
+2023-12-03 20:06:58.689921   Set resolution 1280 * 720 =>
+
+2023-12-03 20:06:58.793616   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-03 20:07:03.811462   Капчи нет. Тестим дальше
+
+2023-12-03 20:07:03.811462   Prev. Role: NoReg
+
+2023-12-03 20:07:03.811462   Current role: NoReg
+
+2023-12-03 20:07:03.811462   Prev language: ar
+
+2023-12-03 20:07:03.811462   => Current language: ar
+
+2023-12-03 20:07:03.811462   Prev country: gb
+
+2023-12-03 20:07:03.811462   => Current country: gb
+
+2023-12-03 20:07:03.811462   => THE END PRECONDITIONS
+
+2023-12-03 20:07:03.811462   0. Arrange_0
+2023-12-03 20:07:04.459141   Load page https://capital.com/ar
+2023-12-03 20:07:04.540874   => Education menu is present
+2023-12-03 20:07:04.787383   => Education menu is visible
+2023-12-03 20:07:06.571971   => Education menu focus moved
+
+
+2023-12-03 20:07:07.926910   => Shares trading sub-menu clicked
+
+2023-12-03 20:07:08.238226   1. Arrange_v0
+2023-12-03 20:07:08.242223   BUTTON_TRY_DEMO is visible? =>
+2023-12-03 20:07:08.267026   => BUTTON_TRY_DEMO is visible on the page!
+
+2023-12-03 20:07:08.267026   2. Act_v0
+2023-12-03 20:07:08.267026   BUTTON_TRY_DEMO is present? =>
+2023-12-03 20:07:08.277027   => BUTTON_TRY_DEMO is present on the page!
+2023-12-03 20:07:08.277027   BUTTON_TRY_DEMO scroll =>
+2023-12-03 20:07:08.427574   => BUTTON_TRY_DEMO clicked!
+
+2023-12-03 20:07:08.427574   3. Assert_v0
+2023-12-03 20:07:08.427574   Start step Check that form [Sign up] opened
+2023-12-03 20:07:08.610493   'Sign up' form opened
+2023-12-03 20:07:08.610493   Assert SIGNUP_HEADER =>
+2023-12-03 20:07:08.626933   Assert SIGNUP_REF_LOGIN =>
+2023-12-03 20:07:08.644271   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-03 20:07:08.668607   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-03 20:07:08.668607   => 'Signup' form is checked
+2023-12-03 20:07:08.668607   Start step Close [Sign up] form =>
+2023-12-03 20:07:08.787315   => 'Signup' form closed
