@@ -1,0 +1,61 @@
+
+2023-12-03 19:46:45.309460   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x00000213CBA36CD0> с именем TC_11.02.02.00_08
+{'width': 1280, 'height': 720}
+
+2023-12-03 19:46:45.311450   worker_id = master
+
+2023-12-03 19:46:45.311450   0. Allure grouping
+
+
+2023-12-03 19:46:45.311450   START PRECONDITIONS =>
+
+
+2023-12-03 19:46:45.311450   {'width': 1280, 'height': 720}
+
+2023-12-03 19:46:45.313461   Set windows position at (320, 180) =>
+
+2023-12-03 19:46:45.417639   Set resolution 1280 * 720 =>
+
+2023-12-03 19:46:45.523142   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-03 19:46:50.568462   Капчи нет. Тестим дальше
+
+2023-12-03 19:46:50.568462   Prev. Role: Reg/NoAuth
+
+2023-12-03 19:46:50.568462   Current role: Reg/NoAuth
+
+2023-12-03 19:46:50.568462   Prev language: ar
+
+2023-12-03 19:46:50.568462   => Current language: ar
+
+2023-12-03 19:46:50.568462   Prev country: au
+
+2023-12-03 19:46:50.568462   => Current country: au
+
+2023-12-03 19:46:50.568462   => THE END PRECONDITIONS
+
+2023-12-03 19:46:50.568462   0. Arrange_0
+2023-12-03 19:46:51.235603   Load page https://capital.com/ar
+2023-12-03 19:46:51.540737   => Education menu is present
+2023-12-03 19:46:51.691344   => Education menu is visible
+2023-12-03 19:46:53.483335   => Education menu focus moved
+
+
+2023-12-03 19:46:55.064115   => Shares trading sub-menu clicked
+
+2023-12-03 19:46:55.125815   1. Arrange_v0
+2023-12-03 19:46:55.379776   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2023-12-03 19:46:55.391336   2. Act_v0
+2023-12-03 19:46:55.734502   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2023-12-03 19:46:55.734847   3. Assert_v0
+2023-12-03 19:46:55.735161   Start step Check that form [Sign up] opened
+2023-12-03 19:46:55.996348   'Sign up' form opened
+2023-12-03 19:46:55.996348   Assert SIGNUP_HEADER =>
+2023-12-03 19:46:56.023053   Assert SIGNUP_REF_LOGIN =>
+2023-12-03 19:46:56.043886   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-03 19:46:56.062946   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-03 19:46:56.062946   => 'Signup' form is checked
+2023-12-03 19:46:56.062946   Start step Close [Sign up] form =>
+2023-12-03 19:46:56.215650   => 'Signup' form closed
