@@ -1,0 +1,72 @@
+
+2023-12-04 10:56:00.028161   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x000002A3E974C7D0> с именем TC_11.01.06_06
+{'width': 1280, 'height': 720}
+
+2023-12-04 10:56:00.030154   browser = msedge
+
+2023-12-04 10:56:00.030154   worker_id = master
+
+2023-12-04 10:56:00.030154   Start TC_11.01.06_04
+
+2023-12-04 10:56:00.030154   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x000002A3E974C7D0>.None
+
+2023-12-04 10:56:00.030154   0. Arrange
+
+
+2023-12-04 10:56:00.030154   START PRECONDITIONS =>
+
+
+2023-12-04 10:56:00.030154   {'width': 1280, 'height': 720}
+
+2023-12-04 10:56:00.033638   Set windows position at (320, 180) =>
+
+2023-12-04 10:56:00.143705   Set resolution 1280 * 720 =>
+
+2023-12-04 10:56:00.301476   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 10:56:05.358965   Капчи нет. Тестим дальше
+
+2023-12-04 10:56:05.358965   Prev. Role: NoReg
+
+2023-12-04 10:56:05.358965   Current role: NoReg
+
+2023-12-04 10:56:05.358965   Prev language: es
+
+2023-12-04 10:56:05.358965   => Current language: es
+
+2023-12-04 10:56:05.358965   Prev country: ae
+
+2023-12-04 10:56:05.358965   => Current country: ae
+
+2023-12-04 10:56:05.358965   => THE END PRECONDITIONS
+
+2023-12-04 10:56:05.358965   1. Arrange
+
+2023-12-04 10:56:05.358965   Testing the qr code: CAPITAL
+2023-12-04 10:56:06.014607   Load page https://capital.com/es/investmate
+2023-12-04 10:56:06.015604   Start Checking that form [Sign up] popped up on the page =>
+2023-12-04 10:56:11.557806   '[Sign up]' form was not popped up
+2023-12-04 10:56:11.557806   QR_CODE is located in the DOM? =>
+2023-12-04 10:56:11.579942   => QR_CODE_CAPITAL is located in the DOM
+2023-12-04 10:56:11.579942   QR_CODE_LINK is visible on the page? =>
+2023-12-04 10:56:11.601885   => QR_CODE_LINK CAPITAL is on the page!
+
+2023-12-04 10:56:11.602904   2. Act
+2023-12-04 10:56:11.602904   Determining the QR_CODE_TITLE link
+2023-12-04 10:56:11.612659   QR_CODE_TITLE link: https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=he1uc4k2-vwc1-ba02-ibv4-ei63555dm7o3                                                                                                                       
+2023-12-04 10:56:11.684204   The QR-code decryption with CV2-method =>
+2023-12-04 10:56:11.700698   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-04 10:56:11.700698   The QR-code decryption with PYZBAR-method =>
+2023-12-04 10:56:11.703698   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-04 10:56:11.746099   The QR-code decryption with QREADER-method =>
+2023-12-04 10:56:13.778789   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-04 10:56:13.794413   QR_CODE_LINK_QREADER=  https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=he1uc4k2-vwc1-ba02-ibv4-ei63555dm7o3                                                                                                                       
+2023-12-04 10:56:13.877474   Check QR-code title link equal QR-code image link =>
+2023-12-04 10:56:15.192447   Load page https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=he1uc4k2-vwc1-ba02-ibv4-ei63555dm7o3                                                                                                                       
+
+2023-12-04 10:56:15.193445   3. Assert_v0
+2023-12-04 10:56:15.193445   Checking that the App Store page has opened
+2023-12-04 10:56:15.326672   => Current page title: Capital.com: Trading & Finance on the App Store
+2023-12-04 10:56:15.326672   Checking that the App Store app title
+2023-12-04 10:56:15.345894   Checking that the App Store specifies provider
+2023-12-04 10:56:16.113427   Load page https://capital.com/es/investmate
