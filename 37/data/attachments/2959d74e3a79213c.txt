@@ -1,0 +1,66 @@
+
+2023-12-04 17:12:54.923563   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x000002714E8F5110> с именем TC_11.02.02_02
+{'width': 1216, 'height': 17337}
+
+2023-12-04 17:12:54.926559   worker_id = master
+
+2023-12-04 17:12:54.926559   0. Allure grouping
+
+
+2023-12-04 17:12:54.926559   START PRECONDITIONS =>
+
+
+2023-12-04 17:12:54.926559   {'width': 1216, 'height': 17337}
+
+2023-12-04 17:12:54.928561   Set windows position at (320, 180) =>
+
+2023-12-04 17:12:55.033080   Set resolution 1280 * 720 =>
+
+2023-12-04 17:12:55.142255   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 17:13:00.154269   Капчи нет. Тестим дальше
+
+2023-12-04 17:13:00.154269   Prev. Role: Reg/NoAuth
+
+2023-12-04 17:13:00.154269   Current role: Reg/NoAuth
+
+2023-12-04 17:13:00.154269   Prev language: es
+
+2023-12-04 17:13:00.154269   => Current language: es
+
+2023-12-04 17:13:00.154269   Prev country: de
+
+2023-12-04 17:13:00.154269   => Current country: de
+
+2023-12-04 17:13:00.154269   => THE END PRECONDITIONS
+
+2023-12-04 17:13:00.154269   0. Arrange_0
+2023-12-04 17:13:00.864852   Load page https://capital.com/es
+2023-12-04 17:13:00.952805   => Education menu is present
+2023-12-04 17:13:01.246715   => Education menu is visible
+2023-12-04 17:13:03.037764   => Education menu focus moved
+
+
+2023-12-04 17:13:04.596212   => Shares trading sub-menu clicked
+
+2023-12-04 17:13:04.663373   1. Arrange_v0
+2023-12-04 17:13:04.904392   BUTTON_TRY_DEMO is visible? =>
+2023-12-04 17:13:04.926468   => BUTTON_TRY_DEMO is visible on the page!
+
+2023-12-04 17:13:04.926468   2. Act_v0
+2023-12-04 17:13:04.926468   BUTTON_TRY_DEMO is present? =>
+2023-12-04 17:13:04.938095   => BUTTON_TRY_DEMO is present on the page!
+2023-12-04 17:13:04.938095   BUTTON_TRY_DEMO scroll =>
+2023-12-04 17:13:05.027346   => BUTTON_TRY_DEMO clicked!
+
+2023-12-04 17:13:05.027346   3. Assert_v0
+2023-12-04 17:13:10.578908   'Login' form not opened
+2023-12-04 17:13:10.600110   'Login' page not opened
+2023-12-04 17:13:13.686152   'Login' form on trading platform not opened
+2023-12-04 17:13:13.687161   Start step Check that form [Sign up] opened
+2023-12-04 17:13:13.704605   'Sign up' form opened
+2023-12-04 17:13:13.704605   Assert SIGNUP_HEADER =>
+2023-12-04 17:13:13.717862   Assert SIGNUP_REF_LOGIN =>
+2023-12-04 17:13:13.730863   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-04 17:13:13.745201   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-04 17:13:13.745201   => 'Signup' form is checked
