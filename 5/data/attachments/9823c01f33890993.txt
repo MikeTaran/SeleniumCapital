@@ -1,0 +1,85 @@
+Current country of trading - de
+
+2023-12-04 11:34:14.135777   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x00000276FEF472D0> с именем TC_11.01.06_01
+{'width': 1280, 'height': 720}
+
+2023-12-04 11:34:14.157391   browser = msedge
+
+2023-12-04 11:34:14.157391   worker_id = master
+
+2023-12-04 11:34:14.157391   Start TC_11.01.06_01
+
+2023-12-04 11:34:14.157391   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x00000276FEF472D0>.None
+
+2023-12-04 11:34:14.157391   0. Arrange
+
+
+2023-12-04 11:34:14.157391   START PRECONDITIONS =>
+
+
+2023-12-04 11:34:14.157391   {'width': 1280, 'height': 720}
+
+2023-12-04 11:34:14.289381   Set windows position at (320, 180) =>
+
+2023-12-04 11:34:14.411946   Set resolution 1280 * 720 =>
+
+2023-12-04 11:34:14.517951   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 11:34:19.525322   Капчи нет. Тестим дальше
+
+2023-12-04 11:34:19.525322   Prev. Role: Auth
+
+2023-12-04 11:34:19.525322   Current role: Auth
+
+2023-12-04 11:34:19.525322   Prev language: es
+
+2023-12-04 11:34:19.525322   => Current language: es
+
+2023-12-04 11:34:19.525322   Prev country: gb
+
+2023-12-04 11:34:19.525322   Run preconditions: set "de" country =>
+
+
+2023-12-04 11:34:19.525322   => Language and Country menu is present
+
+
+2023-12-04 11:34:19.540925   => Language and Country menu is visible
+
+
+2023-12-04 11:34:21.335685   => Focus is moved on Language and Country menu 
+
+2023-12-04 11:34:24.847426   => Current country: de
+
+2023-12-04 11:34:24.847426   => THE END PRECONDITIONS
+
+2023-12-04 11:34:24.847426   1. Arrange
+
+2023-12-04 11:34:24.847426   Testing the qr code: INVESTMATE
+2023-12-04 11:34:24.923305   Start Checking that form [Sign up] popped up on the page =>
+2023-12-04 11:34:30.435842   '[Sign up]' form was not popped up
+2023-12-04 11:34:30.435842   QR_CODE is located in the DOM? =>
+2023-12-04 11:34:30.452921   => QR_CODE_INVESTMATE is located in the DOM
+2023-12-04 11:34:30.452921   QR_CODE_LINK is visible on the page? =>
+2023-12-04 11:34:30.985115   => QR_CODE_LINK INVESTMATE is on the page!
+
+2023-12-04 11:34:30.986111   2. Act
+2023-12-04 11:34:30.986111   Determining the QR_CODE_TITLE link
+2023-12-04 11:34:30.996161   QR_CODE_TITLE link: https://investmate.onelink.me/G4om?pid=website&cp_device_id=dprcnj2i-em2o-7s0e-bd1l-06qof483khex                                                                                                                            
+2023-12-04 11:34:30.996161   Start Checking that form [Sign up] popped up on the page =>
+2023-12-04 11:34:36.551720   '[Sign up]' form was not popped up
+2023-12-04 11:34:36.632328   Start QR-code decryption with CV2-method =>
+2023-12-04 11:34:36.649261   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-04 11:34:36.649261   Start QR-code decryption with PYZBAR-method =>
+2023-12-04 11:34:36.652256   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-04 11:34:36.692976   Start QR-code decryption with QREADER-method =>
+2023-12-04 11:34:38.819094   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-04 11:34:38.819094   QR_CODE_LINK_QREADER=  https://investmate.onelink.me/G4om?pid=website&cp_device_id=dprcnj2i-em2o-7s0e-bd1l-06qof483khex                                                                                                                            
+2023-12-04 11:34:38.892366   Check QR-code title link equal QR-code image link =>
+2023-12-04 11:34:40.529040   Load page https://investmate.onelink.me/G4om?pid=website&cp_device_id=dprcnj2i-em2o-7s0e-bd1l-06qof483khex                                                                                                                            
+
+2023-12-04 11:34:40.529040   3. Assert_v0
+2023-12-04 11:34:40.529040   Checking that the App Store page has opened
+2023-12-04 11:34:40.687260   => Current page title: Investmate — learn to trade on the App Store
+2023-12-04 11:34:40.687260   Checking that the App Store app title
+2023-12-04 11:34:40.708405   Checking that the App Store specifies provider
+2023-12-04 11:34:41.504205   Load page https://capital.com/es/investmate
