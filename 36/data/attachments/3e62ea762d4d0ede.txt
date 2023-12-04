@@ -1,0 +1,55 @@
+
+2023-12-04 16:00:15.112102   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000168ADB64B10> с именем TC_11.02.02.01_10
+{'width': 1216, 'height': 582}
+
+2023-12-04 16:00:15.120066   worker_id = master
+
+2023-12-04 16:00:15.120066   0. Allure grouping
+
+
+2023-12-04 16:00:15.120066   START PRECONDITIONS =>
+
+
+2023-12-04 16:00:15.120066   {'width': 1216, 'height': 582}
+
+2023-12-04 16:00:15.122069   Set windows position at (320, 180) =>
+
+2023-12-04 16:00:15.228588   Set resolution 1280 * 720 =>
+
+2023-12-04 16:00:15.351082   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 16:00:20.409756   Капчи нет. Тестим дальше
+
+2023-12-04 16:00:20.409756   Prev. Role: Auth
+
+2023-12-04 16:00:20.409756   Current role: Auth
+
+2023-12-04 16:00:20.409756   Prev language: es
+
+2023-12-04 16:00:20.409756   => Current language: es
+
+2023-12-04 16:00:20.409756   Prev country: ae
+
+2023-12-04 16:00:20.409756   => Current country: ae
+
+2023-12-04 16:00:20.409756   => THE END PRECONDITIONS
+
+2023-12-04 16:00:20.409756   1. Arrange
+2023-12-04 16:00:21.661318   Load page https://capital.com/es/trade-facebook
+2023-12-04 16:00:21.661318   BUTTON_ON_VER_BANNER is visible? =>
+2023-12-04 16:00:22.899585   => BUTTON_ON_VER_BANNER is visible on the page!
+2023-12-04 16:00:22.899585   Start Checking that form [Sign up] popped up on the page =>
+2023-12-04 16:00:28.486829   '[Sign up]' form was not popped up
+
+2023-12-04 16:00:28.486829   2. Act
+2023-12-04 16:00:28.486829   BUTTON_ON_VER_BANNER is present? =>
+2023-12-04 16:00:28.505668   => BUTTON_ON_VER_BANNER is present on the page!
+2023-12-04 16:00:28.505668   BUTTON_ON_VER_BANNER scroll =>
+2023-12-04 16:00:52.129686   => BUTTON_ON_VER_BANNER clicked!
+2023-12-04 16:00:52.129686   For Vertical banner [type-id=198] Trading platform should be open in Live Mode =>
+
+2023-12-04 16:00:52.129686   3. Assert_v4
+2023-12-04 16:00:52.129686   Checking that the trading platform page has opened (v4) =>
+2023-12-04 16:00:57.245932   => Current page title: Trading Platform | Capital.com
+2023-12-04 16:00:57.246941   Checking that the Trading platform LOGO is present on the page =>
+2023-12-04 16:00:59.347473   Checking that the Trading platform opened in LIVE mode =>

@@ -1,0 +1,58 @@
+
+2023-12-04 16:35:33.426525   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000168ADACFD50> с именем TC_11.02.02.01_06
+{'width': 1216, 'height': 582}
+
+2023-12-04 16:35:33.428528   worker_id = master
+
+2023-12-04 16:35:33.428528   0. Allure grouping
+
+
+2023-12-04 16:35:33.428528   START PRECONDITIONS =>
+
+
+2023-12-04 16:35:33.428528   {'width': 1216, 'height': 582}
+
+2023-12-04 16:35:33.430526   Set windows position at (320, 180) =>
+
+2023-12-04 16:35:33.534814   Set resolution 1280 * 720 =>
+
+2023-12-04 16:35:33.643700   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 16:35:38.665683   Капчи нет. Тестим дальше
+
+2023-12-04 16:35:38.665683   Prev. Role: Auth
+
+2023-12-04 16:35:38.665683   Current role: Auth
+
+2023-12-04 16:35:38.665683   Prev language: es
+
+2023-12-04 16:35:38.665683   => Current language: es
+
+2023-12-04 16:35:38.665683   Prev country: au
+
+2023-12-04 16:35:38.665683   => Current country: au
+
+2023-12-04 16:35:38.665683   => THE END PRECONDITIONS
+
+2023-12-04 16:35:38.665683   Clear Top Chart list =>
+2023-12-04 16:35:40.591842   Load page https://capital.com/trading/platform/charting/
+
+2023-12-04 16:35:50.647813   1. Arrange_v4
+2023-12-04 16:35:51.459038   Load page https://capital.com/es/trade-facebook
+2023-12-04 16:35:51.460040   MOST_TRADED is visible? =>
+2023-12-04 16:35:51.609633   => MOST_TRADED is visible on the page!
+2023-12-04 16:35:51.609633   => Found 5 elements in block MOST_TRADED
+
+2023-12-04 16:35:51.609633   Testing Most traded random element #1
+
+2023-12-04 16:35:51.609633   2. Act_v4
+2023-12-04 16:35:51.609633   MOST_TRADED delete js-mostTraded class =>
+2023-12-04 16:35:51.949748   MOST_TRADED scroll =>
+2023-12-04 16:35:51.960632   MOST_TRADED click for 'AMC Entertainment Holdings Inc' trading instrument =>
+2023-12-04 16:35:52.480854   => MOST_TRADED clicked!
+
+2023-12-04 16:35:52.481857   3. Assert_v4
+2023-12-04 16:35:52.481857   Checking that the trading platform page has opened (v4) =>
+2023-12-04 16:35:52.535374   => Current page title: Trading Platform | Capital.com
+2023-12-04 16:35:52.535374   Checking that the Trading platform LOGO is present on the page =>
+2023-12-04 16:35:54.089222   Checking that the Trading platform opened in LIVE mode =>

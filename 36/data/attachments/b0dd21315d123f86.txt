@@ -1,0 +1,53 @@
+
+2023-12-04 15:06:25.615676   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000168ADA33D50> с именем TC_11.02.02.01_01
+{'width': 1216, 'height': 582}
+
+2023-12-04 15:06:25.617679   worker_id = master
+
+2023-12-04 15:06:25.617679   0. Allure grouping
+
+
+2023-12-04 15:06:25.617679   START PRECONDITIONS =>
+
+
+2023-12-04 15:06:25.617679   {'width': 1216, 'height': 582}
+
+2023-12-04 15:06:25.619854   Set windows position at (320, 180) =>
+
+2023-12-04 15:06:25.723185   Set resolution 1280 * 720 =>
+
+2023-12-04 15:06:25.832032   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 15:06:30.860211   Капчи нет. Тестим дальше
+
+2023-12-04 15:06:30.860211   Prev. Role: Auth
+
+2023-12-04 15:06:30.860211   Current role: Auth
+
+2023-12-04 15:06:30.860211   Prev language: es
+
+2023-12-04 15:06:30.860211   => Current language: es
+
+2023-12-04 15:06:30.860211   Prev country: gb
+
+2023-12-04 15:06:30.860211   => Current country: gb
+
+2023-12-04 15:06:30.860211   => THE END PRECONDITIONS
+
+2023-12-04 15:06:30.860211   1. Arrange_v0
+2023-12-04 15:06:32.027337   Load page https://capital.com/es/trade-facebook
+2023-12-04 15:06:32.118119   BUTTON_START_TRADING scroll =>
+2023-12-04 15:06:32.511999   BUTTON_START_TRADING is visible? =>
+2023-12-04 15:06:32.626453   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-04 15:06:32.626453   2. Act_v0
+2023-12-04 15:06:32.626453   Start Click button [Start Trading] =>
+2023-12-04 15:06:32.634453   BUTTON_START_TRADING is clickable? =>
+2023-12-04 15:06:32.686416   BUTTON_START_TRADING click =>
+2023-12-04 15:06:33.095520   => BUTTON_START_TRADING clicked
+
+2023-12-04 15:06:33.095520   3. Assert_v4
+2023-12-04 15:06:33.095520   Checking that the trading platform page has opened (v4) =>
+2023-12-04 15:06:33.964617   => Current page title: Trading Platform | Capital.com
+2023-12-04 15:06:33.964617   Checking that the Trading platform LOGO is present on the page =>
+2023-12-04 15:06:34.953853   Checking that the Trading platform opened in LIVE mode =>

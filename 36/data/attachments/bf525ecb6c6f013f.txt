@@ -1,0 +1,57 @@
+
+2023-12-04 16:23:53.480595   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000168ADA7E390> с именем TC_11.02.02.01_04
+{'width': 1216, 'height': 582}
+
+2023-12-04 16:23:53.482596   worker_id = master
+
+2023-12-04 16:23:53.482596   0. Allure grouping
+
+
+2023-12-04 16:23:53.482596   START PRECONDITIONS =>
+
+
+2023-12-04 16:23:53.482596   {'width': 1216, 'height': 582}
+
+2023-12-04 16:23:53.484601   Set windows position at (320, 180) =>
+
+2023-12-04 16:23:53.589414   Set resolution 1280 * 720 =>
+
+2023-12-04 16:23:53.699533   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-04 16:23:58.721714   Капчи нет. Тестим дальше
+
+2023-12-04 16:23:58.721714   Prev. Role: Auth
+
+2023-12-04 16:23:58.721714   Current role: Auth
+
+2023-12-04 16:23:58.721714   Prev language: es
+
+2023-12-04 16:23:58.721714   => Current language: es
+
+2023-12-04 16:23:58.721714   Prev country: au
+
+2023-12-04 16:23:58.721714   => Current country: au
+
+2023-12-04 16:23:58.721714   => THE END PRECONDITIONS
+
+2023-12-04 16:23:58.721714   1. Arrange_v0
+2023-12-04 16:23:59.621867   Load page https://capital.com/es/opera-aurora
+2023-12-04 16:23:59.621867   BUTTON_BUY_IN_CONTENT_BLOCK is located on the page? =>
+2023-12-04 16:23:59.710744   => BUTTON_BUY_IN_CONTENT_BLOCK is located on the page!
+2023-12-04 16:23:59.710744   Start Checking that form [Sign up] popped up on the page =>
+2023-12-04 16:24:05.244582   '[Sign up]' form was not popped up
+
+2023-12-04 16:24:05.244582   2. Act_v0
+2023-12-04 16:24:05.290886   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>
+2023-12-04 16:24:05.290886   => BUTTON_BUY_IN_CONTENT_BLOCK is present on the page
+2023-12-04 16:24:05.290886   BUTTON_BUY_IN_CONTENT_BLOCK scroll =>
+2023-12-04 16:24:05.306984   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled
+2023-12-04 16:24:05.306984   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>
+2023-12-04 16:24:05.361038   BUTTON_BUY_IN_CONTENT_BLOCK CLICK =>
+2023-12-04 16:24:06.053175   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!
+
+2023-12-04 16:24:06.087347   3. Assert_v4
+2023-12-04 16:24:06.087347   Checking that the trading platform page has opened (v4) =>
+2023-12-04 16:24:06.651978   => Current page title: Trading Platform | Capital.com
+2023-12-04 16:24:06.651978   Checking that the Trading platform LOGO is present on the page =>
+2023-12-04 16:24:07.384968   Checking that the Trading platform opened in LIVE mode =>
