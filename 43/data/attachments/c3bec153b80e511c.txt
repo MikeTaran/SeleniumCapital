@@ -1,0 +1,58 @@
+
+2023-12-05 18:01:55.208652   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000020CD11E4BD0> с именем TC_11.02.02.00_08
+{'width': 1280, 'height': 720}
+
+2023-12-05 18:01:55.346061   worker_id = master
+
+2023-12-05 18:01:55.346061   0. Allure grouping
+
+
+2023-12-05 18:01:55.347060   START PRECONDITIONS =>
+
+
+2023-12-05 18:01:55.347060   {'width': 1280, 'height': 720}
+
+2023-12-05 18:01:55.413801   Set windows position at (320, 180) =>
+
+2023-12-05 18:01:55.544705   Set resolution 1280 * 720 =>
+
+2023-12-05 18:01:55.648042   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-05 18:01:59.665479   Капчи нет. Тестим дальше
+
+2023-12-05 18:01:59.665479   Prev. Role: Auth
+
+2023-12-05 18:01:59.665479   Current role: Auth
+
+2023-12-05 18:01:59.665479   Prev language: ar
+
+2023-12-05 18:01:59.665479   => Current language: ar
+
+2023-12-05 18:01:59.665479   Prev country: gb
+
+2023-12-05 18:01:59.665479   => Current country: gb
+
+2023-12-05 18:01:59.665479   => THE END PRECONDITIONS
+
+2023-12-05 18:01:59.665479   0. Arrange_0
+2023-12-05 18:02:00.259232   Load page https://capital.com/ar
+2023-12-05 18:02:00.342017   => Education menu is present
+2023-12-05 18:02:00.594952   => Education menu is visible
+2023-12-05 18:02:02.371616   => Education menu focus moved
+
+
+2023-12-05 18:02:03.838312   => Shares trading sub-menu clicked
+
+2023-12-05 18:02:03.992695   1. Arrange_v0
+2023-12-05 18:02:04.043857   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2023-12-05 18:02:04.055746   2. Act_v0
+2023-12-05 18:02:04.539840   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2023-12-05 18:02:04.540821   3. Assert_v4
+2023-12-05 18:02:04.540821   Checking that the trading platform page has opened (v4) =>
+2023-12-05 18:02:05.083926   => Current page title: Trading Platform | Capital.com
+2023-12-05 18:02:05.083926   Checking that the Trading platform LOGO is present on the page =>
+2023-12-05 18:02:05.614411   Checking that the Trading platform opened in LIVE mode =>
+2023-12-05 18:02:05.642518   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-05 18:02:06.293582   Load page https://capital.com/ar/trade-stocks

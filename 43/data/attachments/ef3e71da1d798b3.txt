@@ -1,0 +1,80 @@
+Current country of trading - gb
+{'width': 1264, 'height': 582}
+
+2023-12-05 18:08:39.690803   worker_id = master
+
+2023-12-05 18:08:39.690803   0. Allure grouping
+
+2023-12-05 18:08:39.690803   0. Arrange_0
+2023-12-05 18:08:40.478342   Load page https://capital.com
+
+
+2023-12-05 18:08:40.478342   START PRECONDITIONS =>
+
+
+2023-12-05 18:08:40.478342   {'width': 1264, 'height': 582}
+
+2023-12-05 18:08:40.490740   Set windows position at (320, 180) =>
+
+2023-12-05 18:08:40.603368   Set resolution 1280 * 720 =>
+
+2023-12-05 18:08:40.989792   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-05 18:08:45.067587   Капчи нет. Тестим дальше
+
+2023-12-05 18:08:45.067587   Prev. Role: Reg/NoAuth
+
+2023-12-05 18:08:45.067587   Current role: Reg/NoAuth
+
+2023-12-05 18:08:45.068583   Prev language: ar
+
+2023-12-05 18:08:45.068583   => Current language: ar
+
+2023-12-05 18:08:45.068583   Prev country: de
+
+2023-12-05 18:08:45.068583   Run preconditions: set "gb" country =>
+
+
+2023-12-05 18:08:45.077589   => Language and Country menu is present
+
+
+2023-12-05 18:08:45.097957   => Language and Country menu is visible
+
+
+2023-12-05 18:08:46.887614   => Focus is moved on Language and Country menu 
+
+2023-12-05 18:08:50.205570   => Current country: gb
+
+2023-12-05 18:08:50.205570   => THE END PRECONDITIONS
+
+2023-12-05 18:08:50.205570   0. Arrange_0
+2023-12-05 18:08:51.230917   Load page https://capital.com/ar
+2023-12-05 18:08:51.736765   => Education menu is present
+2023-12-05 18:08:51.777443   => Education menu is visible
+2023-12-05 18:08:53.552040   => Education menu focus moved
+
+
+2023-12-05 18:08:55.143111   => Shares trading sub-menu clicked
+
+2023-12-05 18:08:55.200690   1. Arrange_v0
+2023-12-05 18:08:55.923832   BUTTON_START_TRADING scroll =>
+2023-12-05 18:08:55.929828   BUTTON_START_TRADING is visible? =>
+2023-12-05 18:08:56.009448   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-05 18:08:56.009448   2. Act_v0
+2023-12-05 18:08:56.009448   Start Click button [Start Trading] =>
+2023-12-05 18:08:56.016329   BUTTON_START_TRADING is clickable? =>
+2023-12-05 18:08:56.031874   BUTTON_START_TRADING click =>
+2023-12-05 18:08:56.090333   => BUTTON_START_TRADING clicked
+
+2023-12-05 18:08:56.090333   3. Assert_v0
+2023-12-05 18:09:00.665427   'Login' form not opened
+2023-12-05 18:09:00.667954   'Login' page not opened
+2023-12-05 18:09:05.226355   'Login' form on trading platform not opened
+2023-12-05 18:09:05.227363   Start step Check that form [Sign up] opened
+2023-12-05 18:09:05.244500   'Sign up' form opened
+2023-12-05 18:09:05.244500   Assert SIGNUP_HEADER =>
+2023-12-05 18:09:05.259641   Assert SIGNUP_REF_LOGIN =>
+2023-12-05 18:09:05.275886   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-05 18:09:05.293141   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-05 18:09:05.293141   => 'Signup' form is checked

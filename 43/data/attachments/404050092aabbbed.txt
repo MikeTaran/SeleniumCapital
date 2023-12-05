@@ -1,0 +1,115 @@
+{'width': 1920, 'height': 1080}
+autouse fixture chrome
+Current test language - ar
+Current country of trading - gb
+
+
+
+Current test role - NoReg
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1920, 'height': 1080}
+
+2023-12-05 17:59:48.116790   worker_id = master
+
+2023-12-05 17:59:48.116790   0. Allure grouping
+
+2023-12-05 17:59:48.116790   0. Arrange_0
+2023-12-05 17:59:51.412266   Load page https://capital.com
+
+
+2023-12-05 17:59:51.412266   START PRECONDITIONS =>
+
+2023-12-05 17:59:51.928142   Load page https://capital.com
+
+2023-12-05 17:59:51.928142   {'width': 1920, 'height': 1080}
+
+2023-12-05 17:59:51.970470   Set windows position at (320, 180) =>
+
+2023-12-05 17:59:52.950900   Set resolution 1280 * 720 =>
+
+2023-12-05 17:59:53.175515   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-05 17:59:57.216842   Капчи нет. Тестим дальше
+
+2023-12-05 17:59:57.225201   Prev. Role: ?
+
+2023-12-05 17:59:57.225201   Run preconditions: set "NoReg" Role =>
+2023-12-05 17:59:57.619831   Load page https://capital.com
+
+2023-12-05 17:59:59.473058   => All cookies are deleted
+2023-12-05 18:00:00.351169   Load page https://capital.com
+
+2023-12-05 18:00:00.351169   Click button [Accept all cookies]
+2023-12-05 18:00:00.351169   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-05 18:00:04.423782   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-05 18:00:04.454164   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-05 18:00:04.454164   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-05 18:00:04.482015   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-05 18:00:05.539753   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-05 18:00:05.539753   => Accepted All Cookies
+
+2023-12-05 18:00:05.539753   Current role: NoReg
+
+2023-12-05 18:00:05.539753   Prev language: ?
+
+2023-12-05 18:00:05.539753   Run preconditions: set "ar" language =>
+
+
+2023-12-05 18:00:05.550754   => Language and Country menu is present
+
+
+2023-12-05 18:00:05.570143   => Language and Country menu is visible
+
+
+2023-12-05 18:00:07.685602   => Focus is moved on Language and Country menu 
+
+2023-12-05 18:00:10.132960   => Current language: ar
+
+2023-12-05 18:00:10.132960   Prev country: ?
+
+2023-12-05 18:00:10.132960   Run preconditions: set "gb" country =>
+
+
+2023-12-05 18:00:10.177860   => Language and Country menu is present
+
+
+2023-12-05 18:00:10.195619   => Language and Country menu is visible
+
+
+2023-12-05 18:00:11.978717   => Focus is moved on Language and Country menu 
+
+2023-12-05 18:00:15.137270   => Current country: gb
+
+2023-12-05 18:00:15.137270   => THE END PRECONDITIONS
+
+2023-12-05 18:00:15.137270   0. Arrange_0
+2023-12-05 18:00:15.747292   Load page https://capital.com/ar
+2023-12-05 18:00:15.887397   => Education menu is present
+2023-12-05 18:00:15.964722   => Education menu is visible
+2023-12-05 18:00:17.741235   => Education menu focus moved
+
+
+2023-12-05 18:00:20.106967   => Shares trading sub-menu clicked
+
+2023-12-05 18:00:20.260830   1. Arrange_v0
+2023-12-05 18:00:20.345071   BUTTON_START_TRADING scroll =>
+2023-12-05 18:00:20.349918   BUTTON_START_TRADING is visible? =>
+2023-12-05 18:00:20.399730   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-05 18:00:20.399730   2. Act_v0
+2023-12-05 18:00:20.399730   Start Click button [Start Trading] =>
+2023-12-05 18:00:20.407094   BUTTON_START_TRADING is clickable? =>
+2023-12-05 18:00:20.423094   BUTTON_START_TRADING click =>
+2023-12-05 18:00:20.482298   => BUTTON_START_TRADING clicked
+
+2023-12-05 18:00:20.482298   3. Assert_v0
+2023-12-05 18:00:20.483308   Start step Check that form [Sign up] opened
+2023-12-05 18:00:20.634466   'Sign up' form opened
+2023-12-05 18:00:20.634466   Assert SIGNUP_HEADER =>
+2023-12-05 18:00:20.661985   Assert SIGNUP_REF_LOGIN =>
+2023-12-05 18:00:20.687275   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-05 18:00:20.712392   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-05 18:00:20.712392   => 'Signup' form is checked
+2023-12-05 18:00:20.712392   Start step Close [Sign up] form =>
+2023-12-05 18:00:20.798770   => 'Signup' form closed
