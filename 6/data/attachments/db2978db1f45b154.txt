@@ -1,0 +1,74 @@
+
+2023-12-05 19:10:47.459168   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000021B62DE1490> с именем TC_11.01.06_06
+{'width': 1264, 'height': 582}
+
+2023-12-05 19:10:47.462171   browser = chrome
+
+2023-12-05 19:10:47.462171   worker_id = master
+
+2023-12-05 19:10:47.462171   Start TC_11.01.06_04
+
+2023-12-05 19:10:47.462171   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x0000021B62DE1490>.None
+
+2023-12-05 19:10:47.462171   0. Arrange
+
+
+2023-12-05 19:10:47.462171   START PRECONDITIONS =>
+
+
+2023-12-05 19:10:47.462171   {'width': 1264, 'height': 582}
+
+2023-12-05 19:10:47.470590   Set windows position at (320, 180) =>
+
+2023-12-05 19:10:47.574479   Set resolution 1280 * 720 =>
+
+2023-12-05 19:10:47.682829   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-05 19:10:51.690599   Капчи нет. Тестим дальше
+
+2023-12-05 19:10:51.690599   Prev. Role: Reg/NoAuth
+
+2023-12-05 19:10:51.691602   Current role: Reg/NoAuth
+
+2023-12-05 19:10:51.691602   Prev language: de
+
+2023-12-05 19:10:51.691602   => Current language: de
+
+2023-12-05 19:10:51.691602   Prev country: au
+
+2023-12-05 19:10:51.691602   => Current country: au
+
+2023-12-05 19:10:51.691602   => THE END PRECONDITIONS
+
+2023-12-05 19:10:51.691602   1. Arrange
+
+2023-12-05 19:10:51.691602   Testing the qr code: CAPITAL
+2023-12-05 19:10:52.298436   Load page https://capital.com/de/trading-lernen-app
+2023-12-05 19:10:52.298436   Start Checking that form [Sign up] popped up on the page =>
+2023-12-05 19:10:56.845155   '[Sign up]' form was not popped up
+2023-12-05 19:10:56.845288   QR_CODE is located in the DOM? =>
+2023-12-05 19:10:56.864371   => QR_CODE_CAPITAL is located in the DOM
+2023-12-05 19:10:56.864371   QR_CODE_LINK is visible on the page? =>
+2023-12-05 19:10:56.885064   => QR_CODE_LINK CAPITAL is on the page!
+
+2023-12-05 19:10:56.886069   2. Act
+2023-12-05 19:10:56.886069   Determining the QR_CODE_TITLE link
+2023-12-05 19:10:56.895059   QR_CODE_TITLE link: https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=bullot1a-prmg-4jmr-0qs1-equwl1iyipb7                                                                                                                       
+2023-12-05 19:10:56.896153   Start Checking that form [Sign up] popped up on the page =>
+2023-12-05 19:11:01.459253   '[Sign up]' form was not popped up
+2023-12-05 19:11:01.533698   Start QR-code decryption with CV2-method =>
+2023-12-05 19:11:01.540701   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-05 19:11:01.540701   Start QR-code decryption with PYZBAR-method =>
+2023-12-05 19:11:01.543695   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-05 19:11:01.590404   Start QR-code decryption with QREADER-method =>
+2023-12-05 19:11:03.611365   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-05 19:11:03.611365   QR_CODE_LINK_QREADER=  https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=bullot1a-prmg-4jmr-0qs1-equwl1iyipb7                                                                                                                       
+2023-12-05 19:11:03.678892   Check QR-code title link equal QR-code image link =>
+2023-12-05 19:11:04.707113   Load page https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=bullot1a-prmg-4jmr-0qs1-equwl1iyipb7                                                                                                                       
+
+2023-12-05 19:11:04.707113   3. Assert_v0
+2023-12-05 19:11:04.707113   Checking that the App Store page has opened
+2023-12-05 19:11:05.085857   => Current page title: Capital.com: Trading & Finance on the App Store
+2023-12-05 19:11:05.085857   Checking that the App Store app title
+2023-12-05 19:11:05.107019   Checking that the App Store specifies provider
+2023-12-05 19:11:05.714731   Load page https://capital.com/de/trading-lernen-app
