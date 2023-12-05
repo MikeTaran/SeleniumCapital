@@ -1,0 +1,71 @@
+2023-12-05 15:57:38 ERROR Unable to initialize WebDriver
+2023-12-05 15:57:38 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x008672A3+45731]
+	(No symbol) [0x007F2D51]
+	(No symbol) [0x006E880D]
+	(No symbol) [0x0071B940]
+	(No symbol) [0x0071BE0B]
+	(No symbol) [0x0074D1F2]
+	(No symbol) [0x00738024]
+	(No symbol) [0x0074B7A2]
+	(No symbol) [0x00737DD6]
+	(No symbol) [0x007131F6]
+	(No symbol) [0x0071439D]
+	GetHandleVerifier [0x00B70716+3229462]
+	GetHandleVerifier [0x00BB84C8+3523784]
+	GetHandleVerifier [0x00BB214C+3498316]
+	GetHandleVerifier [0x008F1680+611968]
+	(No symbol) [0x007FCCCC]
+	(No symbol) [0x007F8DF8]
+	(No symbol) [0x007F8F1D]
+	(No symbol) [0x007EB2C7]
+	BaseThreadInitThunk [0x76326A39+25]
+	RtlGetFullPathName_UEx [0x775A7F8D+173]
+	RtlGetFullPathName_UEx [0x775A7F5B+123]
+
+2023-12-05 15:57:42 ERROR Unable to initialize WebDriver
+2023-12-05 15:57:42 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x008672A3+45731]
+	(No symbol) [0x007F2D51]
+	(No symbol) [0x006E880D]
+	(No symbol) [0x0071B940]
+	(No symbol) [0x0071BE0B]
+	(No symbol) [0x0074D1F2]
+	(No symbol) [0x00738024]
+	(No symbol) [0x0074B7A2]
+	(No symbol) [0x00737DD6]
+	(No symbol) [0x007131F6]
+	(No symbol) [0x0071439D]
+	GetHandleVerifier [0x00B70716+3229462]
+	GetHandleVerifier [0x00BB84C8+3523784]
+	GetHandleVerifier [0x00BB214C+3498316]
+	GetHandleVerifier [0x008F1680+611968]
+	(No symbol) [0x007FCCCC]
+	(No symbol) [0x007F8DF8]
+	(No symbol) [0x007F8F1D]
+	(No symbol) [0x007EB2C7]
+	BaseThreadInitThunk [0x76326A39+25]
+	RtlGetFullPathName_UEx [0x775A7F8D+173]
+	RtlGetFullPathName_UEx [0x775A7F5B+123]
