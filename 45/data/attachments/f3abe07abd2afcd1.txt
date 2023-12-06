@@ -1,0 +1,58 @@
+
+2023-12-06 13:55:33.595602   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000196CE321610> с именем TC_11.02.02.01_01
+{'width': 1264, 'height': 582}
+
+2023-12-06 13:55:33.605342   worker_id = master
+
+2023-12-06 13:55:33.605342   0. Allure grouping
+
+2023-12-06 13:55:33.605342   0. Arrange_0
+2023-12-06 13:55:35.199387   Load page https://capital.com
+
+
+2023-12-06 13:55:35.199387   START PRECONDITIONS =>
+
+
+2023-12-06 13:55:35.199387   {'width': 1264, 'height': 582}
+
+2023-12-06 13:55:35.218292   Set windows position at (320, 180) =>
+
+2023-12-06 13:55:35.511195   Set resolution 1280 * 720 =>
+
+2023-12-06 13:55:35.843101   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 13:55:40.536714   Капчи нет. Тестим дальше
+
+2023-12-06 13:55:40.536714   Prev. Role: Auth
+
+2023-12-06 13:55:40.536714   Current role: Auth
+
+2023-12-06 13:55:40.536714   Prev language: de
+
+2023-12-06 13:55:40.536714   => Current language: de
+
+2023-12-06 13:55:40.536714   Prev country: de
+
+2023-12-06 13:55:40.536714   => Current country: de
+
+2023-12-06 13:55:40.536714   => THE END PRECONDITIONS
+
+2023-12-06 13:55:40.536714   1. Arrange_v0
+2023-12-06 13:55:41.689738   Load page https://capital.com/de/disney-aktie-handeln
+2023-12-06 13:55:41.768604   BUTTON_START_TRADING scroll =>
+2023-12-06 13:55:42.375292   BUTTON_START_TRADING is visible? =>
+2023-12-06 13:55:42.661352   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 13:55:42.661352   2. Act_v0
+2023-12-06 13:55:42.661352   Start Click button [Start Trading] =>
+2023-12-06 13:55:42.673354   BUTTON_START_TRADING is clickable? =>
+2023-12-06 13:55:42.701017   BUTTON_START_TRADING click =>
+2023-12-06 13:55:43.184503   => BUTTON_START_TRADING clicked
+
+2023-12-06 13:55:43.184503   3. Assert_v4
+2023-12-06 13:55:43.184503   Checking that the trading platform page has opened (v4) =>
+2023-12-06 13:55:43.829218   => Current page title: Trading Platform | Capital.com
+2023-12-06 13:55:43.829218   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 13:55:44.642176   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 13:55:45.001072   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 13:55:46.356247   Load page https://capital.com/de/disney-aktie-handeln

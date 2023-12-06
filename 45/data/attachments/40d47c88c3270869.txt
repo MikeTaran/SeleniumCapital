@@ -1,0 +1,147 @@
+
+
+
+Current test role - Reg/NoAuth
+{'width': 1280, 'height': 720}
+
+2023-12-06 13:15:02.671454   worker_id = master
+
+2023-12-06 13:15:02.671454   0. Allure grouping
+
+2023-12-06 13:15:02.671454   0. Arrange_0
+2023-12-06 13:15:03.973735   Load page https://capital.com
+
+
+2023-12-06 13:15:03.973735   START PRECONDITIONS =>
+
+
+2023-12-06 13:15:03.973735   {'width': 1280, 'height': 720}
+
+2023-12-06 13:15:04.492366   Set windows position at (320, 180) =>
+
+2023-12-06 13:15:04.607939   Set resolution 1280 * 720 =>
+
+2023-12-06 13:15:04.712406   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 13:15:08.748775   Капчи нет. Тестим дальше
+
+2023-12-06 13:15:08.748775   Prev. Role: NoReg
+
+2023-12-06 13:15:08.748775   Run preconditions: set "Reg/NoAuth" Role =>
+2023-12-06 13:15:09.461789   Load page https://capital.com
+
+2023-12-06 13:15:10.210442   => All cookies are deleted
+2023-12-06 13:15:10.916800   Load page https://capital.com
+
+2023-12-06 13:15:10.916800   Click button [Accept all cookies]
+2023-12-06 13:15:10.916800   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-06 13:15:15.059314   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-06 13:15:15.073538   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-06 13:15:15.073538   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-06 13:15:15.220410   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-06 13:15:16.341670   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-06 13:15:16.342679   => Accepted All Cookies
+
+2023-12-06 13:15:16.342679   Start Autorization
+
+2023-12-06 13:15:16.342679   2. Act
+2023-12-06 13:15:16.342679   Start Click button [Log in] =>
+2023-12-06 13:15:16.360743   BUTTON_LOGIN scroll =>
+2023-12-06 13:15:16.381076   Is BUTTON_LOGIN clickable? =>
+2023-12-06 13:15:16.435346   => BUTTON_LOGIN is clickable
+2023-12-06 13:15:16.435346   BUTTON_LOGIN click =>
+2023-12-06 13:15:16.545534   => BUTTON_LOGIN is clicked!
+2023-12-06 13:15:16.545534   => 'Login' form is opened
+2023-12-06 13:15:17.431209   => "login" and "password" are inputted
+2023-12-06 13:15:17.431209   Click [Continue] button on [Login] form =>
+2023-12-06 13:15:17.632006   => [Continue] button on [Login] form is clicked
+2023-12-06 13:15:19.726799   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2023-12-06 13:15:19.726799   Set timeout = 30
+2023-12-06 13:15:19.726799   Wait until load page with special title =>
+2023-12-06 13:15:19.748149   => Page with title "Trading Platform | Capital.com" is loaded
+2023-12-06 13:15:19.748149   Is present LOGO on this page? =>
+2023-12-06 13:15:20.999358   => LOGO is visible on this page
+2023-12-06 13:15:20.999358   -> "Capital.com" logo is present on trading platform page
+
+2023-12-06 13:15:21.858926   Start DeAuthorisation
+2023-12-06 13:15:21.858926   1. Start Click button [My account]:
+2023-12-06 13:15:21.858926   2. BUTTON_MY_ACCOUNT is present? =>
+2023-12-06 13:15:21.944419   => 2. BUTTON_MY_ACCOUNT is present on this page
+2023-12-06 13:15:23.076295   => 3. BUTTON_MY_ACCOUNT is selected
+2023-12-06 13:15:23.076295   4. BUTTON_MY_ACCOUNT is clickable? =>
+2023-12-06 13:15:23.101583   => 4. BUTTON_MY_ACCOUNT is clickable. Click =>
+2023-12-06 13:15:23.980489   => 5. User panel [My account] is opened
+
+2023-12-06 13:15:23.981498   Start Click [Logout] button:
+2023-12-06 13:15:23.981498   BUTTON_LOGOUT is present? =>
+2023-12-06 13:15:23.993715   => BUTTON_LOGOUT is present
+2023-12-06 13:15:23.993715   Is visible BUTTON_LOGOUT? =>
+2023-12-06 13:15:24.012322   BUTTON_LOGOUT is clickable? =>
+2023-12-06 13:15:24.028946   BUTTON_LOGOUT click =>
+2023-12-06 13:15:24.100098   => BUTTON_LOGOUT is clicked
+
+2023-12-06 13:15:24.100098   Current role: Reg/NoAuth
+
+2023-12-06 13:15:24.100098   Prev language: ?
+
+2023-12-06 13:15:24.100098   Run preconditions: set "de" language =>
+
+
+2023-12-06 13:15:24.165281   => Language and Country menu is present
+
+
+2023-12-06 13:15:24.801858   => Language and Country menu is visible
+
+
+2023-12-06 13:15:26.594822   => Focus is moved on Language and Country menu 
+
+2023-12-06 13:15:28.427254   => Current language: de
+
+2023-12-06 13:15:28.427254   Prev country: ?
+
+2023-12-06 13:15:28.427254   Run preconditions: set "de" country =>
+
+
+2023-12-06 13:15:28.520330   => Language and Country menu is present
+
+
+2023-12-06 13:15:28.563471   => Language and Country menu is visible
+
+
+2023-12-06 13:15:30.343050   => Focus is moved on Language and Country menu 
+
+2023-12-06 13:15:33.681430   => Current country: de
+
+2023-12-06 13:15:33.682440   => THE END PRECONDITIONS
+
+2023-12-06 13:15:33.682440   0. Arrange_0
+2023-12-06 13:15:34.528465   Load page https://capital.com/de
+2023-12-06 13:15:34.846399   => Education menu is present
+2023-12-06 13:15:34.866581   => Education menu is visible
+2023-12-06 13:15:36.640937   => Education menu focus moved
+
+
+2023-12-06 13:15:38.183152   => Shares trading sub-menu clicked
+
+2023-12-06 13:15:38.255701   1. Arrange_v0
+2023-12-06 13:15:38.555282   BUTTON_START_TRADING scroll =>
+2023-12-06 13:15:38.561281   BUTTON_START_TRADING is visible? =>
+2023-12-06 13:15:38.598545   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 13:15:38.599549   2. Act_v0
+2023-12-06 13:15:38.599549   Start Click button [Start Trading] =>
+2023-12-06 13:15:38.606908   BUTTON_START_TRADING is clickable? =>
+2023-12-06 13:15:38.622265   BUTTON_START_TRADING click =>
+2023-12-06 13:15:38.701291   => BUTTON_START_TRADING clicked
+
+2023-12-06 13:15:38.702740   3. Assert_v0
+2023-12-06 13:15:43.262476   'Login' form not opened
+2023-12-06 13:15:43.269898   'Login' page not opened
+2023-12-06 13:15:47.806368   'Login' form on trading platform not opened
+2023-12-06 13:15:47.806368   Start step Check that form [Sign up] opened
+2023-12-06 13:15:47.824729   'Sign up' form opened
+2023-12-06 13:15:47.824729   Assert SIGNUP_HEADER =>
+2023-12-06 13:15:47.844678   Assert SIGNUP_REF_LOGIN =>
+2023-12-06 13:15:47.889695   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-06 13:15:47.906462   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-06 13:15:47.906462   => 'Signup' form is checked

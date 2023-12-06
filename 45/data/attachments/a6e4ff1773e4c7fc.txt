@@ -1,0 +1,51 @@
+
+2023-12-06 14:52:24.041293   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000196CE3C0A90> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-06 14:52:24.044294   worker_id = master
+
+2023-12-06 14:52:24.044294   0. Allure grouping
+
+
+2023-12-06 14:52:24.044294   START PRECONDITIONS =>
+
+
+2023-12-06 14:52:24.044294   {'width': 1280, 'height': 720}
+
+2023-12-06 14:52:24.049404   Set windows position at (320, 180) =>
+
+2023-12-06 14:52:24.153354   Set resolution 1280 * 720 =>
+
+2023-12-06 14:52:24.257511   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 14:52:28.273303   Капчи нет. Тестим дальше
+
+2023-12-06 14:52:28.273303   Prev. Role: NoReg
+
+2023-12-06 14:52:28.273303   Current role: NoReg
+
+2023-12-06 14:52:28.273303   Prev language: de
+
+2023-12-06 14:52:28.273303   => Current language: de
+
+2023-12-06 14:52:28.273303   Prev country: ae
+
+2023-12-06 14:52:28.273303   => Current country: ae
+
+2023-12-06 14:52:28.273303   => THE END PRECONDITIONS
+
+2023-12-06 14:52:28.273303   Clear Top Chart list =>
+2023-12-06 14:52:29.784713   Load page https://capital.com/trading/platform/charting/
+
+2023-12-06 14:52:37.840458   1. Arrange_v4
+2023-12-06 14:52:38.645800   Load page https://capital.com/de/disney-aktie-handeln
+2023-12-06 14:52:38.645800   MOST_TRADED is visible? =>
+2023-12-06 14:52:38.726308   => MOST_TRADED is visible on the page!
+2023-12-06 14:52:38.726308   => Found 5 elements in block MOST_TRADED
+
+2023-12-06 14:52:38.726308   Testing Most traded random element #1
+
+2023-12-06 14:52:38.726308   2. Act_v4
+2023-12-06 14:52:38.726308   MOST_TRADED delete js-mostTraded class =>
+2023-12-06 14:52:38.990859   MOST_TRADED scroll =>
+2023-12-06 14:52:38.996456   MOST_TRADED click for 'Tesla Inc' trading instrument =>

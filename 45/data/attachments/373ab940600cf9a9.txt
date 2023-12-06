@@ -1,0 +1,59 @@
+
+2023-12-06 13:56:06.738990   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000196CE3867D0> с именем TC_11.02.02.01_04
+{'width': 1264, 'height': 582}
+
+2023-12-06 13:56:06.740985   worker_id = master
+
+2023-12-06 13:56:06.740985   0. Allure grouping
+
+
+2023-12-06 13:56:06.740985   START PRECONDITIONS =>
+
+
+2023-12-06 13:56:06.740985   {'width': 1264, 'height': 582}
+
+2023-12-06 13:56:06.743161   Set windows position at (320, 180) =>
+
+2023-12-06 13:56:06.846850   Set resolution 1280 * 720 =>
+
+2023-12-06 13:56:06.952647   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 13:56:10.972557   Капчи нет. Тестим дальше
+
+2023-12-06 13:56:10.972557   Prev. Role: Auth
+
+2023-12-06 13:56:10.972557   Current role: Auth
+
+2023-12-06 13:56:10.972557   Prev language: de
+
+2023-12-06 13:56:10.972557   => Current language: de
+
+2023-12-06 13:56:10.972557   Prev country: de
+
+2023-12-06 13:56:10.972557   => Current country: de
+
+2023-12-06 13:56:10.972557   => THE END PRECONDITIONS
+
+2023-12-06 13:56:10.972557   1. Arrange_v0
+2023-12-06 13:56:12.085346   Load page https://capital.com/de/disney-aktie-handeln
+2023-12-06 13:56:12.085346   BUTTON_BUY_IN_CONTENT_BLOCK is located on the page? =>
+2023-12-06 13:56:12.480835   => BUTTON_BUY_IN_CONTENT_BLOCK is located on the page!
+2023-12-06 13:56:12.480835   Start Checking that form [Sign up] popped up on the page =>
+2023-12-06 13:56:17.043527   '[Sign up]' form was not popped up
+
+2023-12-06 13:56:17.043527   2. Act_v0
+2023-12-06 13:56:17.107048   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>
+2023-12-06 13:56:17.107048   => BUTTON_BUY_IN_CONTENT_BLOCK is present on the page
+2023-12-06 13:56:17.107048   BUTTON_BUY_IN_CONTENT_BLOCK scroll =>
+2023-12-06 13:56:17.113546   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled
+2023-12-06 13:56:17.113546   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>
+2023-12-06 13:56:17.228313   BUTTON_BUY_IN_CONTENT_BLOCK CLICK =>
+2023-12-06 13:56:17.601957   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!
+
+2023-12-06 13:56:17.645939   3. Assert_v4
+2023-12-06 13:56:17.645939   Checking that the trading platform page has opened (v4) =>
+2023-12-06 13:56:18.208868   => Current page title: Trading Platform | Capital.com
+2023-12-06 13:56:18.208868   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 13:56:19.056714   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 13:56:19.070845   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 13:56:19.070845   => Opened page with https://capital.com/trading/platform url for corresponding trading instrument 'Walt Disney'

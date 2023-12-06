@@ -1,0 +1,54 @@
+
+2023-12-06 13:58:41.383945   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000196CE338FD0> с именем TC_11.02.02.01_01
+{'width': 1264, 'height': 582}
+
+2023-12-06 13:58:41.386093   worker_id = master
+
+2023-12-06 13:58:41.386093   0. Allure grouping
+
+2023-12-06 13:58:41.386093   0. Arrange_0
+2023-12-06 13:58:42.477639   Load page https://capital.com
+
+
+2023-12-06 13:58:42.478644   START PRECONDITIONS =>
+
+
+2023-12-06 13:58:42.478644   {'width': 1264, 'height': 582}
+
+2023-12-06 13:58:42.488122   Set windows position at (320, 180) =>
+
+2023-12-06 13:58:42.969347   Set resolution 1280 * 720 =>
+
+2023-12-06 13:58:43.246676   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 13:58:47.359310   Капчи нет. Тестим дальше
+
+2023-12-06 13:58:47.359310   Prev. Role: Auth
+
+2023-12-06 13:58:47.359310   Current role: Auth
+
+2023-12-06 13:58:47.359310   Prev language: de
+
+2023-12-06 13:58:47.359310   => Current language: de
+
+2023-12-06 13:58:47.359310   Prev country: de
+
+2023-12-06 13:58:47.359310   => Current country: de
+
+2023-12-06 13:58:47.359310   => THE END PRECONDITIONS
+
+2023-12-06 13:58:47.360305   1. Arrange_v0
+2023-12-06 13:58:48.419293   Load page https://capital.com/de/trade-facebook
+2023-12-06 13:58:48.796645   BUTTON_START_TRADING scroll =>
+2023-12-06 13:58:49.002402   BUTTON_START_TRADING is visible? =>
+2023-12-06 13:58:49.229255   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 13:58:49.229255   2. Act_v0
+2023-12-06 13:58:49.229255   Start Click button [Start Trading] =>
+2023-12-06 13:58:49.243814   BUTTON_START_TRADING is clickable? =>
+2023-12-06 13:58:49.278353   BUTTON_START_TRADING click =>
+2023-12-06 13:58:49.991239   => BUTTON_START_TRADING clicked
+
+2023-12-06 13:58:49.991239   3. Assert_v4
+2023-12-06 13:58:49.991239   Checking that the trading platform page has opened (v4) =>
+2023-12-06 13:59:05.162091   => Loaded page https://capital.com/ with not https://capital.com/trading/platform/ url

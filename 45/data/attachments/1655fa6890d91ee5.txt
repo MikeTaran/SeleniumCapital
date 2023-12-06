@@ -1,0 +1,65 @@
+
+2023-12-06 13:12:10.113388   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000023D03B9A3D0> с именем TC_11.02.02.00_10
+{'width': 1264, 'height': 582}
+
+2023-12-06 13:12:10.115387   worker_id = master
+
+2023-12-06 13:12:10.115387   0. Allure grouping
+
+
+2023-12-06 13:12:10.115387   START PRECONDITIONS =>
+
+
+2023-12-06 13:12:10.115387   {'width': 1264, 'height': 582}
+
+2023-12-06 13:12:10.117387   Set windows position at (320, 180) =>
+
+2023-12-06 13:12:10.220453   Set resolution 1280 * 720 =>
+
+2023-12-06 13:12:10.325987   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 13:12:14.363506   Капчи нет. Тестим дальше
+
+2023-12-06 13:12:14.363506   Prev. Role: Auth
+
+2023-12-06 13:12:14.363506   Current role: Auth
+
+2023-12-06 13:12:14.363506   Prev language: de
+
+2023-12-06 13:12:14.363506   => Current language: de
+
+2023-12-06 13:12:14.363506   Prev country: de
+
+2023-12-06 13:12:14.363506   => Current country: de
+
+2023-12-06 13:12:14.363506   => THE END PRECONDITIONS
+
+2023-12-06 13:12:14.363506   0. Arrange_0
+2023-12-06 13:12:15.168173   Load page https://capital.com/de
+2023-12-06 13:12:15.251317   => Education menu is present
+2023-12-06 13:12:15.498095   => Education menu is visible
+2023-12-06 13:12:17.281588   => Education menu focus moved
+
+
+2023-12-06 13:12:19.051299   => Shares trading sub-menu clicked
+
+2023-12-06 13:12:19.115569   1. Arrange
+2023-12-06 13:12:19.287490   BUTTON_ON_VER_BANNER is visible? =>
+2023-12-06 13:12:19.389174   => BUTTON_ON_VER_BANNER is visible on the page!
+2023-12-06 13:12:19.389174   Start Checking that form [Sign up] popped up on the page =>
+2023-12-06 13:12:23.913892   '[Sign up]' form was not popped up
+
+2023-12-06 13:12:23.913892   2. Act
+2023-12-06 13:12:23.913892   BUTTON_ON_VER_BANNER is present? =>
+2023-12-06 13:12:23.923888   => BUTTON_ON_VER_BANNER is present on the page!
+2023-12-06 13:12:23.923888   BUTTON_ON_VER_BANNER scroll =>
+2023-12-06 13:12:27.419439   => BUTTON_ON_VER_BANNER clicked!
+2023-12-06 13:12:27.420436   For Vertical banner [type-id=166] Trading platform should be open in Live Mode =>
+
+2023-12-06 13:12:27.420436   3. Assert_v4
+2023-12-06 13:12:27.420436   Checking that the trading platform page has opened (v4) =>
+2023-12-06 13:12:33.612944   => Current page title: Trading Platform | Capital.com
+2023-12-06 13:12:33.613947   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 13:12:35.092886   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 13:12:35.283477   => The page with https://capital.com/trading/signup url was opened in lIVE mode
+2023-12-06 13:12:36.471853   Load page https://capital.com/de/aktienhandel

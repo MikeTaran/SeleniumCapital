@@ -1,0 +1,87 @@
+
+2023-12-06 15:01:29.616583   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000196CE3C2910> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-06 15:01:29.619585   worker_id = master
+
+2023-12-06 15:01:29.619585   0. Allure grouping
+
+
+2023-12-06 15:01:29.619585   START PRECONDITIONS =>
+
+
+2023-12-06 15:01:29.619585   {'width': 1280, 'height': 720}
+
+2023-12-06 15:01:29.621582   Set windows position at (320, 180) =>
+
+2023-12-06 15:01:29.725701   Set resolution 1280 * 720 =>
+
+2023-12-06 15:01:29.829843   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 15:01:33.838940   Капчи нет. Тестим дальше
+
+2023-12-06 15:01:33.838940   Prev. Role: Reg/NoAuth
+
+2023-12-06 15:01:33.838940   Current role: Reg/NoAuth
+
+2023-12-06 15:01:33.838940   Prev language: de
+
+2023-12-06 15:01:33.838940   => Current language: de
+
+2023-12-06 15:01:33.838940   Prev country: au
+
+2023-12-06 15:01:33.838940   => Current country: au
+
+2023-12-06 15:01:33.838940   => THE END PRECONDITIONS
+
+2023-12-06 15:01:33.838940   Clear Top Chart list =>
+2023-12-06 15:01:35.403543   Load page https://capital.com/trading/platform/charting/
+
+2023-12-06 15:01:43.494239   1. Arrange_v4
+2023-12-06 15:01:44.414653   Load page https://capital.com/de/disney-aktie-handeln
+2023-12-06 15:01:44.414653   MOST_TRADED is visible? =>
+2023-12-06 15:01:44.489876   => MOST_TRADED is visible on the page!
+2023-12-06 15:01:44.489876   => Found 5 elements in block MOST_TRADED
+
+2023-12-06 15:01:44.489876   Testing Most traded random element #1
+
+2023-12-06 15:01:44.489876   2. Act_v4
+2023-12-06 15:01:44.489876   MOST_TRADED delete js-mostTraded class =>
+2023-12-06 15:01:45.033148   MOST_TRADED scroll =>
+2023-12-06 15:01:45.038763   MOST_TRADED click for 'Coinbase Global Inc' trading instrument =>
+2023-12-06 15:01:45.360554   => MOST_TRADED clicked!
+
+2023-12-06 15:01:45.360554   3. Assert_v0
+2023-12-06 15:01:45.552208   'Login' form opened
+2023-12-06 15:01:45.552208   Assert LOGIN_REF_SIGNUP =>
+2023-12-06 15:01:45.589808   Assert LOGIN_CHECKBOX =>
+2023-12-06 15:01:45.654413   Assert LOGIN_PASS_FORGOT =>
+2023-12-06 15:01:45.687426   => 'Login' form is checked
+2023-12-06 15:01:45.734498   Click 'Close' button on 'Login' form =>
+2023-12-06 15:01:45.824558   => 'Login' form closed
+
+2023-12-06 15:01:45.824558   Clear Top Chart list =>
+2023-12-06 15:01:47.130966   Load page https://capital.com/trading/platform/charting/
+
+2023-12-06 15:01:55.217123   1. Arrange_v4
+2023-12-06 15:01:56.109254   Load page https://capital.com/de/disney-aktie-handeln
+2023-12-06 15:01:56.109254   MOST_TRADED is visible? =>
+2023-12-06 15:01:56.202574   => MOST_TRADED is visible on the page!
+2023-12-06 15:01:56.202574   => Found 5 elements in block MOST_TRADED
+
+2023-12-06 15:01:56.202574   Testing Most traded random element #2
+
+2023-12-06 15:01:56.202574   2. Act_v4
+2023-12-06 15:01:56.202574   MOST_TRADED delete js-mostTraded class =>
+2023-12-06 15:01:56.699614   MOST_TRADED scroll =>
+2023-12-06 15:01:56.704613   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-06 15:01:56.954470   => MOST_TRADED clicked!
+
+2023-12-06 15:01:56.954470   3. Assert_v0
+2023-12-06 15:01:57.202254   'Login' form opened
+2023-12-06 15:01:57.202254   Assert LOGIN_REF_SIGNUP =>
+2023-12-06 15:01:57.224823   Assert LOGIN_CHECKBOX =>
+2023-12-06 15:01:57.289975   Assert LOGIN_PASS_FORGOT =>
+2023-12-06 15:01:57.321410   => 'Login' form is checked
+2023-12-06 15:01:57.353834   Click 'Close' button on 'Login' form =>
+2023-12-06 15:01:57.451185   => 'Login' form closed
