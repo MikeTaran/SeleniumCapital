@@ -1,0 +1,76 @@
+Current country of trading - de
+{'width': 1280, 'height': 720}
+
+2023-12-06 19:48:59.319332   worker_id = master
+
+2023-12-06 19:48:59.319332   0. Allure grouping
+
+2023-12-06 19:48:59.320336   0. Arrange_0
+2023-12-06 19:49:00.044421   Load page https://capital.com
+
+
+2023-12-06 19:49:00.044421   START PRECONDITIONS =>
+
+
+2023-12-06 19:49:00.044421   {'width': 1280, 'height': 720}
+
+2023-12-06 19:49:00.197042   Set windows position at (320, 180) =>
+
+2023-12-06 19:49:00.304369   Set resolution 1280 * 720 =>
+
+2023-12-06 19:49:00.430516   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 19:49:04.440566   Капчи нет. Тестим дальше
+
+2023-12-06 19:49:04.440566   Prev. Role: Auth
+
+2023-12-06 19:49:04.441569   Current role: Auth
+
+2023-12-06 19:49:04.441569   Prev language: en
+
+2023-12-06 19:49:04.441569   => Current language: en
+
+2023-12-06 19:49:04.441569   Prev country: gb
+
+2023-12-06 19:49:04.441569   Run preconditions: set "de" country =>
+
+
+2023-12-06 19:49:04.452013   => Language and Country menu is present
+
+
+2023-12-06 19:49:04.470651   => Language and Country menu is visible
+
+
+2023-12-06 19:49:06.253730   => Focus is moved on Language and Country menu 
+
+2023-12-06 19:49:09.617217   => Current country: de
+
+2023-12-06 19:49:09.617217   => THE END PRECONDITIONS
+
+2023-12-06 19:49:09.617217   0. Arrange_0
+2023-12-06 19:49:10.394482   Load page https://capital.com/
+2023-12-06 19:49:10.517085   => Education menu is present
+2023-12-06 19:49:10.531489   => Education menu is visible
+2023-12-06 19:49:12.319748   => Education menu focus moved
+
+
+2023-12-06 19:49:13.851302   => Shares trading sub-menu clicked
+
+2023-12-06 19:49:13.898010   1. Arrange_v0
+2023-12-06 19:49:14.021030   BUTTON_START_TRADING scroll =>
+2023-12-06 19:49:14.026035   BUTTON_START_TRADING is visible? =>
+2023-12-06 19:49:14.077685   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 19:49:14.077685   2. Act_v0
+2023-12-06 19:49:14.077685   Start Click button [Start Trading] =>
+2023-12-06 19:49:14.130764   BUTTON_START_TRADING is clickable? =>
+2023-12-06 19:49:14.153428   BUTTON_START_TRADING click =>
+2023-12-06 19:49:14.391872   => BUTTON_START_TRADING clicked
+
+2023-12-06 19:49:14.392872   3. Assert_v4
+2023-12-06 19:49:14.392872   Checking that the trading platform page has opened (v4) =>
+2023-12-06 19:49:14.933254   => Current page title: Trading Platform | Capital.com
+2023-12-06 19:49:14.933254   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 19:49:16.044062   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 19:49:16.068324   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 19:49:16.775119   Load page https://capital.com/trade-stocks

@@ -1,0 +1,59 @@
+
+2023-12-06 20:08:02.387456   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002271A2EB750> с именем TC_11.02.02.01_04
+{'width': 1264, 'height': 582}
+
+2023-12-06 20:08:02.389456   worker_id = master
+
+2023-12-06 20:08:02.389456   0. Allure grouping
+
+
+2023-12-06 20:08:02.389456   START PRECONDITIONS =>
+
+
+2023-12-06 20:08:02.389456   {'width': 1264, 'height': 582}
+
+2023-12-06 20:08:02.391460   Set windows position at (320, 180) =>
+
+2023-12-06 20:08:02.495360   Set resolution 1280 * 720 =>
+
+2023-12-06 20:08:02.600467   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 20:08:06.654627   Капчи нет. Тестим дальше
+
+2023-12-06 20:08:06.654627   Prev. Role: Auth
+
+2023-12-06 20:08:06.654627   Current role: Auth
+
+2023-12-06 20:08:06.654627   Prev language: en
+
+2023-12-06 20:08:06.654627   => Current language: en
+
+2023-12-06 20:08:06.654627   Prev country: de
+
+2023-12-06 20:08:06.654627   => Current country: de
+
+2023-12-06 20:08:06.654627   => THE END PRECONDITIONS
+
+2023-12-06 20:08:06.654627   1. Arrange_v0
+2023-12-06 20:08:07.400015   Load page https://capital.com/trade-barclays
+2023-12-06 20:08:07.400015   BUTTON_BUY_IN_CONTENT_BLOCK is located on the page? =>
+2023-12-06 20:08:07.576195   => BUTTON_BUY_IN_CONTENT_BLOCK is located on the page!
+2023-12-06 20:08:07.576195   Start Checking that form [Sign up] popped up on the page =>
+2023-12-06 20:08:12.124899   '[Sign up]' form was not popped up
+
+2023-12-06 20:08:12.124899   2. Act_v0
+2023-12-06 20:08:12.161010   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>
+2023-12-06 20:08:12.161010   => BUTTON_BUY_IN_CONTENT_BLOCK is present on the page
+2023-12-06 20:08:12.161010   BUTTON_BUY_IN_CONTENT_BLOCK scroll =>
+2023-12-06 20:08:12.166023   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled
+2023-12-06 20:08:12.166023   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>
+2023-12-06 20:08:12.216558   BUTTON_BUY_IN_CONTENT_BLOCK CLICK =>
+2023-12-06 20:08:12.432263   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!
+
+2023-12-06 20:08:12.440259   3. Assert_v4
+2023-12-06 20:08:12.440259   Checking that the trading platform page has opened (v4) =>
+2023-12-06 20:08:12.981890   => Current page title: Trading Platform | Capital.com
+2023-12-06 20:08:12.981890   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 20:08:14.195445   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 20:08:14.207450   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 20:08:14.207450   => Opened page with https://capital.com/trading/platform url for corresponding trading instrument 'Barclays'

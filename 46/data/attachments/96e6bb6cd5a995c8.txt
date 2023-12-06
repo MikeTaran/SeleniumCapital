@@ -1,0 +1,58 @@
+
+2023-12-06 20:33:49.500794   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002271A29C950> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-12-06 20:33:49.502788   worker_id = master
+
+2023-12-06 20:33:49.502788   0. Allure grouping
+
+2023-12-06 20:33:49.502788   0. Arrange_0
+2023-12-06 20:33:50.486791   Load page https://capital.com
+
+
+2023-12-06 20:33:50.486791   START PRECONDITIONS =>
+
+
+2023-12-06 20:33:50.486791   {'width': 1280, 'height': 720}
+
+2023-12-06 20:33:50.670430   Set windows position at (320, 180) =>
+
+2023-12-06 20:33:50.783267   Set resolution 1280 * 720 =>
+
+2023-12-06 20:33:50.898388   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 20:33:54.935048   Капчи нет. Тестим дальше
+
+2023-12-06 20:33:54.935048   Prev. Role: Auth
+
+2023-12-06 20:33:54.935048   Current role: Auth
+
+2023-12-06 20:33:54.935048   Prev language: en
+
+2023-12-06 20:33:54.935048   => Current language: en
+
+2023-12-06 20:33:54.935048   Prev country: ae
+
+2023-12-06 20:33:54.935048   => Current country: ae
+
+2023-12-06 20:33:54.935048   => THE END PRECONDITIONS
+
+2023-12-06 20:33:54.935048   1. Arrange_v0
+2023-12-06 20:33:56.175732   Load page https://capital.com/trade-amd
+2023-12-06 20:33:56.344515   BUTTON_START_TRADING scroll =>
+2023-12-06 20:33:56.348510   BUTTON_START_TRADING is visible? =>
+2023-12-06 20:33:56.435800   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 20:33:56.435800   2. Act_v0
+2023-12-06 20:33:56.435800   Start Click button [Start Trading] =>
+2023-12-06 20:33:56.448478   BUTTON_START_TRADING is clickable? =>
+2023-12-06 20:33:56.467808   BUTTON_START_TRADING click =>
+2023-12-06 20:33:56.720220   => BUTTON_START_TRADING clicked
+
+2023-12-06 20:33:56.720220   3. Assert_v4
+2023-12-06 20:33:56.720220   Checking that the trading platform page has opened (v4) =>
+2023-12-06 20:33:57.261540   => Current page title: Trading Platform | Capital.com
+2023-12-06 20:33:57.262539   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 20:33:59.354075   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 20:33:59.366601   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 20:34:00.107321   Load page https://capital.com/trade-amd

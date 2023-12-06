@@ -1,0 +1,51 @@
+
+2023-12-06 20:55:40.634932   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002271A354210> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-06 20:55:40.636936   worker_id = master
+
+2023-12-06 20:55:40.636936   0. Allure grouping
+
+
+2023-12-06 20:55:40.636936   START PRECONDITIONS =>
+
+
+2023-12-06 20:55:40.636936   {'width': 1280, 'height': 720}
+
+2023-12-06 20:55:40.638930   Set windows position at (320, 180) =>
+
+2023-12-06 20:55:40.742210   Set resolution 1280 * 720 =>
+
+2023-12-06 20:55:40.845437   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 20:55:44.913073   Капчи нет. Тестим дальше
+
+2023-12-06 20:55:44.913073   Prev. Role: NoReg
+
+2023-12-06 20:55:44.913073   Current role: NoReg
+
+2023-12-06 20:55:44.913073   Prev language: en
+
+2023-12-06 20:55:44.913073   => Current language: en
+
+2023-12-06 20:55:44.913073   Prev country: au
+
+2023-12-06 20:55:44.913073   => Current country: au
+
+2023-12-06 20:55:44.913073   => THE END PRECONDITIONS
+
+2023-12-06 20:55:44.913073   Clear Top Chart list =>
+2023-12-06 20:55:46.378950   Load page https://capital.com/trading/platform/charting/
+
+2023-12-06 20:55:54.476958   1. Arrange_v4
+2023-12-06 20:55:55.076178   Load page https://capital.com/trade-sainsburys
+2023-12-06 20:55:55.076178   MOST_TRADED is visible? =>
+2023-12-06 20:55:55.294126   => MOST_TRADED is visible on the page!
+2023-12-06 20:55:55.294126   => Found 5 elements in block MOST_TRADED
+
+2023-12-06 20:55:55.294126   Testing Most traded random element #1
+
+2023-12-06 20:55:55.294126   2. Act_v4
+2023-12-06 20:55:55.294126   MOST_TRADED delete js-mostTraded class =>
+2023-12-06 20:55:55.382535   MOST_TRADED scroll =>
+2023-12-06 20:55:55.388535   MOST_TRADED click for 'Coinbase Global Inc' trading instrument =>

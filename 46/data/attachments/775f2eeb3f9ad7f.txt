@@ -1,0 +1,58 @@
+
+2023-12-06 20:50:41.389599   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002271A2B1E90> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-12-06 20:50:41.396928   worker_id = master
+
+2023-12-06 20:50:41.396928   0. Allure grouping
+
+2023-12-06 20:50:41.396928   0. Arrange_0
+2023-12-06 20:50:42.297669   Load page https://capital.com
+
+
+2023-12-06 20:50:42.297669   START PRECONDITIONS =>
+
+
+2023-12-06 20:50:42.297669   {'width': 1280, 'height': 720}
+
+2023-12-06 20:50:42.423071   Set windows position at (320, 180) =>
+
+2023-12-06 20:50:42.531907   Set resolution 1280 * 720 =>
+
+2023-12-06 20:50:42.636289   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 20:50:46.668604   Капчи нет. Тестим дальше
+
+2023-12-06 20:50:46.668604   Prev. Role: Auth
+
+2023-12-06 20:50:46.668604   Current role: Auth
+
+2023-12-06 20:50:46.668604   Prev language: en
+
+2023-12-06 20:50:46.668604   => Current language: en
+
+2023-12-06 20:50:46.668604   Prev country: au
+
+2023-12-06 20:50:46.668604   => Current country: au
+
+2023-12-06 20:50:46.668604   => THE END PRECONDITIONS
+
+2023-12-06 20:50:46.668604   1. Arrange_v0
+2023-12-06 20:50:47.454463   Load page https://capital.com/trade-sainsburys
+2023-12-06 20:50:47.633746   BUTTON_START_TRADING scroll =>
+2023-12-06 20:50:47.638743   BUTTON_START_TRADING is visible? =>
+2023-12-06 20:50:47.773357   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 20:50:47.773357   2. Act_v0
+2023-12-06 20:50:47.773357   Start Click button [Start Trading] =>
+2023-12-06 20:50:47.793703   BUTTON_START_TRADING is clickable? =>
+2023-12-06 20:50:47.827152   BUTTON_START_TRADING click =>
+2023-12-06 20:50:48.050398   => BUTTON_START_TRADING clicked
+
+2023-12-06 20:50:48.051402   3. Assert_v4
+2023-12-06 20:50:48.051402   Checking that the trading platform page has opened (v4) =>
+2023-12-06 20:50:48.597257   => Current page title: Trading Platform | Capital.com
+2023-12-06 20:50:48.597257   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 20:50:49.270099   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 20:50:49.293523   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 20:50:50.097099   Load page https://capital.com/trade-sainsburys

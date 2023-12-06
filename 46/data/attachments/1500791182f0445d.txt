@@ -1,0 +1,93 @@
+
+2023-12-06 20:11:48.764927   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002271A34B410> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-06 20:11:48.764927   worker_id = master
+
+2023-12-06 20:11:48.764927   0. Allure grouping
+
+
+2023-12-06 20:11:48.764927   START PRECONDITIONS =>
+
+
+2023-12-06 20:11:48.764927   {'width': 1280, 'height': 720}
+
+2023-12-06 20:11:48.779954   Set windows position at (320, 180) =>
+
+2023-12-06 20:11:48.896959   Set resolution 1280 * 720 =>
+
+2023-12-06 20:11:49.011983   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 20:11:53.049493   Капчи нет. Тестим дальше
+
+2023-12-06 20:11:53.049493   Prev. Role: Auth
+
+2023-12-06 20:11:53.049493   Current role: Auth
+
+2023-12-06 20:11:53.049493   Prev language: en
+
+2023-12-06 20:11:53.049493   => Current language: en
+
+2023-12-06 20:11:53.049493   Prev country: de
+
+2023-12-06 20:11:53.049493   => Current country: de
+
+2023-12-06 20:11:53.049493   => THE END PRECONDITIONS
+
+2023-12-06 20:11:53.049493   Clear Top Chart list =>
+2023-12-06 20:11:54.276973   Load page https://capital.com/trading/platform/charting/
+
+2023-12-06 20:12:01.618785   1. Arrange_v4
+2023-12-06 20:12:02.516843   Load page https://capital.com/trade-sainsburys
+2023-12-06 20:12:02.516843   MOST_TRADED is visible? =>
+2023-12-06 20:12:02.719452   => MOST_TRADED is visible on the page!
+2023-12-06 20:12:02.719452   => Found 5 elements in block MOST_TRADED
+
+2023-12-06 20:12:02.719452   Testing Most traded random element #1
+
+2023-12-06 20:12:02.720452   2. Act_v4
+2023-12-06 20:12:02.720452   MOST_TRADED delete js-mostTraded class =>
+2023-12-06 20:12:02.891038   MOST_TRADED scroll =>
+2023-12-06 20:12:02.896033   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-06 20:12:03.447367   => MOST_TRADED clicked!
+
+2023-12-06 20:12:03.447367   3. Assert_v4
+2023-12-06 20:12:03.448392   Checking that the trading platform page has opened (v4) =>
+2023-12-06 20:12:03.494294   => Current page title: Trading Platform | Capital.com
+2023-12-06 20:12:03.494294   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 20:12:05.293560   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 20:12:05.324618   => The page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url was opened in lIVE mode
+2023-12-06 20:12:05.324618   => Opened page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url for corresponding trading instrument 'NVIDIA Corp'
+2023-12-06 20:12:05.324618   Trading Platform for 'NVIDIA Corp' trading instrument is opened
+2023-12-06 20:12:05.494343   Trade instrument 'NVIDIA Corp' is on the Top Charts List
+2023-12-06 20:12:05.820694   Trade instrument 'NVIDIA Corp' is on the Top Charts List and selected
+2023-12-06 20:12:06.633331   Load page https://capital.com/trade-sainsburys
+
+2023-12-06 20:12:06.634323   Clear Top Chart list =>
+2023-12-06 20:12:07.878199   Load page https://capital.com/trading/platform/charting/
+
+2023-12-06 20:12:13.783083   1. Arrange_v4
+2023-12-06 20:12:14.717777   Load page https://capital.com/trade-sainsburys
+2023-12-06 20:12:14.717777   MOST_TRADED is visible? =>
+2023-12-06 20:12:14.907316   => MOST_TRADED is visible on the page!
+2023-12-06 20:12:14.907316   => Found 5 elements in block MOST_TRADED
+
+2023-12-06 20:12:14.907316   Testing Most traded random element #2
+
+2023-12-06 20:12:14.907316   2. Act_v4
+2023-12-06 20:12:14.907316   MOST_TRADED delete js-mostTraded class =>
+2023-12-06 20:12:15.108190   MOST_TRADED scroll =>
+2023-12-06 20:12:15.113186   MOST_TRADED click for 'Altimmune, Inc.' trading instrument =>
+2023-12-06 20:12:15.399716   => MOST_TRADED clicked!
+
+2023-12-06 20:12:15.400717   3. Assert_v4
+2023-12-06 20:12:15.400717   Checking that the trading platform page has opened (v4) =>
+2023-12-06 20:12:15.450388   => Current page title: Trading Platform | Capital.com
+2023-12-06 20:12:15.450388   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 20:12:16.883966   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 20:12:16.900793   => The page with https://capital.com/trading/platform/spotlight/20976620360900?side=buy url was opened in lIVE mode
+2023-12-06 20:12:16.900793   => Opened page with https://capital.com/trading/platform/spotlight/20976620360900?side=buy url for corresponding trading instrument 'Altimmune, Inc.'
+2023-12-06 20:12:16.900793   Trading Platform for 'Altimmune, Inc.' trading instrument is opened
+2023-12-06 20:12:17.077809   Trade instrument 'Altimmune, Inc.' is on the Top Charts List
+2023-12-06 20:12:17.376986   Trade instrument 'Altimmune, Inc.' is on the Top Charts List and selected
+2023-12-06 20:12:18.117425   Load page https://capital.com/trade-sainsburys

@@ -1,0 +1,70 @@
+Current country of trading - de
+
+2023-12-06 20:07:27.038735   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002271A2876D0> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-12-06 20:07:27.043338   worker_id = master
+
+2023-12-06 20:07:27.043338   0. Allure grouping
+
+2023-12-06 20:07:27.043338   0. Arrange_0
+2023-12-06 20:07:27.772501   Load page https://capital.com
+
+
+2023-12-06 20:07:27.772501   START PRECONDITIONS =>
+
+
+2023-12-06 20:07:27.772501   {'width': 1280, 'height': 720}
+
+2023-12-06 20:07:27.924000   Set windows position at (320, 180) =>
+
+2023-12-06 20:07:28.032429   Set resolution 1280 * 720 =>
+
+2023-12-06 20:07:28.150925   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 20:07:32.164797   Капчи нет. Тестим дальше
+
+2023-12-06 20:07:32.164797   Prev. Role: Auth
+
+2023-12-06 20:07:32.164797   Current role: Auth
+
+2023-12-06 20:07:32.164797   Prev language: en
+
+2023-12-06 20:07:32.164797   => Current language: en
+
+2023-12-06 20:07:32.164797   Prev country: gb
+
+2023-12-06 20:07:32.164797   Run preconditions: set "de" country =>
+
+
+2023-12-06 20:07:32.173794   => Language and Country menu is present
+
+
+2023-12-06 20:07:32.192748   => Language and Country menu is visible
+
+
+2023-12-06 20:07:33.968164   => Focus is moved on Language and Country menu 
+
+2023-12-06 20:07:37.313774   => Current country: de
+
+2023-12-06 20:07:37.313774   => THE END PRECONDITIONS
+
+2023-12-06 20:07:37.313774   1. Arrange_v0
+2023-12-06 20:07:38.369125   Load page https://capital.com/trade-barclays
+2023-12-06 20:07:38.534458   BUTTON_START_TRADING scroll =>
+2023-12-06 20:07:38.539462   BUTTON_START_TRADING is visible? =>
+2023-12-06 20:07:38.616733   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-06 20:07:38.617741   2. Act_v0
+2023-12-06 20:07:38.617741   Start Click button [Start Trading] =>
+2023-12-06 20:07:38.622737   BUTTON_START_TRADING is clickable? =>
+2023-12-06 20:07:38.629148   BUTTON_START_TRADING click =>
+2023-12-06 20:07:38.880118   => BUTTON_START_TRADING clicked
+
+2023-12-06 20:07:38.881122   3. Assert_v4
+2023-12-06 20:07:38.881122   Checking that the trading platform page has opened (v4) =>
+2023-12-06 20:07:39.425634   => Current page title: Trading Platform | Capital.com
+2023-12-06 20:07:39.425634   Checking that the Trading platform LOGO is present on the page =>
+2023-12-06 20:07:41.196369   Checking that the Trading platform opened in LIVE mode =>
+2023-12-06 20:07:41.209367   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-06 20:07:41.936672   Load page https://capital.com/trade-barclays
