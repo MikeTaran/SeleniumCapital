@@ -1,0 +1,70 @@
+
+2023-12-06 10:46:49.547695   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x000001AFAA47E690> с именем TC_11.02.02.00_09
+{'width': 1280, 'height': 720}
+
+2023-12-06 10:46:49.558848   worker_id = master
+
+2023-12-06 10:46:49.558848   0. Allure grouping
+
+
+2023-12-06 10:46:49.558848   START PRECONDITIONS =>
+
+
+2023-12-06 10:46:49.558848   {'width': 1280, 'height': 720}
+
+2023-12-06 10:46:49.560830   Set windows position at (320, 180) =>
+
+2023-12-06 10:46:49.665444   Set resolution 1280 * 720 =>
+
+2023-12-06 10:46:49.770268   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 10:46:53.774920   Капчи нет. Тестим дальше
+
+2023-12-06 10:46:53.774920   Prev. Role: NoReg
+
+2023-12-06 10:46:53.774920   Current role: NoReg
+
+2023-12-06 10:46:53.774920   Prev language: de
+
+2023-12-06 10:46:53.774920   => Current language: de
+
+2023-12-06 10:46:53.774920   Prev country: au
+
+2023-12-06 10:46:53.774920   => Current country: au
+
+2023-12-06 10:46:53.774920   => THE END PRECONDITIONS
+
+2023-12-06 10:46:53.774920   0. Arrange_0
+2023-12-06 10:46:54.498062   Load page https://capital.com/de
+2023-12-06 10:46:54.814771   => Education menu is present
+2023-12-06 10:46:54.896176   => Education menu is visible
+2023-12-06 10:46:56.687237   => Education menu focus moved
+
+
+2023-12-06 10:46:58.250859   => Shares trading sub-menu clicked
+
+2023-12-06 10:46:58.321161   1. Arrange
+2023-12-06 10:46:58.545721   BUTTON_ON_HOR_BANNER is visible? =>
+2023-12-06 10:46:58.695220   => BUTTON_ON_HOR_BANNER is visible on the page!
+2023-12-06 10:46:58.695220   Start Checking that form [Sign up] popped up on the page =>
+2023-12-06 10:47:03.213631   '[Sign up]' form was not popped up
+
+2023-12-06 10:47:03.213631   2. Act
+2023-12-06 10:47:03.213631   BUTTON_ON_HOR_BANNER is present? =>
+2023-12-06 10:47:03.224058   => BUTTON_ON_HOR_BANNER is present on the page!
+2023-12-06 10:47:03.224058   BUTTON_ON_HOR_BANNER scroll =>
+2023-12-06 10:47:03.871853   => BUTTON_ON_HOR_BANNER clicked!
+
+2023-12-06 10:47:03.871853   3. Assert_v0
+2023-12-06 10:47:03.871853   Start step Check that form [Sign up] opened
+2023-12-06 10:47:13.539372   'Sign up' form not opened
+2023-12-06 10:47:13.539372   Start method Check that [Sign up] page opened =>
+2023-12-06 10:47:14.546707   'Sign up' page opened
+2023-12-06 10:47:14.546707   Assert SIGNUP_SIGNUP_FRAME =>
+2023-12-06 10:47:14.546707   Assert SIGNUP_REF_LOGIN =>
+2023-12-06 10:47:14.562375   Assert SIGNUP_PRIVACY_POLICY_ALL_1 =>
+2023-12-06 10:47:19.097467   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-06 10:47:19.106497   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-06 10:47:19.106497   => 'Signup' page is checked
+2023-12-06 10:47:20.117393   Start method 'Close [Sign up] page' =>
+2023-12-06 10:47:21.373686   => [Sign up] page is closed

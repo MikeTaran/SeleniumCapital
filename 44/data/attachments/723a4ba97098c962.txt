@@ -1,0 +1,63 @@
+
+2023-12-06 12:00:36.479973   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000001DB400E0390> с именем TC_11.02.02.01_10
+{'width': 1264, 'height': 582}
+
+2023-12-06 12:00:36.479973   worker_id = master
+
+2023-12-06 12:00:36.479973   0. Allure grouping
+
+
+2023-12-06 12:00:36.479973   START PRECONDITIONS =>
+
+
+2023-12-06 12:00:36.479973   {'width': 1264, 'height': 582}
+
+2023-12-06 12:00:36.479973   Set windows position at (320, 180) =>
+
+2023-12-06 12:00:36.596186   Set resolution 1280 * 720 =>
+
+2023-12-06 12:00:36.730048   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-06 12:00:40.753948   Капчи нет. Тестим дальше
+
+2023-12-06 12:00:40.753948   Prev. Role: Reg/NoAuth
+
+2023-12-06 12:00:40.753948   Current role: Reg/NoAuth
+
+2023-12-06 12:00:40.753948   Prev language: de
+
+2023-12-06 12:00:40.753948   => Current language: de
+
+2023-12-06 12:00:40.753948   Prev country: au
+
+2023-12-06 12:00:40.753948   => Current country: au
+
+2023-12-06 12:00:40.753948   => THE END PRECONDITIONS
+
+2023-12-06 12:00:40.753948   1. Arrange
+2023-12-06 12:00:43.025036   Load page https://capital.com/de/barclays-aktie-handeln
+2023-12-06 12:00:43.025036   BUTTON_ON_VER_BANNER is visible? =>
+2023-12-06 12:00:44.497207   => BUTTON_ON_VER_BANNER is visible on the page!
+2023-12-06 12:00:44.497207   Start Checking that form [Sign up] popped up on the page =>
+2023-12-06 12:00:49.133744   '[Sign up]' form was not popped up
+
+2023-12-06 12:00:49.134752   2. Act
+2023-12-06 12:00:49.134752   BUTTON_ON_VER_BANNER is present? =>
+2023-12-06 12:00:49.154273   => BUTTON_ON_VER_BANNER is present on the page!
+2023-12-06 12:00:49.154273   BUTTON_ON_VER_BANNER scroll =>
+2023-12-06 12:00:50.622228   => BUTTON_ON_VER_BANNER clicked!
+
+2023-12-06 12:00:50.623228   3. Assert_v0
+2023-12-06 12:01:27.008752   'Login' form not opened
+2023-12-06 12:01:27.664361   'Login' page not opened
+2023-12-06 12:01:32.266982   'Login' form on trading platform not opened
+2023-12-06 12:01:32.266982   Start step Check that form [Sign up] opened
+2023-12-06 12:01:41.356133   'Sign up' form not opened
+2023-12-06 12:01:41.356133   Start method Check that [Sign up] page opened =>
+2023-12-06 12:01:42.357705   'Sign up' page opened
+2023-12-06 12:01:42.357705   Assert SIGNUP_SIGNUP_FRAME =>
+2023-12-06 12:01:42.372745   Assert SIGNUP_REF_LOGIN =>
+2023-12-06 12:01:42.404038   Assert SIGNUP_PRIVACY_POLICY_ALL_1 =>
+2023-12-06 12:01:46.945695   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-06 12:01:46.964390   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-06 12:01:46.964390   => 'Signup' page is checked

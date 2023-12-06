@@ -1,0 +1,88 @@
+2023-12-06 11:36:31 ERROR Unable to initialize WebDriver
+2023-12-06 11:36:31 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00B072A3+45731]
+	(No symbol) [0x00A92D51]
+	(No symbol) [0x0098880D]
+	(No symbol) [0x009BB940]
+	(No symbol) [0x009BBE0B]
+	(No symbol) [0x009ED1F2]
+	(No symbol) [0x009D8024]
+	(No symbol) [0x009EB7A2]
+	(No symbol) [0x009D7DD6]
+	(No symbol) [0x009B31F6]
+	(No symbol) [0x009B439D]
+	GetHandleVerifier [0x00E10716+3229462]
+	GetHandleVerifier [0x00E584C8+3523784]
+	GetHandleVerifier [0x00E5214C+3498316]
+	GetHandleVerifier [0x00B91680+611968]
+	(No symbol) [0x00A9CCCC]
+	(No symbol) [0x00A98DF8]
+	(No symbol) [0x00A98F1D]
+	(No symbol) [0x00A8B2C7]
+	BaseThreadInitThunk [0x76606A39+25]
+	RtlGetFullPathName_UEx [0x77B77F8D+173]
+	RtlGetFullPathName_UEx [0x77B77F5B+123]
+
+2023-12-06 11:36:53 ERROR Unable to initialize WebDriver
+2023-12-06 11:36:53 ERROR no such execution context
+  (Session info: chrome=119.0.6045.160)
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 607, in wait_for_target_url
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 92, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 94, in _predicate
+    return url in driver.current_url
+                  ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 436, in current_url
+    return self.execute(Command.GET_CURRENT_URL)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such execution context
+  (Session info: chrome=119.0.6045.160)
+Stacktrace:
+	GetHandleVerifier [0x00B072A3+45731]
+	(No symbol) [0x00A92D51]
+	(No symbol) [0x009886D0]
+	(No symbol) [0x0097AFEB]
+	(No symbol) [0x009798EE]
+	(No symbol) [0x00979FFA]
+	(No symbol) [0x00983D70]
+	(No symbol) [0x00990BAA]
+	(No symbol) [0x00993BA6]
+	(No symbol) [0x0097A52C]
+	(No symbol) [0x009908E2]
+	(No symbol) [0x009EB8C3]
+	(No symbol) [0x009D7DD6]
+	(No symbol) [0x009B31F6]
+	(No symbol) [0x009B439D]
+	GetHandleVerifier [0x00E10716+3229462]
+	GetHandleVerifier [0x00E584C8+3523784]
+	GetHandleVerifier [0x00E5214C+3498316]
+	GetHandleVerifier [0x00B91680+611968]
+	(No symbol) [0x00A9CCCC]
+	(No symbol) [0x00A98DF8]
+	(No symbol) [0x00A98F1D]
+	(No symbol) [0x00A8B2C7]
+	BaseThreadInitThunk [0x76606A39+25]
+	RtlGetFullPathName_UEx [0x77B77F8D+173]
+	RtlGetFullPathName_UEx [0x77B77F5B+123]
