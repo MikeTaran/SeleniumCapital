@@ -1,0 +1,74 @@
+
+2023-12-07 14:06:00.799756   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x00000226487C4D90> с именем TC_11.01.06_06
+{'width': 1264, 'height': 582}
+
+2023-12-07 14:06:00.802757   browser = chrome
+
+2023-12-07 14:06:00.802757   worker_id = master
+
+2023-12-07 14:06:00.802757   Start TC_11.01.06_04
+
+2023-12-07 14:06:00.802757   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x00000226487C4D90>.None
+
+2023-12-07 14:06:00.802757   0. Arrange
+
+
+2023-12-07 14:06:00.802757   START PRECONDITIONS =>
+
+
+2023-12-07 14:06:00.802757   {'width': 1264, 'height': 582}
+
+2023-12-07 14:06:00.804760   Set windows position at (320, 180) =>
+
+2023-12-07 14:06:00.908851   Set resolution 1280 * 720 =>
+
+2023-12-07 14:06:01.015221   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-07 14:06:05.037363   Капчи нет. Тестим дальше
+
+2023-12-07 14:06:05.037363   Prev. Role: Reg/NoAuth
+
+2023-12-07 14:06:05.037363   Current role: Reg/NoAuth
+
+2023-12-07 14:06:05.037363   Prev language: en
+
+2023-12-07 14:06:05.037363   => Current language: en
+
+2023-12-07 14:06:05.037363   Prev country: ae
+
+2023-12-07 14:06:05.037363   => Current country: ae
+
+2023-12-07 14:06:05.037363   => THE END PRECONDITIONS
+
+2023-12-07 14:06:05.038361   1. Arrange
+
+2023-12-07 14:06:05.038361   Testing the qr code: CAPITAL
+2023-12-07 14:06:05.509844   Load page https://capital.com/learn-trading-app
+2023-12-07 14:06:05.510041   Start Checking that form [Sign up] popped up on the page =>
+2023-12-07 14:06:10.177641   '[Sign up]' form was not popped up
+2023-12-07 14:06:10.177641   QR_CODE is located in the DOM? =>
+2023-12-07 14:06:10.199050   => QR_CODE_CAPITAL is located in the DOM
+2023-12-07 14:06:10.199050   QR_CODE_LINK is visible on the page? =>
+2023-12-07 14:06:10.220284   => QR_CODE_LINK CAPITAL is on the page!
+
+2023-12-07 14:06:10.220284   2. Act
+2023-12-07 14:06:10.220284   Determining the QR_CODE_TITLE link
+2023-12-07 14:06:10.231483   QR_CODE_TITLE link: https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=zs1cpll1-8dqa-plvi-h7rm-v8e593fdx6ry                                                                                                                       
+2023-12-07 14:06:10.231483   Start Checking that form [Sign up] popped up on the page =>
+2023-12-07 14:06:14.749072   '[Sign up]' form was not popped up
+2023-12-07 14:06:14.813362   Start QR-code decryption with CV2-method =>
+2023-12-07 14:06:14.820359   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-07 14:06:14.820359   Start QR-code decryption with PYZBAR-method =>
+2023-12-07 14:06:14.823365   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-07 14:06:14.872450   Start QR-code decryption with QREADER-method =>
+2023-12-07 14:06:16.939016   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-07 14:06:16.939016   QR_CODE_LINK_QREADER=  https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=zs1cpll1-8dqa-plvi-h7rm-v8e593fdx6ry                                                                                                                       
+2023-12-07 14:06:17.023637   Check QR-code title link equal QR-code image link =>
+2023-12-07 14:06:17.696604   Load page https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=zs1cpll1-8dqa-plvi-h7rm-v8e593fdx6ry                                                                                                                       
+
+2023-12-07 14:06:17.696604   3. Assert_v0
+2023-12-07 14:06:17.696604   Checking that the App Store page has opened
+2023-12-07 14:06:18.022229   => Current page title: Capital.com: Trading & Finance on the App Store
+2023-12-07 14:06:18.022229   Checking that the App Store app title
+2023-12-07 14:06:18.104548   Checking that the App Store specifies provider
+2023-12-07 14:06:18.576414   Load page https://capital.com/learn-trading-app
