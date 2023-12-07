@@ -70,6 +70,10 @@ jobs:
           path: allure-results/
           retention-days: 10
 
+      - name: Run hwinfo.py
+        if: always()
+        run: poetry run python3 tests/hwinfo.py
+
 
   generate_report:
     name: II. Generate & Deploy Allure report
