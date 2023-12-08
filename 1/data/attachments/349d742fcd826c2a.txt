@@ -1,0 +1,51 @@
+
+2023-12-08 14:38:40.932537   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x00000206FAEBE6D0> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-08 14:38:40.934539   worker_id = master
+
+2023-12-08 14:38:40.934539   0. Allure grouping
+
+
+2023-12-08 14:38:40.934539   START PRECONDITIONS =>
+
+
+2023-12-08 14:38:40.934539   {'width': 1280, 'height': 720}
+
+2023-12-08 14:38:40.936538   Set windows position at (320, 180) =>
+
+2023-12-08 14:38:41.040382   Set resolution 1280 * 720 =>
+
+2023-12-08 14:38:41.144498   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-08 14:38:45.154682   Капчи нет. Тестим дальше
+
+2023-12-08 14:38:45.154682   Prev. Role: NoReg
+
+2023-12-08 14:38:45.154682   Current role: NoReg
+
+2023-12-08 14:38:45.154682   Prev language: en
+
+2023-12-08 14:38:45.154682   => Current language: en
+
+2023-12-08 14:38:45.154682   Prev country: au
+
+2023-12-08 14:38:45.154682   => Current country: au
+
+2023-12-08 14:38:45.154682   => THE END PRECONDITIONS
+
+2023-12-08 14:38:45.154682   Clear Top Chart list =>
+2023-12-08 14:38:46.623696   Load page https://capital.com/trading/platform/charting/
+
+2023-12-08 14:38:54.715555   1. Arrange_v4
+2023-12-08 14:38:55.324578   Load page https://capital.com/trade-moderna
+2023-12-08 14:38:55.324578   MOST_TRADED is visible? =>
+2023-12-08 14:38:55.529256   => MOST_TRADED is visible on the page!
+2023-12-08 14:38:55.530253   => Found 5 elements in block MOST_TRADED
+
+2023-12-08 14:38:55.530253   Testing Most traded random element #1
+
+2023-12-08 14:38:55.530253   2. Act_v4
+2023-12-08 14:38:55.530253   MOST_TRADED delete js-mostTraded class =>
+2023-12-08 14:38:55.665216   MOST_TRADED scroll =>
+2023-12-08 14:38:55.670201   MOST_TRADED click for 'Tesla Inc' trading instrument =>

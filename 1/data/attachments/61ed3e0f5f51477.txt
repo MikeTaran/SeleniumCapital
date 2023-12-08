@@ -1,0 +1,60 @@
+
+
+
+Current test role - Auth
+
+2023-12-08 12:50:51.476190   Работает obj <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x00000129321E5F90> с именем TC_11.01.06_01
+{'width': 1280, 'height': 720}
+
+2023-12-08 12:50:51.655601   browser = chrome
+
+2023-12-08 12:50:51.655601   worker_id = master
+
+2023-12-08 12:50:51.655601   Start TC_11.01.06_01
+
+2023-12-08 12:50:51.655601   <us_11-01-06_investmate_app_test.TestInvestmateApp object at 0x00000129321E5F90>.None
+
+2023-12-08 12:50:51.655601   0. Arrange
+
+
+2023-12-08 12:50:51.655601   START PRECONDITIONS =>
+
+
+2023-12-08 12:50:51.655601   {'width': 1280, 'height': 720}
+
+2023-12-08 12:50:51.658610   Set windows position at (320, 180) =>
+
+2023-12-08 12:50:51.768229   Set resolution 1280 * 720 =>
+
+2023-12-08 12:50:51.872000   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-08 12:50:55.880820   Капчи нет. Тестим дальше
+
+2023-12-08 12:50:55.880820   Prev. Role: NoReg
+
+2023-12-08 12:50:55.880820   Run preconditions: set "Auth" Role =>
+2023-12-08 12:51:14.706007   Load page https://capital.com
+
+2023-12-08 12:51:15.336133   => All cookies are deleted
+2023-12-08 12:51:53.059181   Load page https://capital.com
+
+2023-12-08 12:51:53.059181   Click button [Accept all cookies]
+2023-12-08 12:51:53.059181   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-08 12:51:57.113265   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-08 12:51:57.123264   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-08 12:51:57.123264   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-08 12:51:57.141609   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-08 12:51:58.201937   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-08 12:51:58.201937   => Accepted All Cookies
+
+2023-12-08 12:51:58.201937   Start Autorization
+
+2023-12-08 12:51:58.202948   2. Act
+2023-12-08 12:51:58.202948   Start Click button [Log in] =>
+2023-12-08 12:51:58.227213   BUTTON_LOGIN scroll =>
+2023-12-08 12:51:58.235418   Is BUTTON_LOGIN clickable? =>
+2023-12-08 12:51:58.250549   => BUTTON_LOGIN is clickable
+2023-12-08 12:51:58.250549   BUTTON_LOGIN click =>
+2023-12-08 12:51:58.299299   => BUTTON_LOGIN is clicked!
+2023-12-08 12:51:58.299299   => 'Login' form is opened
+2023-12-08 12:52:02.354702   => TextBox with '#l_overlay input[type='email']' locator is not present
