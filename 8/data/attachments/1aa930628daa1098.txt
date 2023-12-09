@@ -1,0 +1,51 @@
+{'width': 1264, 'height': 582}
+
+2023-12-09 13:03:51.429084   worker_id = master
+
+2023-12-09 13:03:51.429084   0. Allure grouping
+
+
+2023-12-09 13:03:51.429084   START PRECONDITIONS =>
+
+
+2023-12-09 13:03:51.429084   {'width': 1264, 'height': 582}
+
+2023-12-09 13:03:51.444707   Set windows position at (320, 180) =>
+
+2023-12-09 13:03:51.547897   Set resolution 1280 * 720 =>
+
+2023-12-09 13:03:51.666242   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 13:03:55.711806   Капчи нет. Тестим дальше
+
+2023-12-09 13:03:55.711806   Prev. Role: Reg/NoAuth
+
+2023-12-09 13:03:55.711806   Current role: Reg/NoAuth
+
+2023-12-09 13:03:55.711806   Prev language: en
+
+2023-12-09 13:03:55.711806   => Current language: en
+
+2023-12-09 13:03:55.711806   Prev country: au
+
+2023-12-09 13:03:55.711806   => Current country: au
+
+2023-12-09 13:03:55.711806   => THE END PRECONDITIONS
+
+2023-12-09 13:03:55.711806   1. Arrange_v0
+2023-12-09 13:03:56.414770   Load page https://capital.com/financial-risk-management
+2023-12-09 13:03:56.414770   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2023-12-09 13:03:56.795115   2. Act_v0
+2023-12-09 13:03:57.072334   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2023-12-09 13:03:57.072334   3. Assert_v0
+2023-12-09 13:03:57.072334   Start step Check that [Sign up] form is opened
+2023-12-09 13:03:57.509770   'Sign up' form opened
+2023-12-09 13:03:57.509770   Assert SIGNUP_HEADER =>
+2023-12-09 13:03:57.531761   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 13:03:57.551044   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 13:03:57.603862   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 13:03:57.604861   => 'Signup' form is checked
+2023-12-09 13:03:57.604861   Start step Close [Sign up] form =>
+2023-12-09 13:03:57.717507   => 'Signup' form closed

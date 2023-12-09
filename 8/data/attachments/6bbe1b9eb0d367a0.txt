@@ -1,0 +1,59 @@
+{'width': 1264, 'height': 582}
+
+2023-12-09 14:12:47.312807   worker_id = master
+
+2023-12-09 14:12:47.312807   0. Allure grouping
+
+
+2023-12-09 14:12:47.312807   START PRECONDITIONS =>
+
+
+2023-12-09 14:12:47.312807   {'width': 1264, 'height': 582}
+
+2023-12-09 14:12:47.314806   Set windows position at (320, 180) =>
+
+2023-12-09 14:12:47.418085   Set resolution 1280 * 720 =>
+
+2023-12-09 14:12:47.523736   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:12:51.570684   Капчи нет. Тестим дальше
+
+2023-12-09 14:12:51.570684   Prev. Role: Auth
+
+2023-12-09 14:12:51.570684   Current role: Auth
+
+2023-12-09 14:12:51.570684   Prev language: en
+
+2023-12-09 14:12:51.570684   => Current language: en
+
+2023-12-09 14:12:51.570684   Prev country: au
+
+2023-12-09 14:12:51.570684   => Current country: au
+
+2023-12-09 14:12:51.571687   => THE END PRECONDITIONS
+
+2023-12-09 14:12:51.571687   Clear Top Chart list =>
+2023-12-09 14:12:52.770582   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 14:12:58.244448   1. Arrange_v4
+2023-12-09 14:12:58.752783   Load page https://capital.com/trade-eurcad
+2023-12-09 14:12:58.752783   MOST_TRADED is visible? =>
+2023-12-09 14:12:59.033970   => MOST_TRADED is visible on the page!
+2023-12-09 14:12:59.033970   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 14:12:59.033970   Testing Most traded random element #1
+
+2023-12-09 14:12:59.033970   2. Act_v4
+2023-12-09 14:12:59.033970   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 14:12:59.109372   MOST_TRADED scroll =>
+2023-12-09 14:12:59.114370   MOST_TRADED click for 'Australian Dollar / US Dollar' trading instrument =>
+2023-12-09 14:12:59.483110   => MOST_TRADED clicked!
+
+2023-12-09 14:12:59.483110   3. Assert_v4
+2023-12-09 14:12:59.484105   Checking that the trading platform page has opened (v4) =>
+2023-12-09 14:12:59.535069   => Current page title: Trading Platform | Capital.com
+2023-12-09 14:12:59.536932   Checking that the Trading platform LOGO is present on the page =>
+2023-12-09 14:13:00.403272   Checking that the Trading platform opened in LIVE mode =>
+2023-12-09 14:13:00.480026   => The page with https://capital.com/trading/platform/spotlight/1496662958757060?side=buy url was opened in lIVE mode
+2023-12-09 14:13:00.480026   => Opened page with https://capital.com/trading/platform/spotlight/1496662958757060?side=buy url for corresponding trading instrument 'Australian Dollar / US Dollar'
+2023-12-09 14:13:00.480026   Trading Platform for 'Australian Dollar / US Dollar' trading instrument is opened

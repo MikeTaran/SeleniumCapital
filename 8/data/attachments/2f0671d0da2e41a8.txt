@@ -1,0 +1,63 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 14:53:14.013914   browser = chrome
+
+2023-12-09 14:53:14.013914   worker_id = master
+
+2023-12-09 14:53:14.013914   Start TC_11.02.07_02
+
+2023-12-09 14:53:14.013914   <us_11-02-07_etf_trading_test.TestETFTrading object at 0x000002940CD60690>.None
+
+2023-12-09 14:53:14.013914   0. Arrange
+
+
+2023-12-09 14:53:14.013914   START PRECONDITIONS =>
+
+
+2023-12-09 14:53:14.013914   {'width': 1280, 'height': 720}
+
+2023-12-09 14:53:14.015917   Set windows position at (320, 180) =>
+
+2023-12-09 14:53:14.119916   Set resolution 1280 * 720 =>
+
+2023-12-09 14:53:14.223688   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:53:18.245434   Капчи нет. Тестим дальше
+
+2023-12-09 14:53:18.245434   Prev. Role: NoReg
+
+2023-12-09 14:53:18.245434   Current role: NoReg
+
+2023-12-09 14:53:18.245434   Prev language: en
+
+2023-12-09 14:53:18.245434   => Current language: en
+
+2023-12-09 14:53:18.245434   Prev country: au
+
+2023-12-09 14:53:18.245434   => Current country: au
+
+2023-12-09 14:53:18.245434   => THE END PRECONDITIONS
+2023-12-09 14:53:18.245434   => Education menu is present
+2023-12-09 14:53:18.261038   => Education menu is visible
+2023-12-09 14:53:20.054484   => Education menu focus moved
+
+2023-12-09 14:53:21.591360   1. Arrange_v0
+2023-12-09 14:53:21.626636   BUTTON_TRY_DEMO is visible? =>
+2023-12-09 14:53:21.652185   => BUTTON_TRY_DEMO is visible on the page!
+
+2023-12-09 14:53:21.652185   2. Act_v0
+2023-12-09 14:53:21.652185   BUTTON_TRY_DEMO is present? =>
+2023-12-09 14:53:21.674206   => BUTTON_TRY_DEMO is present on the page!
+2023-12-09 14:53:21.674206   BUTTON_TRY_DEMO scroll =>
+2023-12-09 14:53:21.757158   => BUTTON_TRY_DEMO clicked!
+
+2023-12-09 14:53:21.757158   3. Assert_v0
+2023-12-09 14:53:21.757158   Start step Check that [Sign up] form is opened
+2023-12-09 14:53:21.994159   'Sign up' form opened
+2023-12-09 14:53:21.994159   Assert SIGNUP_HEADER =>
+2023-12-09 14:53:22.022833   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 14:53:22.038155   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 14:53:22.078880   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 14:53:22.078880   => 'Signup' form is checked
+2023-12-09 14:53:22.078880   Start step Close [Sign up] form =>
+2023-12-09 14:53:22.175349   => 'Signup' form closed

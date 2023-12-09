@@ -1,0 +1,62 @@
+
+2023-12-09 14:36:54.124721   Работает obj <us_11-02-05_cryptocurrency_trading_test.TestCryptocurrencyTrading object at 0x0000020B250B8CD0> с именем TC_11.02.05_10
+{'width': 1264, 'height': 582}
+
+2023-12-09 14:36:54.126710   browser = chrome
+
+2023-12-09 14:36:54.126710   worker_id = master
+
+2023-12-09 14:36:54.126710   Start TC_11.02.05_10
+
+2023-12-09 14:36:54.127712   <us_11-02-05_cryptocurrency_trading_test.TestCryptocurrencyTrading object at 0x0000020B250B8CD0>.None
+
+2023-12-09 14:36:54.127712   0. Arrange
+
+
+2023-12-09 14:36:54.127712   START PRECONDITIONS =>
+
+
+2023-12-09 14:36:54.127712   {'width': 1264, 'height': 582}
+
+2023-12-09 14:36:54.129717   Set windows position at (320, 180) =>
+
+2023-12-09 14:36:54.232811   Set resolution 1280 * 720 =>
+
+2023-12-09 14:36:54.337569   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:36:58.379559   Капчи нет. Тестим дальше
+
+2023-12-09 14:36:58.379559   Prev. Role: Auth
+
+2023-12-09 14:36:58.379559   Current role: Auth
+
+2023-12-09 14:36:58.379559   Prev language: en
+
+2023-12-09 14:36:58.379559   => Current language: en
+
+2023-12-09 14:36:58.379559   Prev country: au
+
+2023-12-09 14:36:58.379559   => Current country: au
+
+2023-12-09 14:36:58.379559   => THE END PRECONDITIONS
+
+2023-12-09 14:36:58.380564   1. Arrange
+2023-12-09 14:36:59.090261   Load page https://capital.com/trade-ethereum-classic
+2023-12-09 14:36:59.090261   BUTTON_BUY_IN_CONTENT_BLOCK is visible? =>
+2023-12-09 14:36:59.101413   => BUTTON_BUY_IN_CONTENT_BLOCK is visible on the page!
+
+2023-12-09 14:36:59.122415   2. Act
+2023-12-09 14:36:59.122415   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>
+2023-12-09 14:36:59.122415   => BUTTON_BUY_IN_CONTENT_BLOCK is present on the page
+2023-12-09 14:36:59.122415   BUTTON_BUY_IN_CONTENT_BLOCK scroll =>
+2023-12-09 14:36:59.127286   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled
+2023-12-09 14:36:59.127286   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>
+2023-12-09 14:36:59.155784   BUTTON_BUY_IN_CONTENT_BLOCK CLICK =>
+2023-12-09 14:36:59.558921   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!
+
+2023-12-09 14:36:59.577080   3. Assert_v3
+2023-12-09 14:36:59.577080   Checking that the trading platform page has opened (v3) =>
+2023-12-09 14:36:59.583926   => Opened page with https://capital.com/trading/platform url. Expected: https://capital.com/trading/platform 
+2023-12-09 14:36:59.591928   => Current page title: Trading Platform | Capital.com
+2023-12-09 14:36:59.591928   Checking that the Trading platform LOGO is present on the page =>
+2023-12-09 14:37:00.891077   Checking that the Trading platform opened in LIVE mode =>

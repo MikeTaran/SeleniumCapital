@@ -1,0 +1,63 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 14:42:05.686418   browser = chrome
+
+2023-12-09 14:42:05.686418   worker_id = master
+
+2023-12-09 14:42:05.686418   Start TC_11.02.06_08
+
+2023-12-09 14:42:05.686418   <us_11-02-06_indices_trading_test.TestIndicesTrading object at 0x000002776E3249D0>.None
+
+2023-12-09 14:42:05.686418   0. Arrange
+
+
+2023-12-09 14:42:05.686418   START PRECONDITIONS =>
+
+
+2023-12-09 14:42:05.686418   {'width': 1280, 'height': 720}
+
+2023-12-09 14:42:05.693773   Set windows position at (320, 180) =>
+
+2023-12-09 14:42:05.797935   Set resolution 1280 * 720 =>
+
+2023-12-09 14:42:05.901159   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:42:09.905900   Капчи нет. Тестим дальше
+
+2023-12-09 14:42:09.905900   Prev. Role: NoReg
+
+2023-12-09 14:42:09.905900   Current role: NoReg
+
+2023-12-09 14:42:09.905900   Prev language: en
+
+2023-12-09 14:42:09.905900   => Current language: en
+
+2023-12-09 14:42:09.905900   Prev country: au
+
+2023-12-09 14:42:09.905900   => Current country: au
+
+2023-12-09 14:42:09.905900   => THE END PRECONDITIONS
+
+2023-12-09 14:42:09.905900   1. Arrange_v0
+2023-12-09 14:42:09.905900   BUTTON_BUY_IN_CONTENT_BLOCK is located on the page? =>
+2023-12-09 14:42:09.921506   => BUTTON_BUY_IN_CONTENT_BLOCK is located on the page!
+
+2023-12-09 14:42:09.921506   2. Act_v0
+2023-12-09 14:42:09.921506   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>
+2023-12-09 14:42:09.921506   => BUTTON_BUY_IN_CONTENT_BLOCK is present on the page
+2023-12-09 14:42:09.921506   BUTTON_BUY_IN_CONTENT_BLOCK scroll =>
+2023-12-09 14:42:09.935063   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled
+2023-12-09 14:42:09.946327   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>
+2023-12-09 14:42:09.954376   BUTTON_BUY_IN_CONTENT_BLOCK CLICK =>
+2023-12-09 14:42:09.998020   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!
+
+2023-12-09 14:42:09.998020   3. Assert_v0
+2023-12-09 14:42:09.999017   Start step Check that [Sign up] form is opened
+2023-12-09 14:42:10.015764   'Sign up' form opened
+2023-12-09 14:42:10.015764   Assert SIGNUP_HEADER =>
+2023-12-09 14:42:10.030004   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 14:42:10.044922   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 14:42:10.060875   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 14:42:10.060875   => 'Signup' form is checked
+2023-12-09 14:42:10.060875   Start step Close [Sign up] form =>
+2023-12-09 14:42:10.150166   => 'Signup' form closed

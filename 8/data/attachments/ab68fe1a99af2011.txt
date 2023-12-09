@@ -1,0 +1,59 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 14:11:15.803660   worker_id = master
+
+2023-12-09 14:11:15.803660   0. Allure grouping
+
+
+2023-12-09 14:11:15.803660   START PRECONDITIONS =>
+
+
+2023-12-09 14:11:15.803660   {'width': 1280, 'height': 720}
+
+2023-12-09 14:11:15.803660   Set windows position at (320, 180) =>
+
+2023-12-09 14:11:15.918046   Set resolution 1280 * 720 =>
+
+2023-12-09 14:11:16.035219   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:11:20.061403   Капчи нет. Тестим дальше
+
+2023-12-09 14:11:20.061403   Prev. Role: Auth
+
+2023-12-09 14:11:20.061403   Current role: Auth
+
+2023-12-09 14:11:20.061403   Prev language: en
+
+2023-12-09 14:11:20.061403   => Current language: en
+
+2023-12-09 14:11:20.061403   Prev country: au
+
+2023-12-09 14:11:20.061403   => Current country: au
+
+2023-12-09 14:11:20.061403   => THE END PRECONDITIONS
+
+2023-12-09 14:11:20.061403   Clear Top Chart list =>
+2023-12-09 14:11:21.541559   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 14:11:27.248931   1. Arrange_v4
+2023-12-09 14:11:28.200744   Load page https://capital.com/stocks-vs-forex
+2023-12-09 14:11:28.200744   MOST_TRADED is visible? =>
+2023-12-09 14:11:28.410547   => MOST_TRADED is visible on the page!
+2023-12-09 14:11:28.410547   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 14:11:28.410547   Testing Most traded random element #1
+
+2023-12-09 14:11:28.410547   2. Act_v4
+2023-12-09 14:11:28.410547   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 14:11:28.455231   MOST_TRADED scroll =>
+2023-12-09 14:11:28.562039   MOST_TRADED click for 'Euro / US Dollar' trading instrument =>
+2023-12-09 14:11:28.792424   => MOST_TRADED clicked!
+
+2023-12-09 14:11:28.793424   3. Assert_v4
+2023-12-09 14:11:28.793424   Checking that the trading platform page has opened (v4) =>
+2023-12-09 14:11:28.845967   => Current page title: Trading Platform | Capital.com
+2023-12-09 14:11:28.845967   Checking that the Trading platform LOGO is present on the page =>
+2023-12-09 14:11:29.740299   Checking that the Trading platform opened in LIVE mode =>
+2023-12-09 14:11:29.757451   => The page with https://capital.com/trading/platform/spotlight/93810675766468?side=buy url was opened in lIVE mode
+2023-12-09 14:11:29.757451   => Opened page with https://capital.com/trading/platform/spotlight/93810675766468?side=buy url for corresponding trading instrument 'Euro / US Dollar'
+2023-12-09 14:11:29.757451   Trading Platform for 'Euro / US Dollar' trading instrument is opened

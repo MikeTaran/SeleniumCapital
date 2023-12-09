@@ -1,0 +1,61 @@
+
+2023-12-09 14:26:34.958098   Работает obj <us_11-02-05_cryptocurrency_trading_test.TestCryptocurrencyTrading object at 0x0000020B25087610> с именем TC_11.02.05_06
+{'width': 1280, 'height': 720}
+
+2023-12-09 14:26:34.960097   browser = chrome
+
+2023-12-09 14:26:34.960097   worker_id = master
+
+2023-12-09 14:26:34.960097   Start TC_11.02.05_06
+
+2023-12-09 14:26:34.960097   <us_11-02-05_cryptocurrency_trading_test.TestCryptocurrencyTrading object at 0x0000020B25087610>.None
+
+2023-12-09 14:26:34.960097   0. Arrange
+
+
+2023-12-09 14:26:34.960097   START PRECONDITIONS =>
+
+
+2023-12-09 14:26:34.960097   {'width': 1280, 'height': 720}
+
+2023-12-09 14:26:34.962101   Set windows position at (320, 180) =>
+
+2023-12-09 14:26:35.065968   Set resolution 1280 * 720 =>
+
+2023-12-09 14:26:35.169432   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:26:39.218950   Капчи нет. Тестим дальше
+
+2023-12-09 14:26:39.218950   Prev. Role: Auth
+
+2023-12-09 14:26:39.218950   Current role: Auth
+
+2023-12-09 14:26:39.218950   Prev language: en
+
+2023-12-09 14:26:39.218950   => Current language: en
+
+2023-12-09 14:26:39.218950   Prev country: au
+
+2023-12-09 14:26:39.218950   => Current country: au
+
+2023-12-09 14:26:39.218950   => THE END PRECONDITIONS
+
+2023-12-09 14:26:39.218950   1. Arrange_v0
+2023-12-09 14:26:39.882558   Load page https://capital.com/trade-eos
+2023-12-09 14:26:39.882558   Is present BUTTON_START_TRADING_IN_ARTICLE? =>
+2023-12-09 14:26:40.079401   => BUTTON_START_TRADING_IN_ARTICLE is present
+2023-12-09 14:26:40.079401   Is visible BUTTON_START_TRADING_IN_ARTICLE? =>
+
+2023-12-09 14:26:40.099181   2. Act_v0
+2023-12-09 14:26:40.099181   Start Click button BUTTON_START_TRADING_IN_ARTICLE =>
+2023-12-09 14:26:40.227969   BUTTON_START_TRADING_IN_ARTICLE_#1 scroll =>
+2023-12-09 14:26:40.238375   Is BUTTON_START_TRADING_IN_ARTICLE_#1 clickable? =>
+2023-12-09 14:26:40.313114   => BUTTON_START_TRADING_IN_ARTICLE_#1 is clickable
+2023-12-09 14:26:40.313114   BUTTON_START_TRADING_IN_ARTICLE_#1 click =>
+2023-12-09 14:26:40.837109   => BUTTON_START_TRADING_IN_ARTICLE_#1 clicked!
+
+2023-12-09 14:26:40.838277   3. Assert_v4
+2023-12-09 14:26:40.838277   Checking that the trading platform page has opened (v4) =>
+2023-12-09 14:26:41.390903   => Current page title: Trading Platform | Capital.com
+2023-12-09 14:26:41.391901   Checking that the Trading platform LOGO is present on the page =>
+2023-12-09 14:26:42.165826   Checking that the Trading platform opened in LIVE mode =>

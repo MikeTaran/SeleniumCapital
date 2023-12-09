@@ -1,0 +1,98 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 14:53:22.184770   browser = chrome
+
+2023-12-09 14:53:22.184770   worker_id = master
+
+2023-12-09 14:53:22.184770   Start TC_11.02.07_03
+
+2023-12-09 14:53:22.184770   <us_11-02-07_etf_trading_test.TestETFTrading object at 0x000002940CD61A90>.None
+
+2023-12-09 14:53:22.184770   0. Arrange
+
+
+2023-12-09 14:53:22.184770   START PRECONDITIONS =>
+
+
+2023-12-09 14:53:22.184770   {'width': 1280, 'height': 720}
+
+2023-12-09 14:53:22.186772   Set windows position at (320, 180) =>
+
+2023-12-09 14:53:22.290072   Set resolution 1280 * 720 =>
+
+2023-12-09 14:53:22.393177   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:53:26.413970   Капчи нет. Тестим дальше
+
+2023-12-09 14:53:26.413970   Prev. Role: NoReg
+
+2023-12-09 14:53:26.413970   Current role: NoReg
+
+2023-12-09 14:53:26.413970   Prev language: en
+
+2023-12-09 14:53:26.413970   => Current language: en
+
+2023-12-09 14:53:26.413970   Prev country: au
+
+2023-12-09 14:53:26.413970   => Current country: au
+
+2023-12-09 14:53:26.413970   => THE END PRECONDITIONS
+2023-12-09 14:53:26.413970   => Education menu is present
+2023-12-09 14:53:26.429571   => Education menu is visible
+2023-12-09 14:53:28.222668   => Education menu focus moved
+
+2023-12-09 14:53:29.707327   Clear Top Chart list =>
+2023-12-09 14:53:31.598748   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 14:53:39.699551   1. Arrange_v4
+2023-12-09 14:53:40.377154   Load page https://capital.com/trade-etfs
+2023-12-09 14:53:40.377154   MOST_TRADED is visible? =>
+2023-12-09 14:53:40.591752   => MOST_TRADED is visible on the page!
+2023-12-09 14:53:40.591752   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 14:53:40.591752   Testing Most traded random element #1
+
+2023-12-09 14:53:40.591752   2. Act_v4
+2023-12-09 14:53:40.591752   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 14:53:40.686533   MOST_TRADED scroll =>
+2023-12-09 14:53:40.691529   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-09 14:53:40.792945   => MOST_TRADED clicked!
+
+2023-12-09 14:53:40.793948   3. Assert_v0
+2023-12-09 14:53:40.793948   Start step Check that [Sign up] form is opened
+2023-12-09 14:53:40.982786   'Sign up' form opened
+2023-12-09 14:53:40.982786   Assert SIGNUP_HEADER =>
+2023-12-09 14:53:41.019984   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 14:53:41.126576   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 14:53:41.187604   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 14:53:41.187604   => 'Signup' form is checked
+2023-12-09 14:53:41.188604   Start step Close [Sign up] form =>
+2023-12-09 14:53:41.344143   => 'Signup' form closed
+
+2023-12-09 14:53:41.344143   Clear Top Chart list =>
+2023-12-09 14:53:43.438775   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 14:53:51.485420   1. Arrange_v4
+2023-12-09 14:53:52.099919   Load page https://capital.com/trade-etfs
+2023-12-09 14:53:52.099919   MOST_TRADED is visible? =>
+2023-12-09 14:53:52.407206   => MOST_TRADED is visible on the page!
+2023-12-09 14:53:52.407206   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 14:53:52.407206   Testing Most traded random element #2
+
+2023-12-09 14:53:52.407206   2. Act_v4
+2023-12-09 14:53:52.407206   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 14:53:52.476846   MOST_TRADED scroll =>
+2023-12-09 14:53:52.485204   MOST_TRADED click for 'GameStop Corp' trading instrument =>
+2023-12-09 14:53:52.553972   => MOST_TRADED clicked!
+
+2023-12-09 14:53:52.553972   3. Assert_v0
+2023-12-09 14:53:52.553972   Start step Check that [Sign up] form is opened
+2023-12-09 14:53:52.987005   'Sign up' form opened
+2023-12-09 14:53:52.987005   Assert SIGNUP_HEADER =>
+2023-12-09 14:53:53.088232   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 14:53:53.107076   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 14:53:53.127609   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 14:53:53.127609   => 'Signup' form is checked
+2023-12-09 14:53:53.127609   Start step Close [Sign up] form =>
+2023-12-09 14:53:53.193782   => 'Signup' form closed

@@ -1,0 +1,58 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 12:58:16.169129   worker_id = master
+
+2023-12-09 12:58:16.169129   0. Allure grouping
+
+
+2023-12-09 12:58:16.170136   START PRECONDITIONS =>
+
+
+2023-12-09 12:58:16.170136   {'width': 1280, 'height': 720}
+
+2023-12-09 12:58:16.172130   Set windows position at (320, 180) =>
+
+2023-12-09 12:58:16.275072   Set resolution 1280 * 720 =>
+
+2023-12-09 12:58:16.378924   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 12:58:20.430611   Капчи нет. Тестим дальше
+
+2023-12-09 12:58:20.430611   Prev. Role: NoReg
+
+2023-12-09 12:58:20.430611   Current role: NoReg
+
+2023-12-09 12:58:20.430611   Prev language: en
+
+2023-12-09 12:58:20.430611   => Current language: en
+
+2023-12-09 12:58:20.430611   Prev country: au
+
+2023-12-09 12:58:20.430611   => Current country: au
+
+2023-12-09 12:58:20.430611   => THE END PRECONDITIONS
+
+2023-12-09 12:58:20.430611   1. Arrange
+2023-12-09 12:58:21.012942   Load page https://capital.com/ipo-initial-public-offering
+2023-12-09 12:58:21.012942   BUTTON_CREATE_DEMO_ACCOUNT is visible? =>
+2023-12-09 12:58:21.215022   => BUTTON_CREATE_DEMO_ACCOUNT is visible on the page!
+
+2023-12-09 12:58:21.215022   2. Act
+2023-12-09 12:58:21.215022   BUTTON_CREATE_DEMO_ACCOUNT is present? =>
+2023-12-09 12:58:21.224004   => BUTTON_CREATE_DEMO_ACCOUNT is present on the page!
+2023-12-09 12:58:21.224004   BUTTON_CREATE_DEMO_ACCOUNT scroll =>
+2023-12-09 12:58:21.647543   => BUTTON_CREATE_DEMO_ACCOUNT clicked!
+
+2023-12-09 12:58:21.648549   3. Assert_v0
+2023-12-09 12:58:21.648549   Start step Check that [Sign up] form is opened
+2023-12-09 12:58:28.902066   'Sign up' form not opened
+2023-12-09 12:58:28.902066   Start method Check that [Sign up] page opened =>
+2023-12-09 12:58:29.906985   'Sign up' page opened
+2023-12-09 12:58:29.906985   Assert SIGNUP_SIGNUP_FRAME =>
+2023-12-09 12:58:29.906985   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 12:58:29.922641   Assert SIGNUP_PRIVACY_POLICY_ALL_1 =>
+2023-12-09 12:58:34.480738   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 12:58:34.495766   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 12:58:34.495766   => 'Signup' page is checked
+2023-12-09 12:58:35.500460   Start method 'Close [Sign up] page' =>
+2023-12-09 12:58:36.042224   => [Sign up] page is closed

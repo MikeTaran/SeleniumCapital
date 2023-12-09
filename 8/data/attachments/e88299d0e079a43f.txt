@@ -1,0 +1,59 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 15:07:38.776262   browser = chrome
+
+2023-12-09 15:07:38.776262   worker_id = master
+
+2023-12-09 15:07:38.776262   Start TC_11.03.02_09
+
+2023-12-09 15:07:38.776262   <us_11-03-02_day_trading_test.TestDayTrading object at 0x0000021C9C81B850>.None
+
+2023-12-09 15:07:38.776262   0. Arrange
+
+
+2023-12-09 15:07:38.776262   START PRECONDITIONS =>
+
+
+2023-12-09 15:07:38.776262   {'width': 1280, 'height': 720}
+
+2023-12-09 15:07:38.778261   Set windows position at (320, 180) =>
+
+2023-12-09 15:07:38.882352   Set resolution 1280 * 720 =>
+
+2023-12-09 15:07:38.986247   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 15:07:43.008014   Капчи нет. Тестим дальше
+
+2023-12-09 15:07:43.008014   Prev. Role: Reg/NoAuth
+
+2023-12-09 15:07:43.008014   Current role: Reg/NoAuth
+
+2023-12-09 15:07:43.008014   Prev language: en
+
+2023-12-09 15:07:43.008014   => Current language: en
+
+2023-12-09 15:07:43.008014   Prev country: au
+
+2023-12-09 15:07:43.008014   => Current country: au
+
+2023-12-09 15:07:43.008014   => THE END PRECONDITIONS
+
+2023-12-09 15:07:43.008014   1. Arrange_v0
+2023-12-09 15:07:43.012011   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2023-12-09 15:07:43.021012   2. Act_v0
+2023-12-09 15:07:43.104010   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2023-12-09 15:07:43.104010   3. Assert_v0
+2023-12-09 15:07:43.104010   Start step Check that [Sign up] form is opened
+2023-12-09 15:07:43.119813   'Sign up' form opened
+2023-12-09 15:07:43.119813   Assert SIGNUP_HEADER =>
+2023-12-09 15:07:43.135551   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 15:07:43.149740   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 15:07:43.163321   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 15:07:43.163321   => 'Signup' form is checked
+2023-12-09 15:07:43.164320   Start step Close [Sign up] form =>
+2023-12-09 15:07:43.248309   => 'Signup' form closed
+
+*** end fixture = teardown ***
+

@@ -1,0 +1,61 @@
+
+2023-12-09 13:45:04.258809   Работает obj <us_11-02-03_commodities_trading_test.TestCommoditiesTrading object at 0x00000186F6DA8050> с именем TC_11.02.03_01
+{'width': 1280, 'height': 720}
+
+2023-12-09 13:45:04.445350   browser = chrome
+
+2023-12-09 13:45:04.446355   worker_id = master
+
+2023-12-09 13:45:04.446355   Start TC_11.02.03_01
+
+2023-12-09 13:45:04.446355   <us_11-02-03_commodities_trading_test.TestCommoditiesTrading object at 0x00000186F6DA8050>.None
+
+2023-12-09 13:45:04.446355   0. Arrange
+
+
+2023-12-09 13:45:04.446355   START PRECONDITIONS =>
+
+
+2023-12-09 13:45:04.446355   {'width': 1280, 'height': 720}
+
+2023-12-09 13:45:04.492004   Set windows position at (320, 180) =>
+
+2023-12-09 13:45:04.627911   Set resolution 1280 * 720 =>
+
+2023-12-09 13:45:04.738505   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 13:45:08.786792   Капчи нет. Тестим дальше
+
+2023-12-09 13:45:08.786792   Prev. Role: Auth
+
+2023-12-09 13:45:08.786792   Current role: Auth
+
+2023-12-09 13:45:08.786792   Prev language: en
+
+2023-12-09 13:45:08.786792   => Current language: en
+
+2023-12-09 13:45:08.786792   Prev country: au
+
+2023-12-09 13:45:08.786792   => Current country: au
+
+2023-12-09 13:45:08.786792   => THE END PRECONDITIONS
+
+2023-12-09 13:45:08.786792   1. Arrange_v0
+2023-12-09 13:45:09.412921   Load page https://capital.com/trade-uscrude-oil
+2023-12-09 13:45:09.646841   BUTTON_START_TRADING scroll =>
+2023-12-09 13:45:09.655832   BUTTON_START_TRADING is visible? =>
+2023-12-09 13:45:09.804423   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-09 13:45:09.804423   2. Act_v0
+2023-12-09 13:45:09.804423   Start Click button [Start Trading] =>
+2023-12-09 13:45:09.810419   BUTTON_START_TRADING is clickable? =>
+2023-12-09 13:45:09.829064   BUTTON_START_TRADING click =>
+2023-12-09 13:45:10.074370   => BUTTON_START_TRADING clicked
+
+2023-12-09 13:45:10.074370   3. Assert_v4
+2023-12-09 13:45:10.075375   Checking that the trading platform page has opened (v4) =>
+2023-12-09 13:45:10.614873   => Current page title: Trading Platform | Capital.com
+2023-12-09 13:45:10.614873   Checking that the Trading platform LOGO is present on the page =>
+2023-12-09 13:45:11.511697   Checking that the Trading platform opened in LIVE mode =>
+2023-12-09 13:45:11.528399   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-09 13:45:12.120163   Load page https://capital.com/trade-uscrude-oil

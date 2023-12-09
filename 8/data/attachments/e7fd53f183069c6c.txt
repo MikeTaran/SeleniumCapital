@@ -1,0 +1,59 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 15:06:40.295015   browser = chrome
+
+2023-12-09 15:06:40.295015   worker_id = master
+
+2023-12-09 15:06:40.295015   Start TC_11.03.02_04
+
+2023-12-09 15:06:40.295015   <us_11-03-02_day_trading_test.TestDayTrading object at 0x0000021C9C809ED0>.None
+
+2023-12-09 15:06:40.295015   0. Arrange
+
+
+2023-12-09 15:06:40.295015   START PRECONDITIONS =>
+
+
+2023-12-09 15:06:40.295015   {'width': 1280, 'height': 720}
+
+2023-12-09 15:06:40.297009   Set windows position at (320, 180) =>
+
+2023-12-09 15:06:40.401096   Set resolution 1280 * 720 =>
+
+2023-12-09 15:06:40.505505   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 15:06:44.564839   Капчи нет. Тестим дальше
+
+2023-12-09 15:06:44.564839   Prev. Role: Reg/NoAuth
+
+2023-12-09 15:06:44.564839   Current role: Reg/NoAuth
+
+2023-12-09 15:06:44.564839   Prev language: en
+
+2023-12-09 15:06:44.564839   => Current language: en
+
+2023-12-09 15:06:44.564839   Prev country: au
+
+2023-12-09 15:06:44.564839   => Current country: au
+
+2023-12-09 15:06:44.564839   => THE END PRECONDITIONS
+
+2023-12-09 15:06:44.564839   1. Arrange_v3
+2023-12-09 15:06:44.564839   Is visible BUTTON_START_TRADING_IN_ARTICLE? =>
+2023-12-09 15:06:44.564839   => BUTTON_START_TRADING_IN_ARTICLE =>
+
+2023-12-09 15:06:44.580447   2. Act_v3
+2023-12-09 15:06:44.580447   Start Click button BUTTON_START_TRADING_IN_ARTICLE =>
+2023-12-09 15:06:44.674185   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2023-12-09 15:06:44.674185   3. Assert_Login_v0
+2023-12-09 15:06:49.211431   'Login' form not opened
+2023-12-09 15:06:49.216962   'Login' page not opened
+2023-12-09 15:06:58.248909   'Login' form on trading platform not opened
+2023-12-09 15:06:58.249474   Start step Check that [Sign up] form is opened
+2023-12-09 15:06:58.266769   'Sign up' form opened
+2023-12-09 15:06:58.266769   Assert SIGNUP_HEADER =>
+2023-12-09 15:06:58.279106   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 15:06:58.295524   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 15:06:58.310555   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 15:06:58.310555   => 'Signup' form is checked

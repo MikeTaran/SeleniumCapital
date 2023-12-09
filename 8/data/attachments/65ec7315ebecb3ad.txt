@@ -1,0 +1,97 @@
+{'width': 1264, 'height': 11326}
+
+2023-12-09 15:12:30.085130   browser = chrome
+
+2023-12-09 15:12:30.085130   worker_id = master
+
+2023-12-09 15:12:30.085130   Start TC_11.03.03_05
+
+2023-12-09 15:12:30.085130   <US_11-03-03_Trend_Trading_test.TestTrendTrading object at 0x000001E31444AD50>.None
+
+2023-12-09 15:12:30.085130   0. Arrange
+
+
+2023-12-09 15:12:30.086135   START PRECONDITIONS =>
+
+
+2023-12-09 15:12:30.086135   {'width': 1264, 'height': 11326}
+
+2023-12-09 15:12:30.087130   Set windows position at (320, 180) =>
+
+2023-12-09 15:12:30.190970   Set resolution 1280 * 720 =>
+
+2023-12-09 15:12:30.302898   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 15:12:34.305557   Капчи нет. Тестим дальше
+
+2023-12-09 15:12:34.305557   Prev. Role: Reg/NoAuth
+
+2023-12-09 15:12:34.305557   Current role: Reg/NoAuth
+
+2023-12-09 15:12:34.305557   Prev language: en
+
+2023-12-09 15:12:34.305557   => Current language: en
+
+2023-12-09 15:12:34.305557   Prev country: au
+
+2023-12-09 15:12:34.305557   => Current country: au
+
+2023-12-09 15:12:34.305557   => THE END PRECONDITIONS
+2023-12-09 15:12:34.305557   => Education menu is present
+2023-12-09 15:12:34.321155   => Education menu is visible
+2023-12-09 15:12:36.096291   => Education menu focus moved
+
+
+2023-12-09 15:12:36.883889   => Trend trading menu item clicked
+
+2023-12-09 15:12:36.893175   Clear Top Chart list =>
+2023-12-09 15:12:38.393013   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 15:12:46.463172   1. Arrange_v4
+2023-12-09 15:12:47.276479   Load page https://capital.com/trend-trading
+2023-12-09 15:12:47.276479   MOST_TRADED is visible? =>
+2023-12-09 15:12:47.503711   => MOST_TRADED is visible on the page!
+2023-12-09 15:12:47.503711   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 15:12:47.503711   Testing Most traded random element #1
+
+2023-12-09 15:12:47.503711   2. Act_v4
+2023-12-09 15:12:47.503711   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 15:12:47.542438   MOST_TRADED scroll =>
+2023-12-09 15:12:47.549443   MOST_TRADED click for 'Bitcoin to US Dollar' trading instrument =>
+2023-12-09 15:12:47.660609   => MOST_TRADED clicked!
+
+2023-12-09 15:12:47.660609   3. Assert_Login_v0
+2023-12-09 15:12:48.143981   'Login' form opened
+2023-12-09 15:12:48.143981   Assert LOGIN_REF_SIGNUP =>
+2023-12-09 15:12:48.166708   Assert LOGIN_CHECKBOX =>
+2023-12-09 15:12:48.191859   Assert LOGIN_PASS_FORGOT =>
+2023-12-09 15:12:48.213246   => 'Login' form is checked
+2023-12-09 15:12:48.269188   Click 'Close' button on 'Login' form =>
+2023-12-09 15:12:48.318376   => 'Login' form closed
+
+2023-12-09 15:12:48.319374   Clear Top Chart list =>
+2023-12-09 15:12:49.531332   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 15:12:57.586107   1. Arrange_v4
+2023-12-09 15:12:58.850491   Load page https://capital.com/trend-trading
+2023-12-09 15:12:58.850491   MOST_TRADED is visible? =>
+2023-12-09 15:12:59.065333   => MOST_TRADED is visible on the page!
+2023-12-09 15:12:59.065333   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 15:12:59.065333   Testing Most traded random element #2
+
+2023-12-09 15:12:59.066322   2. Act_v4
+2023-12-09 15:12:59.066322   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 15:12:59.166302   MOST_TRADED scroll =>
+2023-12-09 15:12:59.176347   MOST_TRADED click for 'Gold Spot' trading instrument =>
+2023-12-09 15:12:59.261117   => MOST_TRADED clicked!
+
+2023-12-09 15:12:59.261117   3. Assert_Login_v0
+2023-12-09 15:12:59.848997   'Login' form opened
+2023-12-09 15:12:59.848997   Assert LOGIN_REF_SIGNUP =>
+2023-12-09 15:12:59.866917   Assert LOGIN_CHECKBOX =>
+2023-12-09 15:12:59.885624   Assert LOGIN_PASS_FORGOT =>
+2023-12-09 15:12:59.932362   => 'Login' form is checked
+2023-12-09 15:12:59.956577   Click 'Close' button on 'Login' form =>
+2023-12-09 15:13:00.007880   => 'Login' form closed

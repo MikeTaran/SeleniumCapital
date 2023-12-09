@@ -1,0 +1,97 @@
+{'width': 1264, 'height': 15880}
+
+2023-12-09 12:45:04.056951   worker_id = master
+
+2023-12-09 12:45:04.056951   0. Allure grouping
+
+
+2023-12-09 12:45:04.056951   START PRECONDITIONS =>
+
+
+2023-12-09 12:45:04.056951   {'width': 1264, 'height': 15880}
+
+2023-12-09 12:45:04.059314   Set windows position at (320, 180) =>
+
+2023-12-09 12:45:04.162355   Set resolution 1280 * 720 =>
+
+2023-12-09 12:45:04.273506   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 12:45:08.317521   Капчи нет. Тестим дальше
+
+2023-12-09 12:45:08.317521   Prev. Role: Reg/NoAuth
+
+2023-12-09 12:45:08.317521   Current role: Reg/NoAuth
+
+2023-12-09 12:45:08.317521   Prev language: en
+
+2023-12-09 12:45:08.317521   => Current language: en
+
+2023-12-09 12:45:08.317521   Prev country: au
+
+2023-12-09 12:45:08.317521   => Current country: au
+
+2023-12-09 12:45:08.317521   => THE END PRECONDITIONS
+
+2023-12-09 12:45:08.317521   START [Open "Education" menu, "CFD trading guide" submenu] =>
+
+2023-12-09 12:45:08.317521   1. Cur URL = https://capital.com/what-is-cfd-trading
+
+2023-12-09 12:45:08.317521   2. Link = https://capital.com/
+2023-12-09 12:45:08.812794   Load page https://capital.com/
+2023-12-09 12:45:09.008660   => Education menu is present
+2023-12-09 12:45:09.091866   => Education menu is visible
+2023-12-09 12:45:10.866637   => Education menu focus moved
+
+2023-12-09 12:45:12.807235   3. Cur URL = https://capital.com/what-is-cfd-trading
+
+2023-12-09 12:45:12.977739   Clear Top Chart list =>
+2023-12-09 12:45:14.440225   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 12:45:22.505385   1. Arrange_v4
+2023-12-09 12:45:23.550491   Load page https://capital.com/what-is-cfd-trading
+2023-12-09 12:45:23.550491   MOST_TRADED is visible? =>
+2023-12-09 12:45:23.795401   => MOST_TRADED is visible on the page!
+2023-12-09 12:45:23.795401   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 12:45:23.795401   Testing Most traded random element #1
+
+2023-12-09 12:45:23.795401   2. Act_v4
+2023-12-09 12:45:23.795401   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 12:45:23.854512   MOST_TRADED scroll =>
+2023-12-09 12:45:23.860865   MOST_TRADED click for 'Ripple to US Dollar' trading instrument =>
+2023-12-09 12:45:23.945147   => MOST_TRADED clicked!
+
+2023-12-09 12:45:23.945147   3. Assert_Login_v0
+2023-12-09 12:45:24.104688   'Login' form opened
+2023-12-09 12:45:24.104688   Assert LOGIN_REF_SIGNUP =>
+2023-12-09 12:45:24.127659   Assert LOGIN_CHECKBOX =>
+2023-12-09 12:45:24.180541   Assert LOGIN_PASS_FORGOT =>
+2023-12-09 12:45:24.199797   => 'Login' form is checked
+2023-12-09 12:45:24.231561   Click 'Close' button on 'Login' form =>
+2023-12-09 12:45:24.281159   => 'Login' form closed
+
+2023-12-09 12:45:24.282163   Clear Top Chart list =>
+2023-12-09 12:45:25.477559   Load page https://capital.com/trading/platform/charting/
+
+2023-12-09 12:45:33.540718   1. Arrange_v4
+2023-12-09 12:45:34.684222   Load page https://capital.com/what-is-cfd-trading
+2023-12-09 12:45:34.684222   MOST_TRADED is visible? =>
+2023-12-09 12:45:34.749522   => MOST_TRADED is visible on the page!
+2023-12-09 12:45:34.749522   => Found 5 elements in block MOST_TRADED
+
+2023-12-09 12:45:34.749522   Testing Most traded random element #2
+
+2023-12-09 12:45:34.749522   2. Act_v4
+2023-12-09 12:45:34.749522   MOST_TRADED delete js-mostTraded class =>
+2023-12-09 12:45:35.005777   MOST_TRADED scroll =>
+2023-12-09 12:45:35.012123   MOST_TRADED click for 'Gold Spot' trading instrument =>
+2023-12-09 12:45:35.085011   => MOST_TRADED clicked!
+
+2023-12-09 12:45:35.085011   3. Assert_Login_v0
+2023-12-09 12:45:35.271518   'Login' form opened
+2023-12-09 12:45:35.271518   Assert LOGIN_REF_SIGNUP =>
+2023-12-09 12:45:35.288325   Assert LOGIN_CHECKBOX =>
+2023-12-09 12:45:35.310779   Assert LOGIN_PASS_FORGOT =>
+2023-12-09 12:45:35.362682   => 'Login' form is checked
+2023-12-09 12:45:35.384796   Click 'Close' button on 'Login' form =>
+2023-12-09 12:45:35.423567   => 'Login' form closed

@@ -1,0 +1,56 @@
+{'width': 1280, 'height': 720}
+
+2023-12-09 12:46:52.696802   worker_id = master
+
+2023-12-09 12:46:52.696802   0. Allure grouping
+
+
+2023-12-09 12:46:52.696802   START PRECONDITIONS =>
+
+
+2023-12-09 12:46:52.696802   {'width': 1280, 'height': 720}
+
+2023-12-09 12:46:52.698799   Set windows position at (320, 180) =>
+
+2023-12-09 12:46:52.802084   Set resolution 1280 * 720 =>
+
+2023-12-09 12:46:52.906277   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 12:46:56.914453   Капчи нет. Тестим дальше
+
+2023-12-09 12:46:56.914453   Prev. Role: NoReg
+
+2023-12-09 12:46:56.914453   Current role: NoReg
+
+2023-12-09 12:46:56.914453   Prev language: en
+
+2023-12-09 12:46:56.914453   => Current language: en
+
+2023-12-09 12:46:56.914453   Prev country: au
+
+2023-12-09 12:46:56.914453   => Current country: au
+
+2023-12-09 12:46:56.914453   => THE END PRECONDITIONS
+
+2023-12-09 12:46:56.914453   1. Arrange_v0
+2023-12-09 12:46:57.275131   Load page https://capital.com/cfds-vs-forex
+2023-12-09 12:46:57.332197   BUTTON_START_TRADING scroll =>
+2023-12-09 12:46:57.583075   BUTTON_START_TRADING is visible? =>
+2023-12-09 12:46:57.634749   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-09 12:46:57.634749   2. Act_v0
+2023-12-09 12:46:57.634749   Start Click button [Start Trading] =>
+2023-12-09 12:46:57.644076   BUTTON_START_TRADING is clickable? =>
+2023-12-09 12:46:57.679682   BUTTON_START_TRADING click =>
+2023-12-09 12:46:57.745871   => BUTTON_START_TRADING clicked
+
+2023-12-09 12:46:57.759183   3. Assert_v0
+2023-12-09 12:46:57.759183   Start step Check that [Sign up] form is opened
+2023-12-09 12:46:57.902523   'Sign up' form opened
+2023-12-09 12:46:57.902523   Assert SIGNUP_HEADER =>
+2023-12-09 12:46:57.922891   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 12:46:57.950813   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 12:46:58.018304   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 12:46:58.018304   => 'Signup' form is checked
+2023-12-09 12:46:58.018304   Start step Close [Sign up] form =>
+2023-12-09 12:46:58.117755   => 'Signup' form closed

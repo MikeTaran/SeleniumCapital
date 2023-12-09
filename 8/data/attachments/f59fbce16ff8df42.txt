@@ -1,0 +1,64 @@
+
+2023-12-09 14:23:39.728302   Работает obj <us_11-02-05_cryptocurrency_trading_test.TestCryptocurrencyTrading object at 0x0000020B2506CB10> с именем TC_11.02.05_03
+{'width': 1280, 'height': 720}
+
+2023-12-09 14:23:39.734060   browser = chrome
+
+2023-12-09 14:23:39.734060   worker_id = master
+
+2023-12-09 14:23:39.734060   Start TC_11.02.05_03
+
+2023-12-09 14:23:39.734060   <us_11-02-05_cryptocurrency_trading_test.TestCryptocurrencyTrading object at 0x0000020B2506CB10>.None
+
+2023-12-09 14:23:39.734060   0. Arrange
+
+
+2023-12-09 14:23:39.735044   START PRECONDITIONS =>
+
+
+2023-12-09 14:23:39.735044   {'width': 1280, 'height': 720}
+
+2023-12-09 14:23:39.737044   Set windows position at (320, 180) =>
+
+2023-12-09 14:23:39.840266   Set resolution 1280 * 720 =>
+
+2023-12-09 14:23:39.944322   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-09 14:23:43.950067   Капчи нет. Тестим дальше
+
+2023-12-09 14:23:43.950067   Prev. Role: NoReg
+
+2023-12-09 14:23:43.950067   Current role: NoReg
+
+2023-12-09 14:23:43.950067   Prev language: en
+
+2023-12-09 14:23:43.950067   => Current language: en
+
+2023-12-09 14:23:43.950067   Prev country: au
+
+2023-12-09 14:23:43.950067   => Current country: au
+
+2023-12-09 14:23:43.950067   => THE END PRECONDITIONS
+
+2023-12-09 14:23:43.950067   1. Arrange_v0
+2023-12-09 14:23:44.476394   Load page https://capital.com/trade-ethereum-classic
+2023-12-09 14:23:44.536458   BUTTON_START_TRADING scroll =>
+2023-12-09 14:23:44.750841   BUTTON_START_TRADING is visible? =>
+2023-12-09 14:23:44.808456   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-09 14:23:44.809451   2. Act_v0
+2023-12-09 14:23:44.809451   Start Click button [Start Trading] =>
+2023-12-09 14:23:44.817771   BUTTON_START_TRADING is clickable? =>
+2023-12-09 14:23:44.847943   BUTTON_START_TRADING click =>
+2023-12-09 14:23:44.927586   => BUTTON_START_TRADING clicked
+
+2023-12-09 14:23:44.927586   3. Assert_v0
+2023-12-09 14:23:44.927586   Start step Check that [Sign up] form is opened
+2023-12-09 14:23:45.106326   'Sign up' form opened
+2023-12-09 14:23:45.106326   Assert SIGNUP_HEADER =>
+2023-12-09 14:23:45.124823   Assert SIGNUP_REF_LOGIN =>
+2023-12-09 14:23:45.142801   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-09 14:23:45.207334   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-09 14:23:45.207334   => 'Signup' form is checked
+2023-12-09 14:23:45.207334   Start step Close [Sign up] form =>
+2023-12-09 14:23:45.293564   => 'Signup' form closed
