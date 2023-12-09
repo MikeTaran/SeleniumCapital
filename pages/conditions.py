@@ -38,16 +38,6 @@ class Conditions(BasePage):
     """This class used as a base class for other page classes that represent specific pages on a website"""
     debug = False
 
-    def arrange_0(self):
-        """
-        Checking Main Page is opened
-        """
-        base_link = CapitalComPageSrc.URL
-        print(f"\n{datetime.now()}   0. Arrange_0")
-        if not self.current_page_is(base_link):
-            self.link = base_link
-            self.open_page()
-
     @allure.step("Set preconditions")
     def preconditions(self, d, host, end_point, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
@@ -229,3 +219,15 @@ class Conditions(BasePage):
 
         assert Header(d, link).header_button_my_account_click(), "Button 'My account' missing"
         assert MyAccount(d, link).my_account_button_logout_click(), "Button 'Logout' missing"
+
+    @allure.step('Checking Main Page is opened')
+    def arrange_0(self):
+        """
+        Checking Main Page is opened
+        """
+        base_link = CapitalComPageSrc.URL
+        print(f"\n{datetime.now()}   0. Arrange_0")
+        if not self.current_page_is(base_link):
+            self.link = base_link
+            self.open_page()
+

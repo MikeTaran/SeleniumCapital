@@ -78,7 +78,7 @@ class TestSpreadBettingGuide:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
     def test_02_main_banner_try_demo_button(
@@ -114,7 +114,7 @@ class TestSpreadBettingGuide:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link, True)
 
     @allure.step("Start test of button [Create your account] in block [Steps trading]")
     def test_03_block_steps_trading_button_create_your_account(
@@ -148,7 +148,7 @@ class TestSpreadBettingGuide:
             case "NoReg" | "Reg/NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Start trading] in article")
     def test_04_start_trading_in_article_button(
@@ -184,7 +184,7 @@ class TestSpreadBettingGuide:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Create account] in article")
     def test_05_create_account_in_article_button(
@@ -218,7 +218,7 @@ class TestSpreadBettingGuide:
             case "NoReg" | "Reg/NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Create account] in Block 'Open a trading account in less than 3 minutes'")
     def test_06_create_account_in_block_open_trading_account_3_minutes(
@@ -253,7 +253,7 @@ class TestSpreadBettingGuide:
             case "NoReg" | "Reg/NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Try Free Demo] in Block 'New to trading? Learn to trade with Capital.com'")
     def test_07_try_free_demo_in_block_new_to_trading(
@@ -290,4 +290,4 @@ class TestSpreadBettingGuide:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v2(d, cur_item_link, demo=True)
+                test_element.assert_trading_platform_v4(d, cur_item_link, True)

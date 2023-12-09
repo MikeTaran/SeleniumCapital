@@ -7,6 +7,7 @@ from pages.Elements.ButtonDownloadAppStore import ButtonDownloadAppStore
 from pages.Elements.ButtonExploreWebPlatform import ButtonExploreWebPlatform
 from pages.Elements.ButtonGetItOnGooglePlay import ButtonGetItOnGooglePlay
 from pages.Elements.ButtonSellInContentBlock import SellButtonContentBlock
+from pages.Elements.ButtonStartTradingInContent import ContentStartTrading
 from pages.Elements.ButtonStartTradingMainBanner import MainBannerStartTrading
 from pages.Elements.ButtonTradeOnWidgetMostTraded import ButtonTradeOnWidgetMostTraded
 from pages.Elements.ButtonTryDemoMainBanner import MainBannerTryDemo
@@ -72,18 +73,7 @@ class TestTradingStrategiesGuides:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = MainBannerStartTrading(d, cur_item_link)
-        test_element.arrange_(d, cur_item_link)
-        test_element.element_click()
-
-        test_element = AssertClass(d, cur_item_link)
-
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, cur_item_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_02 of button [Try demo] on Main banner")
     def test_02_main_banner_try_demo_button(
@@ -106,17 +96,7 @@ class TestTradingStrategiesGuides:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = MainBannerTryDemo(d, cur_item_link)
-        test_element.arrange_(d, cur_item_link)
-        test_element.element_click()
-
-        test_element = AssertClass(d, cur_item_link)
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, cur_item_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link, True)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_03 of buttons [Trade] in Most traded block")
     def test_03_most_traded_trade_button(
@@ -142,19 +122,7 @@ class TestTradingStrategiesGuides:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
-        test_elements_list = test_element.arrange_v2_()
-        for index, element in enumerate(test_elements_list):
-            print(f"\n{datetime.now()}   Testing element #{index + 1}")
-            if not test_element.element_click_v2(element):
-                pytest.fail("Testing element is not clicked")
-            check_element = AssertClass(d, cur_item_link)
-            match cur_role:
-                case "NoReg":
-                    check_element.assert_signup(d, cur_language, cur_item_link)
-                case "Reg/NoAuth":
-                    check_element.assert_login(d, cur_language, cur_item_link)
-                case "Auth":
-                    check_element.assert_trading_platform_v3(d, cur_item_link)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_06 of button [Download on the App Store] "
                  "in Block 'Sign up and trade smart today!'")
@@ -244,7 +212,7 @@ class TestTradingStrategiesGuides:
             case "Reg/NoAuth":
                 test_element.assert_login_form_on_the_trading_platform(d)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_09 of button 'Create_verify_your_account' on the page.")
     def test_11_03_01_09_create_verify_your_account(
@@ -268,15 +236,7 @@ class TestTradingStrategiesGuides:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = BlockStepTrading(d, cur_item_link)
-        test_element.arrange_(d, cur_item_link)
-        test_element.element_click()
-
-        test_element = AssertClass(d, cur_item_link)
-        match cur_role:
-            case "NoReg" | "Reg/NoAuth":
-                test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_10 of button [Sell] in Banner [Trading Instrument]")
     def test_11_03_01_10_button_sell(
@@ -300,18 +260,7 @@ class TestTradingStrategiesGuides:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = SellButtonContentBlock(d, cur_item_link)
-        test_element.arrange_(d, cur_item_link)
-
-        test_element.element_click(cur_role)
-
-        test_element = AssertClass(d, cur_item_link)
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, cur_item_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+        test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_11 of button [Buy] in Banner [Trading Instrument]")
     def test_11_03_01_11_button_buy(
@@ -335,15 +284,28 @@ class TestTradingStrategiesGuides:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = BuyButtonContentBlock(d, cur_item_link)
-        test_element.arrange_(d, cur_item_link)
+        test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
-        test_element.element_click(cur_role)
+    @allure.step("Start test_11.03.01.01_12 of button [Start trading] in Content block")
+    def test_12_button_start_trading_in_content_block(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
+            cur_item_link):
+        """
+        Check: Button [Start trading] in Content block
+        Language: DE. License: All.
+        """
+        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
+                             "11.03.01", "Education > Menu item [Trading Strategies Guides]",
+                             ".01_12", "Testing button [Start trading] in Content block")
 
-        test_element = AssertClass(d, cur_item_link)
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, cur_item_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+        if cur_language not in ["de"]:
+            Common().skip_test_for_language(cur_language)
+
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+
+        test_element = ContentStartTrading(d, cur_item_link)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
+
+

@@ -54,11 +54,6 @@ class BuyButtonContentBlock(BasePage):
     def element_click(self, cur_role):
         print(f"\n{datetime.now()}   2. Act_v0")
         button_list = self.browser.find_elements(*ButtonsOnPageLocators.BUTTON_TRADING_BUY)
-        trade_instrument = self.element_is_visible(ButtonsOnPageLocators.TRADING_INSTRUMENT).text
-        # Вытаскиваем линку из кнопки
-        button_link = button_list[0].get_attribute('href')
-        # Берём ID итема, на который кликаем для сравнения с открытым ID на платформе
-        target_link = button_link[button_link.find("spotlight") + 10:button_link.find("?")]
 
         print(f"{datetime.now()}   BUTTON_BUY_IN_CONTENT_BLOCK is present? =>")
         if len(button_list) == 0:
@@ -74,6 +69,11 @@ class BuyButtonContentBlock(BasePage):
         )
         print(f"{datetime.now()}   => BUTTON_BUY_IN_CONTENT_BLOCK scrolled")
 
+        # Вытаскиваем линку из кнопки
+        button_link = button_list[0].get_attribute('href')
+        # Берём ID итема, на который кликаем для сравнения с открытым ID на платформе
+        trade_instrument = button_link[button_link.find("spotlight") + 10:button_link.find("?")]
+
         print(f"{datetime.now()}   BUTTON_BUY_IN_CONTENT_BLOCK is clickable? =>")
         if not self.element_is_clickable(button_list[0], 5):
             print(f"{datetime.now()}   => BUTTON_BUY_IN_CONTENT_BLOCK is not clickable more then 5 sec.")
@@ -84,10 +84,6 @@ class BuyButtonContentBlock(BasePage):
             self.browser.execute_script("arguments[0].click();", button_list[0])
             print(f"{datetime.now()}   => BUTTON_BUY_IN_CONTENT_BLOCK clicked!")
 
-            # Сравниваем ID
-            # А зачем ты здесь это сравниваешь? Может это надо делать в секции 3. Assert?
-            if not self.browser.current_url.find(target_link) and (cur_role == "Auth"):
-                pytest.fail(f"[{button_list[0].text}] Opened page's link doesn't match with clicked link")
         except ElementClickInterceptedException:
             print(f"{datetime.now()}   => BUTTON_BUY_IN_CONTENT_BLOCK NOT CLICKED")
             # сейчас бы сделать скриншот!

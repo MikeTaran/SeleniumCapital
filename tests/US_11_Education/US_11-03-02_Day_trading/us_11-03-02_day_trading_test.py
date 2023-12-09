@@ -48,27 +48,14 @@ class TestDayTrading:
         Check: Button [Start Trading] on Main banner
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_01")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "01", "Testing button [Start Trading] on Main banner")
 
-        menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
+        cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerStartTrading(d, menu_link)
-        test_element.arrange_(d, menu_link)
-
-        if not test_element.element_click():
-            pytest.fail("Testing element is not clicked")
-
-        test_element = AssertClass(d, menu_link)
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, menu_link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, menu_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+        test_element = MainBannerStartTrading(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Try demo] on Main banner")
     def test_02_main_banner_try_demo_button(
@@ -77,27 +64,14 @@ class TestDayTrading:
         Check: Button [Try demo] on Main banner
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_02")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "02", "Testing button [Try demo] on Main banner")
 
-        menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
+        cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerTryDemo(d, menu_link)
-        test_element.arrange_(d, menu_link)
-
-        if not test_element.element_click():
-            pytest.fail("Testing element is not clicked")
-
-        test_element = AssertClass(d, menu_link)
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, menu_link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, menu_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link, demo=True)
+        test_element = MainBannerTryDemo(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
     def test_03_most_traded_trade_button(
@@ -106,7 +80,6 @@ class TestDayTrading:
         Check: Button [Trade] in Most traded block
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_03")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "03", "Testing button [Trade] in Most traded block")
@@ -114,22 +87,10 @@ class TestDayTrading:
         if cur_country == 'gb':
             pytest.skip("This test is not supported on UK location")
 
-        menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
+        cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, menu_link)
-        test_elements_list = test_element.arrange_v2_()
-        for index, element in enumerate(test_elements_list):
-            print(f"\n{datetime.now()}   Testing element #{index + 1}")
-            if not test_element.element_click_v2(element):
-                pytest.fail("Testing element is not clicked")
-            check_element = AssertClass(d, menu_link)
-            match cur_role:
-                case "NoReg":
-                    check_element.assert_signup(d, cur_language, menu_link)
-                case "Reg/NoAuth":
-                    check_element.assert_login(d, menu_link)
-                case "Auth":
-                    check_element.assert_trading_platform_v3(d, menu_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Start trading] in content block")
     def test_04_start_trading_in_content_block_button(
@@ -138,7 +99,6 @@ class TestDayTrading:
         Check: Button [Start trading] in article
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_04")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "04", "Testing button [Start trading] in Content block")
@@ -146,24 +106,10 @@ class TestDayTrading:
         if cur_country == 'gb':
             pytest.skip("This test is not supported on UK location")
 
-        menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
+        cur_item_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ContentStartTrading(d, menu_link)
-        test_elements_list = test_element.arrange_v2_()
-
-        for index, element in enumerate(test_elements_list):
-            print(f"\n{datetime.now()}   Testing element #{index + 1}")
-            if not test_element.element_click_v2(element):
-                pytest.fail("Testing element is not clicked")
-
-            check_element = AssertClass(d, menu_link)
-            match cur_role:
-                case "NoReg":
-                    check_element.assert_signup(d, cur_language, menu_link)
-                case "Reg/NoAuth":
-                    check_element.assert_login(d, menu_link)
-                case "Auth":
-                    check_element.assert_trading_platform_v3(d, menu_link)
+        test_element = ContentStartTrading(d, cur_item_link)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Practise for free] in content block")
     def test_05_practise_for_free_in_content_block_button(
@@ -172,7 +118,6 @@ class TestDayTrading:
         Check: Button [Practise for free] in content block
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_05")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "05", "Testing button [Practise for free] in Content block")
@@ -204,7 +149,6 @@ class TestDayTrading:
         Check: Button [Download on the App Store] in Block "Sign up and trade smart today!"
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_06")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]", "06",
                              "Test button [Download on the App Store] in Block \"Sign up and trade smart today!\"")
@@ -225,7 +169,6 @@ class TestDayTrading:
         Check: Button [Get it on Google Play] in Block "Sign up and trade smart today!"
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_07")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "07", "Test button [Get it on Google Play] in Block \"Sign up and trade smart today!\"")
@@ -247,7 +190,6 @@ class TestDayTrading:
         Check: Button [Explore Web Platform] in Block "Sign up and trade smart today!"
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_08")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "08", "Testing button [Explore Web Platform] in Block \"Sign up and trade smart today!\"")
@@ -275,22 +217,11 @@ class TestDayTrading:
         Check: Button [1. Create & verify your account] in block 'Steps trading'
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.02_09")
         build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
                              "11.03.02", "Educations > Menu item [Day Trading]",
                              "09", "Testing button [1. Create & verify your account] in Block 'Steps trading'")
 
-        menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
+        cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, menu_link)
-        test_element.arrange_(d, menu_link)
-
-        if not test_element.element_click():
-            pytest.fail("Testing element is not clicked")
-
-        test_element = AssertClass(d, menu_link)
-        match cur_role:
-            case "NoReg" | "Reg/NoAuth":
-                test_element.assert_signup(d, cur_language, menu_link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+        test_element = BlockStepTrading(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)

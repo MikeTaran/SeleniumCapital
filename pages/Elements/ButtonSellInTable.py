@@ -15,11 +15,11 @@ from pages.Elements.AssertClass import AssertClass
 
 
 class SellButtonTable(BasePage):
-    def __init__(self, browser):
+    def __init__(self, browser, link):
         self.current_tab = None
         self.locator = None
         self.item = None
-        super().__init__(browser)
+        super().__init__(browser, link)
 
     def full_test(self, d, cur_language, cur_country, cur_role, cur_item_link, cur_tab):
         self.arrange_(d, cur_item_link, cur_tab)

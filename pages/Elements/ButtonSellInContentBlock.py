@@ -53,11 +53,7 @@ class SellButtonContentBlock(BasePage):
     def element_click(self, cur_role):
         print(f"\n{datetime.now()}   2. Act_v0")
         button_list = self.browser.find_elements(*ButtonsOnPageLocators.BUTTON_TRADING_SELL)
-        trade_instrument = self.element_is_visible(ButtonsOnPageLocators.TRADING_INSTRUMENT).text
-        # Вытаскиваем линку из кнопки
-        button_link = button_list[0].get_attribute('href')
-        # Берём ID и тема, на который кликаем для сравнения с открытым ID на платформе
-        target_link = button_link[button_link.find("spotlight") + 10:button_link.find("?")]
+
         print(f"{datetime.now()}   BUTTON_SELL_IN_CONTENT_BLOCK is present? =>")
         if len(button_list) == 0:
             print(f"{datetime.now()}   => BUTTON_SELL_IN_CONTENT_BLOCK is not present on the page!")
@@ -66,22 +62,23 @@ class SellButtonContentBlock(BasePage):
         print(f"{datetime.now()}   => BUTTON_SELL_IN_CONTENT_BLOCK is present on the page!")
 
         print(f"{datetime.now()}   BUTTON_SELL_IN_CONTENT_BLOCK scroll =>")
-
         self.browser.execute_script(
             'return arguments[0].scrollIntoView({block: "center", inline: "nearest"});',
             button_list[0]
         )
 
-        self.element_is_clickable(button_list[0], 5)
+        # Вытаскиваем линку из кнопки
+        button_link = button_list[0].get_attribute('href')
+        # Берём ID итема, на который кликаем для сравнения с открытым ID на платформе
+        trade_instrument = button_link[button_link.find("spotlight") + 10:button_link.find("?")]
+        # trade_instrument = self.element_is_visible(ButtonsOnPageLocators.TRADING_INSTRUMENT).text
 
+        self.element_is_clickable(button_list[0], 5)
         try:
             # button_list[0].click()
             self.browser.execute_script("arguments[0].click();", button_list[0])
             print(f"{datetime.now()}   => BUTTON_SELL_IN_CONTENT_BLOCK clicked!")
 
-            # Сравниваем ID
-            if not self.browser.current_url.find(target_link) and (cur_role == "Auth"):
-                pytest.fail(f"[{button_list[0].text}] Opened page's link doesn't match with clicked link")
         except ElementClickInterceptedException:
             print(f"{datetime.now()}   => BUTTON_SELL_IN_CONTENT_BLOCK NOT CLICKED")
             print(f"{datetime.now()}   'Sign up' form or page is auto opened")

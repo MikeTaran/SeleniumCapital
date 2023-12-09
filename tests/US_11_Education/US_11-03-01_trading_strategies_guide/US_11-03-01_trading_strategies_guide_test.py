@@ -37,7 +37,7 @@ class TestTradingStrategiesGuides:
         link = build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
                                     "11.03.01",
                                     "Education > Menu item [Trading Strategies Guides]",
-                                    "_01",
+                                    ".00_01",
                                     "Testing button [Start Trading] on Main banner")
 
         if cur_language not in ["", "de", "es", "it", "cn", "zh", "ru"]:
@@ -49,22 +49,10 @@ class TestTradingStrategiesGuides:
 
         page_menu = MenuSection(d, link)
         page_menu.menu_education_move_focus(d, cur_language)
-        link = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
+        cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = MainBannerStartTrading(d, link)
-        test_element.arrange_(d, link)
-
-        test_element.element_click()
-
-        test_element = AssertClass(d, link)
-
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, link)
+        test_element = MainBannerStartTrading(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test_11.03.01_02 of button [Try demo] on Main banner")
     def test_02_main_banner_try_demo_button(
@@ -76,7 +64,7 @@ class TestTradingStrategiesGuides:
         link = build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
                                     "11.03.01",
                                     "Education > Menu item [Trading Strategies Guides]",
-                                    "_02",
+                                    ".00_02",
                                     "Testing button [Try demo] on Main banner")
 
         if cur_language not in ["", "de", "es", "it", "cn", "zh", "ru"]:
@@ -88,20 +76,10 @@ class TestTradingStrategiesGuides:
 
         page_menu = MenuSection(d, link)
         page_menu.menu_education_move_focus(d, cur_language)
-        link = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
+        cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = MainBannerTryDemo(d, link)
-        test_element.arrange_(d, link)
-        test_element.element_click()
-
-        test_element = AssertClass(d, link)
-        match cur_role:
-            case "NoReg":
-                test_element.assert_signup(d, cur_language, link)
-            case "Reg/NoAuth":
-                test_element.assert_login(d, cur_language, link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, link, True)
+        test_element = MainBannerTryDemo(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test_11.03.01_03 of buttons [Trade] in Most traded block")
     def test_03_most_traded_trade_button(
@@ -113,7 +91,7 @@ class TestTradingStrategiesGuides:
         build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
                              "11.03.01",
                              "Education > Menu item [Trading Strategies Guides]",
-                             "_03",
+                             ".00_03",
                              "Testing button [Trade] in Most traded block")
 
         if cur_country == 'gb':
@@ -128,22 +106,10 @@ class TestTradingStrategiesGuides:
 
         page_menu = MenuSection(d, link)
         page_menu.menu_education_move_focus(d, cur_language)
-        link = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
+        cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, link)
-        test_elements_list = test_element.arrange_v2_()
-        for index, element in enumerate(test_elements_list):
-            print(f"\n{datetime.now()}   Testing element #{index + 1}")
-            if not test_element.element_click_v2(element):
-                pytest.fail("Testing element is not clicked")
-            check_element = AssertClass(d, link)
-            match cur_role:
-                case "NoReg":
-                    check_element.assert_signup(d, cur_language, link)
-                case "Reg/NoAuth":
-                    check_element.assert_login(d, cur_language, link)
-                case "Auth":
-                    check_element.assert_trading_platform_v3(d, link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test_11.03.01_04 button 'Create_verify_your_account' on the page.")
     def test_04_create_verify_your_account(
@@ -155,7 +121,7 @@ class TestTradingStrategiesGuides:
         link = build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
                                     "11.03.01",
                                     "Education > Menu item [Trading Strategies Guides]",
-                                    "_04",
+                                    ".00_04",
                                     "Testing button [1. Create your account] in block [Steps trading]")
 
         if cur_language not in ["", "de", "es", "it", "cn", "zh", "ru"]:
@@ -167,19 +133,10 @@ class TestTradingStrategiesGuides:
 
         page_menu = MenuSection(d, link)
         page_menu.menu_education_move_focus(d, cur_language)
-        link = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
+        cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = BlockStepTrading(d, link)
-        test_element.arrange_(d, link)
-
-        test_element.element_click()
-
-        test_element = AssertClass(d, link)
-        match cur_role:
-            case "NoReg" | "Reg/NoAuth":
-                test_element.assert_signup(d, cur_language, link)
-            case "Auth":
-                test_element.assert_trading_platform_v3(d, link)
+        test_element = BlockStepTrading(d, cur_page_url)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start pretest")
     def test_99_trading_strategies_guide_pretest(
@@ -189,7 +146,7 @@ class TestTradingStrategiesGuides:
 
         build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
                              "11.03.01", "Education > Menu item [Trading Strategies Guides]",
-                             "_99", "Pretest for US_11.03.01.01")
+                             ".00_99", "Pretest for US_11.03.01.01")
 
         if cur_language not in ["", "de", "es", "it", "zh", "ru"]:
             Common().skip_test_for_language(cur_language)
@@ -230,7 +187,6 @@ class TestTradingStrategiesGuides:
                                 break
                         file.write(url + "\n")
                         url_prev = url
-                        print(f"{datetime.now()}   {url}")
                         count_out += 1
         finally:
             file.close()

@@ -95,7 +95,7 @@ class TestCommoditiesTrading:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
     # @profile(precision=3)
@@ -130,7 +130,7 @@ class TestCommoditiesTrading:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link, True)
 
     @allure.step("Start test of button [Sell] in content block")
     # @profile(precision=3)
@@ -168,7 +168,7 @@ class TestCommoditiesTrading:
                 case "Reg/NoAuth":
                     test_element.assert_login(d, cur_language, cur_item_link)
                 case "Auth":
-                    test_element.assert_trading_platform_v3(d, cur_item_link)
+                    test_element.assert_trading_platform_v4(d, cur_item_link)
         else:
             pytest.skip("This test not for FCA licence.")
 
@@ -208,7 +208,7 @@ class TestCommoditiesTrading:
                 case "Reg/NoAuth":
                     test_element.assert_login(d, cur_language, cur_item_link)
                 case "Auth":
-                    test_element.assert_trading_platform_v3(d, cur_item_link)
+                    test_element.assert_trading_platform_v4(d, cur_item_link)
         else:
             pytest.skip("This test not for FCA licence.")
 
@@ -275,7 +275,7 @@ class TestCommoditiesTrading:
                     case "Reg/NoAuth":
                         test_element.assert_login(d, cur_language, cur_item_link)
                     case "Auth":
-                        test_element.assert_trading_platform_v3(d, cur_item_link)
+                        test_element.assert_trading_platform_v4(d, cur_item_link)
         else:
             pytest.skip("This test not for FCA licence.")
 
@@ -313,7 +313,7 @@ class TestCommoditiesTrading:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link)
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     @allure.step("Start test of button [Create your account] in block [Steps trading]")
     # @profile(precision=3)
@@ -335,21 +335,18 @@ class TestCommoditiesTrading:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        if cur_country != 'gb':
-            test_element = BlockStepTrading(d, cur_item_link)
-            test_element.arrange_(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link)
+        test_element.arrange_(d, cur_item_link)
 
-            test_element.element_click()
+        test_element.element_click()
 
-            test_element = AssertClass(d, cur_item_link)
-            # test_element.assert_signup(d, cur_language, cur_role, cur_item_link)
-            match cur_role:
-                case "NoReg" | "Reg/NoAuth":
-                    test_element.assert_signup(d, cur_language, cur_item_link)
-                case "Auth":
-                    test_element.assert_trading_platform_v3(d, cur_item_link)
-        else:
-            pytest.skip("This test not for FCA licence.")
+        test_element = AssertClass(d, cur_item_link)
+        # test_element.assert_signup(d, cur_language, cur_role, cur_item_link)
+        match cur_role:
+            case "NoReg" | "Reg/NoAuth":
+                test_element.assert_signup(d, cur_language, cur_item_link)
+            case "Auth":
+                test_element.assert_trading_platform_v4(d, cur_item_link)
 
     # @pytest.skip
     @allure.step("Start test of button [Create account] in block [Open a trading account in less than 3 minutes]")
@@ -385,7 +382,7 @@ class TestCommoditiesTrading:
             case "Reg/NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, cur_item_link, True)
+                test_element.assert_trading_platform_v4(d, cur_item_link, True)
 
     # @allure.step("Start test of buttons [Sign up] on page")
     # # @profile(precision=3)

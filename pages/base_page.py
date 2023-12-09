@@ -440,10 +440,8 @@ class BasePage:
 
     @HandleExcElementDecorator()
     def current_page_is(self, link):
-        try:
-            return link == self.browser.current_url
-        except:
-            return False
+        return link == self.browser.current_url
+
     @HandleExcElementDecorator()
     def current_page_url_contain_the(self, host):
         cur_url = self.browser.current_url

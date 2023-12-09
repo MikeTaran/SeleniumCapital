@@ -126,7 +126,6 @@ class ContentStartTrading(BasePage):
             else:
                 print(f"{datetime.now()}   => BUTTON_START_TRADING_IN_ARTICLE is not present on the page!")
                 pytest.skip("Checking element is not present on this page")
-                return False
 
             print(f"{datetime.now()}   BUTTON_START_TRADING_IN_ARTICLE_#{i + 1} scroll =>")
             self.browser.execute_script(
@@ -150,7 +149,7 @@ class ContentStartTrading(BasePage):
                     case "Reg/NoAuth":
                         test_element.assert_login(self.browser, cur_language, cur_item_link)
                     case "Auth":
-                        test_element.assert_trading_platform(self.browser)
+                        test_element.assert_trading_platform_v4(self.browser, cur_item_link)
                 self.browser.get(cur_item_link)
 
             except ElementClickInterceptedException:
