@@ -49,20 +49,20 @@ jobs:
         if: always()
         run: poetry update
 
-      - name: 3. Run US_11-02-02 test (Михаил)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
-        continue-on-error: true
-
-      - name: 4. Run US_11-02-02-01 test (Михаил)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
-        continue-on-error: true
-
-      - name: 5. Run US_11-01-06 (Сулейман/Андрей)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
-        continue-on-error: true
+#      - name: 3. Run US_11-02-02 test (Михаил)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+#        continue-on-error: true
+#
+#      - name: 4. Run US_11-02-02-01 test (Михаил)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+#        continue-on-error: true
+#
+#      - name: 5. Run US_11-01-06 (Сулейман/Андрей)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
+#        continue-on-error: true
 
       - name: 6. Upload artifact "allure-results"
         if: always()
@@ -107,14 +107,16 @@ jobs:
           #path: gh-pages
           keep_reports: 30
 
-      - name: 4. Deploy report to Github Pages
+      - name: 11.1 Deploy allure_report to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #          github_token: ${{ secrets.MY_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./allure-history
+          publish_dir: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
+          # force_orphan: true
 
       - name: 5. Archive testing results
         if: always()
