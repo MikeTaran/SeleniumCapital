@@ -1,0 +1,73 @@
+2023-12-10 16:54:40 ERROR Unable to initialize WebDriver
+2023-12-10 16:54:40 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x01156E73+174291]
+	(No symbol) [0x01080AC1]
+	(No symbol) [0x00D96FF6]
+	(No symbol) [0x00DC9876]
+	(No symbol) [0x00DC9C2C]
+	(No symbol) [0x00DFBD42]
+	(No symbol) [0x00DE7054]
+	(No symbol) [0x00DFA104]
+	(No symbol) [0x00DE6DA6]
+	(No symbol) [0x00DC1034]
+	(No symbol) [0x00DC1F8D]
+	GetHandleVerifier [0x011F49CC+820268]
+	sqlite3_dbdata_init [0x012B4EBE+652494]
+	sqlite3_dbdata_init [0x012B48D9+650985]
+	sqlite3_dbdata_init [0x012A962C+605244]
+	sqlite3_dbdata_init [0x012B586B+654971]
+	(No symbol) [0x0108FEBC]
+	(No symbol) [0x01088428]
+	(No symbol) [0x0108854D]
+	(No symbol) [0x01075858]
+	BaseThreadInitThunk [0x75F36A39+25]
+	RtlGetFullPathName_UEx [0x77597F8D+173]
+	RtlGetFullPathName_UEx [0x77597F5B+123]
+
+2023-12-10 16:54:50 ERROR Unable to initialize WebDriver
+2023-12-10 16:54:50 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 390, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x01156E73+174291]
+	(No symbol) [0x01080AC1]
+	(No symbol) [0x00D96FF6]
+	(No symbol) [0x00DC9876]
+	(No symbol) [0x00DC9C2C]
+	(No symbol) [0x00DFBD42]
+	(No symbol) [0x00DE7054]
+	(No symbol) [0x00DFA104]
+	(No symbol) [0x00DE6DA6]
+	(No symbol) [0x00DC1034]
+	(No symbol) [0x00DC1F8D]
+	GetHandleVerifier [0x011F49CC+820268]
+	sqlite3_dbdata_init [0x012B4EBE+652494]
+	sqlite3_dbdata_init [0x012B48D9+650985]
+	sqlite3_dbdata_init [0x012A962C+605244]
+	sqlite3_dbdata_init [0x012B586B+654971]
+	(No symbol) [0x0108FEBC]
+	(No symbol) [0x01088428]
+	(No symbol) [0x0108854D]
+	(No symbol) [0x01075858]
+	BaseThreadInitThunk [0x75F36A39+25]
+	RtlGetFullPathName_UEx [0x77597F8D+173]
+	RtlGetFullPathName_UEx [0x77597F5B+123]
