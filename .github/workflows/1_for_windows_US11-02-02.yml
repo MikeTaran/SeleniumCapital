@@ -18,10 +18,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      #      - name: 1. Check out this repo
-      #        uses: actions/checkout@v3
-      #        continue-on-error: true
-
       - name: 1. Check out this repo, master branch
         uses: actions/checkout@v4
         with:
@@ -33,14 +29,6 @@ jobs:
         with:
           python-version: "3.11.6"
 
-      #      - name: 3.1. Set up Homebrew
-      #        id: set-up-homebrew
-      #        uses: Homebrew/actions/setup-homebrew@master
-      #
-      #      - name: 3.3. Install Neofetch
-      #        if: always()
-      #        run: brew install neofetch
-
       - name: 2.2. install Poetry
         if: always()
         run: pip3 install poetry
@@ -49,20 +37,20 @@ jobs:
         if: always()
         run: poetry update
 
-#      - name: 3. Run US_11-02-02 test (Михаил)
-#        if: always()
-#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
-#        continue-on-error: true
-#
-#      - name: 4. Run US_11-02-02-01 test (Михаил)
-#        if: always()
-#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
-#        continue-on-error: true
-#
-#      - name: 5. Run US_11-01-06 (Сулейман/Андрей)
-#        if: always()
-#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
-#        continue-on-error: true
+      - name: 3. Run US_11-02-02 test (Михаил)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+        continue-on-error: true
+
+      - name: 4. Run US_11-02-02-01 test (Михаил)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+        continue-on-error: true
+
+      - name: 5. Run US_11-01-06 (Сулейман/Андрей)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
+        continue-on-error: true
 
       - name: 6. Upload artifact "allure-results"
         if: always()
@@ -112,7 +100,6 @@ jobs:
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          #          github_token: ${{ secrets.MY_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           publish_dir: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
@@ -130,7 +117,6 @@ jobs:
         if: always()
         with:
           to: ${{ secrets.TELEGRAM_TO }}
-#           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
 #           disable_web_page_preview: true
           message: |
