@@ -3,8 +3,8 @@ on:
 #  push:
   workflow_dispatch:
   
-#permissions:
-#  contents: write
+permissions:
+  contents: write
 
 #  schedule:
 #    - cron: '00 13 * * *'
@@ -61,9 +61,9 @@ jobs:
         if: always()
         run: sudo apt-get install libzbar0
 
-      - name: 4.1 Install PyTorch
-        if: always()
-        run: pip install torch --no-cache-dir
+#      - name: 4.1 Install PyTorch
+#        if: always()
+#        run: pip install torch --no-cache-dir
 
       - name: 5. install dependencies
         if: always()
