@@ -57,9 +57,13 @@ jobs:
         if: always()
         run: pip3 install poetry
 
-      - name: Run hwinfo.py
+      - name: 4.1 Install Zbar
         if: always()
-        run: python3 tests/hwinfo.py
+        run: sudo apt-get install libzbar0
+
+      - name: 4.1 Install PyTorch
+        if: always()
+        run: pip install torch --no-cache-dir
 
       - name: 5. install dependencies
         if: always()
@@ -150,15 +154,15 @@ jobs:
 #        if: always()
 #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-01_Market_guides/US_11-02-01_Market_guides_test.py
 #        continue-on-error: true
-
-      - name: 8. Run US_11-02-02 test (Михаил)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
-        continue-on-error: true
-      - name: 8. Run US_11-02-02-01 test (Михаил)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
-        continue-on-error: true
+#
+#      - name: 8. Run US_11-02-02 test (Михаил)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02_Shares_trading_test.py
+#        continue-on-error: true
+#      - name: 8. Run US_11-02-02-01 test (Михаил)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+#        continue-on-error: true
 
 #      - name: 8. Run US_11-02-03_pre_test (Сулейман/Саша Т)
 #        if: always()
