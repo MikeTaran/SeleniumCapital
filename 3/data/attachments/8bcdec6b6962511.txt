@@ -1,0 +1,57 @@
+{'width': 1280, 'height': 720}
+
+2023-12-11 19:39:44.488216   worker_id = master
+
+2023-12-11 19:39:44.488241   0. Allure grouping
+
+
+2023-12-11 19:39:44.488510   START PRECONDITIONS =>
+
+
+2023-12-11 19:39:44.488529   {'width': 1280, 'height': 720}
+
+2023-12-11 19:39:44.531076   Set windows position at (320, 180) =>
+
+2023-12-11 19:39:44.690260   Set resolution 1280 * 720 =>
+
+2023-12-11 19:39:44.792703   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-11 19:39:48.847177   Капчи нет. Тестим дальше
+
+2023-12-11 19:39:48.847223   Prev. Role: NoReg
+
+2023-12-11 19:39:48.847234   Current role: NoReg
+
+2023-12-11 19:39:48.847243   Prev language: de
+
+2023-12-11 19:39:48.847251   => Current language: de
+
+2023-12-11 19:39:48.847259   Prev country: de
+
+2023-12-11 19:39:48.847268   => Current country: de
+
+2023-12-11 19:39:48.847276   => THE END PRECONDITIONS
+
+2023-12-11 19:39:48.847346   1. Arrange
+2023-12-11 19:39:48.850719   CREATE_ACCOUNT_BUTTON is visible? =>
+2023-12-11 19:39:48.867464   => CREATE_ACCOUNT_BUTTON is visible on the page!
+
+2023-12-11 19:39:48.867622   2. Act
+2023-12-11 19:39:48.867640   CREATE_ACCOUNT_BUTTON is present? =>
+2023-12-11 19:39:48.875115   => CREATE_ACCOUNT_BUTTON is present on the page!
+2023-12-11 19:39:48.875137   CREATE_ACCOUNT_BUTTON scroll =>
+2023-12-11 19:39:48.961713   => CREATE_ACCOUNT_BUTTON clicked!
+
+2023-12-11 19:39:48.962009   3. Assert_v0
+2023-12-11 19:39:48.962113   Start step Check that [Sign up] form is opened
+2023-12-11 19:39:49.162901   'Sign up' form opened
+2023-12-11 19:39:49.162947   Assert SIGNUP_HEADER =>
+2023-12-11 19:39:49.181043   Assert SIGNUP_REF_LOGIN =>
+2023-12-11 19:39:49.211335   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-11 19:39:49.286995   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-11 19:39:49.287036   => 'Signup' form is checked
+2023-12-11 19:39:49.287197   Start step Close [Sign up] form =>
+2023-12-11 19:39:49.356147   => 'Signup' form closed
+
+*** end fixture = teardown ***
+
