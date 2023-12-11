@@ -233,9 +233,7 @@ class TestCommoditiesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = ContentStartTrading(d, cur_item_link)
-        test_element.arrange_(cur_item_link)
-
-        test_element.element_click(cur_item_link, cur_language, cur_role)
+        test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
     # @profile(precision=3)

@@ -28,10 +28,11 @@ class Header(BasePage):
             print(f"{datetime.now()}   => BUTTON_MY_ACCOUNT is not present on this page")
             del button_list
             return False
-
         print(f"{datetime.now()}   => BUTTON_MY_ACCOUNT is present on this page")
+
         button_list = self.browser.find_elements(*HeaderElementLocators.BUTTON_MY_ACCOUNT)
         ActionChains(self.browser) \
+            .pause(0.5) \
             .move_to_element(button_list[0]) \
             .pause(0.5) \
             .perform()
@@ -41,18 +42,33 @@ class Header(BasePage):
         button_list = self.browser.find_elements(*HeaderElementLocators.BUTTON_MY_ACCOUNT)
         if not self.element_is_clickable(button_list[0], 10):
             print("Button [My account] is not clickable!")
+        print(f"{datetime.now()}   => BUTTON_MY_ACCOUNT is clickable")
 
-        print(f"{datetime.now()}   => BUTTON_MY_ACCOUNT is clickable. Click =>")
+        print(f"{datetime.now()}   BUTTON_MY_ACCOUNT Click =>")
         button_list = self.browser.find_elements(*HeaderElementLocators.BUTTON_MY_ACCOUNT)
         ActionChains(self.browser) \
             .click(button_list[0]) \
             .perform()
 
         if not self.element_is_visible(MyAccountLocator.LOGOUT, 10):
-            print(f"{datetime.now()}   => User panel [My account] not opened")
+            print(f"{datetime.now()}   => User panel [My account] is not opened after first BUTTON_MY_ACCOUNT click")
+
+            print(f"{datetime.now()}   BUTTON_MY_ACCOUNT second Click =>")
+            button_list = self.browser.find_elements(*HeaderElementLocators.BUTTON_MY_ACCOUNT)
+            ActionChains(self.browser) \
+                .click(button_list[0]) \
+                .perform()
+
+            if self.element_is_visible(MyAccountLocator.LOGOUT, 10):
+                print(f"{datetime.now()}   => User panel [My account] is opened after second BUTTON_MY_ACCOUNT click")
+                del button_list
+                return True
+
+            print(
+                f"{datetime.now()}   => User panel [My account] is not opened after second BUTTON_MY_ACCOUNT click")
             del button_list
             return False
-        print(f"{datetime.now()}   => User panel [My account] is opened")
 
+        print(f"{datetime.now()}   => User panel [My account] is opened")
         del button_list
         return True

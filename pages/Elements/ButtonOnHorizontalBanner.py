@@ -31,8 +31,8 @@ class ButtonOnHorizontalBanner(BasePage):
         if data_id in banner00_hor_tpd or data_id in banner01_hor_tpd:
             tpd = True
         # проверка, что баннер учтен в матрице покрытия
-        if (data_id in banner00_hor_tp or data_id in banner01_hor_tp or data_id in banner00_hor_tpd or
-                data_id in banner01_hor_tpd):
+        if (data_id in banner00_hor_tp or data_id in banner01_hor_tp
+                or data_id in banner00_hor_tpd or data_id in banner01_hor_tpd):
             test_element = AssertClass(d, link)
             match cur_role:
                 case "NoReg":

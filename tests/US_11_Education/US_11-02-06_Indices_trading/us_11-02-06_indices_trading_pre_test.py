@@ -63,7 +63,7 @@ class TestIndicesTradingGuidePreset:
         count_all = len(href_list)
         logger.info(f"Indices Trading Guide include {count_all} items on selected "
                     f"'{'en' if cur_language == '' else cur_language}' language")
-        logger.info(f"Choose no more than 3 random items")
+        logger.info("Choose no more than 3 random items")
         random_list = random.sample(href_list, 3 if count_all >= 3 else count_all)
         with open(name_file, "w", encoding='UTF-8') as f:
             for val in random_list:

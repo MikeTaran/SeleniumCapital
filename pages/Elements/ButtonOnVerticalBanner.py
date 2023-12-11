@@ -30,8 +30,8 @@ class ButtonOnVerticalBanner(BasePage):
         if data_id in banner00_ver_tpd or data_id in banner01_ver_tpd:
             tpd = True
         # проверка, что баннер учтен в матрице покрытия
-        if (data_id in banner00_ver_tp or data_id in banner01_ver_tp or data_id in banner00_ver_tpd or
-                data_id in banner01_ver_tpd):
+        if (data_id in banner00_ver_tp or data_id in banner01_ver_tp
+                or data_id in banner00_ver_tpd or data_id in banner01_ver_tpd):
             test_element = AssertClass(d, link)
             match cur_role:
                 case "NoReg":

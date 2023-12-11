@@ -274,6 +274,10 @@ class BasePage:
         button.click()
         print(f"{datetime.now()}   => BUTTON_ACCEPT_ALL_COOKIE is clicked")
         print(f"{datetime.now()}   => Accepted All Cookies")
+        time.sleep(1)
+        # while True:
+        #     if isinstance(self.element_is_visible(button), bool):
+        #         break
 
     @allure.step("Reject all cookies")
     def button_reject_all_cookies_click(self):

@@ -230,4 +230,3 @@ class Conditions(BasePage):
         if not self.current_page_is(base_link):
             self.link = base_link
             self.open_page()
-

@@ -307,5 +307,3 @@ class TestTradingStrategiesGuides:
 
         test_element = ContentStartTrading(d, cur_item_link)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
-
-

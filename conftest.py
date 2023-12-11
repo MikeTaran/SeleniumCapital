@@ -46,7 +46,7 @@ def cur_role(request):
     params=[
         # "",  # "en"
         # "ar",
-        # "de",
+        "de",
         # "el",
         # "es",
         # "fr",
@@ -57,7 +57,7 @@ def cur_role(request):
         # "ro",
         # "ru",
         # "zh",
-        "cn",  # Education to trade present, financial glossary not present
+        # "cn",  # Education to trade present, financial glossary not present
     ],
 )
 def cur_language(request):
@@ -72,9 +72,9 @@ def cur_language(request):
 @pytest.fixture(
     scope="class",
     params=[
-        # "gb",  # United Kingdom - "FCA"
-        # "de",  # Germany - "CYSEC"
-        # "ae",  # United Arab Emirates - "SCB"
+        "gb",  # United Kingdom - "FCA"
+        "de",  # Germany - "CYSEC"
+        "ae",  # United Arab Emirates - "SCB"
         "au",  # Australia - "ASIC"
 
         # "gr",  # Greece - "CYSEC"
@@ -294,7 +294,7 @@ def pytest_runtest_makereport(item, call):
                 return driver.execute_script(
                     "return document.body.parentNode.scroll" + x)
 
-            driver.set_window_size(s("Width"), s("Height"))
+            # driver.set_window_size(s("Width"), s("Height"))
             driver.find_element(By.TAG_NAME, "body").screenshot(destination_file)
             allure.attach(
                 driver.get_screenshot_as_png(),
