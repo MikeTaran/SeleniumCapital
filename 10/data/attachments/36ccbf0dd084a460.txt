@@ -1,0 +1,66 @@
+{'width': 1280, 'height': 720}
+
+2023-12-11 15:05:38.133590   worker_id = master
+
+2023-12-11 15:05:38.133590   0. Allure grouping
+
+
+2023-12-11 15:05:38.133590   START PRECONDITIONS =>
+
+
+2023-12-11 15:05:38.133590   {'width': 1280, 'height': 720}
+
+2023-12-11 15:05:38.139862   Set windows position at (320, 180) =>
+
+2023-12-11 15:05:38.267918   Set resolution 1280 * 720 =>
+
+2023-12-11 15:05:38.395591   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-11 15:05:42.438291   Капчи нет. Тестим дальше
+
+2023-12-11 15:05:42.438291   Prev. Role: Reg/NoAuth
+
+2023-12-11 15:05:42.438291   Current role: Reg/NoAuth
+
+2023-12-11 15:05:42.438291   Prev language: de
+
+2023-12-11 15:05:42.438291   => Current language: de
+
+2023-12-11 15:05:42.438291   Prev country: ae
+
+2023-12-11 15:05:42.438291   => Current country: ae
+
+2023-12-11 15:05:42.438291   => THE END PRECONDITIONS
+
+2023-12-11 15:05:42.438291   1. Arrange
+
+2023-12-11 15:05:42.438291   Testing the qr code: CAPITAL
+2023-12-11 15:05:42.978949   Load page https://capital.com/de/trading-lernen-app
+2023-12-11 15:05:42.978949   Start Checking that form [Sign up] popped up on the page =>
+2023-12-11 15:05:47.537918   '[Sign up]' form was not popped up
+2023-12-11 15:05:47.538929   QR_CODE is located in the DOM? =>
+2023-12-11 15:05:47.558091   => QR_CODE_CAPITAL is located in the DOM
+2023-12-11 15:05:47.558091   QR_CODE_LINK is visible on the page? =>
+2023-12-11 15:05:47.579661   => QR_CODE_LINK CAPITAL is on the page!
+
+2023-12-11 15:05:47.580802   2. Act
+2023-12-11 15:05:47.581108   Determining the QR_CODE_TITLE link
+2023-12-11 15:05:47.591166   QR_CODE_TITLE link: https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=7ie0ngrj-fhc1-6cho-ozh4-yqqy9pq6fsd4                                                                                                                       
+2023-12-11 15:05:47.591166   Start Checking that form [Sign up] popped up on the page =>
+2023-12-11 15:05:52.101634   '[Sign up]' form was not popped up
+2023-12-11 15:05:52.177462   Start QR-code decryption with CV2-method =>
+2023-12-11 15:05:52.183457   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-11 15:05:52.183457   Start QR-code decryption with PYZBAR-method =>
+2023-12-11 15:05:52.186458   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-11 15:05:52.230723   Start QR-code decryption with QREADER-method =>
+2023-12-11 15:05:54.412374   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-11 15:05:54.412374   QR_CODE_LINK_QREADER=  https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=7ie0ngrj-fhc1-6cho-ozh4-yqqy9pq6fsd4                                                                                                                       
+2023-12-11 15:05:54.504499   Check QR-code title link equal QR-code image link =>
+2023-12-11 15:05:55.374708   Load page https://capitalcom.onelink.me/700515151?pid=website&cp_device_id=7ie0ngrj-fhc1-6cho-ozh4-yqqy9pq6fsd4                                                                                                                       
+
+2023-12-11 15:05:55.375708   3. Assert_v0
+2023-12-11 15:05:55.375708   Checking that the App Store page has opened
+2023-12-11 15:05:55.487942   => Current page title: Capital.com: Trading & Finance on the App Store
+2023-12-11 15:05:55.488944   Checking that the App Store app title
+2023-12-11 15:05:55.506013   Checking that the App Store specifies provider
+2023-12-11 15:05:55.974200   Load page https://capital.com/de/trading-lernen-app

@@ -1,0 +1,102 @@
+
+2023-12-11 12:16:28.135477   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000027F30C51890> с именем TC_11.02.02_06
+{'width': 1280, 'height': 720}
+
+2023-12-11 12:16:28.142941   worker_id = master
+
+2023-12-11 12:16:28.142941   0. Allure grouping
+
+
+2023-12-11 12:16:28.143939   START PRECONDITIONS =>
+
+
+2023-12-11 12:16:28.143939   {'width': 1280, 'height': 720}
+
+2023-12-11 12:16:28.164294   Set windows position at (320, 180) =>
+
+2023-12-11 12:16:28.267597   Set resolution 1280 * 720 =>
+
+2023-12-11 12:16:28.372142   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-11 12:16:32.414508   Капчи нет. Тестим дальше
+
+2023-12-11 12:16:32.414508   Prev. Role: NoReg
+
+2023-12-11 12:16:32.414508   Current role: NoReg
+
+2023-12-11 12:16:32.414508   Prev language: de
+
+2023-12-11 12:16:32.414508   => Current language: de
+
+2023-12-11 12:16:32.414508   Prev country: ae
+
+2023-12-11 12:16:32.414508   => Current country: ae
+
+2023-12-11 12:16:32.414508   => THE END PRECONDITIONS
+
+2023-12-11 12:16:32.414508   1. Cur URL = https://capital.com/de/aktienhandel
+
+2023-12-11 12:16:32.419502   2. Link = https://capital.com/de
+2023-12-11 12:16:33.155129   Load page https://capital.com/de
+2023-12-11 12:16:33.567243   => Education menu is present
+2023-12-11 12:16:33.711638   => Education menu is visible
+2023-12-11 12:16:35.484549   => Education menu focus moved
+
+
+2023-12-11 12:16:37.418560   => Shares trading sub-menu clicked
+
+2023-12-11 12:16:37.505640   Clear Top Chart list =>
+2023-12-11 12:16:39.064218   Load page https://capital.com/trading/platform/charting/
+
+2023-12-11 12:16:47.148604   1. Arrange_v4
+2023-12-11 12:16:48.115960   Load page https://capital.com/de/aktienhandel
+2023-12-11 12:16:48.115960   MOST_TRADED is visible? =>
+2023-12-11 12:16:48.529631   => MOST_TRADED is visible on the page!
+2023-12-11 12:16:48.529631   => Found 5 elements in block MOST_TRADED
+
+2023-12-11 12:16:48.529631   Testing Most traded random element #1
+
+2023-12-11 12:16:48.529631   2. Act_v4
+2023-12-11 12:16:48.529631   MOST_TRADED delete js-mostTraded class =>
+2023-12-11 12:16:48.715845   MOST_TRADED scroll =>
+2023-12-11 12:16:48.721192   MOST_TRADED click for 'Tesla Inc' trading instrument =>
+2023-12-11 12:16:48.885828   => MOST_TRADED clicked!
+
+2023-12-11 12:16:48.885828   3. Assert_v0
+2023-12-11 12:16:48.885828   Start step Check that [Sign up] form is opened
+2023-12-11 12:16:49.149471   'Sign up' form opened
+2023-12-11 12:16:49.149471   Assert SIGNUP_HEADER =>
+2023-12-11 12:16:49.225593   Assert SIGNUP_REF_LOGIN =>
+2023-12-11 12:16:49.283591   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-11 12:16:49.340433   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-11 12:16:49.340433   => 'Signup' form is checked
+2023-12-11 12:16:49.340433   Start step Close [Sign up] form =>
+2023-12-11 12:16:49.516372   => 'Signup' form closed
+
+2023-12-11 12:16:49.516372   Clear Top Chart list =>
+2023-12-11 12:16:50.815642   Load page https://capital.com/trading/platform/charting/
+
+2023-12-11 12:16:58.921881   1. Arrange_v4
+2023-12-11 12:16:59.729850   Load page https://capital.com/de/aktienhandel
+2023-12-11 12:16:59.729850   MOST_TRADED is visible? =>
+2023-12-11 12:16:59.836446   => MOST_TRADED is visible on the page!
+2023-12-11 12:16:59.836446   => Found 5 elements in block MOST_TRADED
+
+2023-12-11 12:16:59.836446   Testing Most traded random element #2
+
+2023-12-11 12:16:59.836446   2. Act_v4
+2023-12-11 12:16:59.837647   MOST_TRADED delete js-mostTraded class =>
+2023-12-11 12:17:00.385764   MOST_TRADED scroll =>
+2023-12-11 12:17:00.395220   MOST_TRADED click for 'Coinbase Global Inc' trading instrument =>
+2023-12-11 12:17:00.525599   => MOST_TRADED clicked!
+
+2023-12-11 12:17:00.525599   3. Assert_v0
+2023-12-11 12:17:00.525599   Start step Check that [Sign up] form is opened
+2023-12-11 12:17:00.830994   'Sign up' form opened
+2023-12-11 12:17:00.830994   Assert SIGNUP_HEADER =>
+2023-12-11 12:17:00.859105   Assert SIGNUP_REF_LOGIN =>
+2023-12-11 12:17:00.913063   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-11 12:17:00.930444   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-11 12:17:00.930444   => 'Signup' form is checked
+2023-12-11 12:17:00.930444   Start step Close [Sign up] form =>
+2023-12-11 12:17:01.027388   => 'Signup' form closed

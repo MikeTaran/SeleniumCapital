@@ -1,0 +1,98 @@
+
+2023-12-11 12:04:16.598713   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000027F30C51750> с именем TC_11.02.02_06
+{'width': 1280, 'height': 720}
+
+2023-12-11 12:04:16.601710   worker_id = master
+
+2023-12-11 12:04:16.601710   0. Allure grouping
+
+
+2023-12-11 12:04:16.601710   START PRECONDITIONS =>
+
+
+2023-12-11 12:04:16.601710   {'width': 1280, 'height': 720}
+
+2023-12-11 12:04:16.603709   Set windows position at (320, 180) =>
+
+2023-12-11 12:04:16.707124   Set resolution 1280 * 720 =>
+
+2023-12-11 12:04:16.812264   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-11 12:04:20.832896   Капчи нет. Тестим дальше
+
+2023-12-11 12:04:20.832896   Prev. Role: Reg/NoAuth
+
+2023-12-11 12:04:20.832896   Current role: Reg/NoAuth
+
+2023-12-11 12:04:20.832896   Prev language: de
+
+2023-12-11 12:04:20.832896   => Current language: de
+
+2023-12-11 12:04:20.832896   Prev country: de
+
+2023-12-11 12:04:20.832896   => Current country: de
+
+2023-12-11 12:04:20.832896   => THE END PRECONDITIONS
+
+2023-12-11 12:04:20.832896   1. Cur URL = https://capital.com/de/aktienhandel
+
+2023-12-11 12:04:20.836897   2. Link = https://capital.com/de
+2023-12-11 12:04:21.444032   Load page https://capital.com/de
+2023-12-11 12:04:21.529172   => Education menu is present
+2023-12-11 12:04:21.872676   => Education menu is visible
+2023-12-11 12:04:23.655931   => Education menu focus moved
+
+
+2023-12-11 12:04:25.159754   => Shares trading sub-menu clicked
+
+2023-12-11 12:04:25.242769   Clear Top Chart list =>
+2023-12-11 12:04:27.028440   Load page https://capital.com/trading/platform/charting/
+
+2023-12-11 12:04:35.138543   1. Arrange_v4
+2023-12-11 12:04:35.946243   Load page https://capital.com/de/aktienhandel
+2023-12-11 12:04:35.946243   MOST_TRADED is visible? =>
+2023-12-11 12:04:36.255236   => MOST_TRADED is visible on the page!
+2023-12-11 12:04:36.255236   => Found 5 elements in block MOST_TRADED
+
+2023-12-11 12:04:36.255236   Testing Most traded random element #1
+
+2023-12-11 12:04:36.255236   2. Act_v4
+2023-12-11 12:04:36.255236   MOST_TRADED delete js-mostTraded class =>
+2023-12-11 12:04:36.406298   MOST_TRADED scroll =>
+2023-12-11 12:04:36.413744   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-11 12:04:36.534548   => MOST_TRADED clicked!
+
+2023-12-11 12:04:36.534548   3. Assert_Login_v0
+2023-12-11 12:04:36.747516   'Login' form opened
+2023-12-11 12:04:36.747516   Assert LOGIN_REF_SIGNUP =>
+2023-12-11 12:04:36.770886   Assert LOGIN_CHECKBOX =>
+2023-12-11 12:04:36.837350   Assert LOGIN_PASS_FORGOT =>
+2023-12-11 12:04:36.861222   => 'Login' form is checked
+2023-12-11 12:04:36.893685   Click 'Close' button on 'Login' form =>
+2023-12-11 12:04:36.955298   => 'Login' form closed
+
+2023-12-11 12:04:36.955298   Clear Top Chart list =>
+2023-12-11 12:04:38.204910   Load page https://capital.com/trading/platform/charting/
+
+2023-12-11 12:04:46.283465   1. Arrange_v4
+2023-12-11 12:04:47.088334   Load page https://capital.com/de/aktienhandel
+2023-12-11 12:04:47.088334   MOST_TRADED is visible? =>
+2023-12-11 12:04:47.179274   => MOST_TRADED is visible on the page!
+2023-12-11 12:04:47.179274   => Found 5 elements in block MOST_TRADED
+
+2023-12-11 12:04:47.179274   Testing Most traded random element #2
+
+2023-12-11 12:04:47.180291   2. Act_v4
+2023-12-11 12:04:47.180291   MOST_TRADED delete js-mostTraded class =>
+2023-12-11 12:04:47.518338   MOST_TRADED scroll =>
+2023-12-11 12:04:47.523806   MOST_TRADED click for 'Coinbase Global Inc' trading instrument =>
+2023-12-11 12:04:47.651254   => MOST_TRADED clicked!
+
+2023-12-11 12:04:47.651254   3. Assert_Login_v0
+2023-12-11 12:04:47.830994   'Login' form opened
+2023-12-11 12:04:47.830994   Assert LOGIN_REF_SIGNUP =>
+2023-12-11 12:04:47.850173   Assert LOGIN_CHECKBOX =>
+2023-12-11 12:04:47.880657   Assert LOGIN_PASS_FORGOT =>
+2023-12-11 12:04:47.929518   => 'Login' form is checked
+2023-12-11 12:04:47.951520   Click 'Close' button on 'Login' form =>
+2023-12-11 12:04:48.010797   => 'Login' form closed
