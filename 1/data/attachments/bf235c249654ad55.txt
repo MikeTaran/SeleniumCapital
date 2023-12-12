@@ -1,0 +1,61 @@
+
+2023-12-12 14:55:35.675441   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x0000023735F90090> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-12-12 14:55:35.730649   worker_id = master
+
+2023-12-12 14:55:35.730649   0. Allure grouping
+
+2023-12-12 14:55:35.730649   0. Arrange_0
+2023-12-12 14:55:39.827283   Load page https://capital.com
+
+
+2023-12-12 14:55:39.827283   START PRECONDITIONS =>
+
+
+2023-12-12 14:55:39.827283   {'width': 1280, 'height': 720}
+
+2023-12-12 14:55:42.225044   Set windows position at (320, 180) =>
+
+2023-12-12 14:55:42.846368   Set resolution 1280 * 720 =>
+
+2023-12-12 14:55:43.098208   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-12 14:55:48.276677   Капчи нет. Тестим дальше
+
+2023-12-12 14:55:48.276677   Prev. Role: NoReg
+
+2023-12-12 14:55:48.276677   Current role: NoReg
+
+2023-12-12 14:55:48.276677   Prev language: es
+
+2023-12-12 14:55:48.276677   => Current language: es
+
+2023-12-12 14:55:48.276677   Prev country: au
+
+2023-12-12 14:55:48.276677   => Current country: au
+
+2023-12-12 14:55:48.276677   => THE END PRECONDITIONS
+
+2023-12-12 14:55:48.276677   1. Arrange_v0
+2023-12-12 14:55:49.653806   Load page https://capital.com/es/operar-uber
+2023-12-12 14:55:51.141060   BUTTON_START_TRADING scroll =>
+2023-12-12 14:55:52.153217   BUTTON_START_TRADING is visible? =>
+2023-12-12 14:55:52.759790   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-12 14:55:52.759790   2. Act_v0
+2023-12-12 14:55:52.759790   Start Click button [Start Trading] =>
+2023-12-12 14:55:52.792218   BUTTON_START_TRADING is clickable? =>
+2023-12-12 14:55:52.858803   BUTTON_START_TRADING click =>
+2023-12-12 14:55:53.422242   => BUTTON_START_TRADING clicked
+
+2023-12-12 14:55:53.422242   3. Assert_v0
+2023-12-12 14:55:53.422242   Start step Check that [Sign up] form is opened
+2023-12-12 14:55:54.255943   'Sign up' form opened
+2023-12-12 14:55:54.255943   Assert SIGNUP_HEADER =>
+2023-12-12 14:55:55.376541   Assert SIGNUP_REF_LOGIN =>
+2023-12-12 14:55:55.421262   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-12 14:55:55.464408   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-12 14:55:55.464408   => 'Signup' form is checked
+2023-12-12 14:55:55.464408   Start step Close [Sign up] form =>
+2023-12-12 14:55:55.798990   => 'Signup' form closed

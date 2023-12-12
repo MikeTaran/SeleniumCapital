@@ -1,0 +1,56 @@
+
+2023-12-12 14:36:22.025307   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x0000023735F90350> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-12-12 14:36:22.028310   worker_id = master
+
+2023-12-12 14:36:22.028310   0. Allure grouping
+
+2023-12-12 14:36:22.028310   0. Arrange_0
+2023-12-12 14:36:24.298145   Load page https://capital.com
+
+
+2023-12-12 14:36:24.298145   START PRECONDITIONS =>
+
+
+2023-12-12 14:36:24.298145   {'width': 1280, 'height': 720}
+
+2023-12-12 14:36:24.351127   Set windows position at (320, 180) =>
+
+2023-12-12 14:36:25.869474   Set resolution 1280 * 720 =>
+
+2023-12-12 14:36:26.752978   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-12 14:36:33.003455   Капчи нет. Тестим дальше
+
+2023-12-12 14:36:33.003455   Prev. Role: Auth
+
+2023-12-12 14:36:33.003455   Current role: Auth
+
+2023-12-12 14:36:33.003455   Prev language: es
+
+2023-12-12 14:36:33.003455   => Current language: es
+
+2023-12-12 14:36:33.003455   Prev country: au
+
+2023-12-12 14:36:33.003455   => Current country: au
+
+2023-12-12 14:36:33.003455   => THE END PRECONDITIONS
+
+2023-12-12 14:36:33.003455   1. Arrange_v0
+2023-12-12 14:36:34.619088   Load page https://capital.com/es/operar-uber
+2023-12-12 14:36:34.999580   BUTTON_START_TRADING scroll =>
+2023-12-12 14:36:36.187826   BUTTON_START_TRADING is visible? =>
+2023-12-12 14:36:36.549540   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-12 14:36:36.549540   2. Act_v0
+2023-12-12 14:36:36.549540   Start Click button [Start Trading] =>
+2023-12-12 14:36:36.575004   BUTTON_START_TRADING is clickable? =>
+2023-12-12 14:36:36.614836   BUTTON_START_TRADING click =>
+2023-12-12 14:36:37.977036   => BUTTON_START_TRADING clicked
+
+2023-12-12 14:36:37.977036   3. Assert_v4
+2023-12-12 14:36:37.977036   Checking that the trading platform page has opened (v4) =>
+2023-12-12 14:36:38.665762   => Current page title: Trading Platform | Capital.com
+2023-12-12 14:36:38.665762   Checking that the Trading platform LOGO is present on the page =>
+2023-12-12 14:36:40.590346   Checking that the Trading platform opened in LIVE mode =>

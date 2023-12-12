@@ -1,0 +1,91 @@
+
+2023-12-12 13:11:09.376562   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000002373601F7D0> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-12 13:11:09.383561   worker_id = master
+
+2023-12-12 13:11:09.383561   0. Allure grouping
+
+
+2023-12-12 13:11:09.383561   START PRECONDITIONS =>
+
+
+2023-12-12 13:11:09.383561   {'width': 1280, 'height': 720}
+
+2023-12-12 13:11:09.385564   Set windows position at (320, 180) =>
+
+2023-12-12 13:11:09.493736   Set resolution 1280 * 720 =>
+
+2023-12-12 13:11:09.605293   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-12 13:11:14.634501   Капчи нет. Тестим дальше
+
+2023-12-12 13:11:14.634501   Prev. Role: NoReg
+
+2023-12-12 13:11:14.634501   Current role: NoReg
+
+2023-12-12 13:11:14.634501   Prev language: es
+
+2023-12-12 13:11:14.634501   => Current language: es
+
+2023-12-12 13:11:14.634501   Prev country: de
+
+2023-12-12 13:11:14.634501   => Current country: de
+
+2023-12-12 13:11:14.634501   => THE END PRECONDITIONS
+
+2023-12-12 13:11:14.634501   1. Arrange_v4
+2023-12-12 13:11:14.634501   MOST_TRADED is visible? =>
+2023-12-12 13:11:14.650100   => MOST_TRADED is visible on the page!
+2023-12-12 13:11:14.650100   => Found 5 elements in block MOST_TRADED
+
+2023-12-12 13:11:14.650100   Testing Most traded random element #1
+
+2023-12-12 13:11:14.650100   2. Act_v4
+2023-12-12 13:11:14.650100   MOST_TRADED delete js-mostTraded class =>
+2023-12-12 13:11:14.690086   MOST_TRADED scroll =>
+2023-12-12 13:11:14.690086   Start Checking that form [Sign up] popped up on the page =>
+2023-12-12 13:11:20.255016   '[Sign up]' form was not popped up
+2023-12-12 13:11:20.282307   MOST_TRADED click for 'Tesla Inc' trading instrument =>
+2023-12-12 13:11:20.416901   => MOST_TRADED clicked!
+
+2023-12-12 13:11:20.416901   3. Assert_v0
+2023-12-12 13:11:20.416901   Start step Check that [Sign up] form is opened
+2023-12-12 13:11:20.488545   'Sign up' form opened
+2023-12-12 13:11:20.488545   Assert SIGNUP_HEADER =>
+2023-12-12 13:11:20.532988   Assert SIGNUP_REF_LOGIN =>
+2023-12-12 13:11:20.556982   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-12 13:11:20.578610   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-12 13:11:20.578610   => 'Signup' form is checked
+2023-12-12 13:11:20.578610   Start step Close [Sign up] form =>
+2023-12-12 13:11:20.678639   => 'Signup' form closed
+
+2023-12-12 13:11:20.678639   Clear Top Chart list =>
+2023-12-12 13:11:22.411806   Load page https://capital.com/trading/platform/charting/
+
+2023-12-12 13:11:32.521153   1. Arrange_v4
+2023-12-12 13:11:33.244401   Load page https://capital.com/es/opera-twitter
+2023-12-12 13:11:33.244401   MOST_TRADED is visible? =>
+2023-12-12 13:11:33.336246   => MOST_TRADED is visible on the page!
+2023-12-12 13:11:33.336246   => Found 5 elements in block MOST_TRADED
+
+2023-12-12 13:11:33.336246   Testing Most traded random element #2
+
+2023-12-12 13:11:33.337240   2. Act_v4
+2023-12-12 13:11:33.337240   MOST_TRADED delete js-mostTraded class =>
+2023-12-12 13:11:33.755891   MOST_TRADED scroll =>
+2023-12-12 13:11:33.755891   Start Checking that form [Sign up] popped up on the page =>
+2023-12-12 13:11:39.294531   '[Sign up]' form was not popped up
+2023-12-12 13:11:39.316236   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-12 13:11:39.453621   => MOST_TRADED clicked!
+
+2023-12-12 13:11:39.453621   3. Assert_v0
+2023-12-12 13:11:39.453621   Start step Check that [Sign up] form is opened
+2023-12-12 13:11:39.691708   'Sign up' form opened
+2023-12-12 13:11:39.691708   Assert SIGNUP_HEADER =>
+2023-12-12 13:11:39.715374   Assert SIGNUP_REF_LOGIN =>
+2023-12-12 13:11:39.732551   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-12 13:11:39.749405   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-12 13:11:39.749405   => 'Signup' form is checked
+2023-12-12 13:11:39.749405   Start step Close [Sign up] form =>
+2023-12-12 13:11:39.884289   => 'Signup' form closed

@@ -1,0 +1,107 @@
+
+
+
+Current test role - NoReg
+{'width': 1280, 'height': 720}
+
+2023-12-12 15:17:44.280850   worker_id = master
+
+2023-12-12 15:17:44.281854   0. Allure grouping
+
+
+2023-12-12 15:17:44.282100   START PRECONDITIONS =>
+
+
+2023-12-12 15:17:44.282100   {'width': 1280, 'height': 720}
+
+2023-12-12 15:17:44.345385   Set windows position at (320, 180) =>
+
+2023-12-12 15:17:44.529239   Set resolution 1280 * 720 =>
+
+2023-12-12 15:17:44.637661   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-12 15:17:49.684897   Капчи нет. Тестим дальше
+
+2023-12-12 15:17:49.684897   Prev. Role: Auth
+
+2023-12-12 15:17:49.684897   Run preconditions: set "NoReg" Role =>
+2023-12-12 15:17:50.473100   Load page https://capital.com
+
+2023-12-12 15:17:51.153643   => All cookies are deleted
+2023-12-12 15:17:51.789937   Load page https://capital.com
+
+2023-12-12 15:17:51.789937   Click button [Accept all cookies]
+2023-12-12 15:17:51.789937   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-12 15:17:55.819728   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-12 15:17:55.828721   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-12 15:17:55.828721   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-12 15:17:55.844589   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-12 15:17:56.904923   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-12 15:17:56.904923   => Accepted All Cookies
+
+2023-12-12 15:17:57.906527   Current role: NoReg
+
+2023-12-12 15:17:57.906527   Prev language: ?
+
+2023-12-12 15:17:57.906527   Run preconditions: set "es" language =>
+
+
+2023-12-12 15:17:57.917908   => Language and Country menu is present
+
+
+2023-12-12 15:17:57.936289   => Language and Country menu is visible
+
+
+2023-12-12 15:17:59.723375   => Focus is moved on Language and Country menu 
+
+2023-12-12 15:18:01.315646   => Current language: es
+
+2023-12-12 15:18:01.315646   Prev country: ?
+
+2023-12-12 15:18:01.315646   Run preconditions: set "ae" country =>
+
+
+2023-12-12 15:18:01.333112   => Language and Country menu is present
+
+
+2023-12-12 15:18:01.427243   => Language and Country menu is visible
+
+
+2023-12-12 15:18:03.204358   => Focus is moved on Language and Country menu 
+
+2023-12-12 15:18:06.439999   => Current country: ae
+
+2023-12-12 15:18:06.439999   => THE END PRECONDITIONS
+
+2023-12-12 15:18:06.440966   1. Arrange
+
+2023-12-12 15:18:06.440966   Testing the qr code: INVESTMATE
+2023-12-12 15:18:08.060747   Load page https://capital.com/es/investmate
+2023-12-12 15:18:08.060747   Start Checking that form [Sign up] popped up on the page =>
+2023-12-12 15:18:13.595661   '[Sign up]' form was not popped up
+2023-12-12 15:18:13.595661   QR_CODE is located in the DOM? =>
+2023-12-12 15:18:13.613178   => QR_CODE_INVESTMATE is located in the DOM
+2023-12-12 15:18:13.613178   QR_CODE_LINK is visible on the page? =>
+2023-12-12 15:18:14.148224   => QR_CODE_LINK INVESTMATE is on the page!
+
+2023-12-12 15:18:14.148224   2. Act
+2023-12-12 15:18:14.148224   Determining the QR_CODE_TITLE link
+2023-12-12 15:18:14.161976   QR_CODE_TITLE link: https://investmate.onelink.me/G4om?pid=website&cp_device_id=qfrcuiex-s1dj-nsy6-ifz4-a6yaczp3lxxb                                                                                                                            
+2023-12-12 15:18:14.161976   Start Checking that form [Sign up] popped up on the page =>
+2023-12-12 15:18:19.680180   '[Sign up]' form was not popped up
+2023-12-12 15:18:19.751871   Start QR-code decryption with CV2-method =>
+2023-12-12 15:18:19.760875   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-12 15:18:19.760875   Start QR-code decryption with PYZBAR-method =>
+2023-12-12 15:18:19.763868   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-12 15:18:19.808615   Start QR-code decryption with QREADER-method =>
+2023-12-12 15:18:21.862410   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-12 15:18:21.862410   QR_CODE_LINK_QREADER=  https://investmate.onelink.me/G4om?pid=website&cp_device_id=qfrcuiex-s1dj-nsy6-ifz4-a6yaczp3lxxb                                                                                                                            
+2023-12-12 15:18:21.945539   Check QR-code title link equal QR-code image link =>
+2023-12-12 15:18:23.017610   Load page https://investmate.onelink.me/G4om?pid=website&cp_device_id=qfrcuiex-s1dj-nsy6-ifz4-a6yaczp3lxxb                                                                                                                            
+
+2023-12-12 15:18:23.017610   3. Assert_v0
+2023-12-12 15:18:23.018615   Checking that the App Store page has opened
+2023-12-12 15:18:23.365875   => Current page title: Investmate — learn to trade on the App Store
+2023-12-12 15:18:23.365875   Checking that the App Store app title
+2023-12-12 15:18:23.394002   Checking that the App Store specifies provider
+2023-12-12 15:18:24.105315   Load page https://capital.com/es/investmate

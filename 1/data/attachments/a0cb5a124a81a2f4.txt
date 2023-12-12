@@ -1,0 +1,59 @@
+
+2023-12-12 12:58:51.433533   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x0000023736003ED0> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-12 12:58:51.433533   worker_id = master
+
+2023-12-12 12:58:51.433533   0. Allure grouping
+
+
+2023-12-12 12:58:51.433533   START PRECONDITIONS =>
+
+
+2023-12-12 12:58:51.433533   {'width': 1280, 'height': 720}
+
+2023-12-12 12:58:51.433533   Set windows position at (320, 180) =>
+
+2023-12-12 12:58:51.559750   Set resolution 1280 * 720 =>
+
+2023-12-12 12:58:51.677546   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-12 12:58:56.696824   Капчи нет. Тестим дальше
+
+2023-12-12 12:58:56.696824   Prev. Role: Auth
+
+2023-12-12 12:58:56.696824   Current role: Auth
+
+2023-12-12 12:58:56.696824   Prev language: es
+
+2023-12-12 12:58:56.696824   => Current language: es
+
+2023-12-12 12:58:56.696824   Prev country: de
+
+2023-12-12 12:58:56.696824   => Current country: de
+
+2023-12-12 12:58:56.696824   => THE END PRECONDITIONS
+
+2023-12-12 12:58:56.696824   1. Arrange_v4
+2023-12-12 12:58:56.696824   MOST_TRADED is visible? =>
+2023-12-12 12:58:56.712449   => MOST_TRADED is visible on the page!
+2023-12-12 12:58:56.712449   => Found 5 elements in block MOST_TRADED
+
+2023-12-12 12:58:56.712449   Testing Most traded random element #1
+
+2023-12-12 12:58:56.712449   2. Act_v4
+2023-12-12 12:58:56.712449   MOST_TRADED delete js-mostTraded class =>
+2023-12-12 12:58:56.748383   MOST_TRADED scroll =>
+2023-12-12 12:58:56.748383   Start Checking that form [Sign up] popped up on the page =>
+2023-12-12 12:59:02.315034   '[Sign up]' form was not popped up
+2023-12-12 12:59:02.345534   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-12 12:59:03.204145   => MOST_TRADED clicked!
+
+2023-12-12 12:59:03.204145   3. Assert_v4
+2023-12-12 12:59:03.205150   Checking that the trading platform page has opened (v4) =>
+2023-12-12 12:59:03.280917   => Current page title: Trading Platform | Capital.com
+2023-12-12 12:59:03.280917   Checking that the Trading platform LOGO is present on the page =>
+2023-12-12 12:59:04.558466   Checking that the Trading platform opened in LIVE mode =>
+2023-12-12 12:59:05.002957   => The page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url was opened in lIVE mode
+2023-12-12 12:59:05.002957   => Opened page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url for corresponding trading instrument 'NVIDIA Corp'
+2023-12-12 12:59:05.002957   Trading Platform for 'NVIDIA Corp' trading instrument is opened

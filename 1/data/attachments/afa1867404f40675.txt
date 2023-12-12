@@ -1,0 +1,62 @@
+
+2023-12-12 13:18:03.101013   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x0000023735F7B790> с именем TC_11.02.02.01_01
+{'width': 1280, 'height': 720}
+
+2023-12-12 13:18:03.101013   worker_id = master
+
+2023-12-12 13:18:03.101013   0. Allure grouping
+
+2023-12-12 13:18:03.101013   0. Arrange_0
+2023-12-12 13:18:04.239926   Load page https://capital.com
+
+
+2023-12-12 13:18:04.239926   START PRECONDITIONS =>
+
+
+2023-12-12 13:18:04.239926   {'width': 1280, 'height': 720}
+
+2023-12-12 13:18:04.261500   Set windows position at (320, 180) =>
+
+2023-12-12 13:18:04.436307   Set resolution 1280 * 720 =>
+
+2023-12-12 13:18:05.243220   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-12 13:18:10.407468   Капчи нет. Тестим дальше
+
+2023-12-12 13:18:10.407468   Prev. Role: Reg/NoAuth
+
+2023-12-12 13:18:10.407468   Current role: Reg/NoAuth
+
+2023-12-12 13:18:10.407468   Prev language: es
+
+2023-12-12 13:18:10.407468   => Current language: es
+
+2023-12-12 13:18:10.407468   Prev country: de
+
+2023-12-12 13:18:10.407468   => Current country: de
+
+2023-12-12 13:18:10.407468   => THE END PRECONDITIONS
+
+2023-12-12 13:18:10.407468   1. Arrange_v0
+2023-12-12 13:18:11.355845   Load page https://capital.com/es/operar-uber
+2023-12-12 13:18:11.513962   BUTTON_START_TRADING scroll =>
+2023-12-12 13:18:12.316327   BUTTON_START_TRADING is visible? =>
+2023-12-12 13:18:12.419691   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-12 13:18:12.419691   2. Act_v0
+2023-12-12 13:18:12.420699   Start Click button [Start Trading] =>
+2023-12-12 13:18:12.433073   BUTTON_START_TRADING is clickable? =>
+2023-12-12 13:18:12.459014   BUTTON_START_TRADING click =>
+2023-12-12 13:18:13.004585   => BUTTON_START_TRADING clicked
+
+2023-12-12 13:18:13.004585   3. Assert_Login_v0
+2023-12-12 13:18:18.562094   'Login' form not opened
+2023-12-12 13:18:18.562094   'Login' page not opened
+2023-12-12 13:18:24.094716   'Login' form on trading platform not opened
+2023-12-12 13:18:24.094716   Start step Check that [Sign up] form is opened
+2023-12-12 13:18:24.103244   'Sign up' form opened
+2023-12-12 13:18:24.103244   Assert SIGNUP_HEADER =>
+2023-12-12 13:18:24.134530   Assert SIGNUP_REF_LOGIN =>
+2023-12-12 13:18:24.150150   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-12 13:18:24.165781   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-12 13:18:24.165781   => 'Signup' form is checked
