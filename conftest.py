@@ -30,8 +30,8 @@ test_browser = ""
     scope="class",
     params=[
         "NoReg",
-        # "Auth",
-        # "Reg/NoAuth",
+        "Auth",
+        "Reg/NoAuth",
     ],
 )
 def cur_role(request):
@@ -72,10 +72,10 @@ def cur_language(request):
 @pytest.fixture(
     scope="class",
     params=[
-        # "gb",  # United Kingdom - "FCA"
+        "gb",  # United Kingdom - "FCA"
         "de",  # Germany - "CYSEC"
-        # "ae",  # United Arab Emirates - "SCB"
-        # "au",  # Australia - "ASIC"
+        "ae",  # United Arab Emirates - "SCB"
+        "au",  # Australia - "ASIC"
 
         # "gr",  # Greece - "CYSEC"
         # "es",  # Spain - "CYSEC"
