@@ -46,9 +46,9 @@ def cur_role(request):
     params=[
         # "",  # "en"
         # "ar",
-        "de",
+        # "de",
         # "el",
-        # "es",
+        "es",
         # "fr",
         # "it",
         # "hu", # Magyar
@@ -145,8 +145,8 @@ def pre_go(fixture_value):
 @pytest.fixture(
     scope="module",
     params=[
-        "chrome",
-        # "edge",
+        # "chrome",
+        "edge",
         # "firefox",
         # "safari",
     ],

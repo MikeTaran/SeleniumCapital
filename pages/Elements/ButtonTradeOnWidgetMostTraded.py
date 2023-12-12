@@ -20,7 +20,7 @@ from pages.Elements.AssertClass import AssertClass
 class ButtonTradeOnWidgetMostTraded(BasePage):
 
     def full_test_with_tpi(self, d, cur_language, cur_country, cur_role, cur_item_link):
-        self.clear_chart_list()
+        # self.clear_chart_list()
         num_item = self.arrange_v4(cur_item_link)
         random_indexes = random.sample(range(0, num_item), 2)
         counter = 0
@@ -123,6 +123,12 @@ class ButtonTradeOnWidgetMostTraded(BasePage):
         instrument = trade_instrument_list[random_index]
         instrument = instrument.get_attribute('title')
         print(f"{datetime.now()}   MOST_TRADED scroll =>")
+
+        # Checking if [SignUP for is popped up on the page]
+        check_popup = SignupLogin(self.browser, self.link)
+        check_popup.check_popup_signup_form()
+        #
+
         self.browser.execute_script(
             'return arguments[0].scrollIntoView({block: "center", inline: "nearest"});', element)
 

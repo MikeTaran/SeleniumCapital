@@ -1,7 +1,7 @@
 """
 -*- coding: utf-8 -*-
-@Time    : 2023/00/00
-@Author  : Azarov Pavel
+@Time    : 2023/11/11
+@Author  : Mike Taran
 """
 import pytest
 import allure

@@ -153,12 +153,12 @@ class TestCFDTradingGuide:
     def test_05_cfd_table_button_sell_tab(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, cur_item_link, cur_tab):
         """
-        Check: Button [1. Sell] in block "CFDs table" in ... tab
+        Check: Button [1. Sell] in block "CFDs table" in {cur _tab} tab
         Language: All. License: All.
         """
         build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
                              "11.01.03", "Educations > Menu item [CFD trading guide]",
-                             ".01_05", f"Testing button [Sell] in block \"CFDs table\" in {cur_tab} tab")
+                             ".01_05", f"Testing random button [Sell] in block(s) \"CFDs table\" in {cur_tab} tab")
 
         check_language(cur_language, ["", "de", "es", "nl", "pl", "ro", "ru", "zh"])
         check_cur_href(cur_item_link, cfd_markets_href)
