@@ -1,0 +1,128 @@
+
+
+
+Current test role - Auth
+{'width': 1280, 'height': 720}
+
+2023-12-13 23:07:53.455565   worker_id = master
+
+2023-12-13 23:07:53.455565   0. Allure grouping
+
+2023-12-13 23:07:53.455565   0. Arrange_0
+2023-12-13 23:07:54.433757   Load page https://capital.com
+
+
+2023-12-13 23:07:54.433757   START PRECONDITIONS =>
+
+
+2023-12-13 23:07:54.433757   {'width': 1280, 'height': 720}
+
+2023-12-13 23:07:54.445953   Set windows position at (320, 180) =>
+
+2023-12-13 23:07:54.581473   Set resolution 1280 * 720 =>
+
+2023-12-13 23:07:55.196388   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-13 23:08:00.235471   Капчи нет. Тестим дальше
+
+2023-12-13 23:08:00.235471   Prev. Role: Reg/NoAuth
+
+2023-12-13 23:08:00.235471   Run preconditions: set "Auth" Role =>
+2023-12-13 23:08:00.993052   Load page https://capital.com
+
+2023-12-13 23:08:02.050251   => All cookies are deleted
+2023-12-13 23:08:02.674652   Load page https://capital.com
+
+2023-12-13 23:08:02.674652   Click button [Accept all cookies]
+2023-12-13 23:08:02.674652   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-13 23:08:07.040580   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-13 23:08:07.050572   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-13 23:08:07.051573   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-13 23:08:07.074495   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-13 23:08:08.149369   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-13 23:08:08.149369   => Accepted All Cookies
+
+2023-12-13 23:08:09.150656   Start Autorization
+
+2023-12-13 23:08:09.150656   2. Act
+2023-12-13 23:08:09.150656   Start Click button [Log in] =>
+2023-12-13 23:08:09.160660   BUTTON_LOGIN scroll =>
+2023-12-13 23:08:09.166660   Is BUTTON_LOGIN clickable? =>
+2023-12-13 23:08:09.181130   => BUTTON_LOGIN is clickable
+2023-12-13 23:08:09.181130   BUTTON_LOGIN click =>
+2023-12-13 23:08:09.249629   => BUTTON_LOGIN is clicked!
+2023-12-13 23:08:09.249629   => 'Login' form is opened
+2023-12-13 23:08:09.923971   => "login" and "password" are inputted
+2023-12-13 23:08:09.923971   Click [Continue] button on [Login] form =>
+2023-12-13 23:08:10.024523   => [Continue] button on [Login] form is clicked
+2023-12-13 23:08:12.865396   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2023-12-13 23:08:12.865396   Set timeout = 30
+2023-12-13 23:08:12.865396   Wait until load page with special title =>
+2023-12-13 23:08:12.902384   => Page with title "Trading Platform | Capital.com" is loaded
+2023-12-13 23:08:12.902384   Is present LOGO on this page? =>
+2023-12-13 23:08:14.372280   => LOGO is visible on this page
+2023-12-13 23:08:14.372280   -> "Capital.com" logo is present on trading platform page
+
+2023-12-13 23:08:15.242461   Current role: Auth
+
+2023-12-13 23:08:15.242461   Prev language: ?
+
+2023-12-13 23:08:15.242461   Run preconditions: set "pl" language =>
+
+
+2023-12-13 23:08:15.351379   => Language and Country menu is present
+
+
+2023-12-13 23:08:15.867052   => Language and Country menu is visible
+
+
+2023-12-13 23:08:17.655785   => Focus is moved on Language and Country menu 
+
+2023-12-13 23:08:19.759982   => Current language: pl
+
+2023-12-13 23:08:19.759982   Prev country: ?
+
+2023-12-13 23:08:19.759982   Run preconditions: set "ae" country =>
+
+
+2023-12-13 23:08:19.777423   => Language and Country menu is present
+
+
+2023-12-13 23:08:19.796537   => Language and Country menu is visible
+
+
+2023-12-13 23:08:21.600025   => Focus is moved on Language and Country menu 
+
+2023-12-13 23:08:25.380635   => Current country: ae
+
+2023-12-13 23:08:25.380635   => THE END PRECONDITIONS
+
+2023-12-13 23:08:25.380635   1. Cur URL = https://capital.com/pl?country=ae
+
+2023-12-13 23:08:25.682860   2. Link = https://capital.com/pl
+2023-12-13 23:08:26.503947   Load page https://capital.com/pl
+2023-12-13 23:08:26.773197   => Education menu is present
+2023-12-13 23:08:26.818168   => Education menu is visible
+2023-12-13 23:08:28.609492   => Education menu focus moved
+
+
+2023-12-13 23:08:30.347729   => Shares trading sub-menu clicked
+
+2023-12-13 23:08:30.424674   1. Arrange_v0
+2023-12-13 23:08:30.715075   BUTTON_START_TRADING scroll =>
+2023-12-13 23:08:30.721560   BUTTON_START_TRADING is visible? =>
+2023-12-13 23:08:30.787103   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-13 23:08:30.787103   2. Act_v0
+2023-12-13 23:08:30.787103   Start Click button [Start Trading] =>
+2023-12-13 23:08:30.793100   BUTTON_START_TRADING is clickable? =>
+2023-12-13 23:08:30.876489   BUTTON_START_TRADING click =>
+2023-12-13 23:08:31.315574   => BUTTON_START_TRADING clicked
+
+2023-12-13 23:08:31.315574   3. Assert_v4
+2023-12-13 23:08:31.316574   Checking that the trading platform page has opened (v4) =>
+2023-12-13 23:08:31.902058   => Current page title: Trading Platform | Capital.com
+2023-12-13 23:08:31.902058   Checking that the Trading platform LOGO is present on the page =>
+2023-12-13 23:08:32.974618   Checking that the Trading platform opened in LIVE mode =>
+2023-12-13 23:08:32.992789   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2023-12-13 23:08:33.834019   Load page https://capital.com/pl/trade-stocks

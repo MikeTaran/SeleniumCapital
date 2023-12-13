@@ -1,0 +1,109 @@
+{'width': 1004, 'height': 708}
+autouse fixture edge
+Current test language - pl
+Current country of trading - gb
+
+
+
+Current test role - NoReg
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+
+2023-12-13 23:24:31.243332   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000001842D332E50> с именем TC_11.02.02.01_01
+{'width': 1004, 'height': 708}
+
+2023-12-13 23:24:31.246325   worker_id = master
+
+2023-12-13 23:24:31.246325   0. Allure grouping
+
+2023-12-13 23:24:31.246325   0. Arrange_0
+2023-12-13 23:24:32.711729   Load page https://capital.com
+
+
+2023-12-13 23:24:32.712739   START PRECONDITIONS =>
+
+2023-12-13 23:24:33.439124   Load page https://capital.com
+
+2023-12-13 23:24:33.439124   {'width': 1004, 'height': 708}
+
+2023-12-13 23:24:33.443124   Set windows position at (320, 180) =>
+
+2023-12-13 23:24:33.588860   Set resolution 1280 * 720 =>
+
+2023-12-13 23:24:33.729712   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-13 23:24:38.785560   Капчи нет. Тестим дальше
+
+2023-12-13 23:24:38.785560   Prev. Role: ?
+
+2023-12-13 23:24:38.785560   Run preconditions: set "NoReg" Role =>
+2023-12-13 23:24:39.272105   Load page https://capital.com
+
+2023-12-13 23:24:39.851631   => All cookies are deleted
+2023-12-13 23:24:40.289170   Load page https://capital.com
+
+2023-12-13 23:24:40.289170   Click button [Accept all cookies]
+2023-12-13 23:24:40.289170   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-13 23:24:44.373574   Find BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-13 23:24:44.382575   => BUTTON_ACCEPT_ALL_COOKIE presented
+2023-12-13 23:24:44.382575   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>
+2023-12-13 23:24:44.407376   Click BUTTON_ACCEPT_ALL_COOKIE =>
+2023-12-13 23:24:45.464256   => BUTTON_ACCEPT_ALL_COOKIE is clicked
+2023-12-13 23:24:45.464256   => Accepted All Cookies
+
+2023-12-13 23:24:46.465124   Current role: NoReg
+
+2023-12-13 23:24:46.465124   Prev language: ?
+
+2023-12-13 23:24:46.465124   Run preconditions: set "pl" language =>
+
+
+2023-12-13 23:24:46.474530   => Language and Country menu is present
+
+
+2023-12-13 23:24:46.490964   => Language and Country menu is visible
+
+
+2023-12-13 23:24:48.274335   => Focus is moved on Language and Country menu 
+
+2023-12-13 23:24:50.006708   => Current language: pl
+
+2023-12-13 23:24:50.006708   Prev country: ?
+
+2023-12-13 23:24:50.006708   Run preconditions: set "gb" country =>
+
+
+2023-12-13 23:24:50.036725   => Language and Country menu is present
+
+
+2023-12-13 23:24:50.078355   => Language and Country menu is visible
+
+
+2023-12-13 23:24:51.856677   => Focus is moved on Language and Country menu 
+
+2023-12-13 23:24:55.286529   => Current country: gb
+
+2023-12-13 23:24:55.286529   => THE END PRECONDITIONS
+
+2023-12-13 23:24:55.286529   1. Arrange_v0
+2023-12-13 23:24:56.793314   Load page https://capital.com/pl/handlovac-canopy-growth
+2023-12-13 23:24:56.944449   BUTTON_START_TRADING scroll =>
+2023-12-13 23:24:56.972627   BUTTON_START_TRADING is visible? =>
+2023-12-13 23:24:57.064902   => BUTTON_START_TRADING is visible on the page!
+
+2023-12-13 23:24:57.064902   2. Act_v0
+2023-12-13 23:24:57.064902   Start Click button [Start Trading] =>
+2023-12-13 23:24:57.126423   BUTTON_START_TRADING is clickable? =>
+2023-12-13 23:24:57.147477   BUTTON_START_TRADING click =>
+2023-12-13 23:24:57.318462   => BUTTON_START_TRADING clicked
+
+2023-12-13 23:24:57.318462   3. Assert_v0
+2023-12-13 23:24:57.318462   Start step Check that [Sign up] form is opened
+2023-12-13 23:24:57.512471   'Sign up' form opened
+2023-12-13 23:24:57.512471   Assert SIGNUP_HEADER =>
+2023-12-13 23:24:57.542788   Assert SIGNUP_REF_LOGIN =>
+2023-12-13 23:24:57.567987   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-13 23:24:57.613171   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-13 23:24:57.613171   => 'Signup' form is checked
+2023-12-13 23:24:57.613171   Start step Close [Sign up] form =>
+2023-12-13 23:24:57.778886   => 'Signup' form closed

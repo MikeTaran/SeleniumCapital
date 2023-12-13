@@ -1,0 +1,104 @@
+
+2023-12-13 23:18:36.618435   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000026FE9E92610> с именем TC_11.02.02_06
+{'width': 1280, 'height': 720}
+
+2023-12-13 23:18:36.641168   worker_id = master
+
+2023-12-13 23:18:36.641168   0. Allure grouping
+
+
+2023-12-13 23:18:36.641168   START PRECONDITIONS =>
+
+
+2023-12-13 23:18:36.641168   {'width': 1280, 'height': 720}
+
+2023-12-13 23:18:36.709793   Set windows position at (320, 180) =>
+
+2023-12-13 23:18:36.863684   Set resolution 1280 * 720 =>
+
+2023-12-13 23:18:37.109085   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-13 23:18:42.133152   Капчи нет. Тестим дальше
+
+2023-12-13 23:18:42.133152   Prev. Role: Auth
+
+2023-12-13 23:18:42.133152   Current role: Auth
+
+2023-12-13 23:18:42.133152   Prev language: pl
+
+2023-12-13 23:18:42.133152   => Current language: pl
+
+2023-12-13 23:18:42.133152   Prev country: au
+
+2023-12-13 23:18:42.133152   => Current country: au
+
+2023-12-13 23:18:42.133152   => THE END PRECONDITIONS
+
+2023-12-13 23:18:42.133152   1. Cur URL = https://capital.com/pl/trade-stocks
+
+2023-12-13 23:18:42.133152   2. Link = https://capital.com/pl
+2023-12-13 23:18:43.325688   Load page https://capital.com/pl
+2023-12-13 23:18:43.473577   => Education menu is present
+2023-12-13 23:18:44.148808   => Education menu is visible
+2023-12-13 23:18:45.940455   => Education menu focus moved
+
+
+2023-12-13 23:18:47.706044   => Shares trading sub-menu clicked
+
+2023-12-13 23:18:47.803688   1. Arrange_v4
+2023-12-13 23:18:48.189626   MOST_TRADED is visible? =>
+2023-12-13 23:18:48.214343   => MOST_TRADED is visible on the page!
+2023-12-13 23:18:48.214343   => Found 5 elements in block MOST_TRADED
+
+2023-12-13 23:18:48.214343   Testing Most traded random element #1
+
+2023-12-13 23:18:48.214343   2. Act_v4
+2023-12-13 23:18:48.214343   MOST_TRADED delete js-mostTraded class =>
+2023-12-13 23:18:48.294009   MOST_TRADED scroll =>
+2023-12-13 23:18:48.295016   Start Checking that form [Sign up] popped up on the page =>
+2023-12-13 23:18:53.835390   '[Sign up]' form was not popped up
+2023-12-13 23:18:53.853694   MOST_TRADED click for 'Tesla Inc' trading instrument =>
+2023-12-13 23:18:54.426388   => MOST_TRADED clicked!
+
+2023-12-13 23:18:54.426388   3. Assert_v4
+2023-12-13 23:18:54.426388   Checking that the trading platform page has opened (v4) =>
+2023-12-13 23:18:54.523783   => Current page title: Trading Platform | Capital.com
+2023-12-13 23:18:54.523783   Checking that the Trading platform LOGO is present on the page =>
+2023-12-13 23:18:56.186492   Checking that the Trading platform opened in LIVE mode =>
+2023-12-13 23:18:56.509671   => The page with https://capital.com/trading/platform/spotlight/22855552501634244?side=buy url was opened in lIVE mode
+2023-12-13 23:18:56.509671   => Opened page with https://capital.com/trading/platform/spotlight/22855552501634244?side=buy url for corresponding trading instrument 'Tesla Inc'
+2023-12-13 23:18:56.509671   Trading Platform for 'Tesla Inc' trading instrument is opened
+2023-12-13 23:18:56.680974   Trade instrument 'Tesla Inc' is on the Top Charts List
+2023-12-13 23:18:56.978300   Trade instrument 'Tesla Inc' is on the Top Charts List and selected
+2023-12-13 23:18:57.993211   Load page https://capital.com/pl/trade-stocks
+
+2023-12-13 23:18:57.993211   Clear Top Chart list =>
+2023-12-13 23:18:59.515211   Load page https://capital.com/trading/platform/charting/
+
+2023-12-13 23:19:06.589484   1. Arrange_v4
+2023-12-13 23:19:07.652515   Load page https://capital.com/pl/trade-stocks
+2023-12-13 23:19:07.652515   MOST_TRADED is visible? =>
+2023-12-13 23:19:07.676108   => MOST_TRADED is visible on the page!
+2023-12-13 23:19:07.676108   => Found 5 elements in block MOST_TRADED
+
+2023-12-13 23:19:07.676108   Testing Most traded random element #2
+
+2023-12-13 23:19:07.676108   2. Act_v4
+2023-12-13 23:19:07.676108   MOST_TRADED delete js-mostTraded class =>
+2023-12-13 23:19:07.709494   MOST_TRADED scroll =>
+2023-12-13 23:19:07.709494   Start Checking that form [Sign up] popped up on the page =>
+2023-12-13 23:19:13.223318   '[Sign up]' form was not popped up
+2023-12-13 23:19:13.239958   MOST_TRADED click for 'Advanced Micro Devices Inc' trading instrument =>
+2023-12-13 23:19:13.744608   => MOST_TRADED clicked!
+
+2023-12-13 23:19:13.745608   3. Assert_v4
+2023-12-13 23:19:13.745608   Checking that the trading platform page has opened (v4) =>
+2023-12-13 23:19:14.002302   => Current page title: Trading Platform | Capital.com
+2023-12-13 23:19:14.002302   Checking that the Trading platform LOGO is present on the page =>
+2023-12-13 23:19:15.774898   Checking that the Trading platform opened in LIVE mode =>
+2023-12-13 23:19:15.871502   => The page with https://capital.com/trading/platform/spotlight/21182778791108?side=buy url was opened in lIVE mode
+2023-12-13 23:19:15.871502   => Opened page with https://capital.com/trading/platform/spotlight/21182778791108?side=buy url for corresponding trading instrument 'Advanced Micro Devices Inc'
+2023-12-13 23:19:15.872502   Trading Platform for 'Advanced Micro Devices Inc' trading instrument is opened
+2023-12-13 23:19:16.204257   Trade instrument 'Advanced Micro Devices Inc' is on the Top Charts List
+2023-12-13 23:19:16.346883   Trade instrument 'Advanced Micro Devices Inc' is on the Top Charts List and selected
+2023-12-13 23:19:17.364306   Load page https://capital.com/pl/trade-stocks

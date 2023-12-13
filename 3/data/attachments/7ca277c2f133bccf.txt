@@ -1,0 +1,72 @@
+
+2023-12-13 22:50:28.578686   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x0000026FE9E9F750> с именем TC_11.02.02.00_10
+{'width': 1280, 'height': 720}
+
+2023-12-13 22:50:28.594138   worker_id = master
+
+2023-12-13 22:50:28.594138   0. Allure grouping
+
+
+2023-12-13 22:50:28.594138   START PRECONDITIONS =>
+
+
+2023-12-13 22:50:28.594138   {'width': 1280, 'height': 720}
+
+2023-12-13 22:50:28.672395   Set windows position at (320, 180) =>
+
+2023-12-13 22:50:29.059196   Set resolution 1280 * 720 =>
+
+2023-12-13 22:50:29.205969   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-13 22:50:34.264125   Капчи нет. Тестим дальше
+
+2023-12-13 22:50:34.264125   Prev. Role: NoReg
+
+2023-12-13 22:50:34.264125   Current role: NoReg
+
+2023-12-13 22:50:34.264125   Prev language: pl
+
+2023-12-13 22:50:34.264125   => Current language: pl
+
+2023-12-13 22:50:34.264125   Prev country: gb
+
+2023-12-13 22:50:34.264125   => Current country: gb
+
+2023-12-13 22:50:34.264125   => THE END PRECONDITIONS
+
+2023-12-13 22:50:34.264125   1. Cur URL = https://capital.com/pl/trade-stocks
+
+2023-12-13 22:50:34.264125   2. Link = https://capital.com/pl
+2023-12-13 22:50:35.146779   Load page https://capital.com/pl
+2023-12-13 22:50:35.540358   => Education menu is present
+2023-12-13 22:50:35.708093   => Education menu is visible
+2023-12-13 22:50:37.477886   => Education menu focus moved
+
+
+2023-12-13 22:50:39.050808   => Shares trading sub-menu clicked
+
+2023-12-13 22:50:39.134368   1. Arrange
+2023-12-13 22:50:39.462889   BUTTON_ON_VER_BANNER is visible? =>
+2023-12-13 22:50:39.490125   => BUTTON_ON_VER_BANNER is visible on the page!
+2023-12-13 22:50:39.490125   Start Checking that form [Sign up] popped up on the page =>
+2023-12-13 22:50:45.051284   '[Sign up]' form was not popped up
+
+2023-12-13 22:50:45.051284   2. Act
+2023-12-13 22:50:45.051284   BUTTON_ON_VER_BANNER is present? =>
+2023-12-13 22:50:45.052807   => BUTTON_ON_VER_BANNER is present on the page!
+2023-12-13 22:50:45.052807   BUTTON_ON_VER_BANNER scroll =>
+2023-12-13 22:50:45.665226   => BUTTON_ON_VER_BANNER clicked!
+
+2023-12-13 22:50:45.666222   3. Assert_v0
+2023-12-13 22:50:45.666222   Start step Check that [Sign up] form is opened
+2023-12-13 22:50:53.852683   'Sign up' form not opened
+2023-12-13 22:50:53.852683   Start method Check that [Sign up] page opened =>
+2023-12-13 22:50:54.858402   'Sign up' page opened
+2023-12-13 22:50:54.858402   Assert SIGNUP_SIGNUP_FRAME =>
+2023-12-13 22:50:54.858402   Assert SIGNUP_REF_LOGIN =>
+2023-12-13 22:50:54.874062   Assert SIGNUP_PRIVACY_POLICY_ALL_1 =>
+2023-12-13 22:51:00.439695   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-13 22:51:00.449727   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-13 22:51:00.449727   => 'Signup' page is checked
+2023-12-13 22:51:01.459003   Start method 'Close [Sign up] page' =>
+2023-12-13 22:51:02.336539   => [Sign up] page is closed
