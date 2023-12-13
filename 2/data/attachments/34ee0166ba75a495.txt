@@ -1,0 +1,75 @@
+2023-12-13 13:39:58 ERROR Unable to initialize WebDriver
+2023-12-13 13:39:58 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 394, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DD13F02+58082]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCA54B2+224082]
+	(No symbol) [0x00007FF68DAC9D9B]
+	(No symbol) [0x00007FF68DB19A9B]
+	(No symbol) [0x00007FF68DB19BAC]
+	(No symbol) [0x00007FF68DB5B8C7]
+	(No symbol) [0x00007FF68DB3BF5F]
+	(No symbol) [0x00007FF68DB0D231]
+	(No symbol) [0x00007FF68DB58A03]
+	(No symbol) [0x00007FF68DB3BB83]
+	(No symbol) [0x00007FF68DB0BFB4]
+	(No symbol) [0x00007FF68DB0B405]
+	(No symbol) [0x00007FF68DB0C7E4]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF68DEBD87A+1003402]
+	(No symbol) [0x00007FF68DB906A9]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF68DC1A8F5+35045]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF68DC12A8D+2685]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF68DEBC573+998531]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCAFE68+267528]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCAAD24+246724]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCAAE52+247026]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DC9F6A1+200001]
+	BaseThreadInitThunk [0x00007FFC2F3D4DE0+16]
+	RtlUserThreadStart [0x00007FFC3055ED9B+43]
+
+2023-12-13 13:40:03 ERROR Unable to initialize WebDriver
+2023-12-13 13:40:03 ERROR 
+Traceback (most recent call last):
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\SeleniumCapital\SeleniumCapital\pages\base_page.py", line 394, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\runneradmin\AppData\Local\pypoetry\Cache\virtualenvs\testcapitalcom-08IAlZho-py3.11\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DD13F02+58082]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCA54B2+224082]
+	(No symbol) [0x00007FF68DAC9D9B]
+	(No symbol) [0x00007FF68DB19A9B]
+	(No symbol) [0x00007FF68DB19BAC]
+	(No symbol) [0x00007FF68DB5B8C7]
+	(No symbol) [0x00007FF68DB3BF5F]
+	(No symbol) [0x00007FF68DB0D231]
+	(No symbol) [0x00007FF68DB58A03]
+	(No symbol) [0x00007FF68DB3BB83]
+	(No symbol) [0x00007FF68DB0BFB4]
+	(No symbol) [0x00007FF68DB0B405]
+	(No symbol) [0x00007FF68DB0C7E4]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF68DEBD87A+1003402]
+	(No symbol) [0x00007FF68DB906A9]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF68DC1A8F5+35045]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF68DC12A8D+2685]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF68DEBC573+998531]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCAFE68+267528]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCAAD24+246724]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DCAAE52+247026]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF68DC9F6A1+200001]
+	BaseThreadInitThunk [0x00007FFC2F3D4DE0+16]
+	RtlUserThreadStart [0x00007FFC3055ED9B+43]
