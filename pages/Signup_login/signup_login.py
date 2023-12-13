@@ -40,7 +40,7 @@ class SignupLogin(BasePage):
         Check there are an elements to on Sign up form
         """
         print(f"{datetime.now()}   Start step Check that [Sign up] form is opened")
-        if self.element_is_visible(SignupFormLocators.SIGNUP_FRAME, 5):
+        if self.element_is_visible(SignupFormLocators.SIGNUP_FRAME, 3):
             print(f"{datetime.now()}   'Sign up' form opened")
 
             print(f"{datetime.now()}   Assert SIGNUP_HEADER =>")
@@ -134,7 +134,7 @@ class SignupLogin(BasePage):
         Check there are an elements to on Sign up form
         """
         print(f"{datetime.now()}   Check that [Sign up] form on trading platform opened =>")
-        if self.element_is_visible(TradingPlatformSignupFormLocators.SIGNUP_FRAME, 5):
+        if self.element_is_visible(TradingPlatformSignupFormLocators.SIGNUP_FRAME, 3):
             print(f"{datetime.now()}   => 'Sign up' form on trading platform page opened")
 
             print(f"{datetime.now()}   Assert SIGNUP_HEADER =>")
@@ -169,7 +169,7 @@ class SignupLogin(BasePage):
         """
         Check there are an elements to on Login form
         """
-        if self.element_is_visible(LoginFormLocators.LOGIN_FRAME):
+        if self.element_is_visible(LoginFormLocators.LOGIN_FRAME, 3):
             print(f"{datetime.now()}   'Login' form opened")
 
             # print(f"{datetime.now()}   LOGIN_HEADER =>")
@@ -212,7 +212,7 @@ class SignupLogin(BasePage):
         """
         Check there are an elements to on Login form on trading platform
         """
-        if self.element_is_visible(TradingPlatformLoginFormLocators.LOGIN_FRAME, 5):
+        if self.element_is_visible(TradingPlatformLoginFormLocators.LOGIN_FRAME, 3):
             print(f"{datetime.now()}   'Login' form on trading platform opened")
 
             print(f"{datetime.now()}   Assert LOGIN_EMAIL_FILD =>")
@@ -278,7 +278,7 @@ class SignupLogin(BasePage):
     def close_signup_form(self):
         """Method Close [Sign up] form"""
         print(f"{datetime.now()}   Start step Close [Sign up] form =>")
-        if not self.element_is_clickable(SignupFormLocators.BUTTON_CLOSE_ON_SIGNUP_FORM, 5):
+        if not self.element_is_clickable(SignupFormLocators.BUTTON_CLOSE_ON_SIGNUP_FORM, 3):
             print(f"{datetime.now()}   => 'Sign up' form is not opened")
             return False
 
@@ -316,7 +316,7 @@ class SignupLogin(BasePage):
 
     @allure.step("Close form [Login]")
     def close_login_form(self):
-        if not self.element_is_clickable(LoginFormLocators.BUTTON_CLOSE_ON_LOGIN_FORM, 5):
+        if not self.element_is_clickable(LoginFormLocators.BUTTON_CLOSE_ON_LOGIN_FORM, 3):
             return False
         print(f"{datetime.now()}   Click 'Close' button on 'Login' form =>")
         self.browser.find_element(*LoginFormLocators.BUTTON_CLOSE_ON_LOGIN_FORM).click()

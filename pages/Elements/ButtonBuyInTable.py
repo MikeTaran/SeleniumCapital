@@ -79,11 +79,8 @@ class BuyButtonTable(BasePage):
             button_list = self.browser.find_elements(*self.locator)
             item_list = self.browser.find_elements(*self.item)
             cur_tab = self.browser.find_elements(*self.current_tab)
+            print()
             print(f"{datetime.now()}   BUTTON_TRADING_BUY_IN_TABLES_#{i + 1} scroll =>")
-            # self.browser.execute_script(
-            #     'return arguments[0].scrollIntoView({block: "center", inline: "nearest"});',
-            #     button_list[i]
-            # )
             try:
                 if self.browser.find_elements(*self.current_tab):
                     # ActionChains(self.browser).move_to_element\
@@ -105,19 +102,15 @@ class BuyButtonTable(BasePage):
             if self.element_is_clickable(button_list[i], 5):
                 print(f"{datetime.now()}   => BUTTON_TRADING_BUY_IN_TABLES_#{i + 1} is clickable")
 
-            print(f"{datetime.now()}   BUTTON_TRADING_BUY_MOST_TRADED_#{i + 1} with item {item_list[i].text} click =>")
-            try:
-                # Вытаскиваем линку из кнопки
-                link = button_list[i].get_attribute('href')
-                # Берём ID итема, на который кликаем для сравнения с открытым ID на платформе
-                trade_instrument = link[link.find("spotlight") + 10:link.find("?")]
+            # Вытаскиваем линку из кнопки
+            link = button_list[i].get_attribute('href')
+            # Берём ID итема, на который кликаем для сравнения с открытым ID на платформе
+            trade_instrument = link[link.find("spotlight") + 10:link.find("?")]
 
+            print(f"{datetime.now()}   BUTTON_TRADING_BUY_MOST_TRADED_#{i + 1} with item {trade_instrument} click =>")
+            try:
                 button_list[i].click()
                 print(f"{datetime.now()}   => BUTTON_TRADING_BUY_IN_TABLES_#{i + 1} clicked!")
-
-                # # Сравниваем ID
-                # if not self.browser.current_url.find(link2) and (cur_role == "Auth"):
-                #     pytest.fail(f"[{item_list[i].text}] Opened page's link doesn't match with clicked link")
 
                 test_element = AssertClass(self.browser, cur_item_link)
                 match cur_role:
@@ -131,7 +124,8 @@ class BuyButtonTable(BasePage):
                 self.browser.get(cur_item_link)
 
             except ElementClickInterceptedException:
-                print(f"{datetime.now()}   'Signup' or 'Login' form is automatically opened")
+                print(f"{datetime.now()}   => BUTTON_TRADING_BUY_IN_TABLES_#{i + 1} not clicked!")
+                print(f"{datetime.now()}   'Signup' or 'Login' form is automatically opened, maybe")
                 page_ = SignupLogin(self.browser)
                 if page_.close_signup_page():
                     pass

@@ -199,10 +199,10 @@ class TradingPlatform(BasePage):
         """
         Check there are an elements to on 'Log in' page on the Trading Platform
         """
-        print(f"{datetime.now()}   Start method Check that [Log in] page opened =>")
+        print(f"{datetime.now()}   Start method Check that [Log in] page opened on the Trading Platform =>")
         print(self.browser.current_url)
         if self.current_page_url_contain_the(tp_data["LOGIN_URL"]):
-            print(f"{datetime.now()}   'Log in' page opened on the Trading Platform")
+            print(f"{datetime.now()}   => 'Log in' page opened on the Trading Platform")
 
             print(f"{datetime.now()}   LOGIN_FRAME =>")
             assert self.element_is_visible(TPSignupFormLocators.LOGIN_FRAME, 30), \
@@ -221,18 +221,18 @@ class TradingPlatform(BasePage):
                 f"{datetime.now()}   Problem with 'Continue' button"
             self.open_page()
         elif self.current_page_url_contain_the(tp_data["SIGNUP_URL"]):
-            print(f"{datetime.now()}   'Sign up' page opened on the Trading Platform")
+            print(f"{datetime.now()}   => 'Sign up' page opened on the Trading Platform")
             print(f"{datetime.now()}   SIGNUP_FRAME =>")
             if self.element_is_visible(TPSignupFormLocators.SIGNUP_FRAME):
-                print(f"{datetime.now()}   SIGNUP_FRAME is visible")
+                print(f"{datetime.now()}   => SIGNUP_FRAME is visible")
             else:
-                print(f"{datetime.now()}   SIGNUP_FRAME is not visible")
-            print(f"{datetime.now()}   'Login' page on the Trading Platform is not opened")
-            assert False, "Bug!!! Opened a 'Sign up' form instead of a 'Login' form on the Trading Platform"
+                print(f"{datetime.now()}   => SIGNUP_FRAME is not visible")
+            print(f"{datetime.now()}   => 'Login' page on the Trading Platform is not opened")
+            assert False, "Bug! 'Sign up' form opened on the Trading Platform instead of 'Login' form"
         else:
             # self.open_page()
-            print(f"{datetime.now()}   'Login' page on the Trading Platform is not opened")
-            assert False, "'Login' page on the Trading Platform is not opened"
+            print(f"{datetime.now()}   => 'Login' page on the Trading Platform is not opened")
+            assert False, "Problem! 'Login' page on the Trading Platform is not opened"
 
     @allure.step("Check the corresponding trading instrument")
     def should_be_corresponding_trading_instrument(self, cur_url, trade_instrument):

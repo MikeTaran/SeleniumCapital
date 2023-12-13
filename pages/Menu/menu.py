@@ -48,7 +48,7 @@ class MenuSection(BasePage):
     @allure.step('Select "Education" menu, "CFD trading guide" submenu')
     def open_education_cfd_trading_menu(self, d, cur_language, link):
 
-        print(f'\n{datetime.now()}   START [Open "Education" menu, "CFD trading guide" submenu] =>')
+        print(f'\n{datetime.now()}   START Open "Education" menu, "CFD trading guide" submenu =>')
         print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
         print(f"\n{datetime.now()}   2. Link = {link}")
         if not self.current_page_is(link):
