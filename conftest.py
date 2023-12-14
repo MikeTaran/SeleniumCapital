@@ -44,7 +44,7 @@ def cur_role(request):
 @pytest.fixture(
     scope="class",
     params=[
-        # "",  # "en"
+        "",  # "en"
         # "ar",
         # "de",
         # "el",
@@ -53,7 +53,7 @@ def cur_role(request):
         # "it",
         # "hu", # Magyar
         # "nl",
-        "pl",
+        # "pl",
         # "ro",
         # "ru",
         # "zh",
