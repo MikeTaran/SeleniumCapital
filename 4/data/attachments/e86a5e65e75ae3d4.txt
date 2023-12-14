@@ -1,0 +1,65 @@
+{'width': 1280, 'height': 720}
+
+2023-12-14 21:12:10.685255   worker_id = master
+
+2023-12-14 21:12:10.685255   0. Allure grouping
+
+
+2023-12-14 21:12:10.686251   START PRECONDITIONS =>
+
+
+2023-12-14 21:12:10.686251   {'width': 1280, 'height': 720}
+
+2023-12-14 21:12:10.742246   Set windows position at (320, 180) =>
+
+2023-12-14 21:12:10.919474   Set resolution 1280 * 720 =>
+
+2023-12-14 21:12:11.032085   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-14 21:12:16.073637   Капчи нет. Тестим дальше
+
+2023-12-14 21:12:16.073637   Prev. Role: Reg/NoAuth
+
+2023-12-14 21:12:16.073637   Current role: Reg/NoAuth
+
+2023-12-14 21:12:16.073637   Prev language: en
+
+2023-12-14 21:12:16.073637   => Current language: en
+
+2023-12-14 21:12:16.073637   Prev country: gb
+
+2023-12-14 21:12:16.073637   => Current country: gb
+
+2023-12-14 21:12:16.073637   => THE END PRECONDITIONS
+
+2023-12-14 21:12:16.073637   1. Arrange
+
+2023-12-14 21:12:16.073637   Testing the qr code: EASY_LEARNING
+2023-12-14 21:12:16.073637   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 21:12:21.613193   '[Sign up]' form was not popped up
+2023-12-14 21:12:21.613193   QR_CODE is located in the DOM? =>
+2023-12-14 21:12:21.633841   => QR_CODE_EASY_LEARNING is located in the DOM
+2023-12-14 21:12:21.633841   QR_CODE_LINK is visible on the page? =>
+2023-12-14 21:12:21.665408   => QR_CODE_LINK EASY_LEARNING is on the page!
+
+2023-12-14 21:12:21.666408   2. Act
+2023-12-14 21:12:21.666408   Determining the QR_CODE_TITLE link
+2023-12-14 21:12:21.676881   QR_CODE_TITLE link: https://investmate.onelink.me/G4om?pid=website&cp_device_id=czkc8sin-eive-hbbc-zmjs-ulij5g00xz6n                                                                                                                            
+2023-12-14 21:12:21.677891   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 21:12:27.231680   '[Sign up]' form was not popped up
+2023-12-14 21:12:27.301624   Start QR-code decryption with CV2-method =>
+2023-12-14 21:12:27.308624   The QR-code has a medium encryption method and is NOT readable by some types of mobile devices.
+2023-12-14 21:12:27.308624   Start QR-code decryption with PYZBAR-method =>
+2023-12-14 21:12:27.311622   The QR-code has a complex encryption method and is NOT readable by almost all types of mobile devices.
+2023-12-14 21:12:27.359471   Start QR-code decryption with QREADER-method =>
+2023-12-14 21:12:29.396765   The QR-code has a complex encryption method and is virtually unreadable by mobile devices.
+2023-12-14 21:12:29.396765   QR_CODE_LINK_QREADER=  https://investmate.onelink.me/G4om?pid=website&cp_device_id=czkc8sin-eive-hbbc-zmjs-ulij5g00xz6n                                                                                                                            
+2023-12-14 21:12:29.463337   Check QR-code title link equal QR-code image link =>
+2023-12-14 21:12:30.676430   Load page https://investmate.onelink.me/G4om?pid=website&cp_device_id=czkc8sin-eive-hbbc-zmjs-ulij5g00xz6n                                                                                                                            
+
+2023-12-14 21:12:30.676430   3. Assert_v0
+2023-12-14 21:12:30.677434   Checking that the App Store page has opened
+2023-12-14 21:12:30.730680   => Current page title: Investmate — learn to trade on the App Store
+2023-12-14 21:12:30.730680   Checking that the App Store app title
+2023-12-14 21:12:30.828088   Checking that the App Store specifies provider
+2023-12-14 21:12:31.499638   Load page https://capital.com/learn-trading-app

@@ -1,0 +1,93 @@
+
+2023-12-14 20:40:02.031213   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000001A105B95B90> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-14 20:40:02.031213   worker_id = master
+
+2023-12-14 20:40:02.031213   0. Allure grouping
+
+
+2023-12-14 20:40:02.031213   START PRECONDITIONS =>
+
+
+2023-12-14 20:40:02.031213   {'width': 1280, 'height': 720}
+
+2023-12-14 20:40:02.031213   Set windows position at (320, 180) =>
+
+2023-12-14 20:40:02.159807   Set resolution 1280 * 720 =>
+
+2023-12-14 20:40:02.265776   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-14 20:40:07.276007   Капчи нет. Тестим дальше
+
+2023-12-14 20:40:07.277062   Prev. Role: Auth
+
+2023-12-14 20:40:07.277062   Current role: Auth
+
+2023-12-14 20:40:07.277062   Prev language: en
+
+2023-12-14 20:40:07.277062   => Current language: en
+
+2023-12-14 20:40:07.277062   Prev country: ae
+
+2023-12-14 20:40:07.277062   => Current country: ae
+
+2023-12-14 20:40:07.277062   => THE END PRECONDITIONS
+
+2023-12-14 20:40:07.277062   1. Arrange_v4
+2023-12-14 20:40:07.281068   MOST_TRADED is visible? =>
+2023-12-14 20:40:07.291222   => MOST_TRADED is visible on the page!
+2023-12-14 20:40:07.291222   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:40:07.291222   Testing Most traded random element #1
+
+2023-12-14 20:40:07.291222   2. Act_v4
+2023-12-14 20:40:07.291222   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:40:07.325383   MOST_TRADED scroll =>
+2023-12-14 20:40:07.325383   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:40:12.854446   '[Sign up]' form was not popped up
+2023-12-14 20:40:12.867347   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-14 20:40:13.447576   => MOST_TRADED clicked!
+
+2023-12-14 20:40:13.447576   3. Assert_v4
+2023-12-14 20:40:13.447576   Checking that the trading platform page has opened (v4) =>
+2023-12-14 20:40:13.519215   => Current page title: Trading Platform | Capital.com
+2023-12-14 20:40:13.519215   Checking that the Trading platform LOGO is present on the page =>
+2023-12-14 20:40:14.815924   Checking that the Trading platform opened in LIVE mode =>
+2023-12-14 20:40:15.038784   => The page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url was opened in lIVE mode
+2023-12-14 20:40:15.039502   => Opened page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url for corresponding trading instrument 'NVIDIA Corp'
+2023-12-14 20:40:15.039502   Trading Platform for 'NVIDIA Corp' trading instrument is opened
+2023-12-14 20:40:15.065791   Trade instrument 'NVIDIA Corp' is on the Top Charts List
+2023-12-14 20:40:15.091092   Trade instrument 'NVIDIA Corp' is on the Top Charts List and selected
+2023-12-14 20:40:16.026052   Load page https://capital.com/trade-nio
+
+2023-12-14 20:40:16.026052   Clear Top Chart list =>
+2023-12-14 20:40:17.311575   Load page https://capital.com/trading/platform/charting/
+
+2023-12-14 20:40:24.003503   1. Arrange_v4
+2023-12-14 20:40:25.443062   Load page https://capital.com/trade-nio
+2023-12-14 20:40:25.443062   MOST_TRADED is visible? =>
+2023-12-14 20:40:25.685240   => MOST_TRADED is visible on the page!
+2023-12-14 20:40:25.685240   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:40:25.685240   Testing Most traded random element #2
+
+2023-12-14 20:40:25.685240   2. Act_v4
+2023-12-14 20:40:25.685240   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:40:25.803879   MOST_TRADED scroll =>
+2023-12-14 20:40:25.803879   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:40:31.345241   '[Sign up]' form was not popped up
+2023-12-14 20:40:31.356945   MOST_TRADED click for 'Advanced Micro Devices Inc' trading instrument =>
+2023-12-14 20:40:31.726387   => MOST_TRADED clicked!
+
+2023-12-14 20:40:31.727388   3. Assert_v4
+2023-12-14 20:40:31.727388   Checking that the trading platform page has opened (v4) =>
+2023-12-14 20:40:31.788167   => Current page title: Trading Platform | Capital.com
+2023-12-14 20:40:31.789170   Checking that the Trading platform LOGO is present on the page =>
+2023-12-14 20:40:33.023125   Checking that the Trading platform opened in LIVE mode =>
+2023-12-14 20:40:33.328322   => The page with https://capital.com/trading/platform/spotlight/21182778791108?side=buy url was opened in lIVE mode
+2023-12-14 20:40:33.328322   => Opened page with https://capital.com/trading/platform/spotlight/21182778791108?side=buy url for corresponding trading instrument 'Advanced Micro Devices Inc'
+2023-12-14 20:40:33.328322   Trading Platform for 'Advanced Micro Devices Inc' trading instrument is opened
+2023-12-14 20:40:33.353042   Trade instrument 'Advanced Micro Devices Inc' is on the Top Charts List
+2023-12-14 20:40:33.383128   Trade instrument 'Advanced Micro Devices Inc' is on the Top Charts List and selected
+2023-12-14 20:40:34.274305   Load page https://capital.com/trade-nio

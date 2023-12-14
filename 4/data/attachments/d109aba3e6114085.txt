@@ -1,0 +1,93 @@
+
+2023-12-14 20:58:20.589445   Работает obj <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x000001A105BA4510> с именем TC_11.02.02.01_06
+{'width': 1280, 'height': 720}
+
+2023-12-14 20:58:20.643027   worker_id = master
+
+2023-12-14 20:58:20.643027   0. Allure grouping
+
+
+2023-12-14 20:58:20.643027   START PRECONDITIONS =>
+
+
+2023-12-14 20:58:20.643027   {'width': 1280, 'height': 720}
+
+2023-12-14 20:58:20.788736   Set windows position at (320, 180) =>
+
+2023-12-14 20:58:20.901832   Set resolution 1280 * 720 =>
+
+2023-12-14 20:58:21.015391   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-14 20:58:26.023395   Капчи нет. Тестим дальше
+
+2023-12-14 20:58:26.023395   Prev. Role: Auth
+
+2023-12-14 20:58:26.023925   Current role: Auth
+
+2023-12-14 20:58:26.023925   Prev language: en
+
+2023-12-14 20:58:26.023925   => Current language: en
+
+2023-12-14 20:58:26.023925   Prev country: au
+
+2023-12-14 20:58:26.024000   => Current country: au
+
+2023-12-14 20:58:26.024000   => THE END PRECONDITIONS
+
+2023-12-14 20:58:26.024122   1. Arrange_v4
+2023-12-14 20:58:26.028931   MOST_TRADED is visible? =>
+2023-12-14 20:58:26.039481   => MOST_TRADED is visible on the page!
+2023-12-14 20:58:26.039481   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:58:26.039481   Testing Most traded random element #1
+
+2023-12-14 20:58:26.039481   2. Act_v4
+2023-12-14 20:58:26.039481   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:58:26.069191   MOST_TRADED scroll =>
+2023-12-14 20:58:26.069191   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:58:31.586207   '[Sign up]' form was not popped up
+2023-12-14 20:58:31.595214   MOST_TRADED click for 'NVIDIA Corp' trading instrument =>
+2023-12-14 20:58:31.972159   => MOST_TRADED clicked!
+
+2023-12-14 20:58:31.972159   3. Assert_v4
+2023-12-14 20:58:31.972159   Checking that the trading platform page has opened (v4) =>
+2023-12-14 20:58:32.040409   => Current page title: Trading Platform | Capital.com
+2023-12-14 20:58:32.041410   Checking that the Trading platform LOGO is present on the page =>
+2023-12-14 20:58:32.919053   Checking that the Trading platform opened in LIVE mode =>
+2023-12-14 20:58:33.216596   => The page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url was opened in lIVE mode
+2023-12-14 20:58:33.216596   => Opened page with https://capital.com/trading/platform/spotlight/16150730595456196?side=buy url for corresponding trading instrument 'NVIDIA Corp'
+2023-12-14 20:58:33.216596   Trading Platform for 'NVIDIA Corp' trading instrument is opened
+2023-12-14 20:58:33.435848   Trade instrument 'NVIDIA Corp' is on the Top Charts List
+2023-12-14 20:58:33.461661   Trade instrument 'NVIDIA Corp' is on the Top Charts List and selected
+2023-12-14 20:58:34.061820   Load page https://capital.com/trade-moderna
+
+2023-12-14 20:58:34.061820   Clear Top Chart list =>
+2023-12-14 20:58:35.617128   Load page https://capital.com/trading/platform/charting/
+
+2023-12-14 20:58:42.279630   1. Arrange_v4
+2023-12-14 20:58:42.929607   Load page https://capital.com/trade-moderna
+2023-12-14 20:58:42.929607   MOST_TRADED is visible? =>
+2023-12-14 20:58:43.233745   => MOST_TRADED is visible on the page!
+2023-12-14 20:58:43.233745   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:58:43.233745   Testing Most traded random element #2
+
+2023-12-14 20:58:43.234496   2. Act_v4
+2023-12-14 20:58:43.234496   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:58:43.363837   MOST_TRADED scroll =>
+2023-12-14 20:58:43.363837   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:58:48.876390   '[Sign up]' form was not popped up
+2023-12-14 20:58:48.883398   MOST_TRADED click for 'GameStop Corp' trading instrument =>
+2023-12-14 20:58:49.244122   => MOST_TRADED clicked!
+
+2023-12-14 20:58:49.244122   3. Assert_v4
+2023-12-14 20:58:49.245123   Checking that the trading platform page has opened (v4) =>
+2023-12-14 20:58:49.302811   => Current page title: Trading Platform | Capital.com
+2023-12-14 20:58:49.303816   Checking that the Trading platform LOGO is present on the page =>
+2023-12-14 20:58:50.441378   Checking that the Trading platform opened in LIVE mode =>
+2023-12-14 20:58:50.755108   => The page with https://capital.com/trading/platform/spotlight/126740190024900?side=buy url was opened in lIVE mode
+2023-12-14 20:58:50.755108   => Opened page with https://capital.com/trading/platform/spotlight/126740190024900?side=buy url for corresponding trading instrument 'GameStop Corp'
+2023-12-14 20:58:50.755108   Trading Platform for 'GameStop Corp' trading instrument is opened
+2023-12-14 20:58:50.776771   Trade instrument 'GameStop Corp' is on the Top Charts List
+2023-12-14 20:58:50.809167   Trade instrument 'GameStop Corp' is on the Top Charts List and selected
+2023-12-14 20:58:51.571965   Load page https://capital.com/trade-moderna

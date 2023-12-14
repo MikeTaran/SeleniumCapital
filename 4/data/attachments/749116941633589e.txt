@@ -1,0 +1,98 @@
+
+2023-12-14 20:04:02.921156   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x000001A98EAA2D10> с именем TC_11.02.02_06
+{'width': 1280, 'height': 720}
+
+2023-12-14 20:04:02.923160   worker_id = master
+
+2023-12-14 20:04:02.923160   0. Allure grouping
+
+
+2023-12-14 20:04:02.924172   START PRECONDITIONS =>
+
+
+2023-12-14 20:04:02.924172   {'width': 1280, 'height': 720}
+
+2023-12-14 20:04:02.925163   Set windows position at (320, 180) =>
+
+2023-12-14 20:04:03.030151   Set resolution 1280 * 720 =>
+
+2023-12-14 20:04:03.147090   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-14 20:04:08.185212   Капчи нет. Тестим дальше
+
+2023-12-14 20:04:08.185212   Prev. Role: Reg/NoAuth
+
+2023-12-14 20:04:08.185212   Current role: Reg/NoAuth
+
+2023-12-14 20:04:08.185212   Prev language: en
+
+2023-12-14 20:04:08.185212   => Current language: en
+
+2023-12-14 20:04:08.185212   Prev country: au
+
+2023-12-14 20:04:08.185212   => Current country: au
+
+2023-12-14 20:04:08.185212   => THE END PRECONDITIONS
+
+2023-12-14 20:04:08.185212   1. Cur URL = https://capital.com/trade-stocks
+
+2023-12-14 20:04:08.185212   2. Link = https://capital.com/
+2023-12-14 20:04:08.743898   Load page https://capital.com/
+2023-12-14 20:04:08.804042   => Education menu is present
+2023-12-14 20:04:09.033369   => Education menu is visible
+2023-12-14 20:04:10.821390   => Education menu focus moved
+
+
+2023-12-14 20:04:12.195915   => Shares trading sub-menu clicked
+
+2023-12-14 20:04:12.242434   1. Arrange_v4
+2023-12-14 20:04:12.359503   MOST_TRADED is visible? =>
+2023-12-14 20:04:12.422017   => MOST_TRADED is visible on the page!
+2023-12-14 20:04:12.422017   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:04:12.422017   Testing Most traded random element #1
+
+2023-12-14 20:04:12.422017   2. Act_v4
+2023-12-14 20:04:12.422017   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:04:12.457097   MOST_TRADED scroll =>
+2023-12-14 20:04:12.457097   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:04:18.022804   '[Sign up]' form was not popped up
+2023-12-14 20:04:18.032848   MOST_TRADED click for 'Altimmune, Inc.' trading instrument =>
+2023-12-14 20:04:18.105953   => MOST_TRADED clicked!
+
+2023-12-14 20:04:18.105953   3. Assert_Login_v0
+2023-12-14 20:04:18.280283   'Login' form opened
+2023-12-14 20:04:18.280283   Assert LOGIN_REF_SIGNUP =>
+2023-12-14 20:04:18.301685   Assert LOGIN_CHECKBOX =>
+2023-12-14 20:04:18.323066   Assert LOGIN_PASS_FORGOT =>
+2023-12-14 20:04:18.345256   => 'Login' form is checked
+2023-12-14 20:04:18.375311   Click 'Close' button on 'Login' form =>
+2023-12-14 20:04:18.428807   => 'Login' form closed
+
+2023-12-14 20:04:18.428807   Clear Top Chart list =>
+2023-12-14 20:04:20.204606   Load page https://capital.com/trading/platform/charting/
+
+2023-12-14 20:04:30.247479   1. Arrange_v4
+2023-12-14 20:04:30.868424   Load page https://capital.com/trade-stocks
+2023-12-14 20:04:30.868424   MOST_TRADED is visible? =>
+2023-12-14 20:04:31.047720   => MOST_TRADED is visible on the page!
+2023-12-14 20:04:31.047720   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:04:31.047720   Testing Most traded random element #2
+
+2023-12-14 20:04:31.048884   2. Act_v4
+2023-12-14 20:04:31.048884   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:04:31.138852   MOST_TRADED scroll =>
+2023-12-14 20:04:31.138852   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:04:36.705522   '[Sign up]' form was not popped up
+2023-12-14 20:04:36.711552   MOST_TRADED click for 'Advanced Micro Devices Inc' trading instrument =>
+2023-12-14 20:04:36.782385   => MOST_TRADED clicked!
+
+2023-12-14 20:04:36.782385   3. Assert_Login_v0
+2023-12-14 20:04:36.971104   'Login' form opened
+2023-12-14 20:04:36.971104   Assert LOGIN_REF_SIGNUP =>
+2023-12-14 20:04:36.986732   Assert LOGIN_CHECKBOX =>
+2023-12-14 20:04:37.009015   Assert LOGIN_PASS_FORGOT =>
+2023-12-14 20:04:37.025206   => 'Login' form is checked
+2023-12-14 20:04:37.050699   Click 'Close' button on 'Login' form =>
+2023-12-14 20:04:37.120053   => 'Login' form closed

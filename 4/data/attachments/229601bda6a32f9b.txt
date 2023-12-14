@@ -1,0 +1,102 @@
+
+2023-12-14 20:06:43.735779   Работает obj <US_11-02-02_Shares_trading_test.TestSharesTrading object at 0x000001A98EAA27D0> с именем TC_11.02.02_06
+{'width': 1280, 'height': 720}
+
+2023-12-14 20:06:43.756950   worker_id = master
+
+2023-12-14 20:06:43.756950   0. Allure grouping
+
+
+2023-12-14 20:06:43.756950   START PRECONDITIONS =>
+
+
+2023-12-14 20:06:43.756950   {'width': 1280, 'height': 720}
+
+2023-12-14 20:06:43.761353   Set windows position at (320, 180) =>
+
+2023-12-14 20:06:43.865811   Set resolution 1280 * 720 =>
+
+2023-12-14 20:06:43.969782   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-14 20:06:49.015641   Капчи нет. Тестим дальше
+
+2023-12-14 20:06:49.015641   Prev. Role: NoReg
+
+2023-12-14 20:06:49.015641   Current role: NoReg
+
+2023-12-14 20:06:49.015641   Prev language: en
+
+2023-12-14 20:06:49.015641   => Current language: en
+
+2023-12-14 20:06:49.015641   Prev country: au
+
+2023-12-14 20:06:49.015641   => Current country: au
+
+2023-12-14 20:06:49.015641   => THE END PRECONDITIONS
+
+2023-12-14 20:06:49.015641   1. Cur URL = https://capital.com/trade-stocks
+
+2023-12-14 20:06:49.020654   2. Link = https://capital.com/
+2023-12-14 20:06:49.482839   Load page https://capital.com/
+2023-12-14 20:06:49.542457   => Education menu is present
+2023-12-14 20:06:49.789382   => Education menu is visible
+2023-12-14 20:06:51.566939   => Education menu focus moved
+
+
+2023-12-14 20:06:52.902035   => Shares trading sub-menu clicked
+
+2023-12-14 20:06:53.142237   1. Arrange_v4
+2023-12-14 20:06:53.148538   MOST_TRADED is visible? =>
+2023-12-14 20:06:53.198753   => MOST_TRADED is visible on the page!
+2023-12-14 20:06:53.198753   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:06:53.198753   Testing Most traded random element #1
+
+2023-12-14 20:06:53.198753   2. Act_v4
+2023-12-14 20:06:53.198753   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:06:53.234144   MOST_TRADED scroll =>
+2023-12-14 20:06:53.234144   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:06:58.761033   '[Sign up]' form was not popped up
+2023-12-14 20:06:58.772000   MOST_TRADED click for 'Advanced Micro Devices Inc' trading instrument =>
+2023-12-14 20:06:58.838287   => MOST_TRADED clicked!
+
+2023-12-14 20:06:58.838287   3. Assert_v0
+2023-12-14 20:06:58.838287   Start step Check that [Sign up] form is opened
+2023-12-14 20:06:59.030073   'Sign up' form opened
+2023-12-14 20:06:59.030073   Assert SIGNUP_HEADER =>
+2023-12-14 20:06:59.045817   Assert SIGNUP_REF_LOGIN =>
+2023-12-14 20:06:59.061878   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-14 20:06:59.081426   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-14 20:06:59.081426   => 'Signup' form is checked
+2023-12-14 20:06:59.081426   Start step Close [Sign up] form =>
+2023-12-14 20:06:59.184441   => 'Signup' form closed
+
+2023-12-14 20:06:59.185440   Clear Top Chart list =>
+2023-12-14 20:07:01.195717   Load page https://capital.com/trading/platform/charting/
+
+2023-12-14 20:07:11.250526   1. Arrange_v4
+2023-12-14 20:07:11.964611   Load page https://capital.com/trade-stocks
+2023-12-14 20:07:11.964611   MOST_TRADED is visible? =>
+2023-12-14 20:07:12.238174   => MOST_TRADED is visible on the page!
+2023-12-14 20:07:12.238174   => Found 5 elements in block MOST_TRADED
+
+2023-12-14 20:07:12.238174   Testing Most traded random element #2
+
+2023-12-14 20:07:12.238174   2. Act_v4
+2023-12-14 20:07:12.238174   MOST_TRADED delete js-mostTraded class =>
+2023-12-14 20:07:12.316223   MOST_TRADED scroll =>
+2023-12-14 20:07:12.316223   Start Checking that form [Sign up] popped up on the page =>
+2023-12-14 20:07:17.864203   '[Sign up]' form was not popped up
+2023-12-14 20:07:17.870378   MOST_TRADED click for 'Tesla Inc' trading instrument =>
+2023-12-14 20:07:18.001046   => MOST_TRADED clicked!
+
+2023-12-14 20:07:18.001046   3. Assert_v0
+2023-12-14 20:07:18.001046   Start step Check that [Sign up] form is opened
+2023-12-14 20:07:18.557082   'Sign up' form opened
+2023-12-14 20:07:18.558089   Assert SIGNUP_HEADER =>
+2023-12-14 20:07:18.574808   Assert SIGNUP_REF_LOGIN =>
+2023-12-14 20:07:18.598860   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2023-12-14 20:07:18.615069   => SIGNUP_PRIVACY_POLICY_ALL
+2023-12-14 20:07:18.615069   => 'Signup' form is checked
+2023-12-14 20:07:18.615069   Start step Close [Sign up] form =>
+2023-12-14 20:07:18.715772   => 'Signup' form closed
