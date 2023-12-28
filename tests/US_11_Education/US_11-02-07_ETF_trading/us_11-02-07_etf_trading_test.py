@@ -6,7 +6,7 @@
 
 import pytest
 import allure
-from tests.build_dynamic_arg import build_dynamic_arg_v2
+from tests.build_dynamic_arg import build_dynamic_arg_v4
 from pages.Elements.BlockStepTrading import BlockStepTrading
 from pages.Elements.ButtonStartTradingMainBanner import MainBannerStartTrading
 from pages.Elements.ButtonTradeOnWidgetMostTraded import ButtonTradeOnWidgetMostTraded
@@ -31,15 +31,17 @@ class TestETFTrading:
     page_conditions = None
 
     @allure.step("Start test of button [Start trading] on Main banner")
+    @pytest.mark.test_01
     def test_01_main_banner_start_trading_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Start Trading] on Main banner
         Language: All. License: All. Role: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.02.07", "Educations > Menu item [ETF trading]",
-                             "01", "Testing button [Start Trading] on Main banner")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.07", "Education > Menu item [ETF trading]",
+            ".00_01", "Testing button [Start Trading] on Main banner")
 
         check_language(cur_language, ["", "ar", "de", "es", "it", "ru", "cn"])
 
@@ -55,15 +57,17 @@ class TestETFTrading:
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Try demo] on Main banner")
+    @pytest.mark.test_02
     def test_02_main_banner_try_demo_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Try demo] on Main banner
         Language: All. License: All. Role: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.02.07", "Educations > Menu item [ETF trading]",
-                             "02", "Testing button [Try demo] on Main banner")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.07", "Education > Menu item [ETF trading]",
+            ".00_02", "Testing button [Try demo] on Main banner")
 
         check_language(cur_language, ["", "ar", "de", "es", "it", "ru", "cn"])
 
@@ -79,15 +83,17 @@ class TestETFTrading:
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
+    @pytest.mark.test_03
     def test_03_most_traded_widget_trade_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Trade] in Most traded widget
         Language: All. License: All. Role: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.02.07", "Educations > Menu item [ETF trading]",
-                             "03", "Testing button [Trade] in Most traded widget")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.07", "Education > Menu item [ETF trading]",
+            ".00_03", "Testing button [Trade] in Most traded widget")
 
         check_country(cur_country, ["gb"])
         check_language(cur_language, ["", "ar", "de", "es", "it", "ru", "cn"])
@@ -104,15 +110,18 @@ class TestETFTrading:
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link)
 
     @allure.step("Start test of button [Create your account] in block [Steps trading]")
+    @pytest.mark.test_05
     def test_05_block_steps_trading_button_create_your_account(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [1. Create your account] in block [Steps trading]
         Language: All. License: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.02.07", "Educations > Menu item [ETF trading]",
-                             "05", "Testing button [1. Create & verify your account] in block [Steps trading]")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.07", "Education > Menu item [ETF trading]",
+            ".00_05",
+            "Testing button [1. Create & verify your account] in block [Steps trading]")
 
         check_language(cur_language, ["", "ar", "de", "es", "it", "ru", "cn"])
 

@@ -22,10 +22,10 @@ class ButtonCreateAccountBlockOurCourses(BasePage):
 
         test_element = AssertClass(d, link)
         match cur_role:
-            case "NoReg" | "Reg/NoAuth":
+            case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, link)
+                test_element.assert_trading_platform_v4(d, link)
 
     def arrange_(self, d, cur_item_link):
         print(f"\n{datetime.now()}   1. Arrange")
@@ -38,7 +38,6 @@ class ButtonCreateAccountBlockOurCourses(BasePage):
             pytest.skip("Checking element is not on this page")
 
     @allure.step("Check if the element is present on the page")
-    # @profile(precision=3)
     def button_create_account_is_visible(self):
         print(f"{datetime.now()}   BUTTON_CREATE_ACCOUNT =>")
         if self.element_is_visible(BlockOurCoursesLocators.BUTTON_CREATE_ACCOUNT):

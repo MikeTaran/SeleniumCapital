@@ -108,6 +108,13 @@ class ButtonsOnPageLocators:
     TRADING_INSTRUMENT = (By.CSS_SELECTOR, ".side-nav a.active")
 
     # Tables with Sell/Buy
+    # Type of FI
+    TYPE_FI_SHARES = (By.CSS_SELECTOR, "")
+    TYPE_FI_COMMODITIES = (By.CSS_SELECTOR, "")
+    TYPE_FI_FOREX = (By.CSS_SELECTOR, "")
+    TYPE_FI_CRYPTOCURRENCY = (By.CSS_SELECTOR, "")
+    TYPE_FI_INDICES = (By.CSS_SELECTOR, "")
+
     # Tabs
     TAB_TRADING_ITEM_MOST_TRADED = (By.CSS_SELECTOR, "div.main__tab--wrap > div > a:nth-child(1)")
     TAB_TRADING_ITEM_TOP_RISERS = (By.CSS_SELECTOR, "div.main__tab--wrap > div > a:nth-child(2)")

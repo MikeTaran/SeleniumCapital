@@ -70,7 +70,7 @@ def cur_license(request):
     scope="class",
     params=[
         "NoReg",
-        # "Reg/NoAuth",
+        # "NoAuth",
         # "Auth",
     ],
 )

@@ -1,0 +1,147 @@
+name: 3. Ubuntu, ReTests
+
+on:
+#  push:
+  workflow_dispatch:
+  
+#permissions:
+#  contents: write
+
+#  schedule:
+#    - cron: '00 13 * * *'
+#    - cron: '10 06 * * *'
+
+jobs:
+  tests:
+    name: I. Building environment and testing the capital.com website
+#     runs-on: macos-latest
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Check out this repo, master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+#      - name: Install Chrome
+#        uses: browser-actions/setup-chrome@latest
+#      - name: Install Firefox
+#        uses: riccione/setup_firefox@v1
+#      - name: Check Chromium version
+#        run: chromium-browser --version
+#
+      - name: 2.1. Install Python
+        if: always()
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.6"
+
+      - name: 3.1. Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      
+      - name: 3.3. Install neofetch
+        if: always()
+        run: brew install neofetch
+
+#      - name: 3.4. Install python-tk@3.11 for ReTest
+#        if: always()
+#        run: brew install python-tk@3.11
+#
+      - name: For Run hwinfo.py first time
+        if: always()
+        run: pip3 install psutil
+      - name: For Run hwinfo.py first time
+        if: always()
+        run: pip3 install speedtest
+      - name: Run hwinfo.py first time
+        if: always()
+        run: python3 tests/hwinfo.py
+
+      - name: 4. install Zbar for QReader
+        if: always()
+        run: sudo apt-get install libzbar0
+
+      - name: 4. install Poetry
+        if: always()
+        run: pip3 install poetry
+
+      - name: Run hwinfo.py
+        if: always()
+        run: python3 tests/hwinfo.py
+
+      - name: 5. install dependencies
+        if: always()
+#        run: poetry update
+        run: poetry install --sync
+
+      - name: Run hwinfo.py
+        if: always()
+        run: poetry run python3 tests/hwinfo.py
+
+      - name: 6. Check code for errors by flake8 and format code with black
+        if: always()
+        uses: ricardochaves/python-lint@v1.4.0
+        with:
+          python-root-list: ""
+          use-pylint: false
+          use-pycodestyle: false
+          use-flake8: true
+          use-black: false
+          use-mypy: false
+          use-isort: false
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: "--count --benchmark --ignore=E501,E999,F401,F631,W191,W503"
+          extra-black-options: ". -S"
+          extra-mypy-options: ""
+          extra-isort-options: ""
+
+      - name: 8. Run WATC_ReTest
+        if: always()
+        run: poetry run pytest -v tests/ReTests/WATC_ReTests.py
+        continue-on-error: true
+
+      - name: 9. Upload artifact "allure-results"
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results/
+          retention-days: 7
+
+      - name: 10. Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: allure-history
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 80
+
+#      - name: 12. Upload artifact "allure-report"
+#        if: always()
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: allure-report
+#          path: allure-report/
+#          retention-days: 7
+#
+      - name: 13. Send telegram message on push
+        uses: appleboy/telegram-action@master
+        if: always()
+        with:
+          to: ${{ secrets.TELEGRAM_TO_ALEXTOM22 }}
+#           to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+#           disable_web_page_preview: true
+          message: |
+            Message from GitHub CI Actions
+
+            ReTesting of the "Capital.com" web application according Bugs Report in the "Ubuntu/Chrome" environment is 
+            complete.
+
+            ReTests-results link: https://docs.google.com/spreadsheets/d/1jG0hdjrUdjMFBYHXyBKRGbBwV0ICxfBPaBkgB98Nuuk/edit?usp=sharing

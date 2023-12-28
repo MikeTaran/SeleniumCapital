@@ -1,17 +1,14 @@
 from datetime import datetime
-import random  # for new method
 
 import allure
 import pytest
 
-from conf import QTY_LINKS
 from pages.common import Common
 from pages.Menu.menu import MenuSection
 from pages.Elements.BlockStepTrading import BlockStepTrading
-# from pages.Elements.AssertClass import AssertClass
 from pages.Elements.ButtonCreateAccountBlockOurCourses import ButtonCreateAccountBlockOurCourses
 from pages.Elements.testing_elements_locators import CoursesPage
-from tests.build_dynamic_arg import build_dynamic_arg_v3
+from tests.build_dynamic_arg import build_dynamic_arg_v4
 from pages.conditions import Conditions
 from src.src import CapitalComPageSrc
 
@@ -29,24 +26,23 @@ class TestTradingCourses:
     page_conditions = None
 
     @allure.step("Start test_11.01.05_01 button [Create account] in the block 'Our courses'.")
+    @pytest.mark.test_01
     def test_01_create_account_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
-            prob_run_tc, cur_time):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Block 'Our courses' -> button [Create account]
         Language: All. License: All. Role: All
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.01.05_01 и атрибутами:")
-        print(f"\n{datetime.now()}   {self.__dict__}")
-        link = build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                                    "11.01.05", "Education > Menu Item [Trading courses]",
-                                    ".00_01", "Testing button [Create account] in block [Our courses]")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.05", "Education > Menu Item [Trading courses]",
+            ".00_01", "Testing button [Create account] in block [Our courses]")
 
         if cur_language in ["ar"]:
             Common().skip_test_for_language(cur_language)
 
         page_conditions = Conditions(d, "")
-        page_conditions.preconditions(
+        link = page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
@@ -57,25 +53,23 @@ class TestTradingCourses:
         test_element.full_test(d, cur_language, cur_country, cur_role, link)
 
     @allure.step("Start test_11.01.05_04 button [1. Create your account] in block 'Steps trading'.")
+    @pytest.mark.test_04
     def test_04_create_your_account(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
-            prob_run_tc, cur_time):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Steps trading -> button [1. Create your account]
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.01.05_04 и атрибутами:")
-        print(f"\n{datetime.now()}   {self.__dict__}")
-
-        link = build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                                    "11.01.05", "Education > Menu Item [Trading courses]",
-                                    ".00_04", "Testing button [1. Create your account] in block [Steps trading]")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.05", "Education > Menu Item [Trading courses]",
+            ".00_04", "Testing button [1. Create your account] in block [Steps trading]")
 
         if cur_language in ["ar"]:
             Common().skip_test_for_language(cur_language)
 
         page_conditions = Conditions(d, "")
-        page_conditions.preconditions(
+        link = page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
@@ -87,13 +81,12 @@ class TestTradingCourses:
 
     @allure.step("Start pretest")
     def test_99_trading_courses_item_pretest(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         global count
-
-        print(f"\n\n{datetime.now()}   Старт TC_11.01.05.00_99")
-        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                             "11.01.05", "Education > Menu Item [Trading courses]",
-                             ".00_99", "Pretest for US_11.01.05.01")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.05", "Education > Menu Item [Trading courses]",
+            ".00_99", "Pretest for US_11.01.05.01")
 
         if cur_language in ["ar"]:
             Common().skip_test_for_language(cur_language)
@@ -114,35 +107,6 @@ class TestTradingCourses:
         file_name = "tests/US_11_Education/US_11-01-05_Trading_courses/list_of_href.txt"
         list_items = d.find_elements(*CoursesPage.COURSES_PAGES_LIST)
 
-        count_in = len(list_items)
-        print(f"{datetime.now()}   Trading courses page include {count_in} lists item(s)")  # for new method
-        file = None
-
-        try:
-            file = open(file_name, "w")
-            count_out = 0
-            url_prev = ""
-            if count_in > 0:
-                for i in range(QTY_LINKS):
-                    if i < count_in:
-                        while True:
-                            k = random.randint(0, count_in - 1)
-                            item = list_items[k]
-                            url = item.get_property("href")
-                            print(f"{datetime.now()}   {url}")
-                            if url != url_prev:
-                                break
-                        file.write(url + "\n")
-                        url_prev = url
-                        count_out += 1
-        finally:
-            file.close()
-            del file
-
-        print(f"{datetime.now()}   Test data include {count_out} item(s)")
-        if count_in != 0:
-            print(f"{datetime.now()}   The test coverage = {count_out/count_in*100} %")
-        else:
-            print(f"{datetime.now()}   The test coverage = 0 %")
+        Common().creating_file_of_hrefs("Trading courses", list_items, file_name, 0)
 
         count -= 1

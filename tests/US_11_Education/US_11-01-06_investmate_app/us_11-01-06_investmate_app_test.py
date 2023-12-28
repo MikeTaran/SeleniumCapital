@@ -7,7 +7,7 @@
 import pytest
 import allure
 
-from tests.build_dynamic_arg import build_dynamic_arg_v3
+from tests.build_dynamic_arg import build_dynamic_arg_v4
 from pages.conditions import Conditions
 from src.src import CapitalComPageSrc
 from pages.Elements.AssertClass import AssertClass
@@ -41,34 +41,40 @@ class TestInvestmateApp:
     us_link = USLink()
 
     @allure.step("Start test of QR code in Investmate block")
+    @pytest.mark.test_01
+    # @pytest.mark.skip
     def test_01_qr_code_investmate_block(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: QR code in Investmate block
         Language: All. License: All.
         """
-        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                             "11.01.06", "Educations > Menu item [Investmate app]",
-                             "_01", "Testing QR code in Investmate block")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.06", "Education > Menu item [Investmate app]",
+            ".00_01", "Testing QR code in Investmate block")
 
         menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = QRCodeDecode(d, menu_link, 'investmate')
         test_element.arrange().element_decode()
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         test_element.assert_app_store_investmate()
 
     @allure.step("Start test of QR code in Easy learning block")
+    @pytest.mark.test_02
+    # @pytest.mark.skip
     def test_02_qr_code_easy_learning_block(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: QR code in Easy learning block
         Language: All. License: All.
         """
-        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                             "11.01.06", "Educations > Menu item [Investmate app]",
-                             "_02", "Testing QR code in Easy learning block")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.06", "Education > Menu item [Investmate app]",
+            ".00_02", "Testing QR code in Easy learning block")
 
         menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -79,15 +85,17 @@ class TestInvestmateApp:
         test_element.assert_app_store_investmate()
 
     @allure.step("Start test of button [Explore Web Platform] in Block 'capital.com'")
+    @pytest.mark.test_03
     def test_03_button_explore_web_platform(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Explore Web Platform] in Block 'capital.com'
         Language: All. License: All.
         """
-        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                             "11.01.06", "Educations > Menu item [Investmate app]",
-                             "_03", "Testing button [Explore Web Platform] in block 'capital.com'")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.06", "Education > Menu item [Investmate app]",
+            ".00_03", "Testing button [Explore Web Platform] in block 'capital.com'")
 
         menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -97,17 +105,19 @@ class TestInvestmateApp:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
 
         match cur_role:
             case "NoReg":
                 test_element.assert_signup_form_on_the_trading_platform(d)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login_form_on_the_trading_platform(d)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, menu_link)
 
     @allure.step("Start test of QR code in Capital block")
+    @pytest.mark.test_04
+    # @pytest.mark.skip
     def test_04_qr_code_capital_block(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
 
@@ -115,9 +125,10 @@ class TestInvestmateApp:
         Check: QR code in Capital block
         Language: All. License: All.
         """
-        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                             "11.01.06", "Educations > Menu item [Investmate app]",
-                             "_04", "Testing QR code in Capital block")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.06", "Education > Menu item [Investmate app]",
+            ".00_04", "Testing QR code in Capital block")
 
         menu_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -128,15 +139,18 @@ class TestInvestmateApp:
         test_element.assert_app_store(d, menu_link)
 
     @allure.step("Start test of button [Create account] in block \"Why choose Capital?\"")
+    @pytest.mark.test_05
+    # @pytest.mark.skip
     def test_05_button_create_account_why_capital(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Create account] in block "Why choose Capital?"
         Language: All. License: All.
         """
-        build_dynamic_arg_v3(self, d, worker_id, cur_language, cur_country, cur_role,
-                             "11.01.06", "Educations > Menu item [Investmate app]",
-                             "_05", "Testing button [Create account] in block \"Why choose Capital?\"")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.06", "Education > Menu item [Investmate app]",
+            ".00_05", "Testing button [Create account] in block \"Why choose Capital?\"")
 
         if cur_language in ['', 'pl', 'cn']:
             pytest.skip(f"This test is not for {'en' if cur_language == '' else cur_language} language")
@@ -151,7 +165,7 @@ class TestInvestmateApp:
         test_element = AssertClass(d, menu_link)
 
         match cur_role:
-            case "NoReg" | "Reg/NoAuth":
+            case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, menu_link)
             case "Auth":
                 test_element.assert_trading_platform_v3(d, menu_link)

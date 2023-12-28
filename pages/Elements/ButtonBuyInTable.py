@@ -16,7 +16,7 @@ from pages.Elements.AssertClass import AssertClass
 
 class BuyButtonTable(BasePage):
 
-    def full_test(self, d, cur_language, cur_country, cur_role, cur_item_link, cur_tab):
+    def full_test(self, d, cur_language, cur_country, cur_role, cur_item_link, cur_type_fi, cur_tab):
         self.arrange_(d, cur_item_link, cur_tab)
         self.element_click(cur_item_link, cur_language, cur_role, cur_tab)
 
@@ -116,7 +116,7 @@ class BuyButtonTable(BasePage):
                 match cur_role:
                     case "NoReg":
                         test_element.assert_signup(self.browser, cur_language, cur_item_link)
-                    case "Reg/NoAuth":
+                    case "NoAuth":
                         test_element.assert_login(self.browser, cur_language, cur_item_link)
                     case "Auth":
                         test_element.assert_trading_platform_v4(

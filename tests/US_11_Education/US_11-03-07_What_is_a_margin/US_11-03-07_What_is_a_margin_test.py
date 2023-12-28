@@ -11,7 +11,7 @@ from pages.Elements.ButtonTryDemoMainBanner import MainBannerTryDemo
 from pages.Menu.menu import MenuSection
 from pages.conditions import Conditions
 from src.src import CapitalComPageSrc
-from tests.build_dynamic_arg import build_dynamic_arg_v2
+from tests.build_dynamic_arg import build_dynamic_arg_v4
 from pages.Elements.AssertClass import AssertClass
 
 
@@ -39,15 +39,17 @@ class TestWhatIsMargin:
     us_link = USLink()
 
     @allure.step("Start test of button [Start trading] on Main banner")
+    @pytest.mark.test_01
     def test_01_main_banner_start_trading_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Start Trading] on Main banner
         Language: All. License: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.03.07", "Educations > Menu item [What is a margin?]",
-                             "01", "Testing button [Start Trading] on Main banner")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_01", "Testing button [Start Trading] on Main banner")
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -61,21 +63,23 @@ class TestWhatIsMargin:
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, link)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(d, cur_language, link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
+    @pytest.mark.test_02
     def test_02_main_banner_try_demo_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Try demo] on Main banner
         Language: All. License: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.03.07", "Educations > Menu item [What is a margin?]",
-                             "02", "Testing button [Try demo] on Main banner")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_02", "Testing button [Try demo] on Main banner")
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -89,22 +93,23 @@ class TestWhatIsMargin:
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, link)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(d, cur_language, link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, link, True)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
+    @pytest.mark.test_03
     def test_03_most_traded_trade_button(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Trade] in Most traded block
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.07_03")
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.03.07", "Educations > Menu item [What is a margin?]",
-                             "03", "Testing button [Trade] in Most traded block")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_03", "Testing button [Trade] in Most traded block")
 
         if cur_country == 'gb':
             pytest.skip("This test is not supported on UK location")
@@ -121,21 +126,23 @@ class TestWhatIsMargin:
             match cur_role:
                 case "NoReg":
                     check_element.assert_signup(d, cur_language, link)
-                case "Reg/NoAuth":
+                case "NoAuth":
                     check_element.assert_login(d, cur_language, link)
                 case "Auth":
                     check_element.assert_trading_platform_v3(d, link)
 
     @allure.step("Start test of button [1. Create & verify your account] in Block 'Steps trading'")
+    @pytest.mark.test_04
     def test_04_create_and_verify_your_account_button_in_block_steps_trading(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [1. Create & verify your account] in block 'Steps trading'
         Language: All. License: All.
         """
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.03.07", "Educations > Menu item [What is a margin?]",
-                             "04", "Testing button [1. Create & verify your account] in Block 'Steps trading'")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_04", "Testing button [1. Create & verify your account] in Block 'Steps trading'")
 
         if cur_language not in ['', "de", "es", "cn"]:
             pytest.skip(f"This test is not for {cur_language} language")
@@ -150,22 +157,23 @@ class TestWhatIsMargin:
 
         test_element = AssertClass(d, link)
         match cur_role:
-            case "NoReg" | "Reg/NoAuth":
+            case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, link)
 
     @allure.step("Start test of button [Create account] in Block 'Open a trading account in less than 3 minutes'")
+    @pytest.mark.test_05
     def test_05_create_account_in_block_open_trading_account_3_minutes(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Create account] in Block 'Open a trading account in less than 3 minutes'
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.07_05")
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.03.07", "Educations > Menu item [What is a margin?]", "05",
-                             "Testing button [Create account] in Block 'Open a trading account in less than 3 minutes'")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_05", "Testing button [Create account] in Block 'Open a trading account in less than 3 minutes'")
 
         if cur_language in ["", "cn"]:
             pytest.skip(f"This test is not for {'en' if cur_language == '' else cur_language} language")
@@ -180,22 +188,23 @@ class TestWhatIsMargin:
 
         test_element = AssertClass(d, link)
         match cur_role:
-            case "NoReg" | "Reg/NoAuth":
+            case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, link)
 
     @allure.step("Start test of button [Try Free Demo] in Block 'Want a test drive?'")
+    @pytest.mark.test_06
     def test_06_try_free_demo_in_block_want_test_drive(
-            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, prob_run_tc):
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         """
         Check: Button [Try Free Demo] in Block 'Want a test drive?'
         Language: All. License: All.
         """
-        print(f"\n{datetime.now()}   Работает obj {self} с именем TC_11.03.07_06")
-        build_dynamic_arg_v2(self, d, worker_id, cur_language, cur_country, cur_role, prob_run_tc,
-                             "11.03.07", "Educations > Menu item [What is a margin?]", "06",
-                             "Testing button [Try Free Demo] in Block 'Want a test drive?'")
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_06", "Testing button [Try Free Demo] in Block 'Want a test drive?'")
 
         if cur_language in ["", "cn"]:
             pytest.skip(f"This test is not for {'en' if cur_language == '' else cur_language} language")
@@ -212,7 +221,7 @@ class TestWhatIsMargin:
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, link)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(d, cur_language, link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, link)

@@ -16,22 +16,35 @@ from pages.Elements.AssertClass import AssertClass
 
 class SellButtonTable(BasePage):
     def __init__(self, browser, link):
+        self.current_type_fi = None
         self.current_tab = None
         self.locator = None
         self.item = None
         super().__init__(browser, link)
 
-    def full_test(self, d, cur_language, cur_country, cur_role, cur_item_link, cur_tab):
-        self.arrange_(d, cur_item_link, cur_tab)
+    def full_test(self, d, cur_language, cur_country, cur_role, cur_item_link, cur_type_fi, cur_tab):
+        self.arrange_(d, cur_item_link, cur_type_fi, cur_tab)
         self.element_click(cur_item_link, cur_language, cur_role, cur_tab)
 
-    def arrange_(self, d, cur_item_link, tab):
+    def arrange_(self, d, cur_item_link, type_fi, tab):
 
-        print(f"\n{datetime.now()}   1. Arrange for \"{tab}\" tab")
+        print(f"\n{datetime.now()}   1. Arrange for \"{type_fi}\" finance instrument and \"{tab}\" tab")
 
         if not self.current_page_is(cur_item_link):
             self.link = cur_item_link
             self.open_page()
+
+        match type_fi:
+            case "Shares":
+                self.current_type_fi = ButtonsOnPageLocators.TYPE_FI_SHARES
+            case "Commodities":
+                self.current_type_fi = ButtonsOnPageLocators.TYPE_FI_COMMODITIES
+            case "Forex":
+                self.current_type_fi = ButtonsOnPageLocators.TYPE_FI_FOREX
+            case "Cryptocurrency":
+                self.current_type_fi = ButtonsOnPageLocators.TYPE_FI_CRYPTOCURRENCY
+            case "Indices":
+                self.current_type_fi = ButtonsOnPageLocators.TYPE_FI_INDICES
 
         if tab == 'most_traded':
             self.current_tab = ButtonsOnPageLocators.TAB_TRADING_ITEM_MOST_TRADED
@@ -119,7 +132,7 @@ class SellButtonTable(BasePage):
                 match cur_role:
                     case "NoReg":
                         test_element.assert_signup(self.browser, cur_language, cur_item_link)
-                    case "Reg/NoAuth":
+                    case "NoAuth":
                         test_element.assert_login(self.browser, cur_language, cur_item_link)
                     case "Auth":
                         test_element.assert_trading_platform_v4(

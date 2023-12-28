@@ -45,6 +45,22 @@ logger = logging.getLogger()
 
 class MenuSection(BasePage):
 
+    @allure.step('Select "Education" menu, "Spread betting guide" submenu')
+    def open_education_spread_betting_guide_menu(self, d, cur_language, link):
+
+        print(f'\n{datetime.now()}   START Open "Education" menu, "Spread betting guide" submenu =>')
+        print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
+        print(f"\n{datetime.now()}   2. Link = {link}")
+        if not self.current_page_is(link):
+            self.link = link
+            self.open_page()
+
+        self.menu_education_move_focus(d, cur_language)
+        self.sub_menu_spread_betting_guide_move_focus_click(d, cur_language)
+
+        print(f"\n{datetime.now()}   3. Cur URL = {d.current_url}")
+        return d.current_url
+
     @allure.step('Select "Education" menu, "CFD trading guide" submenu')
     def open_education_cfd_trading_menu(self, d, cur_language, link):
 
@@ -975,6 +991,8 @@ class MenuSection(BasePage):
                 sub_menu = d.find_elements(*MenuUS11IndicesTrading.SUB_MENU_DE_INDICES_TRADING)
             case "it":
                 sub_menu = d.find_elements(*MenuUS11IndicesTrading.SUB_MENU_IT_INDICES_TRADING)
+            case "zh":
+                sub_menu = d.find_elements(*MenuUS11IndicesTrading.SUB_MENU_ZH_INDICES_TRADING)
             case _:
                 sub_menu = d.find_elements(*MenuUS11IndicesTrading.SUB_MENU_ALL_INDICES_TRADING)
 

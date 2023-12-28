@@ -17,6 +17,7 @@ from pages.Capital.Trading_platform.trading_platform_locators \
 from pages.Capital.Trading_platform.trading_platform_locators \
     import TopBarLocators
 from test_data.trading_platform_data import data
+from tests.ReTests.ReTest_table_fill import retest_table_fill
 
 
 class TradingPlatform(BasePage):
@@ -112,11 +113,11 @@ class TradingPlatform(BasePage):
         else:
             if tpd:
                 print(f"{datetime.now()}   => Loaded page {self.browser.current_url} with not {platform_url} url")
-                assert False, (f"Bug!. Loaded page with {cur_url} url, but expected the Trading platform in"
+                assert False, (f"Bug # 9. Loaded page with {cur_url} url, but expected the Trading platform in"
                                f"Demo mode(timeout=30c)")
             else:
                 print(f"{datetime.now()}   => Loaded page {self.browser.current_url} with not {platform_url} url")
-                assert False, (f"Bug!. Loaded page with {cur_url} url, but expected the Trading platform in"
+                assert False, (f"Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in"
                                f"Live mode(timeout=30c)")
 
     @allure.step("Checking that the trading platform page has opened with selected item and operation")
@@ -153,14 +154,14 @@ class TradingPlatform(BasePage):
         """Check that Trading platform opened in Demo mode"""
         print(f"{datetime.now()}   Checking that the Trading platform opened in DEMO mode =>")
         assert self.element_is_visible(TopBarLocators.MODE_DEMO, timeout), \
-            "Bug! Trading platform is opened not in DEMO mode"
+            "Bug # 11. Trading platform is opened in not DEMO mode"
 
     @allure.step("Check if the trading platform opened in LIVE mode")
     def should_be_platform_live_mode(self, timeout=30):
         """Check that Trading platform opened in Live mode"""
         print(f"{datetime.now()}   Checking that the Trading platform opened in LIVE mode =>")
         assert self.element_is_visible(TopBarLocators.MODE_LIVE, timeout), \
-            "Bug! Trading platform is opened in not LIVE mode"
+            "Bug # 12. Trading platform is opened in not LIVE mode"
 
     @allure.step("Check that form [Sign Up] is opened on the Trading Platform page")
     # @profile(precision=3)
@@ -228,7 +229,13 @@ class TradingPlatform(BasePage):
             else:
                 print(f"{datetime.now()}   => SIGNUP_FRAME is not visible")
             print(f"{datetime.now()}   => 'Login' page on the Trading Platform is not opened")
-            assert False, "Bug! 'Sign up' form opened on the Trading Platform instead of 'Login' form"
+
+            # new bug re-test checking =====
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '13')
+            # ==============================
+
+            assert False, "Bug # 13. 'Sign up' form opened on the Trading Platform instead of 'Login' form"
         else:
             # self.open_page()
             print(f"{datetime.now()}   => 'Login' page on the Trading Platform is not opened")
@@ -241,7 +248,7 @@ class TradingPlatform(BasePage):
         """
         # проверяем, что открыта трейдинговая платформа на вкладке [Charts]
         assert "charting" in cur_url or "spotlight" in cur_url, \
-            f"!!!Bug. Trading platform was Not opened for corresponding trading instrument '{trade_instrument}'"
+            f"Bug # 14. Trading platform was Not opened for corresponding trading instrument '{trade_instrument}'"
         print(f"{datetime.now()}   Trading Platform for '{trade_instrument}' trading instrument is opened")
         # определяем, какие вкладки открыты и избегаем ошибки пустого списка
         top_chart_trade_list = self.elements_are_located(TradingInstruments.LIST_TRADE_INSTRUMENTS, 3)
@@ -262,10 +269,10 @@ class TradingPlatform(BasePage):
                 count = False
                 break
         if count:
-            assert False, f"Bug!!!. Trade instrument '{trade_instrument}' is Not on the Top Charts List"
+            assert False, f"Bug # 15. Trade instrument '{trade_instrument}' is Not on the Top Charts List"
 
         # проверяем, что запрашиваемый торговый инструмент выбран
         selected_trade_instrument = self.element_is_visible(TradingInstruments.SELECTED_TRADE_INSTRUMENTS).text
-        assert trade_instrument_name in selected_trade_instrument, (f"Bug!!!. Trade instrument '{trade_instrument}'"
-                                                                    f" is on the Top Charts List, but Not selected")
+        assert trade_instrument_name in selected_trade_instrument, \
+            f"Bug # 16. Trade instrument '{trade_instrument}' is on the Top Charts List, but Not selected"
         print(f"{datetime.now()}   Trade instrument '{trade_instrument}' is on the Top Charts List and selected")

@@ -24,7 +24,7 @@ class MainBannerStartTrading(BasePage):
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, cur_item_link)
@@ -41,7 +41,7 @@ class MainBannerStartTrading(BasePage):
                 test_element.assert_signup(
                     d, cur_language, page_url
                 )
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(
                     d, cur_language, page_url
                 )

@@ -25,7 +25,7 @@ class ContentStartTrading(BasePage):
             match cur_role:
                 case "NoReg":
                     test_element.assert_signup(d, cur_language, cur_item_link)
-                case "Reg/NoAuth":
+                case "NoAuth":
                     test_element.assert_login(d, cur_language, cur_item_link)
                 case "Auth":
                     test_element.assert_trading_platform_v4(d, cur_item_link)
@@ -39,7 +39,7 @@ class ContentStartTrading(BasePage):
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
                 test_element.assert_trading_platform_v3(d, cur_item_link)
@@ -115,7 +115,7 @@ class ContentStartTrading(BasePage):
 
         # button_list[0].click()
         self.browser.execute_script("arguments[0].click();", button_list[int(i)])
-        print(f"{datetime.now()}   => BUTTON_CREATE_YOUR_ACCOUNT is clicked")
+        print(f"{datetime.now()}   => BUTTON_START_TRADING_IN_ARTICLE is clicked")
 
     def click__button(self, times, cur_item_link, cur_language, cur_role):
         for i in range(times):
@@ -146,7 +146,7 @@ class ContentStartTrading(BasePage):
                 match cur_role:
                     case "NoReg":
                         test_element.assert_signup(self.browser, cur_language, cur_item_link)
-                    case "Reg/NoAuth":
+                    case "NoAuth":
                         test_element.assert_login(self.browser, cur_language, cur_item_link)
                     case "Auth":
                         test_element.assert_trading_platform_v4(self.browser, cur_item_link)
@@ -164,8 +164,35 @@ class ContentStartTrading(BasePage):
 
         return True
 
+    @allure.step("Works ARRANGE START_TRADING_IN_ARTICLE (generator) - ver 4")
+    def arrange_v4(self):
+        print(f"\n{datetime.now()}   1. Arrange_v4")
+
+        if not self.current_page_is(self.link):
+            self.open_page()
+
+        print(f"{datetime.now()}   => button START_TRADING_IN_ARTICLE =>")
+
+        # item_list = self.elements_are_located(ButtonsOnPageLocators.BUTTON_START_TRADING_IN_ARTICLE, timeout=10)
+        item_list = self.browser.find_elements(*ButtonsOnPageLocators.BUTTON_START_TRADING_IN_ARTICLE)
+
+        # locators_ver_one = True
+        if len(item_list) == 0:
+            print(f"{datetime.now()}   => BUTTON_START_TRADING_IN_ARTICLE element(s) not found")
+            pytest.skip('"Start trading" button in article (content) not found on this page')
+
+        print(f"{datetime.now()}   => Founded {len(item_list)} BUTTON_START_TRADING_IN_ARTICLE element(s)")
+        for i in range(len(item_list)):
+            yield item_list[i]
+            if i > 0:
+                self.open_page()
+
+                # item_list = self.browser.find_elements(
+                #     *(ButtonsOnPageLocators.BUTTON_START_TRADING_IN_ARTICLE
+                #       if locators_ver_one else ButtonsOnPageLocators.BUTTON_START_TRADING_IN_ARTICLE2))
+
     @allure.step("Works ARRANGE START_TRADING_IN_ARTICLE (generator) - ver 2")
-    def arrange_v2_(self):
+    def arrange_v2(self):
         print(f"\n{datetime.now()}   1. Arrange_v2")
 
         if not self.current_page_is(self.link):
@@ -197,17 +224,21 @@ class ContentStartTrading(BasePage):
     @allure.step("Click button START_TRADING_IN_ARTICLE - ver 2")
     def element_click_v2(self, web_element):
         print(f"\n{datetime.now()}   2. Act_v2")
-        print(f"{datetime.now()}   Start Click button START_TRADING_IN_ARTICLE =>")
+        print(f"{datetime.now()}   Start Click START_TRADING_IN_ARTICLE button =>")
+
         print(f"{datetime.now()}   START_TRADING_IN_ARTICLE scroll =>")
         self.browser.execute_script(
-            'return arguments[0].scrollIntoView({block: "center", inline: "nearest"});',
-            web_element
-        )
-        print(f"{datetime.now()}   START_TRADING_IN_ARTICLE click ver 2 =>")
-        ActionChains(self.browser) \
-            .move_to_element(web_element) \
-            .click() \
-            .perform()
+            'return arguments[0].scrollIntoView({block: "center", inline: "nearest"});', web_element)
+
+        print(f"{datetime.now()}   START_TRADING_IN_ARTICLE button click =>")
+        web_element.click()
+        print(f"{datetime.now()}   => START_TRADING_IN_ARTICLE button is clicked")
+
+        # ActionChains(self.browser) \
+        #     .move_to_element(web_element) \
+        #     .click() \
+        #     .perform()
+
         return True
 
 #

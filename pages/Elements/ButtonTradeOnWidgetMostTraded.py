@@ -39,7 +39,7 @@ class ButtonTradeOnWidgetMostTraded(BasePage):
             match cur_role:
                 case "NoReg":
                     check_element.assert_signup(d, cur_language, cur_item_link)
-                case "Reg/NoAuth":
+                case "NoAuth":
                     check_element.assert_login(d, cur_language, cur_item_link)
                 case "Auth":
                     check_element.assert_trading_platform_v4(d, cur_item_link, False, True, trade_instrument)
@@ -64,7 +64,7 @@ class ButtonTradeOnWidgetMostTraded(BasePage):
             match cur_role:
                 case "NoReg":
                     check_element.assert_signup(d, cur_language, cur_item_link)
-                case "Reg/NoAuth":
+                case "NoAuth":
                     check_element.assert_login(d, cur_language, cur_item_link)
                 case "Auth":
                     check_element.assert_trading_platform_v4(d, cur_item_link, False, True, trade_instrument)

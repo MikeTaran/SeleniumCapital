@@ -76,7 +76,7 @@ class PageSignUpLogin(BasePage):
                 match cur_role:
                     case "NoReg":
                         test_element.assert_signup(self.browser, cur_language, cur_item_link)
-                    case "Reg/NoAuth":
+                    case "NoAuth":
                         # test_element.assert_login(self.browser, cur_language, cur_item_link)
                         match i:
                             case 1:

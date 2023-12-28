@@ -37,7 +37,7 @@ class ButtonOnHorizontalBanner(BasePage):
             match cur_role:
                 case "NoReg":
                     test_element.assert_signup(d, cur_language, link)
-                case "Reg/NoAuth":
+                case "NoAuth":
                     test_element.assert_login(d, cur_language, link)
                 case "Auth":
                     if tpd:

@@ -20,11 +20,11 @@ class BlockStepTrading(BasePage):
         self.arrange_(d, cur_item_link)
         self.element_click()
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, self.bid)
         match cur_role:
-            case "NoReg" | "Reg/NoAuth":
+            case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
-            case "Reg/NoAuth":
+            case "NoAuth":
                 test_element.assert_login(d, cur_language, cur_item_link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, cur_item_link)
@@ -36,7 +36,7 @@ class BlockStepTrading(BasePage):
 
         test_element = AssertClass(d, cur_item_link)
         match cur_role:
-            case "NoReg" | "Reg/NoAuth":
+            case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
             case "Auth":
                 test_element.assert_trading_platform_v4(d, cur_item_link)

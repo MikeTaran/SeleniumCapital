@@ -218,16 +218,18 @@ class HandleExcElementsDecorator(object):
 class BasePage:
     """This class used as a base class for other page classes that represent specific pages on a website"""
 
-    def __init__(self, browser, link=""):
+    def __init__(self, browser, link="", bid=""):
         """
         Initializes the object.
 
         Args:
             browser: WebDriver
             link: URL
+            bid: ID bug
         """
         self.browser = browser
         self.link = link
+        self.bid = bid
 
     # @allure.step(f"Load page {self.link}")
     def open_page(self):
@@ -240,44 +242,62 @@ class BasePage:
 
     @allure.step("Accept all cookies")
     def button_accept_all_cookies_click(self):
-        print(f"\n"
-              f"{datetime.now()}   Click button [Accept all cookies]")
-        print(f"{datetime.now()}   Is Visible BUTTON_ACCEPT_ALL_COOKIE? =>")
-        self.element_is_visible(OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE, 30)
-        print(f"{datetime.now()}   Find BUTTON_ACCEPT_ALL_COOKIE =>")
-        buttons = self.browser.find_elements(*OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE)
+        time_out = 30
+        print(f"\n{datetime.now()}   Step 'Click button [Accept all cookies]'")
 
-        if len(buttons) == 0:
-            print(f"{datetime.now()}   => BUTTON_ACCEPT_ALL_COOKIE not presented")
-            print(f"{datetime.now()}   => Возможно, всплыла ReCaptcha. Проверим и если проверка на робота, подтвердим, "
-                  f"что я не робот")
-            check_box_i_am_not_robot = self.browser.find_elements(
-                "By.CSS", "#recaptcha-anchor > .recaptcha-checkbox-border")
-            if len(check_box_i_am_not_robot) == 0:
-                print(f"{datetime.now()}   =>  Это не Check Box ReCaptcha. Прекращаем выполнение теста")
-                assert False, f"{datetime.now()}   =>  Это не Check Box ReCaptcha. Прекращаем выполнение теста"
-            print(f"{datetime.now()}   => Это Check Box ReCaptcha 'I am not robot'")
-            print(f"{datetime.now()}   Чекаем Check Box ReCaptcha 'I am not robot'")
-            check_box_i_am_not_robot[0].click()
-            time.sleep(1)
-            self.element_is_visible(OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE, 30)
-            print(f"{datetime.now()}   Find BUTTON_ACCEPT_ALL_COOKIE =>")
-            buttons = self.browser.find_elements(*OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE)
+        print(f"{datetime.now()}   Is Visible Button [Accept all cookies]? =>")
+        button = self.element_is_visible(OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE, time_out)
+        if not button:
+            print(f"{datetime.now()}   => Button [Accept all cookies] is not visible after {time_out} sec.")
+            assert False, f"Button [Accept all cookies] is not visible after {time_out} sec."
         else:
-            print(f"{datetime.now()}   => BUTTON_ACCEPT_ALL_COOKIE presented")
+            print(f"{datetime.now()}   => Button [Accept all cookies] is visible")
 
-        print(f"{datetime.now()}   Is clickable BUTTON_ACCEPT_ALL_COOKIE? =>")
-        button = buttons[0]
-        self.element_is_clickable(button, 30)
-        print(f"{datetime.now()}   Click BUTTON_ACCEPT_ALL_COOKIE =>")
+        # print(f"{datetime.now()}   Find BUTTON_ACCEPT_ALL_COOKIE =>")
+        # buttons = self.browser.find_elements(*OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE)
+        # if len(buttons) == 0:
+        #     print(f"{datetime.now()}   => BUTTON_ACCEPT_ALL_COOKIE not presented")
+        #     print(f"{datetime.now()}   => Возможно, всплыла ReCaptcha. Проверим и если проверка на робота, подтвердим, "
+        #           f"что я не робот")
+        #     check_box_i_am_not_robot = self.browser.find_elements(
+        #         "By.CSS", "#recaptcha-anchor > .recaptcha-checkbox-border")
+        #     if len(check_box_i_am_not_robot) == 0:
+        #         print(f"{datetime.now()}   =>  Это не Check Box ReCaptcha. Прекращаем выполнение теста")
+        #         assert False, f"{datetime.now()}   =>  Это не Check Box ReCaptcha. Прекращаем выполнение теста"
+        #     print(f"{datetime.now()}   => Это Check Box ReCaptcha 'I am not robot'")
+        #     print(f"{datetime.now()}   Чекаем Check Box ReCaptcha 'I am not robot'")
+        #     check_box_i_am_not_robot[0].click()
+        #     time.sleep(1)
+        #     self.element_is_visible(OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE, time_out)
+        #     print(f"{datetime.now()}   Find BUTTON_ACCEPT_ALL_COOKIE =>")
+        #     buttons = self.browser.find_elements(*OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE)
+        # else:
+        #     print(f"{datetime.now()}   => Button [Accept all cookies] is presented")
+
+        # print(f"{datetime.now()}   Is Visible Button [Accept all cookies]? =>")
+        # button = self.element_is_visible(OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE, time_out)
+        # if not button:
+        #     print(f"{datetime.now()}   => Button [Accept all cookies] is not visible after {time_out} sec.")
+        #     assert False, f"Button [Accept all cookies] is not visible after {time_out} sec."
+        # else:
+        #     print(f"{datetime.now()}   => Button [Accept all cookies] is visible")
+
         time.sleep(1)
+
+        print(f"{datetime.now()}   Is clickable Button [Accept all cookies] =>")
+        button = self.element_is_clickable(button, time_out)
+        if not button:
+            print(f"{datetime.now()}   => Button [Accept all cookies] is not clickable after {time_out} sec.")
+            assert False, f"Button [Accept all cookies] is not clickable after {time_out} sec."
+        else:
+            print(f"{datetime.now()}   => Button [Accept all cookies] is clickable")
+
+        print(f"{datetime.now()}   Click Button [Accept all cookies] =>")
+        button = self.browser.find_element(*OnTrustLocators.BUTTON_ACCEPT_ALL_COOKIE)
         button.click()
-        print(f"{datetime.now()}   => BUTTON_ACCEPT_ALL_COOKIE is clicked")
+        print(f"{datetime.now()}   => Button [Accept all cookies] is clicked")
         print(f"{datetime.now()}   => Accepted All Cookies")
-        time.sleep(1)
-        # while True:
-        #     if isinstance(self.element_is_visible(button), bool):
-        #         break
+        time.sleep(0.5)
 
     @allure.step("Reject all cookies")
     def button_reject_all_cookies_click(self):

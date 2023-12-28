@@ -49,10 +49,10 @@ jobs:
         if: always()
         run: poetry update
 
-#      - name: 8. Run US_11-01-01 (Мила Д/Саша Т)
-#        if: always()
-#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-01_Learning_hub/US_11-01-01_Learning_hub.py
-#        continue-on-error: true
+      - name: 8. Run US_11-01-01 (Мила Д/Саша Т)
+        if: always()
+        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-01_Learning_hub/US_11-01-01_Learning_hub.py
+        continue-on-error: true
 #
 #      - name: 8. Run US_11-01-02 (Мила Д/Саша Т)
 #        if: always()
@@ -161,55 +161,55 @@ jobs:
       #          name: pytest.log
       #          path: log/pytest.log
       #
-      - name: 8. Run US_11-02-07 (Сулейман, Саша Т)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-07_ETF_trading/us_11-02-07_etf_trading_test.py
-        continue-on-error: true
+#      - name: 8. Run US_11-02-07 (Сулейман, Саша Т)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-02-07_ETF_trading/us_11-02-07_etf_trading_test.py
+#        continue-on-error: true
+#
+#      - name: 8. Run us_11-03-01 test (Мила П)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01_trading_strategies_guide_test.py
+#        continue-on-error: true
+#      - name: 8. Run us_11-03-01-01 test(Мила П)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test
+#        continue-on-error: true
+#
+#      - name: 8. Run us_11-03-02 (Andrey)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-02_Day_trading/us_11-03-02_day_trading_test.py
+#        continue-on-error: true
+#
+#      - name: 8. Run us_11-03-03 (Анна/Мила П)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-03_Trend_Trading/US_11-03-03_Trend_Trading_test.py
+#        continue-on-error: true
+#
+#      - name: 8. Run US_11-03-04 (Андрей)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-04_Position_Trading/US_11-03-04_Position_Trading_test.py
+#        continue-on-error: true
+#
+#      - name: 8. Run US_11-03-05 (Андрей)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-05_Swing_Trading/US_11-03-05_Swing_Trading_test.py
+#        continue-on-error: true
+#
+#      - name: 8. Run US_11-03-07 (Андрей)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py
+#        continue-on-error: true
+#
+#      - name: 8. Run US_11-03-08-01 pre_test (Мила П)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-08_Trading_psychology_guide/US_11-03-08-01_trading_psychology_guide_pre_test.py
+#        continue-on-error: true
+#      - name: 8. Run US_11-03-08-01 test (Мила П)
+#        if: always()
+#        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-08_Trading_psychology_guide/US_11-03-08-01_trading_psychology_guide_test.py
+#        continue-on-error: true
 
-      - name: 8. Run us_11-03-01 test (Мила П)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01_trading_strategies_guide_test.py
-        continue-on-error: true
-      - name: 8. Run us_11-03-01-01 test(Мила П)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test
-        continue-on-error: true
-
-      - name: 8. Run us_11-03-02 (Andrey)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-02_Day_trading/us_11-03-02_day_trading_test.py
-        continue-on-error: true
-
-      - name: 8. Run us_11-03-03 (Анна/Мила П)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-03_Trend_Trading/US_11-03-03_Trend_Trading_test.py
-        continue-on-error: true
-
-      - name: 8. Run US_11-03-04 (Андрей)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-04_Position_Trading/US_11-03-04_Position_Trading_test.py
-        continue-on-error: true
-
-      - name: 8. Run US_11-03-05 (Андрей)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-05_Swing_Trading/US_11-03-05_Swing_Trading_test.py
-        continue-on-error: true
-
-      - name: 8. Run US_11-03-07 (Андрей)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py
-        continue-on-error: true
-
-      - name: 8. Run US_11-03-08-01 pre_test (Мила П)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-08_Trading_psychology_guide/US_11-03-08-01_trading_psychology_guide_pre_test.py
-        continue-on-error: true
-      - name: 8. Run US_11-03-08-01 test (Мила П)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-03-08_Trading_psychology_guide/US_11-03-08-01_trading_psychology_guide_test.py
-        continue-on-error: true
-
-      - name: 6. Upload artifact "allure-results"
+      - name: 9. Upload artifact "allure-results"
         if: always()
         uses: actions/upload-artifact@v3
         with:
@@ -223,9 +223,10 @@ jobs:
     runs-on: ubuntu-latest
     if: always()
     needs: [ tests ]
+
     steps:
       - name: 1. Get Allure history
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
@@ -254,7 +255,7 @@ jobs:
 
       - name: 4. Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages

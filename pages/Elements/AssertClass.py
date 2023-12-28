@@ -13,6 +13,7 @@ from pages.Capital.Trading_platform.trading_platform import TradingPlatform
 from pages.GooglePlay.google_play import GooglePlay
 from pages.base_page import BasePage
 from pages.Signup_login.signup_login import SignupLogin
+from tests.ReTests.ReTest_table_fill import retest_table_fill
 
 
 class AssertClass(BasePage):
@@ -22,6 +23,7 @@ class AssertClass(BasePage):
     page_google_play = None
     platform_url = ""
 
+
     def __init__(self, *args):
         super().__init__(*args)
         # self.is_captcha()
@@ -29,6 +31,12 @@ class AssertClass(BasePage):
     @allure.step('Checking that "Signup" opened')
     def assert_signup(self, d, cur_language, cur_link):
         """Method Assert Signup"""
+        # ================для наладки==============
+        # print(f'\nBug: {self.bid}')
+        # retest_table_fill(self.bid, '04', cur_link)
+        # assert False, "Bug # 04. Unknown situation instead 'Sign Up' form opened"
+        # =========================================
+
         print(f"\n{datetime.now()}   3. Assert_v0")
         self.page_signup_login = SignupLogin(d, cur_link)
         if self.page_signup_login.should_be_signup_form(cur_language):
@@ -39,7 +47,7 @@ class AssertClass(BasePage):
             self.page_signup_login.close_trading_platform_signup_form()
         else:
             del self.page_signup_login
-            pytest.fail("Bug! Sign Up form is not opened")
+            pytest.fail("Bug # 4. Unknown situation instead 'Sign Up' form opened")
         # time.sleep(2)
         del self.page_signup_login
 
@@ -58,14 +66,14 @@ class AssertClass(BasePage):
             self.page_signup_login.close_trading_platform_login_form()
             del self.page_signup_login
         elif self.page_signup_login.should_be_signup_form(cur_language):
-            pytest.fail("Bug! Opened a 'Sign up' form instead of a 'Login'", False)
+            pytest.fail("Bug # 5. Opened a 'Sign up' form instead of a 'Login'", False)
         elif self.page_signup_login.should_be_signup_page(cur_language):
-            pytest.fail("Bug! Opened a 'Sign up' page instead of a 'Login'", False)
+            pytest.fail("Bug # 6. Opened a 'Sign up' page instead of a 'Login'", False)
         elif self.page_signup_login.should_be_trading_platform_signup_form(cur_language):
-            pytest.fail("Bug! Opened a 'Sign up' form on trading platform instead of a 'Login'", False)
+            pytest.fail("Bug # 7. Opened a 'Sign up' form on trading platform instead of a 'Login'", False)
         else:
             del self.page_signup_login
-            pytest.fail("Bug! Unknown situation", False)
+            pytest.fail("Bug # 8. Unknown situation instead 'Login' form opened", False)
 
     @allure.step('Checking that "Trading platform" page opened')
     def assert_trading_platform(self, d):
@@ -128,7 +136,7 @@ class AssertClass(BasePage):
     @allure.step('Checking that "App Store Investmate" page opened')
     def assert_app_store_investmate(self):
         print(f"\n{datetime.now()}   3. Assert_v0")
-        self.page_app_store = AppStore(self.browser, self.link)
+        self.page_app_store = AppStore(self.browser, self.link, self.bid)
         self.page_app_store.should_be_app_store_investmane_page()
 
     @allure.step('Checking that "Google Play" page opened')
@@ -140,11 +148,11 @@ class AssertClass(BasePage):
     @allure.step('Checking that "Sign Up" form on the Trading Platform page opened')
     def assert_signup_form_on_the_trading_platform(self, d):
         print(f"\n{datetime.now()}   3. Assert_v0")
-        self.page_trading = TradingPlatform(d, self.link)
+        self.page_trading = TradingPlatform(d, self.link, self.bid)
         self.page_trading.should_be_signup_form_on_the_trading_platform()
 
     @allure.step('Checking that "Login" form on the Trading Platform page opened')
     def assert_login_form_on_the_trading_platform(self, d):
         print(f"\n{datetime.now()}   3. Assert_v0")
-        self.page_trading = TradingPlatform(d, self.link)
+        self.page_trading = TradingPlatform(d, self.link, self.bid)
         self.page_trading.should_be_login_form_on_the_trading_platform()
