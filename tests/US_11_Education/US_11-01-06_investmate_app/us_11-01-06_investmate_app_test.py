@@ -162,7 +162,7 @@ class TestInvestmateApp:
 
         test_element.element_click()
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
 
         match cur_role:
             case "NoReg" | "NoAuth":
