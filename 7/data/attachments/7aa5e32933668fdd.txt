@@ -1,0 +1,96 @@
+
+
+
+Current test role - NoReg
+{'width': 1280, 'height': 720}
+
+2023-12-28 16:48:03.659524   worker_id = master
+
+2023-12-28 16:48:03.659524   0. Allure grouping v4
+
+
+2023-12-28 16:48:03.659524   START PRECONDITIONS =>
+
+
+2023-12-28 16:48:03.659524   {'width': 1280, 'height': 720}
+
+2023-12-28 16:48:03.661524   Set windows position at (0, 0) =>
+
+2023-12-28 16:48:03.769609   Set resolution 1280 * 720 =>
+
+2023-12-28 16:48:03.873994   => Resolution seted {'width': 1280, 'height': 720}
+
+2023-12-28 16:48:07.918451   Капчи нет. Тестим дальше
+
+2023-12-28 16:48:07.918451   Prev. Role: NoAuth
+
+2023-12-28 16:48:07.918451   Run preconditions: set "NoReg" Role =>
+2023-12-28 16:48:08.476101   Load page https://capital.com
+
+2023-12-28 16:48:09.077482   => All cookies are deleted
+2023-12-28 16:48:09.478052   Load page https://capital.com
+
+2023-12-28 16:48:09.478052   Step 'Click button [Accept all cookies]'
+2023-12-28 16:48:09.478052   Is Visible Button [Accept all cookies]? =>
+2023-12-28 16:48:13.515147   => Button [Accept all cookies] is visible
+2023-12-28 16:48:14.516726   Is clickable Button [Accept all cookies] =>
+2023-12-28 16:48:14.533697   => Button [Accept all cookies] is clickable
+2023-12-28 16:48:14.534705   Click Button [Accept all cookies] =>
+2023-12-28 16:48:14.605415   => Button [Accept all cookies] is clicked
+2023-12-28 16:48:14.605415   => Accepted All Cookies
+
+2023-12-28 16:48:15.106097   Current role: NoReg
+
+2023-12-28 16:48:15.106097   Prev language: ?
+
+2023-12-28 16:48:15.106097   Run preconditions: set "fr" language =>
+
+
+2023-12-28 16:48:15.106097   => Language and Country menu is present
+
+
+2023-12-28 16:48:15.121628   => Language and Country menu is visible
+
+
+2023-12-28 16:48:16.912631   => Focus is moved on Language and Country menu 
+
+2023-12-28 16:48:18.374661   => Current language: fr
+
+2023-12-28 16:48:18.374661   Prev country: ?
+
+2023-12-28 16:48:18.374661   Run preconditions: set "gb" country =>
+
+
+2023-12-28 16:48:18.387838   => Language and Country menu is present
+
+
+2023-12-28 16:48:18.421693   => Language and Country menu is visible
+
+
+2023-12-28 16:48:20.211599   => Focus is moved on Language and Country menu 
+
+2023-12-28 16:48:23.452276   => Current country: gb
+
+2023-12-28 16:48:23.452276   => THE END PRECONDITIONS
+2023-12-28 16:48:23.462584   => Education menu is present
+2023-12-28 16:48:23.548735   => Education menu is visible
+2023-12-28 16:48:25.326481   => Education menu focus moved
+
+2023-12-28 16:48:26.637289   1. Arrange_v0
+2023-12-28 16:48:26.641557   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2023-12-28 16:48:26.658594   2. Act_v0
+2023-12-28 16:48:26.755523   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+Bug: Bid:11.01.01.00_01-fr.gb.NoReg
+
+2023-12-28 16:48:26.755523   Проверка бага в таблице ретеста  =>
+
+2023-12-28 16:48:27.846745   Добавление новой строки =>
+
+2023-12-28 16:48:28.362905   => Новая строка добавлена
+
+2023-12-28 16:48:29.598038   Bug: Bid:11.01.01.00_01-fr.gb.NoReg-'04 добавлен в таблицу для ретеста
+
+2023-12-28 16:48:32.557422   *** end fixture Chrome = teardown ***
+
