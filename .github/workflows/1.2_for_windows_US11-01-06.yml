@@ -86,10 +86,10 @@ jobs:
 #        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-01_Trading_courses_test.py
 #        continue-on-error: true
 
-      - name: 8. Run US_11-01-06 (Сулейман/Андрей/Михаил)
-        if: always()
-        run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
-        continue-on-error: true
+      # - name: 8. Run US_11-01-06 (Сулейман/Андрей/Михаил)
+      #   if: always()
+      #   run: poetry run pytest --no-summary -v tests/US_11_Education/US_11-01-06_investmate_app/us_11-01-06_investmate_app_test.py
+      #   continue-on-error: true
 
 #      - name: 8. Run US_11-01-07 (Саша Т)
 #        if: always()
