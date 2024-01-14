@@ -209,5 +209,7 @@ def check_results(output, error):
         gs_out = ['skipped']
 
     print(f"\n{datetime.now()}   => 3. check_results finished")
-
+    if gs_out == ["error"]:
+        print(f"{datetime.now()}   => Текущий тест: skipped")
+        assert False, "Ошибка WebDriver"
     return gs_out
