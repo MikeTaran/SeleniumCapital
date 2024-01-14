@@ -21,7 +21,7 @@ class ContentStartTrading(BasePage):
         for i in range(qty):
             self.element_click_v3(i)
 
-            test_element = AssertClass(d, cur_item_link)
+            test_element = AssertClass(d, cur_item_link, self.bid)
             match cur_role:
                 case "NoReg":
                     test_element.assert_signup(d, cur_language, cur_item_link)

@@ -63,7 +63,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerStartTrading(d, cur_item_link)
+        test_element = MainBannerStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -87,7 +87,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerTryDemo(d, cur_item_link)
+        test_element = MainBannerTryDemo(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Start trading] in article")
@@ -111,7 +111,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ContentStartTrading(d, cur_item_link)
+        test_element = ContentStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Sell] in content block")
@@ -138,7 +138,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = SellButtonContentBlock(d, cur_item_link)
+        test_element = SellButtonContentBlock(d, cur_item_link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Buy] in content block")
@@ -165,7 +165,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BuyButtonContentBlock(d, cur_item_link)
+        test_element = BuyButtonContentBlock(d, cur_item_link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
@@ -192,7 +192,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button '1. Create your account' in 'Steps trading' block")
@@ -216,7 +216,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Get started] on Sticky bar")
@@ -243,7 +243,7 @@ class TestForexTradingItemPage:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = GetStartedOnStickyBar(d, cur_item_link)
+        test_element = GetStartedOnStickyBar(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
 #

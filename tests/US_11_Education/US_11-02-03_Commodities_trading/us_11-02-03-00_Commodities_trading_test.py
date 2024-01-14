@@ -1,28 +1,25 @@
 """
 -*- coding: utf-8 -*-
-@Time    : 2023/11/11
-@Author  : Mike Taran
+@Time    : 2023/04/19 17:00 GMT+3
+@Author  : Suleyman Alirzaev
 """
+# import os.path
 import pytest
 import allure
-import random  # for new method
 from datetime import datetime
 
-from conf import QTY_LINKS
-# from pages.Elements.AssertClass import AssertClass
 from pages.Elements.BlockStepTrading import BlockStepTrading
 from pages.Elements.ButtonOnHorizontalBanner import ButtonOnHorizontalBanner
 from pages.Elements.ButtonOnVerticalBanner import ButtonOnVerticalBanner
 from pages.Elements.ButtonStartTradingMainBanner import MainBannerStartTrading
 from pages.Elements.ButtonTradeOnWidgetMostTraded import ButtonTradeOnWidgetMostTraded
 from pages.Elements.ButtonTryDemoMainBanner import MainBannerTryDemo
-from pages.Menu.menu import MenuSection
-# from pages.Signup_login.signup_login import SignupLogin
 from pages.common import Common
+from pages.Menu.menu import MenuSection
 from tests.build_dynamic_arg import build_dynamic_arg_v4
 from pages.conditions import Conditions
-from pages.Education.shares_trading_locators import SharesTradingItem
 from src.src import CapitalComPageSrc
+from pages.Elements.testing_elements_locators import SubPages
 
 count = 1
 
@@ -34,9 +31,8 @@ def cur_time():
 
 
 def check_language(cur_language):
-    if cur_language not in ["hu", "nl", "el"]:
-        return
-    pytest.skip(f"This test is not for {cur_language} language")
+    if cur_language in ["hu", "nl", "el"]:
+        pytest.skip(f"This test is not for {cur_language} language")
 
 
 def check_country(cur_country):
@@ -44,8 +40,9 @@ def check_country(cur_country):
         pytest.skip(f"This test is not for {cur_country} country")
 
 
-@pytest.mark.us_11_02_02
-class TestSharesTrading:
+@pytest.mark.us_11_02_03
+# @allure.epic('US_11.02.03 | Find materials pages in "Commodities trading" menu')
+class TestCommoditiesTradingPretest:
     page_conditions = None
 
     @allure.step("Start test of button [Start trading] on Main banner")
@@ -59,7 +56,7 @@ class TestSharesTrading:
         """
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
+            "11.02.03", "Education > Menu item [Commodities trading]",
             ".00_01", "Testing button [Start Trading] on Main banner")
 
         check_language(cur_language)
@@ -70,7 +67,7 @@ class TestSharesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        cur_menu_link = page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        cur_menu_link = page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
 
         test_element = MainBannerStartTrading(d, cur_menu_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link)
@@ -86,7 +83,7 @@ class TestSharesTrading:
         """
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
+            "11.02.03", "Education > Menu item [Commodities trading]",
             ".00_02", "Testing button [Try demo] on Main banner")
 
         check_language(cur_language)
@@ -96,7 +93,7 @@ class TestSharesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        cur_menu_link = page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        cur_menu_link = page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
 
         test_element = MainBannerTryDemo(d, cur_menu_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link)
@@ -112,7 +109,7 @@ class TestSharesTrading:
         """
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
+            "11.02.03", "Education > Menu item [Commodities trading]",
             ".00_06", "Testing button [Trade] in Most traded block")
 
         check_language(cur_language)
@@ -123,7 +120,7 @@ class TestSharesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        cur_menu_link = page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        cur_menu_link = page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
 
         test_element = ButtonTradeOnWidgetMostTraded(d, cur_menu_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link)
@@ -139,7 +136,7 @@ class TestSharesTrading:
         """
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
+            "11.02.03", "Education > Menu item [Commodities trading]",
             ".00_08", "Testing button [1. Create your account] in block [Steps trading]")
 
         check_language(cur_language)
@@ -149,7 +146,7 @@ class TestSharesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        cur_menu_link = page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        cur_menu_link = page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
 
         test_element = BlockStepTrading(d, cur_menu_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link)
@@ -169,7 +166,7 @@ class TestSharesTrading:
 
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
+            "11.02.03", "Education > Menu item [Commodities trading]",
             ".00_09", "Testing button in block [Horizontal banner]")
 
         check_language(cur_language)
@@ -181,16 +178,16 @@ class TestSharesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         # банеры должны открываться в Demo mode for US_00
-        banner00_hor_tpd = ['103', '252', '167', '197', '220', '291']
+        banner00_hor_tpd = ['103', '167', '252', '291', '197', '427']
         # банеры должны открываться в Live mode for US_00
-        banner00_hor_tp = ['378', '390', '428', '427']
+        banner00_hor_tp = ['378', '390', '428', '220']
         # банеры должны открываться в Demo mode for US_01
         banner01_hor_tpd = []
         # банеры должны открываться в Live mode for US_01
         banner01_hor_tp = []
 
         page_menu = MenuSection(d, main_page_link)
-        cur_menu_link = page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        cur_menu_link = page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
 
         test_element = ButtonOnHorizontalBanner(d, cur_menu_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link,
@@ -211,7 +208,7 @@ class TestSharesTrading:
 
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
+            "11.02.03", "Education > Menu item [Commodities trading]",
             ".00_10", "Testing button in block [Vertical banner]")
 
         check_language(cur_language)
@@ -233,24 +230,24 @@ class TestSharesTrading:
         banner01_ver_tp = []
 
         page_menu = MenuSection(d, main_page_link)
-        cur_menu_link = page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        cur_menu_link = page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
 
         test_element = ButtonOnVerticalBanner(d, cur_menu_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_menu_link, banner00_ver_tpd,
                                         banner00_ver_tp, banner01_ver_tpd, banner01_ver_tp)
 
-    @allure.step("Start pretest: collect the trade instrument list")
-    # @pytest.mark.skip(reason="Skipped for debugging")
-    def test_99_shares_trading_pretest(
+    @allure.step("Start pretest")
+    def test_99_commodities_trading_pretest(
             self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
         global count
 
-        bid = build_dynamic_arg_v4(
+        build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role,
-            "11.02.02", "Education > Menu item [Shares trading]",
-            ".00_99", "Pretest for US_11.02.02.01")
+            "11.02.03", "Education > Menu item [Commodities trading]",
+            ".00_99", "Pretest for US_11.02.03.01")
 
-        if cur_language in ["ar"]:
+        check_language(cur_language)
+        if cur_language in ["ar", "fr", "cn", "zh"]:
             Common().skip_test_for_language(cur_language)
 
         if count == 0:
@@ -261,12 +258,13 @@ class TestSharesTrading:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        page_menu.open_education_shares_trading_menu(d, cur_language, main_page_link)
+        page_menu.open_education_commodities_trading_menu(d, cur_language, main_page_link)
+        del page_menu
 
         # Записываем ссылки в файл
-        file_name = "tests/US_11_Education/US_11-02-02_Shares_trading/list_of_href.txt"
-        list_items = d.find_elements(*SharesTradingItem.ITEM_LIST)
+        file_name = "tests/US_11_Education/US_11-02-03_Commodities_trading/list_of_href.txt"
+        list_items = d.find_elements(*SubPages.SUB_PAGES_LIST)
 
-        Common().creating_file_of_hrefs("Shares trading", list_items, file_name)
+        Common().creating_file_of_hrefs("Commodities trading", list_items, file_name)
 
         count -= 1

@@ -166,7 +166,7 @@ class Conditions(BasePage):
     #     # ввести логин, вести пароль, нажать подтвердить
 
     # авторизация пользователя
-    @allure.step("Authorisation")
+    @allure.step("Start Authorisation")
     # @profile(precision=3)
     def to_do_authorisation(self, d, link, login, password):
         """Authorisation"""
@@ -213,7 +213,7 @@ class Conditions(BasePage):
         del top_bar
         d.back()
 
-    @allure.step('DeAuthorisation')
+    @allure.step('Start DeAuthorisation')
     def to_do_de_authorisation(self, d, link):
         """DeAuthorisation"""
         print(f"\n"
@@ -222,7 +222,7 @@ class Conditions(BasePage):
         assert Header(d, link).header_button_my_account_click(), "Button 'My account' missing"
         assert MyAccount(d, link).my_account_button_logout_click(), "Button 'Logout' missing"
 
-    @allure.step('Checking Main Page is opened')
+    @allure.step('Start Checking that Main Page is opened')
     def arrange_0(self):
         """
         Checking Main Page is opened

@@ -55,7 +55,7 @@ class TestDayTrading:
 
         cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerStartTrading(d, cur_page_url)
+        test_element = MainBannerStartTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -73,7 +73,7 @@ class TestDayTrading:
 
         cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerTryDemo(d, cur_page_url)
+        test_element = MainBannerTryDemo(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
@@ -93,7 +93,7 @@ class TestDayTrading:
 
         cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Start trading] in content block")
@@ -114,7 +114,7 @@ class TestDayTrading:
 
         cur_item_link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ContentStartTrading(d, cur_item_link)
+        test_element = ContentStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Practise for free] in content block")
@@ -141,14 +141,14 @@ class TestDayTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, menu_link)
             case "NoAuth":
                 test_element.assert_login(d, cur_language, menu_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+                test_element.assert_trading_platform_v4(d, menu_link)
 
     @allure.step("Start test of button [Download on the App Store] in Block 'Sign up and trade smart today!'")
     @pytest.mark.test_06
@@ -169,7 +169,7 @@ class TestDayTrading:
         test_element.arrange_(menu_link)
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         test_element.assert_app_store(d, menu_link)
 
     @allure.step("Start test of button [Get it on Google Play] in Block 'Sign up and trade smart today!'")
@@ -192,7 +192,7 @@ class TestDayTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         test_element.assert_google_play(d, menu_link)
 
     @allure.step("Start test of button [Explore Web Platform] in Block 'Sign up and trade smart today!'")
@@ -215,14 +215,14 @@ class TestDayTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup_form_on_the_trading_platform(d)
             case "NoAuth":
                 test_element.assert_login_form_on_the_trading_platform(d)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+                test_element.assert_trading_platform_v4(d, menu_link)
 
     @allure.step("Start test of button [1. Create & verify your account] in Block 'Steps trading'")
     @pytest.mark.test_09
@@ -239,5 +239,5 @@ class TestDayTrading:
 
         cur_page_url = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, cur_page_url)
+        test_element = BlockStepTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)

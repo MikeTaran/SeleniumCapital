@@ -54,7 +54,7 @@ class TestForexTradingMainPage:
         page_menu = MenuSection(d, main_page_link)
         cur_page_url = page_menu.open_education_forex_trading_menu(d, cur_language, main_page_link)
 
-        test_element = MainBannerStartTrading(d, cur_page_url)
+        test_element = MainBannerStartTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -82,7 +82,7 @@ class TestForexTradingMainPage:
         page_menu = MenuSection(d, main_page_link)
         cur_page_url = page_menu.open_education_forex_trading_menu(d, cur_language, main_page_link)
 
-        test_element = MainBannerTryDemo(d, cur_page_url)
+        test_element = MainBannerTryDemo(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Sell] in content block")
@@ -113,7 +113,7 @@ class TestForexTradingMainPage:
         page_menu = MenuSection(d, main_page_link)
         cur_page_url = page_menu.open_education_forex_trading_menu(d, cur_language, main_page_link)
 
-        test_element = SellButtonContentBlock(d, cur_page_url)
+        test_element = SellButtonContentBlock(d, cur_page_url, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Buy] in content block")
@@ -144,7 +144,7 @@ class TestForexTradingMainPage:
         page_menu = MenuSection(d, main_page_link)
         cur_page_url = page_menu.open_education_forex_trading_menu(d, cur_language, main_page_link)
 
-        test_element = BuyButtonContentBlock(d, cur_page_url)
+        test_element = BuyButtonContentBlock(d, cur_page_url, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
@@ -174,7 +174,7 @@ class TestForexTradingMainPage:
         page_menu = MenuSection(d, main_page_link)
         cur_page_url = page_menu.open_education_forex_trading_menu(d, cur_language, main_page_link)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button '1. Create your account' in 'Steps trading' block")
@@ -202,7 +202,7 @@ class TestForexTradingMainPage:
         page_menu = MenuSection(d, main_page_link)
         cur_page_url = page_menu.open_education_forex_trading_menu(d, cur_language, main_page_link)
 
-        test_element = BlockStepTrading(d, cur_page_url)
+        test_element = BlockStepTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start pretest")

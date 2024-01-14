@@ -50,7 +50,7 @@ class TestTrendTrading:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trend_trading_move_focus_click(d, cur_language)
 
-        test_element = MainBannerStartTrading(d, cur_page_url)
+        test_element = MainBannerStartTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -78,7 +78,7 @@ class TestTrendTrading:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trend_trading_move_focus_click(d, cur_language)
 
-        test_element = MainBannerTryDemo(d, cur_page_url)
+        test_element = MainBannerTryDemo(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
@@ -108,7 +108,7 @@ class TestTrendTrading:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trend_trading_move_focus_click(d, cur_language)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test of button [Download on the App Store] in Block 'Sign up and trade smart today!'")
@@ -139,7 +139,7 @@ class TestTrendTrading:
         test_element.arrange_(link)
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         test_element.assert_app_store(d, link)
 
     @allure.step("Start test of button [Get it on Google Play] in Block 'Sign up and trade smart today!'")
@@ -171,7 +171,7 @@ class TestTrendTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         test_element.assert_google_play(d, link)
 
     @allure.step("Start test of button [Explore Web Platform] in Block 'Sign up and trade smart today!'")
@@ -203,14 +203,14 @@ class TestTrendTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup_form_on_the_trading_platform(d)
             case "NoAuth":
                 test_element.assert_login_form_on_the_trading_platform(d)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, link)
+                test_element.assert_trading_platform_v4(d, link)
 
     @allure.step("Start test of button [1. Create & verify your account] in Block 'Steps trading'")
     @pytest.mark.test_09
@@ -236,5 +236,5 @@ class TestTrendTrading:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trend_trading_move_focus_click(d, cur_language)
 
-        test_element = BlockStepTrading(d, cur_page_url)
+        test_element = BlockStepTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)

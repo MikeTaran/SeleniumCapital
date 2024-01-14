@@ -47,7 +47,7 @@ class TestTradingStrategiesGuides:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = MainBannerStartTrading(d, cur_page_url)
+        test_element = MainBannerStartTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test_11.03.01_02 of button [Try demo] on Main banner")
@@ -73,7 +73,7 @@ class TestTradingStrategiesGuides:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = MainBannerTryDemo(d, cur_page_url)
+        test_element = MainBannerTryDemo(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test_11.03.01_03 of buttons [Trade] in Most traded block")
@@ -100,7 +100,7 @@ class TestTradingStrategiesGuides:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start test_11.03.01_04 button 'Create_verify_your_account' on the page.")
@@ -126,7 +126,7 @@ class TestTradingStrategiesGuides:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_trading_strategies_guide_move_focus_click(d, cur_language)
 
-        test_element = BlockStepTrading(d, cur_page_url)
+        test_element = BlockStepTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)
 
     @allure.step("Start pretest")

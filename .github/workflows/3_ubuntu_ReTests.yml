@@ -33,7 +33,7 @@ jobs:
         if: always()
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11.6"
+          python-version: "3.11.7"
 
       - name: 3.1. Set up Homebrew
         id: set-up-homebrew
@@ -74,12 +74,17 @@ jobs:
 #        run: poetry update
         run: poetry install --sync
 
-      - name: Run hwinfo.py
+      - name: Poetry Run Python3 hwinfo.py
         if: always()
         run: poetry run python3 tests/hwinfo.py
 
+      - name: Python3 hwinfo.py
+        if: always()
+        run: python3 tests/hwinfo.py
+
       - name: 6. Check code for errors by flake8 and format code with black
         if: always()
+        continue-on-error: true
         uses: ricardochaves/python-lint@v1.4.0
         with:
           python-root-list: ""
@@ -98,8 +103,10 @@ jobs:
 
       - name: 8. Run WATC_ReTest
         if: always()
-        run: poetry run pytest -v tests/ReTests/WATC_ReTests.py
         continue-on-error: true
+#        run: poetry run pytest -vv tests/ReTests/WATC_ReTests.py
+        run: poetry run pytest -vv tests/ReTests/ReTests.py
+#        run: poetry run pytest -n auto -vv tests/ReTests/WATC_ReTests.py
 
       - name: 9. Upload artifact "allure-results"
         if: always()
@@ -134,10 +141,9 @@ jobs:
         uses: appleboy/telegram-action@master
         if: always()
         with:
-          to: ${{ secrets.TELEGRAM_TO_ALEXTOM22 }}
-#           to: ${{ secrets.TELEGRAM_TO }}
+          to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-#           disable_web_page_preview: true
+          #           disable_web_page_preview: true
           message: |
             Message from GitHub CI Actions
 

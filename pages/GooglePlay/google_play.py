@@ -12,6 +12,7 @@ import pytest
 from pages.base_page import BasePage
 from pages.GooglePlay.google_play_locators import GooglePlayLocators
 from test_data.google_play_data import data
+from tests.ReTests.ReTest_table_fill import retest_table_fill
 
 
 class GooglePlay(BasePage):
@@ -31,8 +32,12 @@ class GooglePlay(BasePage):
             assert True
         else:
             current_page = self.browser.current_url
-            self.open_page()
-            pytest.fail(f'Bug!!! Loaded page {current_page} with not {data["APP_URL"]} url')
+            # self.open_page()
+            # ==== new bug re-test checking =====
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '03', self.link)
+            # ==================================
+            assert False, f'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url'
 
     @allure.step("Checking that the Google Play app title")
     def should_be_google_play_app_title(self, app_title):

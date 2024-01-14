@@ -51,7 +51,7 @@ class TestSpreadBettingGuidePretest:
         page_menu = MenuSection(d, main_page_link)
         cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
 
-        test_element = MainBannerStartTrading(d, cur_item_link)
+        test_element = MainBannerStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -77,7 +77,7 @@ class TestSpreadBettingGuidePretest:
         page_menu = MenuSection(d, main_page_link)
         cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
 
-        test_element = MainBannerTryDemo(d, cur_item_link)
+        test_element = MainBannerTryDemo(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
@@ -103,7 +103,7 @@ class TestSpreadBettingGuidePretest:
         page_menu = MenuSection(d, main_page_link)
         cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Create your account] in block [Steps trading]")
@@ -129,7 +129,7 @@ class TestSpreadBettingGuidePretest:
         page_menu = MenuSection(d, main_page_link)
         cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Start trading] in article")
@@ -155,7 +155,7 @@ class TestSpreadBettingGuidePretest:
         page_menu = MenuSection(d, main_page_link)
         cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
 
-        test_element = ContentStartTrading(d, cur_item_link)
+        test_element = ContentStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Create account] in article")
@@ -181,7 +181,7 @@ class TestSpreadBettingGuidePretest:
         page_menu = MenuSection(d, main_page_link)
         cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
 
-        test_element = ArticleCreateAccount(d, cur_item_link)
+        test_element = ArticleCreateAccount(d, cur_item_link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start pretest")

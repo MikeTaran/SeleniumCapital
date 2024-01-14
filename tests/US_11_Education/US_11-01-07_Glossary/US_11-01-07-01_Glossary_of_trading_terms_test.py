@@ -61,7 +61,7 @@ class TestGlossaryItems:
 
         test_element.element_click()
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
@@ -93,7 +93,7 @@ class TestGlossaryItems:
 
         test_element.element_click()
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
@@ -126,7 +126,7 @@ class TestGlossaryItems:
 
         test_element.click(button_name)
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
@@ -159,7 +159,7 @@ class TestGlossaryItems:
 
         test_element.click(button_name)
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
@@ -192,7 +192,7 @@ class TestGlossaryItems:
 
         test_element.click(button_name)
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)

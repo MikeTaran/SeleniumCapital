@@ -11,6 +11,7 @@ from datetime import datetime
 count = 1
 
 
+@allure.step("Start Building dynamic arguments for allure report generation")
 def build_dynamic_arg_v4(d, worker_id, cur_language, cur_country, cur_role,
                          us, desc_us, num_tc, desc_tc):
     """

@@ -20,7 +20,7 @@ class GetStartedOnStickyBar(BasePage):
         self.arrange_(d, cur_item_link)
 
         self.element_click()
-        check_element = AssertClass(d, cur_item_link)
+        check_element = AssertClass(d, cur_item_link, self.bid)
         match cur_role:
             case "NoReg":
                 check_element.assert_signup(d, cur_language, cur_item_link)

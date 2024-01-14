@@ -23,7 +23,6 @@ class AssertClass(BasePage):
     page_google_play = None
     platform_url = ""
 
-
     def __init__(self, *args):
         super().__init__(*args)
         # self.is_captcha()
@@ -31,11 +30,6 @@ class AssertClass(BasePage):
     @allure.step('Checking that "Signup" opened')
     def assert_signup(self, d, cur_language, cur_link):
         """Method Assert Signup"""
-        # ================для наладки==============
-        print(f'\nBug: {self.bid}')
-        retest_table_fill(self.bid, '04', cur_link)
-        assert False, "Bug # 04. Unknown situation instead 'Sign Up' form opened"
-        # =========================================
 
         print(f"\n{datetime.now()}   3. Assert_v0")
         self.page_signup_login = SignupLogin(d, cur_link)
@@ -47,7 +41,10 @@ class AssertClass(BasePage):
             self.page_signup_login.close_trading_platform_signup_form()
         else:
             del self.page_signup_login
-            pytest.fail("Bug # 4. Unknown situation instead 'Sign Up' form opened")
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '04', self.link)
+            assert False, "Bug # 04. Unknown situation instead 'Sign Up' form opened"
+            # pytest.fail("Bug # 04. Unknown situation instead 'Sign Up' form opened")
         # time.sleep(2)
         del self.page_signup_login
 
@@ -66,14 +63,29 @@ class AssertClass(BasePage):
             self.page_signup_login.close_trading_platform_login_form()
             del self.page_signup_login
         elif self.page_signup_login.should_be_signup_form(cur_language):
-            pytest.fail("Bug # 5. Opened a 'Sign up' form instead of a 'Login'", False)
+            del self.page_signup_login
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '05', self.link)
+            assert False, "Bug # 05. Opened a 'Sign up' form instead of a 'Login'"
+            # pytest.fail("Bug # 05. Opened a 'Sign up' form instead of a 'Login'", False)
         elif self.page_signup_login.should_be_signup_page(cur_language):
-            pytest.fail("Bug # 6. Opened a 'Sign up' page instead of a 'Login'", False)
+            del self.page_signup_login
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '06', self.link)
+            assert False, "Bug # 06. Opened a 'Sign up' page instead of a 'Login'"
+            # pytest.fail("Bug # 06. Opened a 'Sign up' page instead of a 'Login'", False)
         elif self.page_signup_login.should_be_trading_platform_signup_form(cur_language):
-            pytest.fail("Bug # 7. Opened a 'Sign up' form on trading platform instead of a 'Login'", False)
+            del self.page_signup_login
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '07', self,link)
+            assert False, "Bug # 07. Opened a 'Sign up' form on trading platform instead of a 'Login'"
+            # pytest.fail("Bug # 07. Opened a 'Sign up' form on trading platform instead of a 'Login'", False)
         else:
             del self.page_signup_login
-            pytest.fail("Bug # 8. Unknown situation instead 'Login' form opened", False)
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '08', self.link)
+            assert False, "Bug # 08. Unknown situation instead 'Login' form opened"
+            # pytest.fail("Bug # 08. Unknown situation instead 'Login' form opened", False)
 
     @allure.step('Checking that "Trading platform" page opened')
     def assert_trading_platform(self, d):
@@ -110,7 +122,7 @@ class AssertClass(BasePage):
                     trade_instrument: corresponding trade instrument (False)
         """
         print(f"\n{datetime.now()}   3. Assert_v4")
-        self.page_trading = TradingPlatform(d, cur_link)
+        self.page_trading = TradingPlatform(d, cur_link, self.bid)
         self.page_trading.should_be_trading_platform_page_v4(d, cur_link, tpd, tpi, trade_instrument)
 
     @allure.step('Checking that "Trading platform" page opened with corresponding trading instrument - ver 5')
@@ -130,7 +142,7 @@ class AssertClass(BasePage):
     @allure.step('Checking that "App Store" page opened')
     def assert_app_store(self, d, cur_link):
         print(f"\n{datetime.now()}   3. Assert_v0")
-        self.page_app_store = AppStore(d, cur_link)
+        self.page_app_store = AppStore(d, cur_link, self.bid)
         self.page_app_store.should_be_app_store_page(cur_link)
 
     @allure.step('Checking that "App Store Investmate" page opened')
@@ -142,7 +154,7 @@ class AssertClass(BasePage):
     @allure.step('Checking that "Google Play" page opened')
     def assert_google_play(self, d, cur_link):
         print(f"\n{datetime.now()}   3. Assert_v0")
-        self.page_google_play = GooglePlay(d, cur_link)
+        self.page_google_play = GooglePlay(d, cur_link, self.bid)
         self.page_google_play.should_be_google_play_page(cur_link)
 
     @allure.step('Checking that "Sign Up" form on the Trading Platform page opened')

@@ -60,14 +60,14 @@ class TestPositionTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, menu_link)
             case "NoAuth":
                 test_element.assert_login(d, cur_language, menu_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+                test_element.assert_trading_platform_v4(d, menu_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
     @pytest.mark.test_02
@@ -90,14 +90,14 @@ class TestPositionTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, menu_link)
             case "NoAuth":
                 test_element.assert_login(d, cur_language, menu_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link, demo=True)
+                test_element.assert_trading_platform_v4(d, menu_link, True)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
     @pytest.mark.test_03
@@ -123,14 +123,14 @@ class TestPositionTrading:
             print(f"\n{datetime.now()}   Testing element #{index + 1}")
             if not test_element.element_click_v2(element):
                 pytest.fail("Testing element is not clicked")
-            check_element = AssertClass(d, menu_link)
+            check_element = AssertClass(d, menu_link, bid)
             match cur_role:
                 case "NoReg":
                     check_element.assert_signup(d, cur_language, menu_link)
                 case "NoAuth":
                     check_element.assert_login(d, cur_language, menu_link)
                 case "Auth":
-                    check_element.assert_trading_platform_v3(d, menu_link)
+                    check_element.assert_trading_platform_v4(d, menu_link)
 
     @allure.step("Start test of button [Download on the App Store] in Block 'Sign up and trade smart today!'")
     @pytest.mark.test_04
@@ -151,7 +151,7 @@ class TestPositionTrading:
         test_element.arrange_(menu_link)
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         test_element.assert_app_store(d, menu_link)
 
     @allure.step("Start test of button [Get it on Google Play] in Block 'Sign up and trade smart today!'")
@@ -174,7 +174,7 @@ class TestPositionTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         test_element.assert_google_play(d, menu_link)
 
     @allure.step("Start test of button [Explore Web Platform] in Block 'Sign up and trade smart today!'")
@@ -197,14 +197,14 @@ class TestPositionTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup_form_on_the_trading_platform(d)
             case "NoAuth":
                 test_element.assert_login_form_on_the_trading_platform(d)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+                test_element.assert_trading_platform_v4(d, menu_link)
 
     @allure.step("Start test of button [1. Create & verify your account] in Block 'Steps trading'")
     @pytest.mark.test_07
@@ -227,9 +227,9 @@ class TestPositionTrading:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, menu_link)
+        test_element = AssertClass(d, menu_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, menu_link)
             case "Auth":
-                test_element.assert_trading_platform_v3(d, menu_link)
+                test_element.assert_trading_platform_v4(d, menu_link)

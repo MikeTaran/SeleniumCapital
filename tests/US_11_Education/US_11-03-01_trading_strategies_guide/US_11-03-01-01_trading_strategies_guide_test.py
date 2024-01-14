@@ -50,7 +50,7 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerStartTrading(d, cur_item_link)
+        test_element = MainBannerStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_02 of button [Try demo] on Main banner")
@@ -72,7 +72,7 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerTryDemo(d, cur_item_link)
+        test_element = MainBannerTryDemo(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_03 of buttons [Trade] in Most traded block")
@@ -95,7 +95,7 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_06 of button [Download on the App Store] "
@@ -122,7 +122,7 @@ class TestTradingStrategiesGuides:
         test_element.arrange_(cur_item_link)
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         test_element.assert_app_store(d, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_07 of button [Get it on Google Play] "
@@ -150,7 +150,7 @@ class TestTradingStrategiesGuides:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         test_element.assert_google_play(d, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_08 of button [Explore Web Platform] in Block 'Sign up and trade smart today!'")
@@ -177,7 +177,7 @@ class TestTradingStrategiesGuides:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup_form_on_the_trading_platform(d)
@@ -206,7 +206,7 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_10 of button [Sell] in Banner [Trading Instrument]")
@@ -229,7 +229,7 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = SellButtonContentBlock(d, cur_item_link)
+        test_element = SellButtonContentBlock(d, cur_item_link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_11 of button [Buy] in Banner [Trading Instrument]")
@@ -252,7 +252,7 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BuyButtonContentBlock(d, cur_item_link)
+        test_element = BuyButtonContentBlock(d, cur_item_link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.01.01_12 of button [Start trading] in Content block")
@@ -275,5 +275,5 @@ class TestTradingStrategiesGuides:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ContentStartTrading(d, cur_item_link)
+        test_element = ContentStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)

@@ -34,7 +34,7 @@ class ButtonTradeOnWidgetMostTraded(BasePage):
             if not trade_instrument:
                 pytest.fail("Testing element is not clicked")
 
-            check_element = AssertClass(d, cur_item_link)
+            check_element = AssertClass(d, cur_item_link, self.bid)
             counter += 1
             match cur_role:
                 case "NoReg":

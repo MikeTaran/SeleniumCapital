@@ -52,7 +52,7 @@ class TestTradingCoursesItem:
 
         test_element.element_click()
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, cur_item_link)
@@ -84,7 +84,7 @@ class TestTradingCoursesItem:
 
         test_element.element_click()
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, cur_item_link)
@@ -113,5 +113,5 @@ class TestTradingCoursesItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)

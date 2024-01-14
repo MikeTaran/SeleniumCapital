@@ -59,7 +59,7 @@ class TestWhatIsMargin:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, link)
@@ -89,7 +89,7 @@ class TestWhatIsMargin:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, link)
@@ -122,14 +122,14 @@ class TestWhatIsMargin:
             print(f"\n{datetime.now()}   Testing element #{index + 1}")
             if not test_element.element_click_v2(element):
                 pytest.fail("Testing element is not clicked")
-            check_element = AssertClass(d, link)
+            check_element = AssertClass(d, link, bid)
             match cur_role:
                 case "NoReg":
                     check_element.assert_signup(d, cur_language, link)
                 case "NoAuth":
                     check_element.assert_login(d, cur_language, link)
                 case "Auth":
-                    check_element.assert_trading_platform_v3(d, link)
+                    check_element.assert_trading_platform_v4(d, link)
 
     @allure.step("Start test of button [1. Create & verify your account] in Block 'Steps trading'")
     @pytest.mark.test_04
@@ -155,7 +155,7 @@ class TestWhatIsMargin:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, link)
@@ -186,7 +186,7 @@ class TestWhatIsMargin:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, link)
@@ -217,7 +217,7 @@ class TestWhatIsMargin:
         if not test_element.element_click():
             pytest.fail("Testing element is not clicked")
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, link)

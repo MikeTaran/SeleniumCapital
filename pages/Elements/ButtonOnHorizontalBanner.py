@@ -33,7 +33,7 @@ class ButtonOnHorizontalBanner(BasePage):
         # проверка, что баннер учтен в матрице покрытия
         if (data_id in banner00_hor_tp or data_id in banner01_hor_tp
                 or data_id in banner00_hor_tpd or data_id in banner01_hor_tpd):
-            test_element = AssertClass(d, link)
+            test_element = AssertClass(d, link, self.bid)
             match cur_role:
                 case "NoReg":
                     test_element.assert_signup(d, cur_language, link)

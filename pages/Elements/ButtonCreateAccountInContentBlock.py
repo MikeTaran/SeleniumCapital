@@ -39,7 +39,7 @@ class ArticleCreateAccount(BasePage):
 
         print(f"{datetime.now()}   BUTTON_CREATE_ACCOUNT is visible? =>")
         # if self.element_is_visible(ButtonsOnPageLocators.BUTTON_CREATE_ACCOUNT):
-        if self.element_is_visible(*ButtonsOnPageLocators.BUTTON_CREATE_ACCOUNT):
+        if self.element_is_visible(ButtonsOnPageLocators.BUTTON_CREATE_ACCOUNT, 5):
             print(f"{datetime.now()}   => BUTTON_CREATE_ACCOUNT is visible on the page!")
         else:
             print(f"{datetime.now()}   => BUTTON_CREATE_ACCOUNT is not visible on the page!")

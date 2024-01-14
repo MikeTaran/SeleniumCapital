@@ -49,7 +49,7 @@ class TestTradingCourses:
         page_menu.menu_education_move_focus(d, cur_language)
         link = page_menu.sub_menu_trading_courses_move_focus_click(d, cur_language)
 
-        test_element = ButtonCreateAccountBlockOurCourses(d, link)
+        test_element = ButtonCreateAccountBlockOurCourses(d, link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, link)
 
     @allure.step("Start test_11.01.05_04 button [1. Create your account] in block 'Steps trading'.")
@@ -76,7 +76,7 @@ class TestTradingCourses:
         page_menu.menu_education_move_focus(d, cur_language)
         link = page_menu.sub_menu_trading_courses_move_focus_click(d, cur_language)
 
-        test_element = BlockStepTrading(d, link)
+        test_element = BlockStepTrading(d, link, bid)
         test_element.full_test(d, cur_language, cur_country, cur_role, link)
 
     @allure.step("Start pretest")

@@ -84,7 +84,7 @@ class PageSignUpLogin(BasePage):
                             case 2:
                                 test_element.assert_signup(self.browser, cur_language, cur_item_link)
                     case "Auth":
-                        test_element.assert_trading_platform_v3(self.browser, cur_item_link)
+                        test_element.assert_trading_platform_v4(self.browser, cur_item_link)
                 self.browser.get(cur_item_link)
             # except Exception as e:
             #     print(f"EXC_IS: {e}")

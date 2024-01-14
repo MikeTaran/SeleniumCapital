@@ -60,7 +60,7 @@ class TestGlossaryOfTradingTerms:
 
         test_element.element_click()
 
-        test_element = AssertClass(d, link)
+        test_element = AssertClass(d, link, bid)
         match cur_role:
             case "NoReg" | "NoAuth":
                 test_element.assert_signup(d, cur_language, link)

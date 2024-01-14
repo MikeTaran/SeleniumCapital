@@ -53,7 +53,7 @@ class TestTradingPsychologyGuideItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerStartTrading(d, cur_item_link)
+        test_element = MainBannerStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -76,7 +76,7 @@ class TestTradingPsychologyGuideItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerTryDemo(d, cur_item_link)
+        test_element = MainBannerTryDemo(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Trade] in Widget Most traded block")
@@ -101,7 +101,7 @@ class TestTradingPsychologyGuideItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Start trading] in Content block")
@@ -126,7 +126,7 @@ class TestTradingPsychologyGuideItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ContentStartTrading(d, cur_item_link)
+        test_element = ContentStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Practise for free] in Content block")
@@ -151,7 +151,7 @@ class TestTradingPsychologyGuideItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonPractiseForFreeInContentBlock(d, cur_item_link)
+        test_element = ButtonPractiseForFreeInContentBlock(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Create_verify_your_account] in block [Steps trading].")
@@ -174,5 +174,5 @@ class TestTradingPsychologyGuideItem:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)

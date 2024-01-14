@@ -25,7 +25,7 @@ class BuyButtonContentBlock(BasePage):
 
         trade_instrument = self.element_click(cur_role)
 
-        test_element = AssertClass(d, cur_item_link)
+        test_element = AssertClass(d, cur_item_link, self.bid)
         match cur_role:
             case "NoReg":
                 test_element.assert_signup(d, cur_language, cur_item_link)

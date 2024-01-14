@@ -33,5 +33,5 @@ class TestMarketGuides:
         page_menu.menu_education_move_focus(d, cur_language)
         cur_page_url = page_menu.sub_menu_market_guides_move_focus_click(d, cur_language)
 
-        test_element = BlockStepTrading(d, cur_page_url)
+        test_element = BlockStepTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)

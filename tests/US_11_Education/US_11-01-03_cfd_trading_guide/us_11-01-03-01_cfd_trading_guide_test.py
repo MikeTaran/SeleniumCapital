@@ -67,7 +67,7 @@ class TestCFDTradingGuide:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerStartTrading(d, cur_item_link)
+        test_element = MainBannerStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -90,7 +90,7 @@ class TestCFDTradingGuide:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = MainBannerTryDemo(d, cur_item_link)
+        test_element = MainBannerTryDemo(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of buttons [Trade] in Most traded block")
@@ -114,7 +114,7 @@ class TestCFDTradingGuide:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Create your account] in block [Steps trading]")
@@ -137,7 +137,7 @@ class TestCFDTradingGuide:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     # @allure.step('Start test "Click 2 from 5 random [Sell] buttons in "CFDs tables" for {type_fi} and {tab}')
@@ -208,5 +208,5 @@ class TestCFDTradingGuide:
         page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
-        test_element = ContentStartTrading(d, cur_item_link)
+        test_element = ContentStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)

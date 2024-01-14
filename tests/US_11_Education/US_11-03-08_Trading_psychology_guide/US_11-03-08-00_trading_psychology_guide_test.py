@@ -49,7 +49,7 @@ class TestTradingPsychologyGuideMain:
         page_menu.sub_menu_trading_psychology_guide_move_focus_click(d, cur_language)
         del page_menu
 
-        test_element = MainBannerStartTrading(d, cur_item_link)
+        test_element = MainBannerStartTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Try demo] on Main banner")
@@ -77,7 +77,7 @@ class TestTradingPsychologyGuideMain:
         page_menu.sub_menu_trading_psychology_guide_move_focus_click(d, cur_language)
         del page_menu
 
-        test_element = MainBannerTryDemo(d, cur_item_link)
+        test_element = MainBannerTryDemo(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Trade] in Widget Most traded block")
@@ -107,7 +107,7 @@ class TestTradingPsychologyGuideMain:
         page_menu.sub_menu_trading_psychology_guide_move_focus_click(d, cur_language)
         del page_menu
 
-        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link)
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test of button [Create_verify_your_account] in block [Steps trading].")
@@ -135,7 +135,7 @@ class TestTradingPsychologyGuideMain:
         page_menu.sub_menu_trading_psychology_guide_move_focus_click(d, cur_language)
         del page_menu
 
-        test_element = BlockStepTrading(d, cur_item_link)
+        test_element = BlockStepTrading(d, cur_item_link, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
 
     @allure.step("Start test_11.03.08_99 pretest")

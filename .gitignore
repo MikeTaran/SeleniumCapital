@@ -1,5 +1,6 @@
 .DS_Store
 __pycache__
+__init__.py
 /.idea/
 /.pytest_cache/
 /.run/
@@ -8,6 +9,25 @@ __pycache__
 /.zed/
 /allure-report/
 /allure-results/
+/report/
+
+# /*/__pycache__/
+# /*/*/__pycache__/
+# /*/*/*/__pycache__/
+
+# /pages/__pycache__/
+# /pages/Education/__pycache__/
+# /pages/Markets/__pycache__/
+
+# /src/__pycharm__/
+
+# /test_data/__pycache__/
+
+# /tests/__pycache__/
+# /tests/Capital/__pycache__/
+# /tests/Education/__pycache__/
+# /tests/Markets/__pycache__/
+
 tests/ReTests/temp.py
 tests/ReTests/allure-report/
 tests/ReTests/allure-results/
@@ -15,25 +35,9 @@ tests/ReTests/report/
 tests/ReTests/cookies/
 tests/ReTests/temp/
 tests/ReTests/tests/ReTests/
+tests/ReTests/token.json
 #tests/ReTests/credentials.json
-# /pages/__pycache__/
-# /pages/Education/__pycache__/
-# /pages/Markets/__pycache__/
-/report/
-# /src/__pycharm__/
-# /test_data/__pycache__/
-# /tests/__pycache__/
-# /tests/Capital/__pycache__/
-# /tests/Education/__pycache__/
-# /tests/Markets/__pycache__/
-# /*/__pycache__/
-# /*/*/__pycache__/
-# /*/*/*/__pycache__/
-tests/hwinfo.txt
-tests/hwinfo_example.py
-__init__.py
-geckodriver.log
-qodana.yaml
+
 tests/US_11_Education/US_11-01-01_basics_of_trading/allure-results
 tests/US_11_Education/US_11-01-01_basics_of_trading/allure-report
 tests/US_11_Education/US_11-01-01_basics_of_trading/report
@@ -65,4 +69,10 @@ tests/US_11_Education/US_11-03-01_trading_strategies_guide/allure-results
 tests/US_11_Education/US_11-03-01_trading_strategies_guide/report
 tests/US_11_Education/US_11-03-08_Trading_Psychology_Guide/list_of_href.txt
 tests/US_11_Education/US_11-01-06_investmate_app/temp.py
+
+tests/hwinfo.txt
+tests/hwinfo_example.py
+
 qr_image.png
+geckodriver.log
+qodana.yaml

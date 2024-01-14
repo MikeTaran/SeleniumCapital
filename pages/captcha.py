@@ -4,6 +4,8 @@
 @Author  : Alexander Tomelo
 """
 from datetime import datetime
+
+import allure
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
@@ -13,6 +15,7 @@ class Captcha(BasePage):
     CAPTCHA_API_KEY = "8729f4a5a40472cb058438731884ded9"
     LOCATOR = "div.g-recaptcha[data-sitekey]"
 
+    @allure.step("Start Checking Captcha")
     def is_captcha_v2(self, driver):
         captcha = driver.find_elements(By.CSS_SELECTOR, self.LOCATOR)
         if len(captcha) == 0:
