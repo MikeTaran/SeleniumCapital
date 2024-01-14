@@ -129,6 +129,16 @@ jobs:
           path: gh-pages
           keep_reports: 80
 
+      - name: 11. Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        env:
+          #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./allure-history
+          commit_message: ${{ github.event.head_commit.message }}
+
 #      - name: 12. Upload artifact "allure-report"
 #        if: always()
 #        uses: actions/upload-artifact@v3
