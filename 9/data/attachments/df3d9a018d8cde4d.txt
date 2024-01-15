@@ -1,0 +1,113 @@
+
+
+
+Current test role - NoAuth
+{'width': 1280, 'height': 720}
+
+2024-01-15 16:09:40.189005   worker_id = master
+
+2024-01-15 16:09:40.189005   0. Allure grouping v4
+
+
+2024-01-15 16:09:40.189005   START PRECONDITIONS =>
+
+
+2024-01-15 16:09:40.189005   {'width': 1280, 'height': 720}
+
+2024-01-15 16:09:40.191138   Set windows position at (0, 0) =>
+
+2024-01-15 16:09:40.303905   Set resolution 1280 * 720 =>
+
+2024-01-15 16:09:40.422577   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-15 16:09:45.451861   Капчи нет. Тестим дальше
+
+2024-01-15 16:09:45.451861   Prev. Role: Auth
+
+2024-01-15 16:09:45.451861   Run preconditions: set "NoAuth" Role =>
+2024-01-15 16:09:46.351021   Load page https://capital.com
+
+2024-01-15 16:09:47.025967   => All cookies are deleted
+2024-01-15 16:09:48.044648   Load page https://capital.com
+
+2024-01-15 16:09:48.044648   Step 'Click button [Accept all cookies]'
+2024-01-15 16:09:53.071013   Is Visible Button [Accept all cookies]? =>
+2024-01-15 16:09:53.086638   => Button [Accept all cookies] is visible
+2024-01-15 16:09:54.094354   Is clickable Button [Accept all cookies] =>
+2024-01-15 16:09:54.120221   => Button [Accept all cookies] is clickable
+2024-01-15 16:09:54.120221   Click Button [Accept all cookies] =>
+2024-01-15 16:09:54.191452   => Button [Accept all cookies] is clicked
+2024-01-15 16:09:54.191452   => Accepted All Cookies
+
+2024-01-15 16:09:54.692700   Start Autorization
+
+2024-01-15 16:09:54.692700   2. Act
+2024-01-15 16:09:54.692700   Start Click button [Log in] =>
+2024-01-15 16:09:54.704018   BUTTON_LOGIN scroll =>
+2024-01-15 16:09:54.709022   Is BUTTON_LOGIN clickable? =>
+2024-01-15 16:09:54.724387   => BUTTON_LOGIN is clickable
+2024-01-15 16:09:54.724387   BUTTON_LOGIN click =>
+2024-01-15 16:09:54.785774   => BUTTON_LOGIN is clicked!
+2024-01-15 16:09:54.785774   => 'Login' form is opened
+2024-01-15 16:09:55.322296   => "login" and "password" are inputted
+2024-01-15 16:09:55.322296   Click [Continue] button on [Login] form =>
+2024-01-15 16:09:55.419782   => [Continue] button on [Login] form is clicked
+2024-01-15 16:09:57.697606   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-15 16:09:57.697606   Set timeout = 30
+2024-01-15 16:09:57.697606   Wait until load page with special title =>
+2024-01-15 16:09:57.702602   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-15 16:09:57.702602   Is present LOGO on this page? =>
+2024-01-15 16:09:59.324066   => LOGO is visible on this page
+2024-01-15 16:09:59.324066   -> "Capital.com" logo is present on trading platform page
+
+2024-01-15 16:10:00.364095   Start DeAuthorisation
+2024-01-15 16:10:00.364095   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-15 16:10:00.380513   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-15 16:10:01.692037   => Move to BUTTON_MY_ACCOUNT
+2024-01-15 16:10:01.692037   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-15 16:10:01.715399   => BUTTON_MY_ACCOUNT is clickable
+2024-01-15 16:10:01.715399   BUTTON_MY_ACCOUNT Click =>
+2024-01-15 16:10:02.548064   => User panel [My account] is opened
+
+2024-01-15 16:10:02.548064   Start Click [Logout] button:
+2024-01-15 16:10:02.548064   BUTTON_LOGOUT is present? =>
+2024-01-15 16:10:02.564588   => BUTTON_LOGOUT is present
+2024-01-15 16:10:02.564588   Is visible BUTTON_LOGOUT? =>
+2024-01-15 16:10:02.582631   BUTTON_LOGOUT is clickable? =>
+2024-01-15 16:10:02.600178   BUTTON_LOGOUT click =>
+2024-01-15 16:10:02.660992   => BUTTON_LOGOUT is clicked
+
+2024-01-15 16:10:02.660992   Current role: NoAuth
+
+2024-01-15 16:10:02.660992   Prev language: ?
+
+2024-01-15 16:10:02.660992   Run preconditions: set "es" language =>
+
+
+2024-01-15 16:10:02.691570   => Language and Country menu is present
+
+
+2024-01-15 16:10:02.708574   => Language and Country menu is visible
+
+
+2024-01-15 16:10:03.501512   => Focus is moved on Language and Country menu 
+
+2024-01-15 16:10:04.305399   => Current language: es
+
+2024-01-15 16:10:04.305445   Prev country: ?
+
+2024-01-15 16:10:04.305445   Run preconditions: set "ae" country =>
+
+
+2024-01-15 16:10:04.314450   => Language and Country menu is present
+
+
+2024-01-15 16:10:04.330659   => Language and Country menu is visible
+
+
+2024-01-15 16:10:05.110112   => Focus is moved on Language and Country menu 
+
+2024-01-15 16:10:07.267169   => Current country: ae
+
+2024-01-15 16:10:07.267169   => THE END PRECONDITIONS
+2024-01-15 16:10:12.812496   => Education menu not present
