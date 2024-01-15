@@ -87,11 +87,11 @@ def cur_role(request):
     scope="class",
     params=[
         # "",  # "en" - 21 us
-        # "es",  # 20 us
+        "es",  # 20 us
         # "de",  # 15 us
         # "it",  # 15 us
         # "ru",  # 15 us
-        "cn",  # 13 us Education to trade present, financial glossary not present
+        # "cn",  # 13 us Education to trade present, financial glossary not present
         # "zh",  # 12 us
         # "fr",  # 11 us
         # "pl",  # 10 us
@@ -125,10 +125,10 @@ def cur_language(request):
 @pytest.fixture(
     scope="class",
     params=[
-        "gb",  # United Kingdom - "FCA"
+        # "gb",  # United Kingdom - "FCA"
         # "au",  # Australia - "ASIC"
         # "de",  # Germany - "CYSEC"
-        # "ae",  # United Arab Emirates - "SCB"
+        "ae",  # United Arab Emirates - "SCB"
 
         # "gr",  # Greece - "CYSEC"
         # "es",  # Spain - "CYSEC"
@@ -248,8 +248,10 @@ def init_remote_driver_chrome():
     # chrome_version = "115.0.5790.114"
     # chrome_version = "116.0.5845.96"
     chrome_options = webdriver.ChromeOptions()
-    # chrome_options.page_load_strategy = "eager"
+
     chrome_options.page_load_strategy = "normal"
+    # chrome_options.page_load_strategy = "eager"
+
     chrome_options.add_argument(conf.CHROME_WINDOW_SIZES)
     # chrome_options.add_argument(conf.CHROME_WINDOW_SIZES_4k)
 
@@ -262,7 +264,7 @@ def init_remote_driver_chrome():
     if conf.HEADLESS:
         chrome_options.add_argument(conf.CHROMIUM_HEADLESS)
 
-    chrome_options.add_argument("--disable-browser-side-navigation")
+    # chrome_options.add_argument("--disable-browser-side-navigation")
     # chrome_options.add_argument("--no-sandbox")
     # chrome_options.add_argument("--disable-gpu")
 
@@ -275,15 +277,18 @@ def init_remote_driver_chrome():
     # )
 
     print(driver.get_window_size())
-    driver.implicitly_wait(4)
-    driver.set_script_timeout(20000)
+    driver.implicitly_wait(5)
+    # driver.set_script_timeout(20000)
 
     return driver
 
 
 def init_remote_driver_edge():
     edge_options = webdriver.EdgeOptions()
-    edge_options.page_load_strategy = "eager"  # 'normal'
+
+    edge_options.page_load_strategy = 'normal'
+    # edge_options.page_load_strategy = "eager"
+
     # edge_options.add_argument(conf.WINDOW_SIZES)
     edge_options.add_argument(conf.CHROMIUM_WINDOW_WIDTH)
     edge_options.add_argument(conf.CHROMIUM_WINDOW_HEIGHT)
@@ -297,13 +302,16 @@ def init_remote_driver_edge():
 
     print(driver.get_window_size())
     driver.implicitly_wait(5)
+
     return driver
 
 
 def init_remote_driver_firefox():
-
     firefox_options = webdriver.FirefoxOptions()
-    firefox_options.page_load_strategy = "eager"  # 'normal'
+
+    firefox_options.page_load_strategy = 'normal'
+    # firefox_options.page_load_strategy = "eager"
+
     firefox_options.add_argument(conf.FIREFOX_WINDOW_WIDTH)
     firefox_options.add_argument(conf.FIREFOX_WINDOW_HEIGHT)
 
@@ -325,6 +333,8 @@ def init_remote_driver_safari():
 
     driver = webdriver.Safari()
     driver.set_window_size(*conf.SAFARI_WINDOW_SIZES)
+
+    print(driver.get_window_size())
     driver.implicitly_wait(5)
     return driver
 

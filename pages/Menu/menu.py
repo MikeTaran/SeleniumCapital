@@ -136,7 +136,6 @@ class MenuSection(BasePage):
         # print(f"\n\n{datetime.now()}   => Language and Country menu is clickable")
         #
 
-        time.sleep(1)
         menu = d.find_element(*MenuLanguageAndCountry.MENU_LANGUAGE_AND_COUNTRY)  # not Glossary
         ActionChains(d) \
             .move_to_element(menu) \
@@ -179,11 +178,12 @@ class MenuSection(BasePage):
             case "cn":
                 ed_menu_locator = MenuUS11Education.SUB_MENU_CN_LEARN_TO_TRADE
 
+        time.sleep(0.5)
         menu = d.find_elements(*ed_menu_locator)
         if len(menu) == 0:
             print(f"{datetime.now()}   => Education menu not present")
             allure.attach(self.browser.get_screenshot_as_png(), "scr_qr", allure.attachment_type.PNG)
-            pytest.skip(f"For '{test_language}' language menu [Education] not present")
+            pytest.skip(f"[Education] menu not present for '{test_language}' language")
         print(f"{datetime.now()}   => Education menu is present")
 
         if not self.element_is_visible(ed_menu_locator, 5):
@@ -191,12 +191,13 @@ class MenuSection(BasePage):
             pytest.fail("Education menu not visible")
         print(f"{datetime.now()}   => Education menu is visible")
 
-        time.sleep(1)
+        time.sleep(0.5)
         menu = d.find_elements(*ed_menu_locator)  # not Glossary
         ActionChains(d) \
             .move_to_element(menu[0]) \
             .pause(0.5) \
             .perform()
+
         del menu
         print(f"{datetime.now()}   => Education menu focus moved")
 
@@ -242,6 +243,7 @@ class MenuSection(BasePage):
             .pause(0.5) \
             .click() \
             .perform()
+
         del sub_menu
 
         return d.current_url
@@ -853,44 +855,45 @@ class MenuSection(BasePage):
             .click() \
             .perform()
 
-        self.send_keys(cur_country, *MenuLanguageAndCountry.COUNTRIES_SEARCH_INPUT)
-        time.sleep(0.5)
+        # elements[0].click()
 
-        countries_list = d.find_elements(*MenuLanguageAndCountry.COUNTRIES_LIST)
-        if len(countries_list) == 0:
-            print(f"For test country '{cur_country}' problem № 2 with set country")
+        # self.send_keys(cur_country, *MenuLanguageAndCountry.COUNTRIES_SEARCH_INPUT)
+        # time.sleep(0.5)
 
-        ActionChains(d) \
-            .move_to_element(countries_list[0]) \
-            .pause(0.5) \
-            .click(countries_list[0]) \
-            .perform()
-
-        # css_sel_country = 'a[data-country="' + cur_country + '"]'
-        # if conf.DEBUG:
-        #     print(f"\n{datetime.now()} Debug:   css_country_selector = {css_sel_country}")
-        #
-        # country_str_list = d.find_elements(By.CSS_SELECTOR, css_sel_country)
-        # if len(country_str_list) == 0:
-        #     # time.sleep(10)
-        #     pytest.fail(f"Test country '{cur_country}' not present in country list")
+        # countries_list = d.find_elements(*MenuLanguageAndCountry.COUNTRIES_LIST)
+        # if len(countries_list) == 0:
+        #     print(f"For test country '{cur_country}' problem № 2 with set country")
         #
         # ActionChains(d) \
-        #     .move_to_element(country_str_list[0]) \
+        #     .move_to_element(countries_list[0]) \
         #     .pause(0.5) \
-        #     .click(country_str_list[0]) \
+        #     .click(countries_list[0]) \
         #     .perform()
-        #
-        # time_out = 3
-        # country_str_list = self.element_is_visible(["By.CSS_Selector", css_sel_country], time_out)
-        # if not country_str_list:
-        #     print(f"{datetime.now()}   => Country item is not visible after {time_out} sec.")
-        #     assert False, f"Country item in drop down country list is not visible after {time_out} sec."
-        # else:
-        #     print(f"{datetime.now()}   => Country item in drop down country list is visible")
-        #
-        # country_str_list.click()
-        # time.sleep(0.5)
+
+        css_sel_country = 'a[data-country="' + cur_country + '"]'
+        country_str_list = d.find_elements(By.CSS_SELECTOR, css_sel_country)
+        if len(country_str_list) == 0:
+            # time.sleep(10)
+            pytest.fail(f"Test country '{cur_country}' not present in country list")
+
+        ActionChains(d) \
+            .move_to_element(country_str_list[0]) \
+            .click(country_str_list[0]) \
+            .perform()
+        # .pause(0.5) \
+
+# -----------------------
+#         time_out = 3
+#         country_str_list = self.element_is_visible(["By.CSS_Selector", css_sel_country], time_out)
+#         if not country_str_list:
+#             print(f"{datetime.now()}   => Country item is not visible after {time_out} sec.")
+#             assert False, f"Country item in drop down country list is not visible after {time_out} sec."
+#         else:
+#             print(f"{datetime.now()}   => Country item in drop down country list is visible")
+#
+#         country_str_list.click()
+#         time.sleep(0.5)
+# ------------------------
 
         return d.current_url
 

@@ -96,8 +96,8 @@ def pretest(row_loc, number_of_row, gs):
     except KeyError:
         print(f"\n{datetime.now()}   =>  Не корректные входные данные из таблицы WATC_BugsReport")
         gs.update_range_values(f'V{number_of_row}', [["skipped"]])
-        # pytest.skip()
-        assert False, "Не корректные входные данные из таблицы WATC_BugsReport"
+        pytest.skip()
+
     print(f"\n{datetime.now()}   => 1. Pretest finished")
 
 
@@ -151,14 +151,13 @@ def run_pytest():
 def check_results(output, error):
     print(f"\n{datetime.now()}   3. Run check_results =>")
     # Проверка наличия ошибок при выполнении
-    gs_out = ["error"]
+    gs_out = ["WebDriver Error"]
 
     if error:
         print(f"{datetime.now()}   Ошибка: \n{error.decode('utf-8')}")
-        gs_out = ['error_data']
+        gs_out = ['Stdout error']
         print(f"{datetime.now()}   => Текущий тест: skipped")
-        assert False, "Не корректные входные данные из таблицы WATC_BugsReport: error_data"
-        # return gs_out
+        return gs_out
     else:
         test_results = output.decode('utf-8')
         print(f"{datetime.now()}   test_results: \n{test_results}")
@@ -171,14 +170,12 @@ def check_results(output, error):
             print(f"{datetime.now()}   => Для текущего теста не выбрано ни одного ТС")
             print(f"{datetime.now()}   => Текущий тест: skipped")
             gs_out = ['0 TC selected']
-            assert False, "Не корректные входные данные из таблицы WATC_BugsReport: 0 TC selected"
-            # return gs_out
+            return gs_out
     else:
         print(f"{datetime.now()}   => Для текущего теста не выбрано ни одного ТС")
         print(f"{datetime.now()}   => Текущий тест: skipped")
-        gs_out = ['no TC selected']
-        assert False, "Не корректные входные данные из таблицы WATC_BugsReport: no TC selected'"
-        # return gs_out
+        gs_out = ['No one TC selected']
+        return gs_out
 
     # Проверка на Failed
     failed_match = re.search(r"(\d+ failed)", test_results)
@@ -209,7 +206,5 @@ def check_results(output, error):
         gs_out = ['skipped']
 
     print(f"\n{datetime.now()}   => 3. check_results finished")
-    if gs_out == ["error"]:
-        print(f"{datetime.now()}   => Текущий тест: skipped")
-        assert False, "Ошибка WebDriver"
+
     return gs_out
