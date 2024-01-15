@@ -154,18 +154,17 @@ jobs:
           PUBLISH_DIR: ./allure-history
           commit_message: ${{ github.event.head_commit.message }}
 
-#      - name: 12. Send telegram message on push
-#        uses: appleboy/telegram-action@master
-#        if: always()
-#        with:
-#          to: ${{ secrets.TELEGRAM_TO_ALEXTOM22 }}
-##           to: ${{ secrets.TELEGRAM_TO }}
-#          token: ${{ secrets.TELEGRAM_TOKEN }}
-##           disable_web_page_preview: true
-#          message: |
-#            Message from GitHub CI Actions
-#
-#            Testing of the "Capital.com" web application in the "macOS/Chrome" environment is completed!
-#
-#            See allure-result testing: https://${{ github.actor }}.github.io/TestCapitalCom/
-##             Tests Repository: https://github.com/${{ github.repository }}
+      - name: 12. Send telegram message on push
+        uses: appleboy/telegram-action@master
+        if: always()
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          #           disable_web_page_preview: true
+          message: |
+            Message from GitHub CI Actions
+            
+            Testing of the "Capital.com" web application in the "Windows/Edge" environment is completed!
+            
+            See allure-result testing: https://${{ github.actor }}.github.io/SeleniumCapital/
+            Tests Repository: ${{ github.repository }}
