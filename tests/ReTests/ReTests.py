@@ -121,7 +121,7 @@ def run_pytest():
     retest = True
     # получение корня проекта
     host = "\\".join(os.getcwd().split('\\')[:-2]) + '\\'
-    # host = "\\".join(os.getcwd().split('\\')) + '\\'            # for debugging
+    # host = "\\".join(os.getcwd().split('\\')) + '\\'            # for LOCAL debugging
     # формирование командной строки и запуск pytest, как subprocess
     command = (f"poetry run pytest"
                f" --retest={retest}"

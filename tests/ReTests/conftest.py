@@ -43,7 +43,7 @@ def gs():
     gs.update_range_values('V1', [start_retest_date])
 
     # установка таймера выполнения ретестов
-    gs.update_range_values('V4', [["=NOW()-V1-TIME(3;0;0)"]])
+    gs.update_range_values('V4', [["=NOW()-V1-TIME(1;0;0)"]])
 
     # установка счетчика пройденных тестов
     gs.new_data_copy_past(1, 2, 1, 2,
