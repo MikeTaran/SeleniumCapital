@@ -211,7 +211,7 @@ jobs:
           path: allure-results/
           retention-days: 1
 
-  generate_report:
+  generate_and_deploy_report:
     name: II. Generate & Deploy Allure report
     runs-on: ubuntu-latest
     if: always()
@@ -229,27 +229,37 @@ jobs:
       - name: 2. Download Artifacts
         uses: actions/download-artifact@v3
         id: download
+        if: always()
+        continue-on-error: true
         with:
           name: allure-results
           path: allure-results
 
-      - name: 3. Create Allure report
+      - name: 3. Generate allure report
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
           allure_results: allure-results
-          allure_history: allure-history
           allure_report: allure-report
           gh_pages: gh-pages
+          allure_history: allure-history
           ref: gh-pages
           path: gh-pages
           keep_reports: 80
 
-#      - name: Run hwinfo.py
-#        if: always()
-#        run: poetry run python3 tests/hwinfo.py
-#
+      - name: 4. Deploy allure_report to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          #          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          #          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: ./allure-history
+          commit_message: ${{ github.event.head_commit.message }}
+
       - name: 12. Send telegram message on push
         uses: appleboy/telegram-action@master
         if: always()
