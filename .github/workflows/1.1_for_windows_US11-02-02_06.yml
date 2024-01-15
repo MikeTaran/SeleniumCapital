@@ -27,7 +27,7 @@ jobs:
         if: always()
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11.6"
+          python-version: "3.11.7"
 
       - name: 2.2. install Poetry
         if: always()
