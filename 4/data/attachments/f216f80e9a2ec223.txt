@@ -1,0 +1,97 @@
+
+
+
+Current test role - NoReg
+{'width': 1280, 'height': 720}
+
+2024-01-15 15:59:48.775745   worker_id = master
+
+2024-01-15 15:59:48.775745   0. Allure grouping v4
+
+
+2024-01-15 15:59:48.775745   START PRECONDITIONS =>
+
+
+2024-01-15 15:59:48.775745   {'width': 1280, 'height': 720}
+
+2024-01-15 15:59:48.775745   Set windows position at (0, 0) =>
+
+2024-01-15 15:59:48.881367   Set resolution 1280 * 720 =>
+
+2024-01-15 15:59:48.986002   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-15 15:59:54.013986   Капчи нет. Тестим дальше
+
+2024-01-15 15:59:54.013986   Prev. Role: NoAuth
+
+2024-01-15 15:59:54.013986   Run preconditions: set "NoReg" Role =>
+2024-01-15 15:59:54.760801   Load page https://capital.com
+
+2024-01-15 15:59:55.108476   => All cookies are deleted
+2024-01-15 15:59:55.830340   Load page https://capital.com
+
+2024-01-15 15:59:55.830340   Step 'Click button [Accept all cookies]'
+2024-01-15 16:00:00.889082   Is Visible Button [Accept all cookies]? =>
+2024-01-15 16:00:00.908696   => Button [Accept all cookies] is visible
+2024-01-15 16:00:01.909627   Is clickable Button [Accept all cookies] =>
+2024-01-15 16:00:01.940683   => Button [Accept all cookies] is clickable
+2024-01-15 16:00:01.940683   Click Button [Accept all cookies] =>
+2024-01-15 16:00:02.020285   => Button [Accept all cookies] is clicked
+2024-01-15 16:00:02.020285   => Accepted All Cookies
+
+2024-01-15 16:00:02.521302   Current role: NoReg
+
+2024-01-15 16:00:02.521302   Prev language: ?
+
+2024-01-15 16:00:02.521302   Run preconditions: set "es" language =>
+
+
+2024-01-15 16:00:02.529313   => Language and Country menu is present
+
+
+2024-01-15 16:00:02.544746   => Language and Country menu is visible
+
+
+2024-01-15 16:00:03.329254   => Focus is moved on Language and Country menu 
+
+2024-01-15 16:00:05.327755   => Current language: es
+
+2024-01-15 16:00:05.327755   Prev country: ?
+
+2024-01-15 16:00:05.327755   Run preconditions: set "ae" country =>
+
+
+2024-01-15 16:00:05.337083   => Language and Country menu is present
+
+
+2024-01-15 16:00:05.354425   => Language and Country menu is visible
+
+
+2024-01-15 16:00:06.138861   => Focus is moved on Language and Country menu 
+
+2024-01-15 16:00:08.708419   => Current country: ae
+
+2024-01-15 16:00:08.708419   => THE END PRECONDITIONS
+2024-01-15 16:00:09.218401   => Education menu is present
+2024-01-15 16:00:09.237320   => Education menu is visible
+2024-01-15 16:00:10.530467   => Education menu focus moved
+
+2024-01-15 16:00:11.934107   1. Arrange_v0
+2024-01-15 16:00:11.938111   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2024-01-15 16:00:11.947635   2. Act_v0
+2024-01-15 16:00:12.032510   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2024-01-15 16:00:12.032510   3. Assert_v0
+2024-01-15 16:00:12.032510   Start step Check that [Sign up] form is opened
+2024-01-15 16:00:12.378422   'Sign up' form opened
+2024-01-15 16:00:12.378422   Assert SIGNUP_HEADER =>
+2024-01-15 16:00:12.402581   Assert SIGNUP_REF_LOGIN =>
+2024-01-15 16:00:12.454789   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2024-01-15 16:00:12.473145   => SIGNUP_PRIVACY_POLICY_ALL
+2024-01-15 16:00:12.473145   => 'Signup' form is checked
+2024-01-15 16:00:12.473145   Start step Close [Sign up] form =>
+2024-01-15 16:00:12.565923   => 'Signup' form closed
+
+2024-01-15 16:00:14.818117   *** end fixture Browser = teardown ***
+
