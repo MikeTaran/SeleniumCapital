@@ -1,0 +1,288 @@
+
+
+
+2024-01-16 12:04:44.923746   0. Get Values row =>
+2024-01-16 12:04:44.923769   Row # = 11
+
+2024-01-16 12:04:44.923840   1. get_row_values from 11 row =>
+2024-01-16 12:04:45.116855   => row values = 
+[['Bid:11.03.01.01_07-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_07', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '03']]
+
+2024-01-16 12:04:45.116896   => 1. Get row values from 11 row finished
+2024-01-16 12:04:45.116954   Row Values = 
+['Bid:11.03.01.01_07-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_07', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '03']
+
+2024-01-16 12:04:45.117083   1. Run pretest =>
+
+2024-01-16 12:04:45.117097   row_loc = 
+['Bid:11.03.01.01_07-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_07', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '03']
+
+2024-01-16 12:04:45.117112   => 1. Pretest finished
+
+2024-01-16 12:04:45.117177   2. Run run_pytest with Bid = Bid:11.03.01.01_07-es.ae.NoAuth from row =>
+
+2024-01-16 12:04:45.117190   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-16 12:04:45.117210   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=ae --role=NoAuth --tpi_link=https://capital.com/es/swing-trading -m test_07 -v \tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py
+
+2024-01-16 12:05:15.994008   => 2.2. pytest ... as subprocess finished
+
+2024-01-16 12:05:15.994058   => 2. Autotest with Bid = Bid:11.03.01.01_07-es.ae.NoAuth from row finished
+
+2024-01-16 12:05:15.994136   3. Run check_results =>
+2024-01-16 12:05:15.994160   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.3, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.3.0'}, 'Plugins': {'html': '4.1.1', 'xdist': '3.5.0', 'timeout': '2.2.0', 'allure-pytest': '2.13.2', 'metadata': '3.0.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: html-4.1.1, xdist-3.5.0, timeout-2.2.0, allure-pytest-2.13.2, metadata-3.0.0
+collecting ... collected 10 items / 9 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestTradingStrategiesGuides.test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-03-01-01_trading_strategies_guide_test.TestTradingStrategiesGuides object at 0x7facf744f310>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="10cc384b573a79d52d6ff7dc9d3c8304")>
+cur_language = 'es', cur_country = 'ae', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/es/swing-trading'
+
+    @allure.step("Start test_11.03.01.01_07 of button [Get it on Google Play] "
+                 "in Block 'Sign up and trade smart today!'")
+    @pytest.mark.test_07
+    def test_07_button_get_it_on_google_play(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, cur_item_link):
+        """
+        Check: Button [Get it on Google Play] in Block "Sign up and trade smart today!"
+        Language: All. License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.01", "Education > Menu item [Trading Strategies Guides]",
+            ".01_07", "Test button [Get it on Google Play] in Block \"Sign up and trade smart today!\"")
+    
+        Common().check_language_in_list_and_skip_if_not_present(cur_language, ["", "de", "es", "it", "ru", "zh"])
+    
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        test_element = ButtonGetItOnGooglePlay(d, cur_item_link)
+        test_element.arrange_(cur_item_link)
+        if not test_element.element_click():
+            pytest.fail("Testing element is not clicked")
+    
+        test_element = AssertClass(d, cur_item_link, bid)
+>       test_element.assert_google_play(d, cur_item_link)
+
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/AssertClass.py:158: in assert_google_play
+    self.page_google_play.should_be_google_play_page(cur_link)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.GooglePlay.google_play.GooglePlay object at 0x7facf74860d0>
+cur_link = 'https://capital.com/es/swing-trading'
+
+    @allure.step("Checking that the Google Play page has opened")
+    def should_be_google_play_page(self, cur_link):
+        """Check if the page is open"""
+        print(f"{datetime.now()}   Checking that the Google Play page has opened")
+        self.wait_for_change_url(cur_link, 10)
+        # Следующие две строки только для проверки работоспособности asserts, тк в данный момент баг в url кнопки
+        # self.link = "https://play.google.com/store/apps/details?id=com.capital.trading"
+        # self.open_page()
+        if self.current_page_url_contain_the(data["APP_URL"]):
+            self.should_be_page_title_v2(data["PAGE_TITLE"])
+            self.should_be_google_play_app_title(data["APP_TITLE"])
+            self.should_be_google_play_specifies_provider(data["PROVIDER"])
+            self.open_page()
+            assert True
+        else:
+            current_page = self.browser.current_url
+            # self.open_page()
+            # ==== new bug re-test checking =====
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '03', self.link)
+            # ==================================
+>           assert False, f'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url'
+E           AssertionError: Bug # 03. Loaded page https://apps.apple.com/ie/app/capital-com-trading-finance/id1230088754?mt=8 with not https://play.google.com/store/apps/details?id=com.capital.trading url
+
+pages/GooglePlay/google_play.py:40: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-16 12:04:45.885889   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:04:46.797234   worker_id = master
+
+2024-01-16 12:04:46.797251   0. Allure grouping v4
+
+
+2024-01-16 12:04:46.797437   START PRECONDITIONS =>
+
+2024-01-16 12:04:47.946999   Load page https://capital.com
+
+2024-01-16 12:04:47.947048   {'width': 1280, 'height': 720}
+
+2024-01-16 12:04:47.949122   Set windows position at (0, 0) =>
+
+2024-01-16 12:04:48.063173   Set resolution 1280 * 720 =>
+
+2024-01-16 12:04:48.193141   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:04:53.210962   Капчи нет. Тестим дальше
+
+2024-01-16 12:04:53.211058   Prev. Role: ?
+
+2024-01-16 12:04:53.211070   Run preconditions: set "NoAuth" Role =>
+2024-01-16 12:04:53.864881   Load page https://capital.com
+
+2024-01-16 12:04:54.025386   => All cookies are deleted
+2024-01-16 12:04:54.652462   Load page https://capital.com
+
+2024-01-16 12:04:54.652677   Step 'Click button [Accept all cookies]'
+2024-01-16 12:04:59.699621   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:04:59.716240   => Button [Accept all cookies] is visible
+2024-01-16 12:05:00.716344   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:05:00.740518   => Button [Accept all cookies] is clickable
+2024-01-16 12:05:00.740551   Click Button [Accept all cookies] =>
+2024-01-16 12:05:00.794737   => Button [Accept all cookies] is clicked
+2024-01-16 12:05:00.794783   => Accepted All Cookies
+
+2024-01-16 12:05:01.295185   Start Autorization
+
+2024-01-16 12:05:01.295308   2. Act
+2024-01-16 12:05:01.295325   Start Click button [Log in] =>
+2024-01-16 12:05:01.305874   BUTTON_LOGIN scroll =>
+2024-01-16 12:05:01.310123   Is BUTTON_LOGIN clickable? =>
+2024-01-16 12:05:01.322952   => BUTTON_LOGIN is clickable
+2024-01-16 12:05:01.322981   BUTTON_LOGIN click =>
+2024-01-16 12:05:01.366718   => BUTTON_LOGIN is clicked!
+2024-01-16 12:05:01.366827   => 'Login' form is opened
+2024-01-16 12:05:01.760875   => "login" and "password" are inputted
+2024-01-16 12:05:01.760916   Click [Continue] button on [Login] form =>
+2024-01-16 12:05:01.837553   => [Continue] button on [Login] form is clicked
+2024-01-16 12:05:03.847923   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-16 12:05:03.847960   Set timeout = 30
+2024-01-16 12:05:03.847975   Wait until load page with special title =>
+2024-01-16 12:05:03.850763   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-16 12:05:03.850785   Is present LOGO on this page? =>
+2024-01-16 12:05:04.715791   => LOGO is visible on this page
+2024-01-16 12:05:04.715875   -> "Capital.com" logo is present on trading platform page
+
+2024-01-16 12:05:05.747937   Start DeAuthorisation
+2024-01-16 12:05:05.748036   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-16 12:05:05.758817   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-16 12:05:07.037285   => Move to BUTTON_MY_ACCOUNT
+2024-01-16 12:05:07.037326   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-16 12:05:07.053509   => BUTTON_MY_ACCOUNT is clickable
+2024-01-16 12:05:07.053535   BUTTON_MY_ACCOUNT Click =>
+2024-01-16 12:05:07.872086   => User panel [My account] is opened
+
+2024-01-16 12:05:07.872274   Start Click [Logout] button:
+2024-01-16 12:05:07.872288   BUTTON_LOGOUT is present? =>
+2024-01-16 12:05:07.879567   => BUTTON_LOGOUT is present
+2024-01-16 12:05:07.879589   Is visible BUTTON_LOGOUT? =>
+2024-01-16 12:05:07.890810   BUTTON_LOGOUT is clickable? =>
+2024-01-16 12:05:07.900363   BUTTON_LOGOUT click =>
+2024-01-16 12:05:07.931287   => BUTTON_LOGOUT is clicked
+
+2024-01-16 12:05:07.931384   Current role: NoAuth
+
+2024-01-16 12:05:07.931396   Prev language: ?
+
+2024-01-16 12:05:07.931405   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:05:07.949777   => Language and Country menu is present
+
+
+2024-01-16 12:05:07.979570   => Language and Country menu is visible
+
+
+2024-01-16 12:05:08.761628   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:05:09.547240   => Current language: es
+
+2024-01-16 12:05:09.547273   Prev country: ?
+
+2024-01-16 12:05:09.547283   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:05:09.552765   => Language and Country menu is present
+
+
+2024-01-16 12:05:09.566921   => Language and Country menu is visible
+
+
+2024-01-16 12:05:10.339681   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:05:12.400173   => Current country: ae
+
+2024-01-16 12:05:12.400214   => THE END PRECONDITIONS
+
+2024-01-16 12:05:12.400248   1. Arrange
+2024-01-16 12:05:13.028410   Load page https://capital.com/es/swing-trading
+2024-01-16 12:05:13.028460   Is visible BUTTON_GET_IT_ON_GOOGLE_PLAY? =>
+2024-01-16 12:05:13.264401   => BUTTON_GET_IT_ON_GOOGLE_PLAY is visible on the page!
+
+2024-01-16 12:05:13.264559   2. Act
+2024-01-16 12:05:13.273166   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-16 12:05:13.366695   => BUTTON_GET_IT_ON_GOOGLE_PLAY IS CLICKED
+
+2024-01-16 12:05:13.366905   3. Assert_v0
+2024-01-16 12:05:13.366979   Checking that the Google Play page has opened
+
+Bug: Bid:11.03.01.01_07-es.ae.NoAuth
+
+2024-01-16 12:05:14.541996   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:05:14.548250   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:05:14.965253   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:05:15.351391   Bug: Bid:11.03.01.01_07-es.ae.NoAuth-03 уже существует
+
+2024-01-16 12:05:15.351568   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:05:15.617265   => 4. One row check results into Google Sheet Bugs Report fixed
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-16 12:05:15.920036   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 03. Loaded page https://apps.apple.com/ie/app/capital-com-trading-finance/id1230088754?mt=8 with not https://play.google.com/store/apps/details?id=com.capital.trading url
+================= 1 failed, 9 deselected, 1 warning in 30.18s ==================
+
+2024-01-16 12:05:15.994605   => Текущий тест: 1 failed
+
+2024-01-16 12:05:15.995513   => 3. check_results finished
+
+2024-01-16 12:05:15.995664   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:05:16.180692   => 4. One row check results into Google Sheet Bugs Report fixed

@@ -1,0 +1,112 @@
+
+2024-01-16 12:03:45.911362   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - NoReg
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:03:46.817644   worker_id = master
+
+2024-01-16 12:03:46.817662   0. Allure grouping v4
+
+
+2024-01-16 12:03:46.817847   START PRECONDITIONS =>
+
+2024-01-16 12:03:48.125217   Load page https://capital.com
+
+2024-01-16 12:03:48.125264   {'width': 1280, 'height': 720}
+
+2024-01-16 12:03:48.127303   Set windows position at (0, 0) =>
+
+2024-01-16 12:03:48.268435   Set resolution 1280 * 720 =>
+
+2024-01-16 12:03:48.402134   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:03:53.455635   Капчи нет. Тестим дальше
+
+2024-01-16 12:03:53.455731   Prev. Role: ?
+
+2024-01-16 12:03:53.455743   Run preconditions: set "NoReg" Role =>
+2024-01-16 12:03:54.063657   Load page https://capital.com
+
+2024-01-16 12:03:54.228025   => All cookies are deleted
+2024-01-16 12:03:54.869639   Load page https://capital.com
+
+2024-01-16 12:03:54.869880   Step 'Click button [Accept all cookies]'
+2024-01-16 12:03:59.901589   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:03:59.921379   => Button [Accept all cookies] is visible
+2024-01-16 12:04:00.921488   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:04:00.943624   => Button [Accept all cookies] is clickable
+2024-01-16 12:04:00.943654   Click Button [Accept all cookies] =>
+2024-01-16 12:04:00.998479   => Button [Accept all cookies] is clicked
+2024-01-16 12:04:00.998533   => Accepted All Cookies
+
+2024-01-16 12:04:01.498716   Current role: NoReg
+
+2024-01-16 12:04:01.498775   Prev language: ?
+
+2024-01-16 12:04:01.498788   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:04:01.507600   => Language and Country menu is present
+
+
+2024-01-16 12:04:01.520638   => Language and Country menu is visible
+
+
+2024-01-16 12:04:02.292936   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:04:04.043203   => Current language: es
+
+2024-01-16 12:04:04.043242   Prev country: ?
+
+2024-01-16 12:04:04.043253   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:04:04.049369   => Language and Country menu is present
+
+
+2024-01-16 12:04:04.063995   => Language and Country menu is visible
+
+
+2024-01-16 12:04:04.843380   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:04:07.186666   => Current country: ae
+
+2024-01-16 12:04:07.186705   => THE END PRECONDITIONS
+
+2024-01-16 12:04:07.186745   1. Arrange
+2024-01-16 12:04:07.813286   Load page https://capital.com/es/swing-trading
+2024-01-16 12:04:07.813334   Is visible BUTTON_GET_IT_ON_GOOGLE_PLAY? =>
+2024-01-16 12:04:07.845473   => BUTTON_GET_IT_ON_GOOGLE_PLAY is visible on the page!
+
+2024-01-16 12:04:07.845630   2. Act
+2024-01-16 12:04:07.852989   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-16 12:04:07.962189   => BUTTON_GET_IT_ON_GOOGLE_PLAY IS CLICKED
+
+2024-01-16 12:04:07.962479   3. Assert_v0
+2024-01-16 12:04:07.962578   Checking that the Google Play page has opened
+
+Bug: Bid:11.03.01.01_07-es.ae.NoReg
+
+2024-01-16 12:04:09.813718   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:04:09.820858   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:04:10.253485   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:04:10.618274   Bug: Bid:11.03.01.01_07-es.ae.NoReg-03 уже существует
+
+2024-01-16 12:04:10.618500   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:04:10.972595   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:04:11.266392   *** end fixture Browser = teardown ***
+

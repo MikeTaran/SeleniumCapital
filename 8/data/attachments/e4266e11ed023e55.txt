@@ -1,0 +1,147 @@
+
+2024-01-16 12:07:50.673647   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:07:51.578496   worker_id = master
+
+2024-01-16 12:07:51.578513   0. Allure grouping v4
+
+
+2024-01-16 12:07:51.578698   START PRECONDITIONS =>
+
+2024-01-16 12:07:53.007831   Load page https://capital.com
+
+2024-01-16 12:07:53.007876   {'width': 1280, 'height': 720}
+
+2024-01-16 12:07:53.009771   Set windows position at (0, 0) =>
+
+2024-01-16 12:07:53.174037   Set resolution 1280 * 720 =>
+
+2024-01-16 12:07:53.289482   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:07:58.294948   Капчи нет. Тестим дальше
+
+2024-01-16 12:07:58.295043   Prev. Role: ?
+
+2024-01-16 12:07:58.295055   Run preconditions: set "Auth" Role =>
+2024-01-16 12:07:58.954371   Load page https://capital.com
+
+2024-01-16 12:07:59.094678   => All cookies are deleted
+2024-01-16 12:07:59.704515   Load page https://capital.com
+
+2024-01-16 12:07:59.704741   Step 'Click button [Accept all cookies]'
+2024-01-16 12:08:04.746003   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:08:04.768957   => Button [Accept all cookies] is visible
+2024-01-16 12:08:05.769083   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:08:05.808952   => Button [Accept all cookies] is clickable
+2024-01-16 12:08:05.808986   Click Button [Accept all cookies] =>
+2024-01-16 12:08:05.871383   => Button [Accept all cookies] is clicked
+2024-01-16 12:08:05.871432   => Accepted All Cookies
+
+2024-01-16 12:08:06.371761   Start Autorization
+
+2024-01-16 12:08:06.371861   2. Act
+2024-01-16 12:08:06.371875   Start Click button [Log in] =>
+2024-01-16 12:08:06.382573   BUTTON_LOGIN scroll =>
+2024-01-16 12:08:06.386507   Is BUTTON_LOGIN clickable? =>
+2024-01-16 12:08:06.399442   => BUTTON_LOGIN is clickable
+2024-01-16 12:08:06.399465   BUTTON_LOGIN click =>
+2024-01-16 12:08:06.438650   => BUTTON_LOGIN is clicked!
+2024-01-16 12:08:06.438732   => 'Login' form is opened
+2024-01-16 12:08:06.893894   => "login" and "password" are inputted
+2024-01-16 12:08:06.893935   Click [Continue] button on [Login] form =>
+2024-01-16 12:08:06.940762   => [Continue] button on [Login] form is clicked
+2024-01-16 12:08:09.168968   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-16 12:08:09.169003   Set timeout = 30
+2024-01-16 12:08:09.169017   Wait until load page with special title =>
+2024-01-16 12:08:09.173162   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-16 12:08:09.173185   Is present LOGO on this page? =>
+2024-01-16 12:08:10.022450   => LOGO is visible on this page
+2024-01-16 12:08:10.022531   -> "Capital.com" logo is present on trading platform page
+
+2024-01-16 12:08:10.895258   Current role: Auth
+
+2024-01-16 12:08:10.895304   Prev language: ?
+
+2024-01-16 12:08:10.895318   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:08:10.911964   => Language and Country menu is present
+
+
+2024-01-16 12:08:10.948934   => Language and Country menu is visible
+
+
+2024-01-16 12:08:11.715946   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:08:13.343531   => Current language: es
+
+2024-01-16 12:08:13.343565   Prev country: ?
+
+2024-01-16 12:08:13.343575   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:08:13.370880   => Language and Country menu is present
+
+
+2024-01-16 12:08:13.383700   => Language and Country menu is visible
+
+
+2024-01-16 12:08:14.149627   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:08:16.260193   => Current country: ae
+
+2024-01-16 12:08:16.260235   => THE END PRECONDITIONS
+2024-01-16 12:08:16.772787   => Education menu is present
+2024-01-16 12:08:16.799664   => Education menu is visible
+2024-01-16 12:08:18.063204   => Education menu focus moved
+
+2024-01-16 12:08:19.534705   1. Arrange_v4
+2024-01-16 12:08:19.552689   MOST_TRADED is visible? =>
+2024-01-16 12:08:19.560919   => MOST_TRADED is visible on the page!
+2024-01-16 12:08:19.560945   => Found 5 elements in block MOST_TRADED
+
+2024-01-16 12:08:19.560982   Testing Most traded random element #1
+
+2024-01-16 12:08:19.561123   2. Act_v4
+2024-01-16 12:08:19.561138   MOST_TRADED delete js-mostTraded class =>
+2024-01-16 12:08:19.590194   MOST_TRADED scroll =>
+2024-01-16 12:08:19.590395   Start Checking that form [Sign up] popped up on the page =>
+2024-01-16 12:08:25.137619   '[Sign up]' form was not popped up
+2024-01-16 12:08:25.143322   MOST_TRADED click for 'US Natural Gas Spot' trading instrument =>
+2024-01-16 12:08:26.537635   => MOST_TRADED clicked!
+
+2024-01-16 12:08:26.537874   3. Assert_v4
+2024-01-16 12:08:26.537974   Checking that the trading platform page has opened (v4) =>
+2024-01-16 12:08:26.547604   => Current page title: Trading Platform | Capital.com
+2024-01-16 12:08:26.547737   Checking that the Trading platform LOGO is present on the page =>
+2024-01-16 12:08:27.548704   Checking that the Trading platform opened in LIVE mode =>
+2024-01-16 12:08:27.678080   => The page with https://capital.com/trading/platform/spotlight/426090820621508?side=buy url was opened in lIVE mode
+2024-01-16 12:08:27.678123   => Opened page with https://capital.com/trading/platform/spotlight/426090820621508?side=buy url for corresponding trading instrument 'US Natural Gas Spot'
+
+Bug: Bid:11.03.01.00_03-es.ae.Auth
+
+2024-01-16 12:08:27.678338   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:08:27.688278   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:08:28.178475   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:08:28.548462   Bug: Bid:11.03.01.00_03-es.ae.Auth-14 уже существует
+
+2024-01-16 12:08:28.548707   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:08:28.905587   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:08:29.226409   *** end fixture Browser = teardown ***
+

@@ -1,0 +1,145 @@
+
+2024-01-16 12:07:13.065595   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:07:13.966980   worker_id = master
+
+2024-01-16 12:07:13.966999   0. Allure grouping v4
+
+
+2024-01-16 12:07:13.967236   START PRECONDITIONS =>
+
+2024-01-16 12:07:15.189963   Load page https://capital.com
+
+2024-01-16 12:07:15.190007   {'width': 1280, 'height': 720}
+
+2024-01-16 12:07:15.191692   Set windows position at (0, 0) =>
+
+2024-01-16 12:07:15.303493   Set resolution 1280 * 720 =>
+
+2024-01-16 12:07:15.409985   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:07:20.436659   Капчи нет. Тестим дальше
+
+2024-01-16 12:07:20.436754   Prev. Role: ?
+
+2024-01-16 12:07:20.436766   Run preconditions: set "Auth" Role =>
+2024-01-16 12:07:21.079660   Load page https://capital.com
+
+2024-01-16 12:07:21.250743   => All cookies are deleted
+2024-01-16 12:07:21.871363   Load page https://capital.com
+
+2024-01-16 12:07:21.871608   Step 'Click button [Accept all cookies]'
+2024-01-16 12:07:26.875278   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:07:26.892656   => Button [Accept all cookies] is visible
+2024-01-16 12:07:27.892775   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:07:27.919076   => Button [Accept all cookies] is clickable
+2024-01-16 12:07:27.919113   Click Button [Accept all cookies] =>
+2024-01-16 12:07:27.976304   => Button [Accept all cookies] is clicked
+2024-01-16 12:07:27.976346   => Accepted All Cookies
+
+2024-01-16 12:07:28.476759   Start Autorization
+
+2024-01-16 12:07:28.476890   2. Act
+2024-01-16 12:07:28.476910   Start Click button [Log in] =>
+2024-01-16 12:07:28.491210   BUTTON_LOGIN scroll =>
+2024-01-16 12:07:28.495159   Is BUTTON_LOGIN clickable? =>
+2024-01-16 12:07:28.509644   => BUTTON_LOGIN is clickable
+2024-01-16 12:07:28.509678   BUTTON_LOGIN click =>
+2024-01-16 12:07:28.559379   => BUTTON_LOGIN is clicked!
+2024-01-16 12:07:28.559544   => 'Login' form is opened
+2024-01-16 12:07:29.003681   => "login" and "password" are inputted
+2024-01-16 12:07:29.003725   Click [Continue] button on [Login] form =>
+2024-01-16 12:07:29.106953   => [Continue] button on [Login] form is clicked
+2024-01-16 12:07:31.076761   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-16 12:07:31.076804   Set timeout = 30
+2024-01-16 12:07:31.076827   Wait until load page with special title =>
+2024-01-16 12:07:31.079818   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-16 12:07:31.079846   Is present LOGO on this page? =>
+2024-01-16 12:07:32.306506   => LOGO is visible on this page
+2024-01-16 12:07:32.306589   -> "Capital.com" logo is present on trading platform page
+
+2024-01-16 12:07:33.129525   Current role: Auth
+
+2024-01-16 12:07:33.129572   Prev language: ?
+
+2024-01-16 12:07:33.129589   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:07:33.158130   => Language and Country menu is present
+
+
+2024-01-16 12:07:33.179967   => Language and Country menu is visible
+
+
+2024-01-16 12:07:33.950908   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:07:35.571242   => Current language: es
+
+2024-01-16 12:07:35.571282   Prev country: ?
+
+2024-01-16 12:07:35.571292   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:07:35.576781   => Language and Country menu is present
+
+
+2024-01-16 12:07:35.593290   => Language and Country menu is visible
+
+
+2024-01-16 12:07:36.367751   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:07:38.529260   => Current country: ae
+
+2024-01-16 12:07:38.529304   => THE END PRECONDITIONS
+
+2024-01-16 12:07:38.529339   1. Arrange_v4
+2024-01-16 12:07:39.263006   Load page https://capital.com/es/swing-trading
+2024-01-16 12:07:39.263059   MOST_TRADED is visible? =>
+2024-01-16 12:07:39.299454   => MOST_TRADED is visible on the page!
+2024-01-16 12:07:39.299490   => Found 5 elements in block MOST_TRADED
+
+2024-01-16 12:07:39.299524   Testing Most traded random element #1
+
+2024-01-16 12:07:39.299672   2. Act_v4
+2024-01-16 12:07:39.299685   MOST_TRADED delete js-mostTraded class =>
+2024-01-16 12:07:39.328272   MOST_TRADED scroll =>
+2024-01-16 12:07:39.328440   Start Checking that form [Sign up] popped up on the page =>
+2024-01-16 12:07:44.871467   '[Sign up]' form was not popped up
+2024-01-16 12:07:44.875308   MOST_TRADED click for 'Bitcoin to US Dollar' trading instrument =>
+2024-01-16 12:07:46.273402   => MOST_TRADED clicked!
+
+2024-01-16 12:07:46.273644   3. Assert_v4
+2024-01-16 12:07:46.273743   Checking that the trading platform page has opened (v4) =>
+2024-01-16 12:07:46.282826   => Current page title: Trading Platform | Capital.com
+2024-01-16 12:07:46.282976   Checking that the Trading platform LOGO is present on the page =>
+2024-01-16 12:07:47.649627   Checking that the Trading platform opened in LIVE mode =>
+2024-01-16 12:07:47.673225   => The page with https://capital.com/trading/platform/spotlight/2604592722433220?side=buy url was opened in lIVE mode
+2024-01-16 12:07:47.673267   => Opened page with https://capital.com/trading/platform/spotlight/2604592722433220?side=buy url for corresponding trading instrument 'Bitcoin to US Dollar'
+
+Bug: Bid:11.03.01.01_03-es.ae.Auth
+
+2024-01-16 12:07:47.673456   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:07:47.680205   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:07:48.211755   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:07:48.647907   Bug: Bid:11.03.01.01_03-es.ae.Auth-14 уже существует
+
+2024-01-16 12:07:48.648116   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:07:48.984726   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:07:49.402035   *** end fixture Browser = teardown ***
+

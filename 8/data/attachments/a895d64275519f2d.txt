@@ -1,0 +1,55 @@
+
+
+
+2024-01-16 12:02:01.783325   0. Get Values row =>
+2024-01-16 12:02:01.783348   Row # = 6
+
+2024-01-16 12:02:01.783420   1. get_row_values from 6 row =>
+2024-01-16 12:02:02.010651   => row values = 
+[['Bid:11.03.07.00_06-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.07.00', '_06', 'es', 'ae', 'SCB', 'NoAuth', '', 'Education', 'What is a margin?', '', '', '', '06']]
+
+2024-01-16 12:02:02.010699   => 1. Get row values from 6 row finished
+2024-01-16 12:02:02.010765   Row Values = 
+['Bid:11.03.07.00_06-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.07.00', '_06', 'es', 'ae', 'SCB', 'NoAuth', '', 'Education', 'What is a margin?', '', '', '', '06']
+
+2024-01-16 12:02:02.010925   1. Run pretest =>
+
+2024-01-16 12:02:02.010942   row_loc = 
+['Bid:11.03.07.00_06-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.07.00', '_06', 'es', 'ae', 'SCB', 'NoAuth', '', 'Education', 'What is a margin?', '', '', '', '06']
+
+2024-01-16 12:02:02.010960   => 1. Pretest finished
+
+2024-01-16 12:02:02.011042   2. Run run_pytest with Bid = Bid:11.03.07.00_06-es.ae.NoAuth from row =>
+
+2024-01-16 12:02:02.011057   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-16 12:02:02.011079   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=ae --role=NoAuth -m test_06 -v \tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py
+
+2024-01-16 12:02:35.687428   => 2.2. pytest ... as subprocess finished
+
+2024-01-16 12:02:35.687509   => 2. Autotest with Bid = Bid:11.03.07.00_06-es.ae.NoAuth from row finished
+
+2024-01-16 12:02:35.687581   3. Run check_results =>
+2024-01-16 12:02:35.687595   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.3, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.3.0'}, 'Plugins': {'html': '4.1.1', 'xdist': '3.5.0', 'timeout': '2.2.0', 'allure-pytest': '2.13.2', 'metadata': '3.0.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: html-4.1.1, xdist-3.5.0, timeout-2.2.0, allure-pytest-2.13.2, metadata-3.0.0
+collecting ... collected 6 items / 5 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py::TestWhatIsMargin::test_06_try_free_demo_in_block_want_test_drive[Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+====================== 1 skipped, 5 deselected in 32.98s =======================
+
+2024-01-16 12:02:35.687751   => Текущий тест: 1 skipped
+
+2024-01-16 12:02:35.687763   => 3. check_results finished
+
+2024-01-16 12:02:35.687908   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:02:36.057433   => 4. One row check results into Google Sheet Bugs Report fixed

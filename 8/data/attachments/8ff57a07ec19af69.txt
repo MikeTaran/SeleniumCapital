@@ -1,0 +1,398 @@
+
+
+
+2024-01-16 12:11:21.607410   0. Get Values row =>
+2024-01-16 12:11:21.607433   Row # = 21
+
+2024-01-16 12:11:21.607501   1. get_row_values from 21 row =>
+2024-01-16 12:11:22.184463   => row values = 
+[['Bid:11.02.04.01_04-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.04.01', '_04', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/operar-eur-aud', 'Education', 'Forex trading L1', '', '', '', '05']]
+
+2024-01-16 12:11:22.184517   => 1. Get row values from 21 row finished
+2024-01-16 12:11:22.184582   Row Values = 
+['Bid:11.02.04.01_04-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.04.01', '_04', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/operar-eur-aud', 'Education', 'Forex trading L1', '', '', '', '05']
+
+2024-01-16 12:11:22.184740   1. Run pretest =>
+
+2024-01-16 12:11:22.184756   row_loc = 
+['Bid:11.02.04.01_04-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.04.01', '_04', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/operar-eur-aud', 'Education', 'Forex trading L1', '', '', '', '05']
+
+2024-01-16 12:11:22.184773   => 1. Pretest finished
+
+2024-01-16 12:11:22.184852   2. Run run_pytest with Bid = Bid:11.02.04.01_04-es.ae.NoAuth from row =>
+
+2024-01-16 12:11:22.184873   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-16 12:11:22.184894   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=ae --role=NoAuth --tpi_link=https://capital.com/es/operar-eur-aud -m test_04 -v \tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py
+
+2024-01-16 12:12:08.644734   => 2.2. pytest ... as subprocess finished
+
+2024-01-16 12:12:08.644781   => 2. Autotest with Bid = Bid:11.02.04.01_04-es.ae.NoAuth from row finished
+
+2024-01-16 12:12:08.644853   3. Run check_results =>
+2024-01-16 12:12:08.644875   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.3, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.3.0'}, 'Plugins': {'html': '4.1.1', 'xdist': '3.5.0', 'timeout': '2.2.0', 'allure-pytest': '2.13.2', 'metadata': '3.0.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: html-4.1.1, xdist-3.5.0, timeout-2.2.0, allure-pytest-2.13.2, metadata-3.0.0
+collecting ... collected 8 items / 7 deselected / 1 selected
+
+tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py::TestForexTradingItemPage::test_04_content_block_button_sell[https://capital.com/es/operar-eur-aud-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestForexTradingItemPage.test_04_content_block_button_sell[https://capital.com/es/operar-eur-aud-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-02-04-01_Forex_trading_test.TestForexTradingItemPage object at 0x7f332c650f90>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="a7b35fb7a64c302d86b453ec3c2c945e")>
+cur_language = 'es', cur_country = 'ae', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/es/operar-eur-aud'
+
+    @allure.step("Start test of button [Sell] in content block")
+    @pytest.mark.test_04
+    def test_04_content_block_button_sell(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
+            cur_item_link):
+        """
+        Check: Button [Sell] in content block
+        Language: All. License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.04", "Education > Menu item [Forex trading]",
+            ".01_04", "Testing button [Sell] in content block")
+    
+        if cur_country in ["gb"]:
+            Common().skip_test_for_country(cur_country)
+    
+        Common().check_language_in_list_and_skip_if_not_present(
+            cur_language, ["", "de", "es", "it", "cn", "ru"])
+    
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        test_element = SellButtonContentBlock(d, cur_item_link, bid)
+>       test_element.full_test(d, cur_language, cur_country, cur_role, cur_item_link)
+
+tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/ButtonSellInContentBlock.py:32: in full_test
+    test_element.assert_login(d, cur_language, cur_item_link)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.Elements.AssertClass.AssertClass object at 0x7f332ed56190>
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="a7b35fb7a64c302d86b453ec3c2c945e")>
+cur_language = 'es', cur_link = 'https://capital.com/es/operar-eur-aud'
+
+    @allure.step('Checking that "Login" form or page opened')
+    def assert_login(self, d, cur_language, cur_link):
+        """Method Assert Login form or page"""
+        print(f"\n{datetime.now()}   3. Assert_Login_v0")
+        self.page_signup_login = SignupLogin(d, cur_link)
+        if self.page_signup_login.should_be_login_form():
+            self.page_signup_login.close_login_form()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_login_page():
+            self.page_signup_login.close_login_page()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_trading_platform_login_form(cur_language):
+            self.page_signup_login.close_trading_platform_login_form()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_signup_form(cur_language):
+            del self.page_signup_login
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '05', self.link)
+>           assert False, "Bug # 05. Opened a 'Sign up' form instead of a 'Login'"
+E           AssertionError: Bug # 05. Opened a 'Sign up' form instead of a 'Login'
+
+pages/Elements/AssertClass.py:69: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-16 12:11:22.958029   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:11:23.857757   worker_id = master
+
+2024-01-16 12:11:23.857775   0. Allure grouping v4
+
+
+2024-01-16 12:11:23.857961   START PRECONDITIONS =>
+
+2024-01-16 12:11:25.033461   Load page https://capital.com
+
+2024-01-16 12:11:25.033511   {'width': 1280, 'height': 720}
+
+2024-01-16 12:11:25.035344   Set windows position at (0, 0) =>
+
+2024-01-16 12:11:25.158698   Set resolution 1280 * 720 =>
+
+2024-01-16 12:11:25.275889   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:11:30.301877   Капчи нет. Тестим дальше
+
+2024-01-16 12:11:30.301968   Prev. Role: ?
+
+2024-01-16 12:11:30.301980   Run preconditions: set "NoAuth" Role =>
+2024-01-16 12:11:30.929684   Load page https://capital.com
+
+2024-01-16 12:11:31.095578   => All cookies are deleted
+2024-01-16 12:11:31.701968   Load page https://capital.com
+
+2024-01-16 12:11:31.702224   Step 'Click button [Accept all cookies]'
+2024-01-16 12:11:36.727414   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:11:36.745114   => Button [Accept all cookies] is visible
+2024-01-16 12:11:37.745254   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:11:37.766016   => Button [Accept all cookies] is clickable
+2024-01-16 12:11:37.766048   Click Button [Accept all cookies] =>
+2024-01-16 12:11:37.815411   => Button [Accept all cookies] is clicked
+2024-01-16 12:11:37.815457   => Accepted All Cookies
+
+2024-01-16 12:11:38.315841   Start Autorization
+
+2024-01-16 12:11:38.315965   2. Act
+2024-01-16 12:11:38.315984   Start Click button [Log in] =>
+2024-01-16 12:11:38.326869   BUTTON_LOGIN scroll =>
+2024-01-16 12:11:38.331273   Is BUTTON_LOGIN clickable? =>
+2024-01-16 12:11:38.346931   => BUTTON_LOGIN is clickable
+2024-01-16 12:11:38.346960   BUTTON_LOGIN click =>
+2024-01-16 12:11:38.390589   => BUTTON_LOGIN is clicked!
+2024-01-16 12:11:38.390687   => 'Login' form is opened
+2024-01-16 12:11:38.810400   => "login" and "password" are inputted
+2024-01-16 12:11:38.810442   Click [Continue] button on [Login] form =>
+2024-01-16 12:11:38.885453   => [Continue] button on [Login] form is clicked
+2024-01-16 12:11:40.803059   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-16 12:11:40.803097   Set timeout = 30
+2024-01-16 12:11:40.803119   Wait until load page with special title =>
+2024-01-16 12:11:40.809204   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-16 12:11:40.809231   Is present LOGO on this page? =>
+2024-01-16 12:11:41.670475   => LOGO is visible on this page
+2024-01-16 12:11:41.670562   -> "Capital.com" logo is present on trading platform page
+
+2024-01-16 12:11:42.520271   Start DeAuthorisation
+2024-01-16 12:11:42.520409   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-16 12:11:42.550946   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-16 12:11:43.821354   => Move to BUTTON_MY_ACCOUNT
+2024-01-16 12:11:43.821395   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-16 12:11:43.837317   => BUTTON_MY_ACCOUNT is clickable
+2024-01-16 12:11:43.837344   BUTTON_MY_ACCOUNT Click =>
+2024-01-16 12:11:44.656785   => User panel [My account] is opened
+
+2024-01-16 12:11:44.656984   Start Click [Logout] button:
+2024-01-16 12:11:44.656998   BUTTON_LOGOUT is present? =>
+2024-01-16 12:11:44.664191   => BUTTON_LOGOUT is present
+2024-01-16 12:11:44.664212   Is visible BUTTON_LOGOUT? =>
+2024-01-16 12:11:44.674114   BUTTON_LOGOUT is clickable? =>
+2024-01-16 12:11:44.683709   BUTTON_LOGOUT click =>
+2024-01-16 12:11:44.715055   => BUTTON_LOGOUT is clicked
+
+2024-01-16 12:11:44.715163   Current role: NoAuth
+
+2024-01-16 12:11:44.715178   Prev language: ?
+
+2024-01-16 12:11:44.715189   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:11:44.735068   => Language and Country menu is present
+
+
+2024-01-16 12:11:44.767541   => Language and Country menu is visible
+
+
+2024-01-16 12:11:45.546012   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:11:46.331334   => Current language: es
+
+2024-01-16 12:11:46.331366   Prev country: ?
+
+2024-01-16 12:11:46.331376   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:11:46.336730   => Language and Country menu is present
+
+
+2024-01-16 12:11:46.349302   => Language and Country menu is visible
+
+
+2024-01-16 12:11:47.123534   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:11:49.184723   => Current country: ae
+
+2024-01-16 12:11:49.184761   => THE END PRECONDITIONS
+
+2024-01-16 12:11:49.184797   1. Arrange_v0
+2024-01-16 12:11:50.160960   Load page https://capital.com/es/operar-eur-aud
+2024-01-16 12:11:50.161004   BUTTON_SELL_IN_CONTENT_BLOCK is located on the page? =>
+2024-01-16 12:11:50.169572   => BUTTON_SELL_IN_CONTENT_BLOCK is located on the page!
+2024-01-16 12:11:50.169739   Start Checking that form [Sign up] popped up on the page =>
+2024-01-16 12:11:55.731958   '[Sign up]' form was not popped up
+
+2024-01-16 12:11:55.732130   2. Act_v0
+2024-01-16 12:11:55.740536   BUTTON_SELL_IN_CONTENT_BLOCK is present? =>
+2024-01-16 12:11:55.740566   => BUTTON_SELL_IN_CONTENT_BLOCK is present on the page!
+2024-01-16 12:11:55.740578   BUTTON_SELL_IN_CONTENT_BLOCK scroll =>
+2024-01-16 12:11:55.883169   => BUTTON_SELL_IN_CONTENT_BLOCK clicked!
+
+2024-01-16 12:11:55.883409   3. Assert_Login_v0
+2024-01-16 12:11:55.883481   Check that 'Login' form is opened
+2024-01-16 12:12:01.446206   'Login' form not opened
+2024-01-16 12:12:01.448970   'Login' page not opened
+2024-01-16 12:12:07.008699   'Login' form on trading platform not opened
+2024-01-16 12:12:07.008866   Start step Check that [Sign up] form is opened
+2024-01-16 12:12:07.020410   'Sign up' form opened
+2024-01-16 12:12:07.020432   Assert SIGNUP_HEADER =>
+2024-01-16 12:12:07.034630   Assert SIGNUP_REF_LOGIN =>
+2024-01-16 12:12:07.047805   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2024-01-16 12:12:07.060674   => SIGNUP_PRIVACY_POLICY_ALL
+2024-01-16 12:12:07.060695   => 'Signup' form is checked
+
+Bug: Bid:11.02.04.01_04-es.ae.NoAuth
+
+2024-01-16 12:12:07.060749   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:12:07.066761   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:12:07.520586   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:12:07.989729   Bug: Bid:11.02.04.01_04-es.ae.NoAuth-05 уже существует
+
+2024-01-16 12:12:07.989948   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:12:08.265212   => 4. One row check results into Google Sheet Bugs Report fixed
+------------------------------ Captured log call -------------------------------
+2024-01-16 12:11:55 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/operar-eur-aud
+2024-01-16 12:11:55 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x55a251030f83 <unknown>
+#1 0x55a250ce9cf7 <unknown>
+#2 0x55a250d3999e <unknown>
+#3 0x55a250d39aa1 <unknown>
+#4 0x55a250d84d64 <unknown>
+#5 0x55a250d630dd <unknown>
+#6 0x55a250d82006 <unknown>
+#7 0x55a250d62e53 <unknown>
+#8 0x55a250d2add4 <unknown>
+#9 0x55a250d2c1de <unknown>
+#10 0x55a250ff5531 <unknown>
+#11 0x55a250ff9455 <unknown>
+#12 0x55a250fe1f55 <unknown>
+#13 0x55a250ffa0ef <unknown>
+#14 0x55a250fc599f <unknown>
+#15 0x55a25101e008 <unknown>
+#16 0x55a25101e1d7 <unknown>
+#17 0x55a251030124 <unknown>
+#18 0x7fe5f5094ac3 <unknown>
+
+2024-01-16 12:12:01 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/operar-eur-aud
+2024-01-16 12:12:01 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x55a251030f83 <unknown>
+#1 0x55a250ce9cf7 <unknown>
+#2 0x55a250d3999e <unknown>
+#3 0x55a250d39aa1 <unknown>
+#4 0x55a250d84d64 <unknown>
+#5 0x55a250d630dd <unknown>
+#6 0x55a250d82006 <unknown>
+#7 0x55a250d62e53 <unknown>
+#8 0x55a250d2add4 <unknown>
+#9 0x55a250d2c1de <unknown>
+#10 0x55a250ff5531 <unknown>
+#11 0x55a250ff9455 <unknown>
+#12 0x55a250fe1f55 <unknown>
+#13 0x55a250ffa0ef <unknown>
+#14 0x55a250fc599f <unknown>
+#15 0x55a25101e008 <unknown>
+#16 0x55a25101e1d7 <unknown>
+#17 0x55a251030124 <unknown>
+#18 0x7fe5f5094ac3 <unknown>
+
+2024-01-16 12:12:07 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/operar-eur-aud
+2024-01-16 12:12:07 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x55a251030f83 <unknown>
+#1 0x55a250ce9cf7 <unknown>
+#2 0x55a250d3999e <unknown>
+#3 0x55a250d39aa1 <unknown>
+#4 0x55a250d84d64 <unknown>
+#5 0x55a250d630dd <unknown>
+#6 0x55a250d82006 <unknown>
+#7 0x55a250d62e53 <unknown>
+#8 0x55a250d2add4 <unknown>
+#9 0x55a250d2c1de <unknown>
+#10 0x55a250ff5531 <unknown>
+#11 0x55a250ff9455 <unknown>
+#12 0x55a250fe1f55 <unknown>
+#13 0x55a250ffa0ef <unknown>
+#14 0x55a250fc599f <unknown>
+#15 0x55a25101e008 <unknown>
+#16 0x55a25101e1d7 <unknown>
+#17 0x55a251030124 <unknown>
+#18 0x7fe5f5094ac3 <unknown>
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-16 12:12:08.570525   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py::TestForexTradingItemPage::test_04_content_block_button_sell[https://capital.com/es/operar-eur-aud-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py::TestForexTradingItemPage::test_04_content_block_button_sell[https://capital.com/es/operar-eur-aud-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 05. Opened a 'Sign up' form instead of a 'Login'
+================= 1 failed, 7 deselected, 1 warning in 45.75s ==================
+
+2024-01-16 12:12:08.645294   => Текущий тест: 1 failed
+
+2024-01-16 12:12:08.646340   => 3. check_results finished
+
+2024-01-16 12:12:08.646513   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:12:08.778806   => 4. One row check results into Google Sheet Bugs Report fixed

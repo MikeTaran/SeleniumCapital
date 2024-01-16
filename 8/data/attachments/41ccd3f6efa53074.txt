@@ -1,0 +1,314 @@
+
+
+
+2024-01-16 12:04:11.493604   0. Get Values row =>
+2024-01-16 12:04:11.493628   Row # = 10
+
+2024-01-16 12:04:11.493696   1. get_row_values from 10 row =>
+2024-01-16 12:04:11.897669   => row values = 
+[['Bid:11.03.01.01_08-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_08', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '13']]
+
+2024-01-16 12:04:11.897718   => 1. Get row values from 10 row finished
+2024-01-16 12:04:11.897776   Row Values = 
+['Bid:11.03.01.01_08-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_08', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '13']
+
+2024-01-16 12:04:11.897913   1. Run pretest =>
+
+2024-01-16 12:04:11.897926   row_loc = 
+['Bid:11.03.01.01_08-es.ae.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_08', 'es', 'ae', 'SCB', 'NoAuth', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '13']
+
+2024-01-16 12:04:11.897941   => 1. Pretest finished
+
+2024-01-16 12:04:11.898006   2. Run run_pytest with Bid = Bid:11.03.01.01_08-es.ae.NoAuth from row =>
+
+2024-01-16 12:04:11.898018   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-16 12:04:11.898037   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=ae --role=NoAuth --tpi_link=https://capital.com/es/swing-trading -m test_08 -v \tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py
+
+2024-01-16 12:04:44.707295   => 2.2. pytest ... as subprocess finished
+
+2024-01-16 12:04:44.707344   => 2. Autotest with Bid = Bid:11.03.01.01_08-es.ae.NoAuth from row finished
+
+2024-01-16 12:04:44.707419   3. Run check_results =>
+2024-01-16 12:04:44.707438   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.3, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.3.0'}, 'Plugins': {'html': '4.1.1', 'xdist': '3.5.0', 'timeout': '2.2.0', 'allure-pytest': '2.13.2', 'metadata': '3.0.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: html-4.1.1, xdist-3.5.0, timeout-2.2.0, allure-pytest-2.13.2, metadata-3.0.0
+collecting ... collected 10 items / 9 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_08_button_explore_web_platform[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestTradingStrategiesGuides.test_08_button_explore_web_platform[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-03-01-01_trading_strategies_guide_test.TestTradingStrategiesGuides object at 0x7efe92c63990>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="91a2617d1ec2f95b3970c273452f5259")>
+cur_language = 'es', cur_country = 'ae', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/es/swing-trading'
+
+    @allure.step("Start test_11.03.01.01_08 of button [Explore Web Platform] in Block 'Sign up and trade smart today!'")
+    @pytest.mark.test_08
+    def test_08_button_explore_web_platform(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, cur_item_link):
+        """
+        Check: Button [Explore Web Platform] in Block "Sign up and trade smart today!"
+        Language: All. License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.01", "Education > Menu item [Trading Strategies Guides]",
+            ".01_08", "Testing button [Explore Web Platform] in Block \"Sign up and trade smart today!\"")
+    
+        Common().check_language_in_list_and_skip_if_not_present(cur_language, ["", "de", "es", "it", "ru", "zh"])
+    
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        test_element = ButtonExploreWebPlatform(d, cur_item_link)
+        test_element.arrange_(cur_item_link)
+        if not test_element.element_click():
+            pytest.fail("Testing element is not clicked")
+    
+        test_element = AssertClass(d, cur_item_link, bid)
+        match cur_role:
+            case "NoReg":
+                test_element.assert_signup_form_on_the_trading_platform(d)
+            case "NoAuth":
+>               test_element.assert_login_form_on_the_trading_platform(d)
+
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/AssertClass.py:170: in assert_login_form_on_the_trading_platform
+    self.page_trading.should_be_login_form_on_the_trading_platform()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.Capital.Trading_platform.trading_platform.TradingPlatform object at 0x7efe92c98450>
+
+    @allure.step("Check that form [Login] is opened on the Trading Platform page")
+    # @profile(precision=3)
+    def should_be_login_form_on_the_trading_platform(self):
+        """
+        Check there are an elements to on 'Log in' page on the Trading Platform
+        """
+        print(f"{datetime.now()}   Start method Check that [Log in] page opened on the Trading Platform =>")
+        print(self.browser.current_url)
+        if self.current_page_url_contain_the(tp_data["LOGIN_URL"]):
+            print(f"{datetime.now()}   => 'Log in' page opened on the Trading Platform")
+    
+            print(f"{datetime.now()}   LOGIN_FRAME =>")
+            assert self.element_is_visible(TPSignupFormLocators.LOGIN_FRAME, 30), \
+                f"{datetime.now()}   The layout of the 'Login' page has changed"
+    
+            print(f"{datetime.now()}   INPUT_EMAIL =>")
+            assert self.element_is_visible(TPSignupFormLocators.USERNAME), \
+                f"{datetime.now()}   Problem with 'Username (email)' field"
+    
+            print(f"{datetime.now()}   INPUT_PASS =>")
+            assert self.element_is_visible(TPSignupFormLocators.PASSWORD), \
+                f"{datetime.now()}   Problem with 'Password' field"
+    
+            print(f"{datetime.now()}   BUTTON_CONTINUE =>")
+            assert self.element_is_visible(TPSignupFormLocators.BUTTON_CONTINUE), \
+                f"{datetime.now()}   Problem with 'Continue' button"
+            self.open_page()
+        elif self.current_page_url_contain_the(tp_data["SIGNUP_URL"]):
+            print(f"{datetime.now()}   => 'Sign up' page opened on the Trading Platform")
+            print(f"{datetime.now()}   SIGNUP_FRAME =>")
+            if self.element_is_visible(TPSignupFormLocators.SIGNUP_FRAME):
+                print(f"{datetime.now()}   => SIGNUP_FRAME is visible")
+            else:
+                print(f"{datetime.now()}   => SIGNUP_FRAME is not visible")
+            print(f"{datetime.now()}   => 'Login' page on the Trading Platform is not opened")
+    
+            # new bug re-test checking =====
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '13', self.link)
+            # ==============================
+>           assert False, "Bug # 13. 'Sign up' form opened on the Trading Platform instead of 'Login' form"
+E           AssertionError: Bug # 13. 'Sign up' form opened on the Trading Platform instead of 'Login' form
+
+pages/Capital/Trading_platform/trading_platform.py:249: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-16 12:04:12.676574   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:04:13.583460   worker_id = master
+
+2024-01-16 12:04:13.583477   0. Allure grouping v4
+
+
+2024-01-16 12:04:13.583660   START PRECONDITIONS =>
+
+2024-01-16 12:04:14.833533   Load page https://capital.com
+
+2024-01-16 12:04:14.833583   {'width': 1280, 'height': 720}
+
+2024-01-16 12:04:14.836098   Set windows position at (0, 0) =>
+
+2024-01-16 12:04:14.946839   Set resolution 1280 * 720 =>
+
+2024-01-16 12:04:15.049066   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:04:20.119900   Капчи нет. Тестим дальше
+
+2024-01-16 12:04:20.120001   Prev. Role: ?
+
+2024-01-16 12:04:20.120013   Run preconditions: set "NoAuth" Role =>
+2024-01-16 12:04:20.765833   Load page https://capital.com
+
+2024-01-16 12:04:20.942524   => All cookies are deleted
+2024-01-16 12:04:21.675566   Load page https://capital.com
+
+2024-01-16 12:04:21.675831   Step 'Click button [Accept all cookies]'
+2024-01-16 12:04:26.692046   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:04:26.712296   => Button [Accept all cookies] is visible
+2024-01-16 12:04:27.712414   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:04:27.798402   => Button [Accept all cookies] is clickable
+2024-01-16 12:04:27.798446   Click Button [Accept all cookies] =>
+2024-01-16 12:04:27.894021   => Button [Accept all cookies] is clicked
+2024-01-16 12:04:27.894070   => Accepted All Cookies
+
+2024-01-16 12:04:28.394484   Start Autorization
+
+2024-01-16 12:04:28.394612   2. Act
+2024-01-16 12:04:28.394630   Start Click button [Log in] =>
+2024-01-16 12:04:28.403243   BUTTON_LOGIN scroll =>
+2024-01-16 12:04:28.406878   Is BUTTON_LOGIN clickable? =>
+2024-01-16 12:04:28.417475   => BUTTON_LOGIN is clickable
+2024-01-16 12:04:28.417496   BUTTON_LOGIN click =>
+2024-01-16 12:04:28.451838   => BUTTON_LOGIN is clicked!
+2024-01-16 12:04:28.451928   => 'Login' form is opened
+2024-01-16 12:04:28.828857   => "login" and "password" are inputted
+2024-01-16 12:04:28.828897   Click [Continue] button on [Login] form =>
+2024-01-16 12:04:28.934077   => [Continue] button on [Login] form is clicked
+2024-01-16 12:04:31.646332   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-16 12:04:31.646397   Set timeout = 30
+2024-01-16 12:04:31.646415   Wait until load page with special title =>
+2024-01-16 12:04:31.650467   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-16 12:04:31.650495   Is present LOGO on this page? =>
+2024-01-16 12:04:31.941448   => LOGO is visible on this page
+2024-01-16 12:04:31.941526   -> "Capital.com" logo is present on trading platform page
+
+2024-01-16 12:04:32.949615   Start DeAuthorisation
+2024-01-16 12:04:32.949750   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-16 12:04:32.996585   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-16 12:04:34.273688   => Move to BUTTON_MY_ACCOUNT
+2024-01-16 12:04:34.273729   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-16 12:04:34.293189   => BUTTON_MY_ACCOUNT is clickable
+2024-01-16 12:04:34.293226   BUTTON_MY_ACCOUNT Click =>
+2024-01-16 12:04:35.105922   => User panel [My account] is opened
+
+2024-01-16 12:04:35.106121   Start Click [Logout] button:
+2024-01-16 12:04:35.106136   BUTTON_LOGOUT is present? =>
+2024-01-16 12:04:35.113374   => BUTTON_LOGOUT is present
+2024-01-16 12:04:35.113394   Is visible BUTTON_LOGOUT? =>
+2024-01-16 12:04:35.123388   BUTTON_LOGOUT is clickable? =>
+2024-01-16 12:04:35.132915   BUTTON_LOGOUT click =>
+2024-01-16 12:04:35.178037   => BUTTON_LOGOUT is clicked
+
+2024-01-16 12:04:35.178171   Current role: NoAuth
+
+2024-01-16 12:04:35.178190   Prev language: ?
+
+2024-01-16 12:04:35.178206   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:04:35.201790   => Language and Country menu is present
+
+
+2024-01-16 12:04:35.217007   => Language and Country menu is visible
+
+
+2024-01-16 12:04:35.996305   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:04:36.782632   => Current language: es
+
+2024-01-16 12:04:36.782663   Prev country: ?
+
+2024-01-16 12:04:36.782673   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:04:36.790075   => Language and Country menu is present
+
+
+2024-01-16 12:04:36.800729   => Language and Country menu is visible
+
+
+2024-01-16 12:04:37.574682   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:04:39.626218   => Current country: ae
+
+2024-01-16 12:04:39.626258   => THE END PRECONDITIONS
+
+2024-01-16 12:04:39.626291   1. Arrange
+2024-01-16 12:04:40.069044   Load page https://capital.com/es/swing-trading
+2024-01-16 12:04:40.069092   Is visible BUTTON_EXPLORE_WEB_PLATFORM? =>
+2024-01-16 12:04:40.297538   => BUTTON_EXPLORE_WEB_PLATFORM is visible on the page!
+
+2024-01-16 12:04:40.297741   2. Act
+2024-01-16 12:04:40.315898   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-16 12:04:41.502469   => BUTTON_EXPLORE_WEB_PLATFORM IS CLICKED
+
+2024-01-16 12:04:41.502688   3. Assert_v0
+2024-01-16 12:04:41.502774   Start method Check that [Log in] page opened on the Trading Platform =>
+https://capital.com/trading/platform/
+2024-01-16 12:04:41.511452   => 'Sign up' page opened on the Trading Platform
+2024-01-16 12:04:41.511475   SIGNUP_FRAME =>
+2024-01-16 12:04:43.037438   => SIGNUP_FRAME is visible
+2024-01-16 12:04:43.037484   => 'Login' page on the Trading Platform is not opened
+
+Bug: Bid:11.03.01.01_08-es.ae.NoAuth
+
+2024-01-16 12:04:43.037509   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:04:43.046412   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:04:43.522031   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:04:43.932812   Bug: Bid:11.03.01.01_08-es.ae.NoAuth-13 уже существует
+
+2024-01-16 12:04:43.932988   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:04:44.323296   => 4. One row check results into Google Sheet Bugs Report fixed
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-16 12:04:44.633582   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_08_button_explore_web_platform[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_08_button_explore_web_platform[https://capital.com/es/swing-trading-Chrome-es-ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 13. 'Sign up' form opened on the Trading Platform instead of 'Login' form
+================= 1 failed, 9 deselected, 1 warning in 32.10s ==================
+
+2024-01-16 12:04:44.707803   => Текущий тест: 1 failed
+
+2024-01-16 12:04:44.708671   => 3. check_results finished
+
+2024-01-16 12:04:44.708821   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:04:44.920745   => 4. One row check results into Google Sheet Bugs Report fixed

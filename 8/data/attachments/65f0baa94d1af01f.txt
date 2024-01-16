@@ -1,0 +1,328 @@
+
+
+
+2024-01-16 12:13:32.557694   0. Get Values row =>
+2024-01-16 12:13:32.557717   Row # = 24
+
+2024-01-16 12:13:32.557786   1. get_row_values from 24 row =>
+2024-01-16 12:13:32.977373   => row values = 
+[['Bid:11.02.04.01_06-es.ae.Auth', 'Ubuntu 22.04', 'Chrome', '11.02.04.01', '_06', 'es', 'ae', 'SCB', 'Auth', 'https://capital.com/es/operar-eur-aud', 'Education', 'Forex trading L1', '', '', '', '14']]
+
+2024-01-16 12:13:32.977424   => 1. Get row values from 24 row finished
+2024-01-16 12:13:32.977492   Row Values = 
+['Bid:11.02.04.01_06-es.ae.Auth', 'Ubuntu 22.04', 'Chrome', '11.02.04.01', '_06', 'es', 'ae', 'SCB', 'Auth', 'https://capital.com/es/operar-eur-aud', 'Education', 'Forex trading L1', '', '', '', '14']
+
+2024-01-16 12:13:32.977654   1. Run pretest =>
+
+2024-01-16 12:13:32.977670   row_loc = 
+['Bid:11.02.04.01_06-es.ae.Auth', 'Ubuntu 22.04', 'Chrome', '11.02.04.01', '_06', 'es', 'ae', 'SCB', 'Auth', 'https://capital.com/es/operar-eur-aud', 'Education', 'Forex trading L1', '', '', '', '14']
+
+2024-01-16 12:13:32.977689   => 1. Pretest finished
+
+2024-01-16 12:13:32.977767   2. Run run_pytest with Bid = Bid:11.02.04.01_06-es.ae.Auth from row =>
+
+2024-01-16 12:13:32.977783   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-16 12:13:32.977804   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=ae --role=Auth --tpi_link=https://capital.com/es/operar-eur-aud -m test_06 -v \tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py
+
+2024-01-16 12:14:10.381412   => 2.2. pytest ... as subprocess finished
+
+2024-01-16 12:14:10.381466   => 2. Autotest with Bid = Bid:11.02.04.01_06-es.ae.Auth from row finished
+
+2024-01-16 12:14:10.381546   3. Run check_results =>
+2024-01-16 12:14:10.381572   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.3, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.3.0'}, 'Plugins': {'html': '4.1.1', 'xdist': '3.5.0', 'timeout': '2.2.0', 'allure-pytest': '2.13.2', 'metadata': '3.0.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: html-4.1.1, xdist-3.5.0, timeout-2.2.0, allure-pytest-2.13.2, metadata-3.0.0
+collecting ... collected 8 items / 7 deselected / 1 selected
+
+tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py::TestForexTradingItemPage::test_06_most_traded_trade_button[https://capital.com/es/operar-eur-aud-Chrome-es-ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestForexTradingItemPage.test_06_most_traded_trade_button[https://capital.com/es/operar-eur-aud-Chrome-es-ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-02-04-01_Forex_trading_test.TestForexTradingItemPage object at 0x7f93d6489b90>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="a20a74a56b65a6fa8a8f308ea6c300b2")>
+cur_language = 'es', cur_country = 'ae', cur_role = 'Auth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/es/operar-eur-aud'
+
+    @allure.step("Start test of buttons [Trade] in Most traded block")
+    @pytest.mark.test_06
+    def test_06_most_traded_trade_button(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
+            cur_item_link):
+        """
+        Check: Button [Trade] in Most traded block
+        Language: All. License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.04", "Education > Menu item [Forex trading]",
+            ".01_06", "Testing button [Trade] in Most traded block")
+    
+        if cur_country in ["gb"]:
+            Common().skip_test_for_country(cur_country)
+    
+        Common().check_language_in_list_and_skip_if_not_present(
+            cur_language, ["", "de", "es", "fr", "it", "cn", "ru"])
+    
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        test_element = ButtonTradeOnWidgetMostTraded(d, cur_item_link, bid)
+>       test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_item_link)
+
+tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py:196: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/ButtonTradeOnWidgetMostTraded.py:45: in full_test_with_tpi
+    check_element.assert_trading_platform_v4(d, cur_item_link, False, True, trade_instrument)
+pages/Elements/AssertClass.py:126: in assert_trading_platform_v4
+    self.page_trading.should_be_trading_platform_page_v4(d, cur_link, tpd, tpi, trade_instrument)
+pages/Capital/Trading_platform/trading_platform.py:109: in should_be_trading_platform_page_v4
+    self.should_be_corresponding_trading_instrument(cur_url, trade_instrument)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.Capital.Trading_platform.trading_platform.TradingPlatform object at 0x7f93d64a0690>
+cur_url = 'https://capital.com/trading/platform/spotlight/93810675766468?side=buy'
+trade_instrument = 'Euro / US Dollar'
+
+    @allure.step("Check the corresponding trading instrument")
+    def should_be_corresponding_trading_instrument(self, cur_url, trade_instrument):
+        """
+        Check Trading platform is opened for corresponding trade instrument
+        """
+        # проверяем, что открыта трейдинговая платформа на вкладке [Charts]
+        # new bug re-test checking =====
+        if "charting" not in cur_url or "spotlight" not in cur_url:
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '14', self.link)
+>           assert False, ("Bug # 14. Trading platform was Not opened for corresponding trading instrument"
+                           " '{trade_instrument}'")
+E           AssertionError: Bug # 14. Trading platform was Not opened for corresponding trading instrument '{trade_instrument}'
+
+pages/Capital/Trading_platform/trading_platform.py:265: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-16 12:13:33.743172   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - ae
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-16 12:13:34.645801   worker_id = master
+
+2024-01-16 12:13:34.645819   0. Allure grouping v4
+
+
+2024-01-16 12:13:34.646005   START PRECONDITIONS =>
+
+2024-01-16 12:13:35.901993   Load page https://capital.com
+
+2024-01-16 12:13:35.902040   {'width': 1280, 'height': 720}
+
+2024-01-16 12:13:35.903948   Set windows position at (0, 0) =>
+
+2024-01-16 12:13:36.016578   Set resolution 1280 * 720 =>
+
+2024-01-16 12:13:36.122669   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-16 12:13:41.147424   Капчи нет. Тестим дальше
+
+2024-01-16 12:13:41.147519   Prev. Role: ?
+
+2024-01-16 12:13:41.147532   Run preconditions: set "Auth" Role =>
+2024-01-16 12:13:41.870993   Load page https://capital.com
+
+2024-01-16 12:13:42.063825   => All cookies are deleted
+2024-01-16 12:13:42.700159   Load page https://capital.com
+
+2024-01-16 12:13:42.700407   Step 'Click button [Accept all cookies]'
+2024-01-16 12:13:47.787089   Is Visible Button [Accept all cookies]? =>
+2024-01-16 12:13:47.809078   => Button [Accept all cookies] is visible
+2024-01-16 12:13:48.809207   Is clickable Button [Accept all cookies] =>
+2024-01-16 12:13:48.840358   => Button [Accept all cookies] is clickable
+2024-01-16 12:13:48.840388   Click Button [Accept all cookies] =>
+2024-01-16 12:13:48.907384   => Button [Accept all cookies] is clicked
+2024-01-16 12:13:48.907432   => Accepted All Cookies
+
+2024-01-16 12:13:49.407754   Start Autorization
+
+2024-01-16 12:13:49.407852   2. Act
+2024-01-16 12:13:49.407865   Start Click button [Log in] =>
+2024-01-16 12:13:49.417896   BUTTON_LOGIN scroll =>
+2024-01-16 12:13:49.421558   Is BUTTON_LOGIN clickable? =>
+2024-01-16 12:13:49.432550   => BUTTON_LOGIN is clickable
+2024-01-16 12:13:49.432571   BUTTON_LOGIN click =>
+2024-01-16 12:13:49.466477   => BUTTON_LOGIN is clicked!
+2024-01-16 12:13:49.466567   => 'Login' form is opened
+2024-01-16 12:13:49.888324   => "login" and "password" are inputted
+2024-01-16 12:13:49.888368   Click [Continue] button on [Login] form =>
+2024-01-16 12:13:49.963790   => [Continue] button on [Login] form is clicked
+2024-01-16 12:13:52.232743   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-16 12:13:52.232780   Set timeout = 30
+2024-01-16 12:13:52.232805   Wait until load page with special title =>
+2024-01-16 12:13:52.235706   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-16 12:13:52.235727   Is present LOGO on this page? =>
+2024-01-16 12:13:52.763467   => LOGO is visible on this page
+2024-01-16 12:13:52.763556   -> "Capital.com" logo is present on trading platform page
+
+2024-01-16 12:13:53.611385   Current role: Auth
+
+2024-01-16 12:13:53.611429   Prev language: ?
+
+2024-01-16 12:13:53.611443   Run preconditions: set "es" language =>
+
+
+2024-01-16 12:13:53.643152   => Language and Country menu is present
+
+
+2024-01-16 12:13:53.663832   => Language and Country menu is visible
+
+
+2024-01-16 12:13:54.435572   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:13:56.029143   => Current language: es
+
+2024-01-16 12:13:56.029183   Prev country: ?
+
+2024-01-16 12:13:56.029193   Run preconditions: set "ae" country =>
+
+
+2024-01-16 12:13:56.038510   => Language and Country menu is present
+
+
+2024-01-16 12:13:56.053663   => Language and Country menu is visible
+
+
+2024-01-16 12:13:56.818898   => Focus is moved on Language and Country menu 
+
+2024-01-16 12:13:58.986462   => Current country: ae
+
+2024-01-16 12:13:58.986505   => THE END PRECONDITIONS
+
+2024-01-16 12:13:58.986541   1. Arrange_v4
+2024-01-16 12:14:00.681335   Load page https://capital.com/es/operar-eur-aud
+2024-01-16 12:14:00.681372   MOST_TRADED is visible? =>
+2024-01-16 12:14:00.708348   => MOST_TRADED is visible on the page!
+2024-01-16 12:14:00.708387   => Found 5 elements in block MOST_TRADED
+
+2024-01-16 12:14:00.708421   Testing Most traded random element #1
+
+2024-01-16 12:14:00.708567   2. Act_v4
+2024-01-16 12:14:00.708580   MOST_TRADED delete js-mostTraded class =>
+2024-01-16 12:14:00.733917   MOST_TRADED scroll =>
+2024-01-16 12:14:00.734082   Start Checking that form [Sign up] popped up on the page =>
+2024-01-16 12:14:06.277571   '[Sign up]' form was not popped up
+2024-01-16 12:14:06.287007   MOST_TRADED click for 'Euro / US Dollar' trading instrument =>
+2024-01-16 12:14:07.683027   => MOST_TRADED clicked!
+
+2024-01-16 12:14:07.683325   3. Assert_v4
+2024-01-16 12:14:07.683443   Checking that the trading platform page has opened (v4) =>
+2024-01-16 12:14:07.692176   => Current page title: Trading Platform | Capital.com
+2024-01-16 12:14:07.692293   Checking that the Trading platform LOGO is present on the page =>
+2024-01-16 12:14:08.719938   Checking that the Trading platform opened in LIVE mode =>
+2024-01-16 12:14:08.741494   => The page with https://capital.com/trading/platform/spotlight/93810675766468?side=buy url was opened in lIVE mode
+2024-01-16 12:14:08.741528   => Opened page with https://capital.com/trading/platform/spotlight/93810675766468?side=buy url for corresponding trading instrument 'Euro / US Dollar'
+
+Bug: Bid:11.02.04.01_06-es.ae.Auth
+
+2024-01-16 12:14:08.741664   Проверка бага в таблице ретеста  =>
+
+2024-01-16 12:14:08.750565   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:14:09.247533   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:14:09.628553   Bug: Bid:11.02.04.01_06-es.ae.Auth-14 уже существует
+
+2024-01-16 12:14:09.628736   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:14:09.933015   => 4. One row check results into Google Sheet Bugs Report fixed
+------------------------------ Captured log call -------------------------------
+2024-01-16 12:14:06 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/operar-eur-aud
+2024-01-16 12:14:06 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x55b72bdc8f83 <unknown>
+#1 0x55b72ba81cf7 <unknown>
+#2 0x55b72bad199e <unknown>
+#3 0x55b72bad1aa1 <unknown>
+#4 0x55b72bb1cd64 <unknown>
+#5 0x55b72bafb0dd <unknown>
+#6 0x55b72bb1a006 <unknown>
+#7 0x55b72bafae53 <unknown>
+#8 0x55b72bac2dd4 <unknown>
+#9 0x55b72bac41de <unknown>
+#10 0x55b72bd8d531 <unknown>
+#11 0x55b72bd91455 <unknown>
+#12 0x55b72bd79f55 <unknown>
+#13 0x55b72bd920ef <unknown>
+#14 0x55b72bd5d99f <unknown>
+#15 0x55b72bdb6008 <unknown>
+#16 0x55b72bdb61d7 <unknown>
+#17 0x55b72bdc8124 <unknown>
+#18 0x7f9496a94ac3 <unknown>
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-16 12:14:10.308734   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py::TestForexTradingItemPage::test_06_most_traded_trade_button[https://capital.com/es/operar-eur-aud-Chrome-es-ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcom-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-02-04_Forex_trading/US_11-02-04-01_Forex_trading_test.py::TestForexTradingItemPage::test_06_most_traded_trade_button[https://capital.com/es/operar-eur-aud-Chrome-es-ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 14. Trading platform was Not opened for corresponding trading instrument '{trade_instrument}'
+================= 1 failed, 7 deselected, 1 warning in 36.71s ==================
+
+2024-01-16 12:14:10.381990   => Текущий тест: 1 failed
+
+2024-01-16 12:14:10.382954   => 3. check_results finished
+
+2024-01-16 12:14:10.383105   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:14:10.570206   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:14:10.571383   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:14:10.796405   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:14:10.796580   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:14:10.944805   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:14:10.945011   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-16 12:14:11.143420   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-16 12:14:11.143489   *** end fixture gs = teardown ***
+
+
+2024-01-16 12:14:11.231854   *** end fixture Browser = teardown ***
+
