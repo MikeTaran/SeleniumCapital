@@ -1,11 +1,10 @@
 name: 3. Ubuntu, ReTests
-
 on:
 #  push:
   workflow_dispatch:
   
-#permissions:
-#  contents: write
+permissions:
+  contents: write
 
 #  schedule:
 #    - cron: '00 13 * * *'
@@ -14,7 +13,6 @@ on:
 jobs:
   tests:
     name: I. Building environment and testing the capital.com website
-#     runs-on: macos-latest
     runs-on: ubuntu-latest
     steps:
       - name: 1. Check out this repo, master branch
@@ -22,13 +20,6 @@ jobs:
         with:
           ref: master
 
-#      - name: Install Chrome
-#        uses: browser-actions/setup-chrome@latest
-#      - name: Install Firefox
-#        uses: riccione/setup_firefox@v1
-#      - name: Check Chromium version
-#        run: chromium-browser --version
-#
       - name: 2.1. Install Python
         if: always()
         uses: actions/setup-python@v4
@@ -43,10 +34,6 @@ jobs:
         if: always()
         run: brew install neofetch
 
-#      - name: 3.4. Install python-tk@3.11 for ReTest
-#        if: always()
-#        run: brew install python-tk@3.11
-#
       - name: For Run hwinfo.py first time
         if: always()
         run: pip3 install psutil
@@ -65,13 +52,8 @@ jobs:
         if: always()
         run: pip3 install poetry
 
-      - name: Run hwinfo.py
-        if: always()
-        run: python3 tests/hwinfo.py
-
       - name: 5. install dependencies
         if: always()
-#        run: poetry update
         run: poetry install --sync
 
       - name: Poetry Run Python3 hwinfo.py
@@ -81,25 +63,6 @@ jobs:
       - name: Python3 hwinfo.py
         if: always()
         run: python3 tests/hwinfo.py
-
-      - name: 6. Check code for errors by flake8 and format code with black
-        if: always()
-        continue-on-error: true
-        uses: ricardochaves/python-lint@v1.4.0
-        with:
-          python-root-list: ""
-          use-pylint: false
-          use-pycodestyle: false
-          use-flake8: true
-          use-black: false
-          use-mypy: false
-          use-isort: false
-          extra-pylint-options: ""
-          extra-pycodestyle-options: ""
-          extra-flake8-options: "--count --benchmark --ignore=E501,E999,F401,F631,W191,W503"
-          extra-black-options: ". -S"
-          extra-mypy-options: ""
-          extra-isort-options: ""
 
       - name: 8. Run WATC_ReTest
         if: always()
@@ -116,7 +79,31 @@ jobs:
           path: allure-results/
           retention-days: 7
 
-      - name: 10. Generate allure report
+  generate_and_deploy_report:
+    name: II. Generate & Deploy Allure report
+    runs-on: ubuntu-latest
+    if: always()
+    needs: [ tests ]
+
+    steps:
+      - name: 1. Get Allure history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: 2. Download Artifacts
+        uses: actions/download-artifact@v3
+        id: download
+        if: always()
+        continue-on-error: true
+        with:
+          name: allure-results
+          path: allure-results
+
+      - name: 3. Generate allure report
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
@@ -129,11 +116,29 @@ jobs:
           path: gh-pages
           keep_reports: 80
 
-#      - name: 12. Upload artifact "allure-report"
-#        if: always()
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: allure-report
-#          path: allure-report/
-#          retention-days: 7
-#
+      - name: 4. Deploy allure_report to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          #          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          #          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: ./allure-history
+          commit_message: ${{ github.event.head_commit.message }}
+
+      - name: 12. Send telegram message on push
+        uses: appleboy/telegram-action@master
+        if: always()
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          #           disable_web_page_preview: true
+          message: |
+            Message from GitHub CI Actions
+            
+            Testing of the "Capital.com" web application in the "Windows/Edge" environment is completed!
+            
+            See allure-result testing: https://${{ github.actor }}.github.io/SeleniumCapital/
+            Tests Repository: ${{ github.repository }}

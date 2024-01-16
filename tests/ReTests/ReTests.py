@@ -95,7 +95,7 @@ def pretest(row_loc, number_of_row, gs):
         # num_bug = row_loc[12]
     except KeyError:
         print(f"\n{datetime.now()}   =>  Не корректные входные данные из таблицы WATC_BugsReport")
-        gs.update_range_values(f'V{number_of_row}', [["skipped"]])
+        gs.update_range_values(f'V{number_of_row}', [["Error table data"]])
         pytest.skip()
 
     print(f"\n{datetime.now()}   => 1. Pretest finished")
