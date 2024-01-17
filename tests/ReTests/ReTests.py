@@ -29,9 +29,9 @@ role = None
 url = None
 
 country_list = [
-        "gb",  # United Kingdom - "FCA"
-        "au",  # Australia - "ASIC"
-        "de",  # Germany - "CYSEC"
+        # "gb",  # United Kingdom - "FCA"
+        # "au",  # Australia - "ASIC"
+        # "de",  # Germany - "CYSEC"
         "ae",  # United Arab Emirates - "SCB"
 ]
 
