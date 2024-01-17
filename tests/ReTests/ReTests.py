@@ -223,6 +223,6 @@ def check_results(output, error):
         gs_out = ['skipped']
 
     print(f"\n{datetime.now()}   => 3. check_results finished")
-    if gs_out != ["WebDriver Error"]:
+    if gs_out == ["WebDriver Error"]:
         pytest.fail("WebDriver Error")
     return gs_out
