@@ -137,8 +137,8 @@ def run_pytest():
     print(f"\n{datetime.now()}   2.2. Run poetry run pytest ... in subprocess =>")
     retest = True
     # получение корня проекта
-    # host = "\\".join(os.getcwd().split('\\')[:-2]) + '\\'
-    host = "\\".join(os.getcwd().split('\\')) + '\\'            # for LOCAL debugging
+    host = "\\".join(os.getcwd().split('\\')[:-2]) + '\\'
+    # host = "\\".join(os.getcwd().split('\\')) + '\\'            # for LOCAL debugging
     # формирование командной строки и запуск pytest, как subprocess
     command = (f"poetry run pytest"
                f" --retest={retest}"
@@ -223,5 +223,6 @@ def check_results(output, error):
         gs_out = ['skipped']
 
     print(f"\n{datetime.now()}   => 3. check_results finished")
-
+    if gs_out != ["WebDriver Error"]:
+        pytest.fail("WebDriver Error")
     return gs_out
