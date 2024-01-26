@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 15:40:27.041256   0. Get Values row =>
+2024-01-26 15:40:27.041290   Row # = 984
+2024-01-26 15:40:27.041299   Row Values = 
+['Bid:11.01.04.00_02-en.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.01.04.00', '_02', 'en', 'gb', 'FCA', 'NoAuth', '', 'Education', 'Spread betting guide', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:40:27.041386   1. Run pretest =>
+
+2024-01-26 15:40:27.041399   row_loc = 
+['Bid:11.01.04.00_02-en.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.01.04.00', '_02', 'en', 'gb', 'FCA', 'NoAuth', '', 'Education', 'Spread betting guide', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:40:27.041414   => 1. Pretest finished
+
+2024-01-26 15:40:27.041479   2. Run run_pytest with Bid = Bid:11.01.04.00_02-en.gb.NoAuth from row =>
+
+2024-01-26 15:40:27.041491   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:40:27.041503   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang= --country=gb --role=NoAuth -m test_02 -v \tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py
+
+2024-01-26 15:40:29.073379   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:40:29.073425   => 2. Autotest with Bid = Bid:11.01.04.00_02-en.gb.NoAuth from row finished
+
+2024-01-26 15:40:29.073496   3. Run check_results =>
+2024-01-26 15:40:29.073510   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py::TestSpreadBettingGuidePretest::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+======================= 1 skipped, 6 deselected in 1.27s =======================
+
+2024-01-26 15:40:29.073715   => Текущий тест: 1 skipped
+
+2024-01-26 15:40:29.073735   => 3. check_results finished
+
+2024-01-26 15:40:29.073911   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:40:29.251758   => 4. One row check results into Google Sheet Bugs Report fixed

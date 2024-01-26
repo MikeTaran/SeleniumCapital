@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 15:37:29.830065   0. Get Values row =>
+2024-01-26 15:37:29.830103   Row # = 976
+2024-01-26 15:37:29.830113   Row Values = 
+['Bid:11.02.03.01_02-en.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.03.01', '_02', 'en', 'gb', 'FCA', 'NoAuth', 'https://capital.com/trade-brentcrude-oil', 'Education', 'Commodities trading L1', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '19/01/24', 'failed']
+
+2024-01-26 15:37:29.830206   1. Run pretest =>
+
+2024-01-26 15:37:29.830219   row_loc = 
+['Bid:11.02.03.01_02-en.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.03.01', '_02', 'en', 'gb', 'FCA', 'NoAuth', 'https://capital.com/trade-brentcrude-oil', 'Education', 'Commodities trading L1', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '19/01/24', 'failed']
+
+2024-01-26 15:37:29.830234   => 1. Pretest finished
+
+2024-01-26 15:37:29.830301   2. Run run_pytest with Bid = Bid:11.02.03.01_02-en.gb.NoAuth from row =>
+
+2024-01-26 15:37:29.830313   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:37:29.830325   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang= --country=gb --role=NoAuth --tpi_link=https://capital.com/trade-brentcrude-oil -m test_02 -v \tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py
+
+2024-01-26 15:38:15.103243   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:38:15.103326   => 2. Autotest with Bid = Bid:11.02.03.01_02-en.gb.NoAuth from row finished
+
+2024-01-26 15:38:15.103402   3. Run check_results =>
+2024-01-26 15:38:15.103416   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 10 items / 9 deselected / 1 selected
+
+tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py::TestCommoditiesTrading::test_02_main_banner_try_demo_button[https://capital.com/trade-brentcrude-oil-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+====================== 1 skipped, 9 deselected in 44.43s =======================
+
+2024-01-26 15:38:15.103538   => Текущий тест: 1 skipped
+
+2024-01-26 15:38:15.103549   => 3. check_results finished
+
+2024-01-26 15:38:15.103686   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:38:15.321574   => 4. One row check results into Google Sheet Bugs Report fixed

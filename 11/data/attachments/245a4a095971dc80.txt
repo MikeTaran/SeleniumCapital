@@ -1,0 +1,147 @@
+
+2024-01-26 15:50:31.982925   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:50:32.896850   worker_id = master
+
+2024-01-26 15:50:32.896866   0. Allure grouping v4
+
+
+2024-01-26 15:50:32.897058   START PRECONDITIONS =>
+
+2024-01-26 15:50:34.376417   Load page https://capital.com
+
+2024-01-26 15:50:34.376463   {'width': 1280, 'height': 720}
+
+2024-01-26 15:50:34.380096   Set windows position at (0, 0) =>
+
+2024-01-26 15:50:34.534889   Set resolution 1280 * 720 =>
+
+2024-01-26 15:50:34.641319   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:50:39.664438   Капчи нет. Тестим дальше
+
+2024-01-26 15:50:39.664535   Prev. Role: ?
+
+2024-01-26 15:50:39.664548   Run preconditions: set "Auth" Role =>
+2024-01-26 15:50:40.315120   Load page https://capital.com
+
+2024-01-26 15:50:40.521478   => All cookies are deleted
+2024-01-26 15:50:41.305930   Load page https://capital.com
+
+2024-01-26 15:50:41.306140   Step 'Click button [Accept all cookies]'
+2024-01-26 15:50:46.322090   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:50:46.348554   => Button [Accept all cookies] is visible
+2024-01-26 15:50:47.348682   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:50:47.382996   => Button [Accept all cookies] is clickable
+2024-01-26 15:50:47.383030   Click Button [Accept all cookies] =>
+2024-01-26 15:50:47.485285   => Button [Accept all cookies] is clicked
+2024-01-26 15:50:47.485330   => Accepted All Cookies
+
+2024-01-26 15:50:47.985762   Start Autorization
+
+2024-01-26 15:50:47.985940   2. Act
+2024-01-26 15:50:47.985962   Start Click button [Log in] =>
+2024-01-26 15:50:48.012178   BUTTON_LOGIN scroll =>
+2024-01-26 15:50:48.018289   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:50:48.033070   => BUTTON_LOGIN is clickable
+2024-01-26 15:50:48.033105   BUTTON_LOGIN click =>
+2024-01-26 15:50:48.072837   => BUTTON_LOGIN is clicked!
+2024-01-26 15:50:48.072923   => 'Login' form is opened
+2024-01-26 15:50:48.520952   => "login" and "password" are inputted
+2024-01-26 15:50:48.520998   Click [Continue] button on [Login] form =>
+2024-01-26 15:50:48.608179   => [Continue] button on [Login] form is clicked
+2024-01-26 15:50:51.720525   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:50:51.720559   Set timeout = 30
+2024-01-26 15:50:51.720574   Wait until load page with special title =>
+2024-01-26 15:50:51.723223   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:50:51.723250   Is present LOGO on this page? =>
+2024-01-26 15:50:53.062169   => LOGO is visible on this page
+2024-01-26 15:50:53.062298   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:50:54.270182   Current role: Auth
+
+2024-01-26 15:50:54.270228   Prev language: ?
+
+2024-01-26 15:50:54.270244   Run preconditions: set "it" language =>
+
+
+2024-01-26 15:50:54.302999   => Language and Country menu is present
+
+
+2024-01-26 15:50:54.323268   => Language and Country menu is visible
+
+
+2024-01-26 15:50:56.098268   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:50:59.802233   => Current language: it
+
+2024-01-26 15:50:59.802284   Prev country: ?
+
+2024-01-26 15:50:59.802300   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:50:59.819757   => Language and Country menu is present
+
+
+2024-01-26 15:50:59.839136   => Language and Country menu is visible
+
+
+2024-01-26 15:51:01.632995   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:51:04.421964   => Current country: gb
+
+2024-01-26 15:51:04.421999   => THE END PRECONDITIONS
+
+2024-01-26 15:51:04.422035   1. Arrange
+2024-01-26 15:51:05.974577   Load page https://capital.com/it/fare-trading-canopy-growth
+2024-01-26 15:51:05.974625   BUTTON_ON_VER_BANNER is visible? =>
+2024-01-26 15:51:06.025500   => BUTTON_ON_VER_BANNER is visible on the page!
+2024-01-26 15:51:06.025757   Start Checking that form [Sign up] popped up on the page =>
+2024-01-26 15:51:11.548146   '[Sign up]' form was not popped up
+
+2024-01-26 15:51:11.548311   2. Act
+2024-01-26 15:51:11.548325   BUTTON_ON_VER_BANNER is present? =>
+2024-01-26 15:51:11.556431   => BUTTON_ON_VER_BANNER is present on the page!
+2024-01-26 15:51:11.556464   BUTTON_ON_VER_BANNER scroll =>
+2024-01-26 15:51:17.197169   => BUTTON_ON_VER_BANNER clicked!
+2024-01-26 15:51:17.197283   For Vertical banner [type-id=253] Trading platform should be open in Demo Mode =>
+
+2024-01-26 15:51:17.197495   3. Assert_v4
+2024-01-26 15:51:17.197683   Checking that the trading platform page has opened (v4) =>
+2024-01-26 15:51:19.548799   => Current page title: Trading Platform | Capital.com
+2024-01-26 15:51:19.548975   Checking that the Trading platform LOGO is present on the page =>
+2024-01-26 15:51:20.672735   Checking that the Trading platform opened in DEMO mode =>
+
+Bug: Bid:11.02.02.01_10-it.gb.Auth
+
+2024-01-26 15:51:37.269419   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:51:37.275148   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:51:37.686163   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:51:38.219045   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:51:38.395679   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:51:38.395749   Bug: Bid:11.02.02.01_10-it.gb.Auth уже существует, но тип бага изменился с 16/01/24 на 11
+
+2024-01-26 15:51:38.396178   Bug: Bid:11.02.02.01_10-it.gb.Auth-11 уже существует
+
+2024-01-26 15:51:38.396335   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:51:38.698649   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:51:39.053114   *** end fixture Browser = teardown ***
+

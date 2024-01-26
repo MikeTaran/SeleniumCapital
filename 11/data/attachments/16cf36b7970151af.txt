@@ -1,0 +1,133 @@
+
+2024-01-26 15:09:04.052337   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - ro
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:09:04.947197   worker_id = master
+
+2024-01-26 15:09:04.947220   0. Allure grouping v4
+
+
+2024-01-26 15:09:04.947531   START PRECONDITIONS =>
+
+2024-01-26 15:09:06.505918   Load page https://capital.com
+
+2024-01-26 15:09:06.505967   {'width': 1280, 'height': 720}
+
+2024-01-26 15:09:06.508191   Set windows position at (0, 0) =>
+
+2024-01-26 15:09:06.686989   Set resolution 1280 * 720 =>
+
+2024-01-26 15:09:06.794076   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:09:11.846461   Капчи нет. Тестим дальше
+
+2024-01-26 15:09:11.846558   Prev. Role: ?
+
+2024-01-26 15:09:11.846571   Run preconditions: set "Auth" Role =>
+2024-01-26 15:09:12.527819   Load page https://capital.com
+
+2024-01-26 15:09:12.785073   => All cookies are deleted
+2024-01-26 15:09:13.773725   Load page https://capital.com
+
+2024-01-26 15:09:13.773921   Step 'Click button [Accept all cookies]'
+2024-01-26 15:09:18.796468   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:09:18.832632   => Button [Accept all cookies] is visible
+2024-01-26 15:09:19.832763   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:09:19.856326   => Button [Accept all cookies] is clickable
+2024-01-26 15:09:19.856357   Click Button [Accept all cookies] =>
+2024-01-26 15:09:19.914229   => Button [Accept all cookies] is clicked
+2024-01-26 15:09:19.914267   => Accepted All Cookies
+
+2024-01-26 15:09:20.414640   Start Autorization
+
+2024-01-26 15:09:20.414769   2. Act
+2024-01-26 15:09:20.414786   Start Click button [Log in] =>
+2024-01-26 15:09:20.423308   BUTTON_LOGIN scroll =>
+2024-01-26 15:09:20.429459   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:09:20.442637   => BUTTON_LOGIN is clickable
+2024-01-26 15:09:20.442668   BUTTON_LOGIN click =>
+2024-01-26 15:09:20.487904   => BUTTON_LOGIN is clicked!
+2024-01-26 15:09:20.487991   => 'Login' form is opened
+2024-01-26 15:09:21.066705   => "login" and "password" are inputted
+2024-01-26 15:09:21.066758   Click [Continue] button on [Login] form =>
+2024-01-26 15:09:21.142197   => [Continue] button on [Login] form is clicked
+2024-01-26 15:09:23.591572   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:09:23.591607   Set timeout = 30
+2024-01-26 15:09:23.591623   Wait until load page with special title =>
+2024-01-26 15:09:23.595076   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:09:23.595101   Is present LOGO on this page? =>
+2024-01-26 15:09:25.155806   => LOGO is visible on this page
+2024-01-26 15:09:25.155889   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:09:26.172451   Current role: Auth
+
+2024-01-26 15:09:26.172491   Prev language: ?
+
+2024-01-26 15:09:26.172500   Run preconditions: set "ro" language =>
+
+
+2024-01-26 15:09:26.188894   => Language and Country menu is present
+
+
+2024-01-26 15:09:26.254027   => Language and Country menu is visible
+
+
+2024-01-26 15:09:28.051665   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:09:29.824116   => Current language: ro
+
+2024-01-26 15:09:29.824161   Prev country: ?
+
+2024-01-26 15:09:29.824177   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:09:29.838133   => Language and Country menu is present
+
+
+2024-01-26 15:09:29.890303   => Language and Country menu is visible
+
+
+2024-01-26 15:09:31.664533   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:09:34.007417   => Current country: gb
+
+2024-01-26 15:09:34.007451   => THE END PRECONDITIONS
+
+2024-01-26 15:09:34.007606   START Open "Education" menu, "CFD trading guide" submenu =>
+
+2024-01-26 15:09:34.007621   1. Cur URL = https://capital.com/ro?country=gb
+
+2024-01-26 15:09:34.014055   2. Link = https://capital.com/ro
+2024-01-26 15:09:34.691408   Load page https://capital.com/ro
+2024-01-26 15:09:35.239135   => Education menu is present
+2024-01-26 15:09:35.272759   => Education menu is visible
+2024-01-26 15:09:36.601429   => Education menu focus moved
+
+2024-01-26 15:09:38.706369   3. Cur URL = https://capital.com/ro/what-is-cfd-trading
+
+2024-01-26 15:09:38.714314   1. Arrange_v0
+2024-01-26 15:09:38.718711   BUTTON_CREATE_YOUR_ACCOUNT is located on the page? =>
+
+2024-01-26 15:09:38.744352   2. Act_v0
+2024-01-26 15:09:39.492913   => BUTTON_CREATE_YOUR_ACCOUNT is clicked
+
+2024-01-26 15:09:39.493233   3. Assert_v4
+2024-01-26 15:09:39.493371   Checking that the trading platform page has opened (v4) =>
+2024-01-26 15:09:40.008687   => Current page title: Trading Platform | Capital.com
+2024-01-26 15:09:40.008833   Checking that the Trading platform LOGO is present on the page =>
+2024-01-26 15:09:40.622732   Checking that the Trading platform opened in LIVE mode =>
+2024-01-26 15:09:40.646793   => The page with https://capital.com/trading/platform url was opened in lIVE mode
+2024-01-26 15:09:42.005671   Load page https://capital.com/ro/what-is-cfd-trading
+
+2024-01-26 15:09:42.116411   *** end fixture Browser = teardown ***
+

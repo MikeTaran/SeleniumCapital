@@ -1,0 +1,221 @@
+
+
+
+2024-01-26 16:11:20.980556   0. Get Values row =>
+2024-01-26 16:11:20.980589   Row # = 1416
+2024-01-26 16:11:20.980598   Row Values = 
+['Bid:11.01.04.00_04-cn.gb.Auth', 'Server 2022', 'Chrome', '11.01.04.00', '_04', 'cn', 'gb', 'FCA', 'Auth', '', 'Education', 'Spread betting guide', '', '', '', '12', 'Bug # 12. Trading platform is opened in not LIVE mode', '', '', '', '14/01/24', 'passed']
+
+2024-01-26 16:11:20.980685   1. Run pretest =>
+
+2024-01-26 16:11:20.980698   row_loc = 
+['Bid:11.01.04.00_04-cn.gb.Auth', 'Server 2022', 'Chrome', '11.01.04.00', '_04', 'cn', 'gb', 'FCA', 'Auth', '', 'Education', 'Spread betting guide', '', '', '', '12', 'Bug # 12. Trading platform is opened in not LIVE mode', '', '', '', '14/01/24', 'passed']
+
+2024-01-26 16:11:20.980712   => 1. Pretest finished
+
+2024-01-26 16:11:20.980778   2. Run run_pytest with Bid = Bid:11.01.04.00_04-cn.gb.Auth from row =>
+
+2024-01-26 16:11:20.980790   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 16:11:20.980802   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=cn --country=gb --role=Auth -m test_04 -v \tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py
+
+2024-01-26 16:11:51.707613   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 16:11:51.707678   => 2. Autotest with Bid = Bid:11.01.04.00_04-cn.gb.Auth from row finished
+
+2024-01-26 16:11:51.707743   3. Run check_results =>
+2024-01-26 16:11:51.707761   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py::TestSpreadBettingGuidePretest::test_04_block_steps_trading_button_create_your_account[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestSpreadBettingGuidePretest.test_04_block_steps_trading_button_create_your_account[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <us_11-01-04-00_spread_betting_guide_test.TestSpreadBettingGuidePretest object at 0x7f819fb34810>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="498b126d85ee713be226b1dedefc375f")>
+cur_language = 'cn', cur_country = 'gb', cur_role = 'Auth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+
+    @allure.step("Start test of button [Create your account] in block [Steps trading]")
+    @pytest.mark.test_04
+    def test_04_block_steps_trading_button_create_your_account(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
+        """
+        Check: Button [1. Create your account] in block [Steps trading]
+        Language: EN, ES, CN. License: FCA.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.04", "Education > Menu item [Spread betting guide]",
+            ".00_04", "Testing button [Create your account] in block [Steps trading]")
+    
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+    
+        Common().check_language_in_list_and_skip_if_not_present(cur_language, ["", "es", "cn", "ru"])
+        Common().check_country_in_list_and_skip_if_not_present(cur_country, ["gb"])
+    
+        page_conditions = Conditions(d, "")
+        main_page_link = page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        page_menu = MenuSection(d, main_page_link)
+>       cur_item_link = page_menu.open_education_spread_betting_guide_menu(d, cur_language, main_page_link)
+E       TypeError: MenuSection.open_education_spread_betting_guide_menu() missing 1 required positional argument: 'link'
+
+tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py:138: TypeError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 16:11:21.891491   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - cn
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 16:11:22.796428   worker_id = master
+
+2024-01-26 16:11:22.796451   0. Allure grouping v4
+
+
+2024-01-26 16:11:22.796718   START PRECONDITIONS =>
+
+2024-01-26 16:11:24.290974   Load page https://capital.com
+
+2024-01-26 16:11:24.291018   {'width': 1280, 'height': 720}
+
+2024-01-26 16:11:24.294390   Set windows position at (0, 0) =>
+
+2024-01-26 16:11:24.435107   Set resolution 1280 * 720 =>
+
+2024-01-26 16:11:24.540371   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 16:11:29.581673   Капчи нет. Тестим дальше
+
+2024-01-26 16:11:29.581762   Prev. Role: ?
+
+2024-01-26 16:11:29.581774   Run preconditions: set "Auth" Role =>
+2024-01-26 16:11:30.327770   Load page https://capital.com
+
+2024-01-26 16:11:30.529774   => All cookies are deleted
+2024-01-26 16:11:31.308464   Load page https://capital.com
+
+2024-01-26 16:11:31.308688   Step 'Click button [Accept all cookies]'
+2024-01-26 16:11:36.331888   Is Visible Button [Accept all cookies]? =>
+2024-01-26 16:11:36.350197   => Button [Accept all cookies] is visible
+2024-01-26 16:11:37.350316   Is clickable Button [Accept all cookies] =>
+2024-01-26 16:11:37.372204   => Button [Accept all cookies] is clickable
+2024-01-26 16:11:37.372239   Click Button [Accept all cookies] =>
+2024-01-26 16:11:37.431973   => Button [Accept all cookies] is clicked
+2024-01-26 16:11:37.432025   => Accepted All Cookies
+
+2024-01-26 16:11:37.932385   Start Autorization
+
+2024-01-26 16:11:37.932514   2. Act
+2024-01-26 16:11:37.932532   Start Click button [Log in] =>
+2024-01-26 16:11:37.941441   BUTTON_LOGIN scroll =>
+2024-01-26 16:11:37.947269   Is BUTTON_LOGIN clickable? =>
+2024-01-26 16:11:37.966307   => BUTTON_LOGIN is clickable
+2024-01-26 16:11:37.966341   BUTTON_LOGIN click =>
+2024-01-26 16:11:38.036504   => BUTTON_LOGIN is clicked!
+2024-01-26 16:11:38.036611   => 'Login' form is opened
+2024-01-26 16:11:38.641708   => "login" and "password" are inputted
+2024-01-26 16:11:38.641745   Click [Continue] button on [Login] form =>
+2024-01-26 16:11:38.721826   => [Continue] button on [Login] form is clicked
+2024-01-26 16:11:41.326058   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 16:11:41.326099   Set timeout = 30
+2024-01-26 16:11:41.326122   Wait until load page with special title =>
+2024-01-26 16:11:41.329721   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 16:11:41.329744   Is present LOGO on this page? =>
+2024-01-26 16:11:42.619066   => LOGO is visible on this page
+2024-01-26 16:11:42.619147   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 16:11:43.713261   Current role: Auth
+
+2024-01-26 16:11:43.713306   Prev language: ?
+
+2024-01-26 16:11:43.713322   Run preconditions: set "cn" language =>
+
+
+2024-01-26 16:11:43.725377   => Language and Country menu is present
+
+
+2024-01-26 16:11:43.796332   => Language and Country menu is visible
+
+
+2024-01-26 16:11:45.580128   => Focus is moved on Language and Country menu 
+
+2024-01-26 16:11:47.268709   => Current language: cn
+
+2024-01-26 16:11:47.268744   Prev country: ?
+
+2024-01-26 16:11:47.268754   Run preconditions: set "gb" country =>
+
+
+2024-01-26 16:11:47.274196   => Language and Country menu is present
+
+
+2024-01-26 16:11:47.305771   => Language and Country menu is visible
+
+
+2024-01-26 16:11:49.080114   => Focus is moved on Language and Country menu 
+
+2024-01-26 16:11:51.283207   => Current country: gb
+
+2024-01-26 16:11:51.283248   => THE END PRECONDITIONS
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 16:11:51.653313   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py::TestSpreadBettingGuidePretest::test_04_block_steps_trading_button_create_your_account[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-01-04_spread_betting_guide/us_11-01-04-00_spread_betting_guide_test.py::TestSpreadBettingGuidePretest::test_04_block_steps_trading_button_create_your_account[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - TypeError: MenuSection.open_education_spread_betting_guide_menu() missing 1 required positional argument: 'link'
+================= 1 failed, 6 deselected, 1 warning in 29.91s ==================
+
+2024-01-26 16:11:51.708073   => Текущий тест: 1 failed
+
+2024-01-26 16:11:51.708793   => 3. check_results finished
+
+2024-01-26 16:11:51.708928   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:11:51.913359   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:11:51.916636   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:11:52.417289   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:11:52.417525   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:11:52.747608   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:11:52.747767   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:11:52.925341   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:11:52.925397   *** end fixture gs = teardown ***
+
+
+2024-01-26 16:11:53.014485   *** end fixture Browser = teardown ***
+

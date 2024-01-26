@@ -1,0 +1,342 @@
+
+
+
+2024-01-26 15:49:07.055051   0. Get Values row =>
+2024-01-26 15:49:07.055084   Row # = 1177
+2024-01-26 15:49:07.055093   Row Values = 
+['Bid:11.02.02.01_02-it.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.02.01', '_02', 'it', 'gb', 'FCA', 'NoAuth', 'https://capital.com/it/fare-trading-canopy-growth', 'Education', 'Shares trading / child', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '16/01/24', 'failed']
+
+2024-01-26 15:49:07.055182   1. Run pretest =>
+
+2024-01-26 15:49:07.055195   row_loc = 
+['Bid:11.02.02.01_02-it.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.02.01', '_02', 'it', 'gb', 'FCA', 'NoAuth', 'https://capital.com/it/fare-trading-canopy-growth', 'Education', 'Shares trading / child', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '16/01/24', 'failed']
+
+2024-01-26 15:49:07.055210   => 1. Pretest finished
+
+2024-01-26 15:49:07.055273   2. Run run_pytest with Bid = Bid:11.02.02.01_02-it.gb.NoAuth from row =>
+
+2024-01-26 15:49:07.055286   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:49:07.055297   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=it --country=gb --role=NoAuth --tpi_link=https://capital.com/it/fare-trading-canopy-growth -m test_02 -v \tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py
+
+2024-01-26 15:49:39.867672   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:49:39.867735   => 2. Autotest with Bid = Bid:11.02.02.01_02-it.gb.NoAuth from row finished
+
+2024-01-26 15:49:39.867818   3. Run check_results =>
+2024-01-26 15:49:39.867844   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 10 items / 9 deselected / 1 selected
+
+tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py::TestSharesTradingItems::test_02_main_banner_try_demo_button[https://capital.com/it/fare-trading-canopy-growth-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestSharesTradingItems.test_02_main_banner_try_demo_button[https://capital.com/it/fare-trading-canopy-growth-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-02-02-01_Shares_trading_test.TestSharesTradingItems object at 0x7fab20b61010>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="bc78bf206fd21c1ec3b9b29dd0c52373")>
+cur_language = 'it', cur_country = 'gb', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/it/fare-trading-canopy-growth'
+
+    @allure.step("Start test of button [Try demo] on Main banner")
+    # @pytest.mark.skip(reason="Skipped for debugging")
+    @pytest.mark.test_02
+    def test_02_main_banner_try_demo_button(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
+            cur_item_link):
+        """
+        Check: Button [Try demo] on Main banner
+        Language: All (Except: EL, HU, NL). License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.02", "Education > Menu item [Shares trading]",
+            ".01_02", "Testing button [Try demo] on Main banner")
+    
+        check_language(cur_language)
+    
+        page_conditions = Conditions(d, "")
+>       page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+
+tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/conditions.py:119: in preconditions
+    page_menu.menu_language_and_country_move_focus(cur_language)
+pages/Menu/menu.py:141: in menu_language_and_country_move_focus
+    .move_to_element(d.find_element(*MenuLanguageAndCountry.MENU_LANGUAGE_AND_COUNTRY)) \
+../../../.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:742: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+../../../.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:348: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fab2134b3d0>
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\\n#16 0x55b6342c21d7 \\u003Cunknown>\\n#17 0x55b6342d4124 \\u003Cunknown>\\n#18 0x7fbcc8c94ac3 \\u003Cunknown>\\n"}}'}
+
+    def check_response(self, response: Dict[str, Any]) -> None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                import json
+    
+                try:
+                    value = json.loads(value_json)
+                    if len(value) == 1:
+                        value = value["value"]
+                    status = value.get("error", None)
+                    if not status:
+                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                        message = value.get("value") or value.get("message")
+                        if not isinstance(message, str):
+                            value = message
+                            message = message.get("message")
+                    else:
+                        message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: Type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"header.cc-header .js-licLangSw"}
+E         (Session info: chrome=120.0.6099.224); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+E       Stacktrace:
+E       #0 0x55b6342d4f83 <unknown>
+E       #1 0x55b633f8dcf7 <unknown>
+E       #2 0x55b633fdd99e <unknown>
+E       #3 0x55b633fddaa1 <unknown>
+E       #4 0x55b634028d64 <unknown>
+E       #5 0x55b6340070dd <unknown>
+E       #6 0x55b634026006 <unknown>
+E       #7 0x55b634006e53 <unknown>
+E       #8 0x55b633fcedd4 <unknown>
+E       #9 0x55b633fd01de <unknown>
+E       #10 0x55b634299531 <unknown>
+E       #11 0x55b63429d455 <unknown>
+E       #12 0x55b634285f55 <unknown>
+E       #13 0x55b63429e0ef <unknown>
+E       #14 0x55b63426999f <unknown>
+E       #15 0x55b6342c2008 <unknown>
+E       #16 0x55b6342c21d7 <unknown>
+E       #17 0x55b6342d4124 <unknown>
+E       #18 0x7fbcc8c94ac3 <unknown>
+
+../../../.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: NoSuchElementException
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 15:49:08.072107   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:49:09.100379   worker_id = master
+
+2024-01-26 15:49:09.100404   0. Allure grouping v4
+
+
+2024-01-26 15:49:09.100669   START PRECONDITIONS =>
+
+2024-01-26 15:49:10.596259   Load page https://capital.com
+
+2024-01-26 15:49:10.596297   {'width': 1280, 'height': 720}
+
+2024-01-26 15:49:10.600647   Set windows position at (0, 0) =>
+
+2024-01-26 15:49:10.755500   Set resolution 1280 * 720 =>
+
+2024-01-26 15:49:10.862256   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:49:15.912113   Капчи нет. Тестим дальше
+
+2024-01-26 15:49:15.912233   Prev. Role: ?
+
+2024-01-26 15:49:15.912254   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:49:16.878527   Load page https://capital.com
+
+2024-01-26 15:49:17.145768   => All cookies are deleted
+2024-01-26 15:49:17.952783   Load page https://capital.com
+
+2024-01-26 15:49:17.953045   Step 'Click button [Accept all cookies]'
+2024-01-26 15:49:23.002585   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:49:23.021122   => Button [Accept all cookies] is visible
+2024-01-26 15:49:24.021242   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:49:24.046601   => Button [Accept all cookies] is clickable
+2024-01-26 15:49:24.046649   Click Button [Accept all cookies] =>
+2024-01-26 15:49:24.128597   => Button [Accept all cookies] is clicked
+2024-01-26 15:49:24.128644   => Accepted All Cookies
+
+2024-01-26 15:49:24.628999   Start Autorization
+
+2024-01-26 15:49:24.629164   2. Act
+2024-01-26 15:49:24.629183   Start Click button [Log in] =>
+2024-01-26 15:49:24.646359   BUTTON_LOGIN scroll =>
+2024-01-26 15:49:24.658617   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:49:24.687105   => BUTTON_LOGIN is clickable
+2024-01-26 15:49:24.687147   BUTTON_LOGIN click =>
+2024-01-26 15:49:24.822865   => BUTTON_LOGIN is clicked!
+2024-01-26 15:49:24.822992   => 'Login' form is opened
+2024-01-26 15:49:25.637922   => "login" and "password" are inputted
+2024-01-26 15:49:25.637968   Click [Continue] button on [Login] form =>
+2024-01-26 15:49:25.738351   => [Continue] button on [Login] form is clicked
+2024-01-26 15:49:28.445411   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:49:28.445445   Set timeout = 30
+2024-01-26 15:49:28.445460   Wait until load page with special title =>
+2024-01-26 15:49:28.449150   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:49:28.449176   Is present LOGO on this page? =>
+2024-01-26 15:49:29.934728   => LOGO is visible on this page
+2024-01-26 15:49:29.934842   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:49:31.079622   Start DeAuthorisation
+2024-01-26 15:49:31.079757   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 15:49:31.159213   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 15:49:32.432433   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 15:49:32.432481   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 15:49:32.453948   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 15:49:32.453991   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 15:49:33.318384   => User panel [My account] is opened
+
+2024-01-26 15:49:33.318593   Start Click [Logout] button:
+2024-01-26 15:49:33.318609   BUTTON_LOGOUT is present? =>
+2024-01-26 15:49:33.326840   => BUTTON_LOGOUT is present
+2024-01-26 15:49:33.326864   Is visible BUTTON_LOGOUT? =>
+2024-01-26 15:49:33.340865   BUTTON_LOGOUT is clickable? =>
+2024-01-26 15:49:33.353772   BUTTON_LOGOUT click =>
+2024-01-26 15:49:33.405631   => BUTTON_LOGOUT is clicked
+
+2024-01-26 15:49:33.405768   Current role: NoAuth
+
+2024-01-26 15:49:33.405785   Prev language: ?
+
+2024-01-26 15:49:33.405797   Run preconditions: set "it" language =>
+
+
+2024-01-26 15:49:33.431603   => Language and Country menu is present
+
+
+2024-01-26 15:49:33.444832   => Language and Country menu is visible
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 15:49:39.763258   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py::TestSharesTradingItems::test_02_main_banner_try_demo_button[https://capital.com/it/fare-trading-canopy-growth-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-01_Shares_trading_test.py::TestSharesTradingItems::test_02_main_banner_try_demo_button[https://capital.com/it/fare-trading-canopy-growth-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"header.cc-header .js-licLangSw"}
+  (Session info: chrome=120.0.6099.224); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b6342d4f83 <unknown>
+#1 0x55b633f8dcf7 <unknown>
+#2 0x55b633fdd99e <unknown>
+#3 0x55b633fddaa1 <unknown>
+#4 0x55b634028d64 <unknown>
+#5 0x55b6340070dd <unknown>
+#6 0x55b634026006 <unknown>
+#7 0x55b634006e53 <unknown>
+#8 0x55b633fcedd4 <unknown>
+#9 0x55b633fd01de <unknown>
+#10 0x55b634299531 <unknown>
+#11 0x55b63429d455 <unknown>
+#12 0x55b634285f55 <unknown>
+#13 0x55b63429e0ef <unknown>
+#14 0x55b63426999f <unknown>
+#15 0x55b6342c2008 <unknown>
+#16 0x55b6342c21d7 <unknown>
+#17 0x55b6342d4124 <unknown>
+#18 0x7fbcc8c94ac3 <unknown>
+================= 1 failed, 9 deselected, 1 warning in 31.93s ==================
+
+2024-01-26 15:49:39.868506   => Текущий тест: 1 failed
+
+2024-01-26 15:49:39.870218   => 3. check_results finished
+
+2024-01-26 15:49:39.870433   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:49:40.040233   => 4. One row check results into Google Sheet Bugs Report fixed

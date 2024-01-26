@@ -1,0 +1,180 @@
+
+2024-01-26 15:23:18.325693   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:23:19.279103   worker_id = master
+
+2024-01-26 15:23:19.279125   0. Allure grouping v4
+
+
+2024-01-26 15:23:19.279369   START PRECONDITIONS =>
+
+2024-01-26 15:23:20.765762   Load page https://capital.com
+
+2024-01-26 15:23:20.765811   {'width': 1280, 'height': 720}
+
+2024-01-26 15:23:20.768458   Set windows position at (0, 0) =>
+
+2024-01-26 15:23:20.876042   Set resolution 1280 * 720 =>
+
+2024-01-26 15:23:20.984123   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:23:26.013839   Капчи нет. Тестим дальше
+
+2024-01-26 15:23:26.013934   Prev. Role: ?
+
+2024-01-26 15:23:26.013947   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:23:26.676097   Load page https://capital.com
+
+2024-01-26 15:23:26.871108   => All cookies are deleted
+2024-01-26 15:23:27.750086   Load page https://capital.com
+
+2024-01-26 15:23:27.750283   Step 'Click button [Accept all cookies]'
+2024-01-26 15:23:32.768078   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:23:32.798300   => Button [Accept all cookies] is visible
+2024-01-26 15:23:33.798420   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:23:33.831273   => Button [Accept all cookies] is clickable
+2024-01-26 15:23:33.831310   Click Button [Accept all cookies] =>
+2024-01-26 15:23:33.918119   => Button [Accept all cookies] is clicked
+2024-01-26 15:23:33.918160   => Accepted All Cookies
+
+2024-01-26 15:23:34.418520   Start Autorization
+
+2024-01-26 15:23:34.418628   2. Act
+2024-01-26 15:23:34.418641   Start Click button [Log in] =>
+2024-01-26 15:23:34.431436   BUTTON_LOGIN scroll =>
+2024-01-26 15:23:34.435791   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:23:34.450569   => BUTTON_LOGIN is clickable
+2024-01-26 15:23:34.450602   BUTTON_LOGIN click =>
+2024-01-26 15:23:34.496168   => BUTTON_LOGIN is clicked!
+2024-01-26 15:23:34.496250   => 'Login' form is opened
+2024-01-26 15:23:34.961668   => "login" and "password" are inputted
+2024-01-26 15:23:34.961708   Click [Continue] button on [Login] form =>
+2024-01-26 15:23:35.057789   => [Continue] button on [Login] form is clicked
+2024-01-26 15:23:37.723456   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:23:37.723490   Set timeout = 30
+2024-01-26 15:23:37.723505   Wait until load page with special title =>
+2024-01-26 15:23:37.727241   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:23:37.727270   Is present LOGO on this page? =>
+2024-01-26 15:23:39.248793   => LOGO is visible on this page
+2024-01-26 15:23:39.248877   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:23:40.321550   Start DeAuthorisation
+2024-01-26 15:23:40.321700   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 15:23:40.370204   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 15:23:41.696463   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 15:23:41.696509   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 15:23:41.716745   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 15:23:41.716776   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 15:23:42.570937   => User panel [My account] is opened
+
+2024-01-26 15:23:42.571154   Start Click [Logout] button:
+2024-01-26 15:23:42.571169   BUTTON_LOGOUT is present? =>
+2024-01-26 15:23:42.583342   => BUTTON_LOGOUT is present
+2024-01-26 15:23:42.583374   Is visible BUTTON_LOGOUT? =>
+2024-01-26 15:23:42.600885   BUTTON_LOGOUT is clickable? =>
+2024-01-26 15:23:42.617595   BUTTON_LOGOUT click =>
+2024-01-26 15:23:42.691770   => BUTTON_LOGOUT is clicked
+
+2024-01-26 15:23:42.691907   Current role: NoAuth
+
+2024-01-26 15:23:42.691929   Prev language: ?
+
+2024-01-26 15:23:42.691943   Run preconditions: set "es" language =>
+
+
+2024-01-26 15:23:42.736683   => Language and Country menu is present
+
+
+2024-01-26 15:23:42.757577   => Language and Country menu is visible
+
+
+2024-01-26 15:23:44.561720   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:23:46.256780   => Current language: es
+
+2024-01-26 15:23:46.256814   Prev country: ?
+
+2024-01-26 15:23:46.256824   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:23:46.285342   => Language and Country menu is present
+
+
+2024-01-26 15:23:46.305403   => Language and Country menu is visible
+
+
+2024-01-26 15:23:48.079411   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:23:50.330483   => Current country: gb
+
+2024-01-26 15:23:50.330529   => THE END PRECONDITIONS
+
+2024-01-26 15:23:50.330562   1. Cur URL = https://capital.com/es?country=gb
+
+2024-01-26 15:23:50.333079   2. Link = https://capital.com/es
+2024-01-26 15:23:51.026713   Load page https://capital.com/es
+2024-01-26 15:23:51.539457   => Education menu is present
+2024-01-26 15:23:51.563029   => Education menu is visible
+2024-01-26 15:23:52.843988   => Education menu focus moved
+
+2024-01-26 15:23:54.720311   1. Arrange
+2024-01-26 15:23:54.723859   BUTTON_ON_HOR_BANNER is visible? =>
+2024-01-26 15:23:54.746462   => BUTTON_ON_HOR_BANNER is visible on the page!
+2024-01-26 15:23:54.746698   Start Checking that form [Sign up] popped up on the page =>
+2024-01-26 15:24:00.275348   '[Sign up]' form was not popped up
+
+2024-01-26 15:24:00.275549   2. Act
+2024-01-26 15:24:00.275569   BUTTON_ON_HOR_BANNER is present? =>
+2024-01-26 15:24:00.284779   => BUTTON_ON_HOR_BANNER is present on the page!
+2024-01-26 15:24:00.284808   BUTTON_ON_HOR_BANNER scroll =>
+2024-01-26 15:24:02.242194   => BUTTON_ON_HOR_BANNER clicked!
+
+2024-01-26 15:24:02.242491   3. Assert_Login_v0
+2024-01-26 15:24:02.242609   Check that 'Login' form is opened
+2024-01-26 15:24:09.256842   'Login' form not opened
+2024-01-26 15:24:09.262985   'Login' page not opened
+2024-01-26 15:24:14.797806   'Login' form on trading platform not opened
+2024-01-26 15:24:14.797985   Start step Check that [Sign up] form is opened
+2024-01-26 15:24:20.330068   'Sign up' form not opened
+2024-01-26 15:24:20.330242   Start method Check that [Sign up] page opened =>
+2024-01-26 15:24:21.335174   'Sign up' page opened
+2024-01-26 15:24:21.335219   Assert SIGNUP_SIGNUP_FRAME =>
+2024-01-26 15:24:21.344158   Assert SIGNUP_REF_LOGIN =>
+2024-01-26 15:24:21.362316   Assert SIGNUP_PRIVACY_POLICY_ALL_1 =>
+2024-01-26 15:24:26.896062   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2024-01-26 15:24:26.915456   => SIGNUP_PRIVACY_POLICY_ALL
+2024-01-26 15:24:26.915487   => 'Signup' page is checked
+
+Bug: Bid:11.02.03.00_09-es.gb.NoAuth
+
+2024-01-26 15:24:27.915686   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:24:27.923231   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:24:28.297637   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:24:28.667852   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:24:29.020572   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:24:29.020649   Bug: Bid:11.02.03.00_09-es.gb.NoAuth уже существует, но тип бага изменился с 22/01/24 на 06
+
+2024-01-26 15:24:29.021048   Bug: Bid:11.02.03.00_09-es.gb.NoAuth-06 уже существует
+
+2024-01-26 15:24:29.021189   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:24:29.317359   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:24:29.861112   *** end fixture Browser = teardown ***
+

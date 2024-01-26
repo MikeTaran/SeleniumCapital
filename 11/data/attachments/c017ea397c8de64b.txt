@@ -1,0 +1,148 @@
+
+2024-01-26 15:59:31.156059   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:59:32.021909   worker_id = master
+
+2024-01-26 15:59:32.021931   0. Allure grouping v4
+
+
+2024-01-26 15:59:32.022178   START PRECONDITIONS =>
+
+2024-01-26 15:59:33.900444   Load page https://capital.com
+
+2024-01-26 15:59:33.900490   {'width': 1280, 'height': 720}
+
+2024-01-26 15:59:33.902972   Set windows position at (0, 0) =>
+
+2024-01-26 15:59:34.010844   Set resolution 1280 * 720 =>
+
+2024-01-26 15:59:34.146441   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:59:39.153190   Капчи нет. Тестим дальше
+
+2024-01-26 15:59:39.153280   Prev. Role: ?
+
+2024-01-26 15:59:39.153292   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:59:39.871290   Load page https://capital.com
+
+2024-01-26 15:59:40.145731   => All cookies are deleted
+2024-01-26 15:59:40.880450   Load page https://capital.com
+
+2024-01-26 15:59:40.880695   Step 'Click button [Accept all cookies]'
+2024-01-26 15:59:45.912890   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:59:45.942178   => Button [Accept all cookies] is visible
+2024-01-26 15:59:46.942305   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:59:46.965172   => Button [Accept all cookies] is clickable
+2024-01-26 15:59:46.965201   Click Button [Accept all cookies] =>
+2024-01-26 15:59:47.020477   => Button [Accept all cookies] is clicked
+2024-01-26 15:59:47.020516   => Accepted All Cookies
+
+2024-01-26 15:59:47.520938   Start Autorization
+
+2024-01-26 15:59:47.521091   2. Act
+2024-01-26 15:59:47.521113   Start Click button [Log in] =>
+2024-01-26 15:59:47.535998   BUTTON_LOGIN scroll =>
+2024-01-26 15:59:47.546058   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:59:47.568519   => BUTTON_LOGIN is clickable
+2024-01-26 15:59:47.568564   BUTTON_LOGIN click =>
+2024-01-26 15:59:47.649787   => BUTTON_LOGIN is clicked!
+2024-01-26 15:59:47.649890   => 'Login' form is opened
+2024-01-26 15:59:48.250398   => "login" and "password" are inputted
+2024-01-26 15:59:48.250441   Click [Continue] button on [Login] form =>
+2024-01-26 15:59:48.345004   => [Continue] button on [Login] form is clicked
+2024-01-26 15:59:51.065245   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:59:51.065286   Set timeout = 30
+2024-01-26 15:59:51.065310   Wait until load page with special title =>
+2024-01-26 15:59:51.070758   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:59:51.070787   Is present LOGO on this page? =>
+2024-01-26 15:59:52.401896   => LOGO is visible on this page
+2024-01-26 15:59:52.401972   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:59:53.669083   Start DeAuthorisation
+2024-01-26 15:59:53.669204   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 15:59:53.682479   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 15:59:54.958456   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 15:59:54.958497   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 15:59:54.977893   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 15:59:54.977925   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 15:59:55.827415   => User panel [My account] is opened
+
+2024-01-26 15:59:55.827637   Start Click [Logout] button:
+2024-01-26 15:59:55.827655   BUTTON_LOGOUT is present? =>
+2024-01-26 15:59:55.835608   => BUTTON_LOGOUT is present
+2024-01-26 15:59:55.835631   Is visible BUTTON_LOGOUT? =>
+2024-01-26 15:59:55.851839   BUTTON_LOGOUT is clickable? =>
+2024-01-26 15:59:55.867866   BUTTON_LOGOUT click =>
+2024-01-26 15:59:55.920966   => BUTTON_LOGOUT is clicked
+
+2024-01-26 15:59:55.921108   Current role: NoAuth
+
+2024-01-26 15:59:55.921133   Prev language: ?
+
+2024-01-26 15:59:55.921148   Run preconditions: set "es" language =>
+
+
+2024-01-26 15:59:55.966776   => Language and Country menu is present
+
+
+2024-01-26 15:59:55.983289   => Language and Country menu is visible
+
+
+2024-01-26 15:59:57.759322   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:59:59.445284   => Current language: es
+
+2024-01-26 15:59:59.445328   Prev country: ?
+
+2024-01-26 15:59:59.445345   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:59:59.496190   => Language and Country menu is present
+
+
+2024-01-26 15:59:59.516740   => Language and Country menu is visible
+
+
+2024-01-26 16:00:01.308669   => Focus is moved on Language and Country menu 
+
+2024-01-26 16:00:03.569808   => Current country: gb
+
+2024-01-26 16:00:03.569848   => THE END PRECONDITIONS
+
+2024-01-26 16:00:03.569896   1. Arrange
+2024-01-26 16:00:04.234089   Load page https://capital.com/es/operar-cobre
+2024-01-26 16:00:04.234134   BUTTON_ON_HOR_BANNER is visible? =>
+2024-01-26 16:00:04.330262   => BUTTON_ON_HOR_BANNER is visible on the page!
+2024-01-26 16:00:04.330430   Start Checking that form [Sign up] popped up on the page =>
+2024-01-26 16:00:09.881900   '[Sign up]' form was not popped up
+
+2024-01-26 16:00:09.882061   2. Act
+2024-01-26 16:00:09.882075   BUTTON_ON_HOR_BANNER is present? =>
+2024-01-26 16:00:09.890091   => BUTTON_ON_HOR_BANNER is present on the page!
+2024-01-26 16:00:09.890123   BUTTON_ON_HOR_BANNER scroll =>
+2024-01-26 16:00:10.656691   => BUTTON_ON_HOR_BANNER clicked!
+
+2024-01-26 16:00:10.656976   3. Assert_Login_v0
+2024-01-26 16:00:10.657091   Check that 'Login' form is opened
+2024-01-26 16:00:16.187200   'Login' form not opened
+2024-01-26 16:00:16.190166   'Login' page not opened
+2024-01-26 16:00:21.748106   'Login' form on trading platform not opened
+2024-01-26 16:00:21.748271   Start step Check that [Sign up] form is opened
+2024-01-26 16:00:27.279481   'Sign up' form not opened
+2024-01-26 16:00:27.279658   Start method Check that [Sign up] page opened =>
+2024-01-26 16:00:28.283123   'Sign up' page opened
+2024-01-26 16:00:28.283159   Assert SIGNUP_SIGNUP_FRAME =>
+
+2024-01-26 16:00:33.639313   *** end fixture Browser = teardown ***
+

@@ -1,0 +1,250 @@
+
+
+
+2024-01-26 15:57:33.200976   0. Get Values row =>
+2024-01-26 15:57:33.201004   Row # = 1360
+2024-01-26 15:57:33.201014   Row Values = 
+['Bid:11.03.01.01_07-es.gb.NoReg', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_07', 'es', 'gb', 'FCA', 'NoReg', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '03', 'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url', '', '', '', '15/01/24', 'failed']
+
+2024-01-26 15:57:33.201094   1. Run pretest =>
+
+2024-01-26 15:57:33.201107   row_loc = 
+['Bid:11.03.01.01_07-es.gb.NoReg', 'Ubuntu 22.04', 'Chrome', '11.03.01.01', '_07', 'es', 'gb', 'FCA', 'NoReg', 'https://capital.com/es/swing-trading', 'Education', 'Trading strategies guide L1', '', '', '', '03', 'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url', '', '', '', '15/01/24', 'failed']
+
+2024-01-26 15:57:33.201122   => 1. Pretest finished
+
+2024-01-26 15:57:33.201197   2. Run run_pytest with Bid = Bid:11.03.01.01_07-es.gb.NoReg from row =>
+
+2024-01-26 15:57:33.201210   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:57:33.201221   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=gb --role=NoReg --tpi_link=https://capital.com/es/swing-trading -m test_07 -v \tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py
+
+2024-01-26 15:58:02.141793   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:58:02.141842   => 2. Autotest with Bid = Bid:11.03.01.01_07-es.gb.NoReg from row finished
+
+2024-01-26 15:58:02.141909   3. Run check_results =>
+2024-01-26 15:58:02.141928   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 10 items / 9 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome--ae-NoReg-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestTradingStrategiesGuides.test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome--ae-NoReg-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-03-01-01_trading_strategies_guide_test.TestTradingStrategiesGuides object at 0x7f6299296310>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="b8f6cf954c8c5813bf6a71f851eeb652")>
+cur_language = 'es', cur_country = 'gb', cur_role = 'NoReg'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/es/swing-trading'
+
+    @allure.step("Start test_11.03.01.01_07 of button [Get it on Google Play] "
+                 "in Block 'Sign up and trade smart today!'")
+    @pytest.mark.test_07
+    def test_07_button_get_it_on_google_play(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password, cur_item_link):
+        """
+        Check: Button [Get it on Google Play] in Block "Sign up and trade smart today!"
+        Language: All. License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.01", "Education > Menu item [Trading Strategies Guides]",
+            ".01_07", "Test button [Get it on Google Play] in Block \"Sign up and trade smart today!\"")
+    
+        Common().check_language_in_list_and_skip_if_not_present(cur_language, ["", "de", "es", "it", "ru", "zh"])
+    
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        test_element = ButtonGetItOnGooglePlay(d, cur_item_link)
+        test_element.arrange_(cur_item_link)
+        if not test_element.element_click():
+            pytest.fail("Testing element is not clicked")
+    
+        test_element = AssertClass(d, cur_item_link, bid)
+>       test_element.assert_google_play(d, cur_item_link)
+
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/AssertClass.py:159: in assert_google_play
+    self.page_google_play.should_be_google_play_page(cur_link)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.GooglePlay.google_play.GooglePlay object at 0x7f62992cd050>
+cur_link = 'https://capital.com/es/swing-trading'
+
+    @allure.step("Checking that the Google Play page has opened")
+    def should_be_google_play_page(self, cur_link):
+        """Check if the page is open"""
+        print(f"{datetime.now()}   Checking that the Google Play page has opened")
+        self.wait_for_change_url(cur_link, 10)
+        # Следующие две строки только для проверки работоспособности asserts, тк в данный момент баг в url кнопки
+        # self.link = "https://play.google.com/store/apps/details?id=com.capital.trading"
+        # self.open_page()
+        if self.current_page_url_contain_the(data["APP_URL"]):
+            self.should_be_page_title_v2(data["PAGE_TITLE"])
+            self.should_be_google_play_app_title(data["APP_TITLE"])
+            self.should_be_google_play_specifies_provider(data["PROVIDER"])
+            self.open_page()
+            assert True
+        else:
+            current_page = self.browser.current_url
+            # self.open_page()
+            # ==== new bug re-test checking =====
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '03', self.link)
+            # ==================================
+>           assert False, f'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url'
+E           AssertionError: Bug # 03. Loaded page https://apps.apple.com/ie/app/capital-com-trading-finance/id1230088754?mt=8 with not https://play.google.com/store/apps/details?id=com.capital.trading url
+
+pages/GooglePlay/google_play.py:40: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 15:57:34.038226   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - gb
+
+
+
+Current test role - NoReg
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:57:34.948063   worker_id = master
+
+2024-01-26 15:57:34.948079   0. Allure grouping v4
+
+
+2024-01-26 15:57:34.948338   START PRECONDITIONS =>
+
+2024-01-26 15:57:36.455914   Load page https://capital.com
+
+2024-01-26 15:57:36.455963   {'width': 1280, 'height': 720}
+
+2024-01-26 15:57:36.458754   Set windows position at (0, 0) =>
+
+2024-01-26 15:57:36.569587   Set resolution 1280 * 720 =>
+
+2024-01-26 15:57:36.672262   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:57:41.686235   Капчи нет. Тестим дальше
+
+2024-01-26 15:57:41.686329   Prev. Role: ?
+
+2024-01-26 15:57:41.686341   Run preconditions: set "NoReg" Role =>
+2024-01-26 15:57:42.381754   Load page https://capital.com
+
+2024-01-26 15:57:42.664923   => All cookies are deleted
+2024-01-26 15:57:43.490748   Load page https://capital.com
+
+2024-01-26 15:57:43.490984   Step 'Click button [Accept all cookies]'
+2024-01-26 15:57:48.498692   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:57:48.517448   => Button [Accept all cookies] is visible
+2024-01-26 15:57:49.517570   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:57:49.540397   => Button [Accept all cookies] is clickable
+2024-01-26 15:57:49.540441   Click Button [Accept all cookies] =>
+2024-01-26 15:57:49.600208   => Button [Accept all cookies] is clicked
+2024-01-26 15:57:49.600264   => Accepted All Cookies
+
+2024-01-26 15:57:50.100500   Current role: NoReg
+
+2024-01-26 15:57:50.100568   Prev language: ?
+
+2024-01-26 15:57:50.100592   Run preconditions: set "es" language =>
+
+
+2024-01-26 15:57:50.113116   => Language and Country menu is present
+
+
+2024-01-26 15:57:50.132266   => Language and Country menu is visible
+
+
+2024-01-26 15:57:51.913681   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:57:53.520289   => Current language: es
+
+2024-01-26 15:57:53.520326   Prev country: ?
+
+2024-01-26 15:57:53.520336   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:57:53.529635   => Language and Country menu is present
+
+
+2024-01-26 15:57:53.563433   => Language and Country menu is visible
+
+
+2024-01-26 15:57:55.348575   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:57:57.690680   => Current country: gb
+
+2024-01-26 15:57:57.690719   => THE END PRECONDITIONS
+
+2024-01-26 15:57:57.690755   1. Arrange
+2024-01-26 15:57:58.402025   Load page https://capital.com/es/swing-trading
+2024-01-26 15:57:58.402064   Is visible BUTTON_GET_IT_ON_GOOGLE_PLAY? =>
+2024-01-26 15:57:58.421986   => BUTTON_GET_IT_ON_GOOGLE_PLAY is visible on the page!
+
+2024-01-26 15:57:58.422175   2. Act
+2024-01-26 15:57:58.531434   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-26 15:57:58.668720   => BUTTON_GET_IT_ON_GOOGLE_PLAY IS CLICKED
+
+2024-01-26 15:57:58.669009   3. Assert_v0
+2024-01-26 15:57:58.669128   Checking that the Google Play page has opened
+
+Bug: Bid:11.03.01.01_07-es.gb.NoReg
+
+2024-01-26 15:58:00.028514   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:58:00.037043   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:58:00.437774   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:58:00.977714   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:58:01.293774   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:58:01.293863   Bug: Bid:11.03.01.01_07-es.gb.NoReg уже существует, но тип бага изменился с 15/01/24 на 03
+
+2024-01-26 15:58:01.294437   Bug: Bid:11.03.01.01_07-es.gb.NoReg-03 уже существует
+
+2024-01-26 15:58:01.294595   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:58:01.738925   => 4. One row check results into Google Sheet Bugs Report fixed
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 15:58:02.063741   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome--ae-NoReg-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-03-01_trading_strategies_guide/US_11-03-01-01_trading_strategies_guide_test.py::TestTradingStrategiesGuides::test_07_button_get_it_on_google_play[https://capital.com/es/swing-trading-Chrome--ae-NoReg-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 03. Loaded page https://apps.apple.com/ie/app/capital-com-trading-finance/id1230088754?mt=8 with not https://play.google.com/store/apps/details?id=com.capital.trading url
+================= 1 failed, 9 deselected, 1 warning in 28.18s ==================
+
+2024-01-26 15:58:02.142206   => Текущий тест: 1 failed
+
+2024-01-26 15:58:02.142848   => 3. check_results finished
+
+2024-01-26 15:58:02.142986   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:58:02.317478   => 4. One row check results into Google Sheet Bugs Report fixed

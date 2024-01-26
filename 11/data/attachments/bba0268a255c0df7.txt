@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 15:32:10.244157   0. Get Values row =>
+2024-01-26 15:32:10.244188   Row # = 948
+2024-01-26 15:32:10.244197   Row Values = 
+['Bid:11.03.03.00_07-en.gb.NoReg', 'Ubuntu 22.04', 'Chrome', '11.03.03.00', '_07', 'en', 'gb', 'FCA', 'NoReg', '', 'Education', 'Trend Trading', '', '', '', '03', 'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url', '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:32:10.244282   1. Run pretest =>
+
+2024-01-26 15:32:10.244295   row_loc = 
+['Bid:11.03.03.00_07-en.gb.NoReg', 'Ubuntu 22.04', 'Chrome', '11.03.03.00', '_07', 'en', 'gb', 'FCA', 'NoReg', '', 'Education', 'Trend Trading', '', '', '', '03', 'Bug # 03. Loaded page {current_page} with not {data["APP_URL"]} url', '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:32:10.244309   => 1. Pretest finished
+
+2024-01-26 15:32:10.244374   2. Run run_pytest with Bid = Bid:11.03.03.00_07-en.gb.NoReg from row =>
+
+2024-01-26 15:32:10.244385   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:32:10.244397   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang= --country=gb --role=NoReg -m test_07 -v \tests/US_11_Education/US_11-03-03_Trend_Trading/US_11-03-03_Trend_Trading_test.py
+
+2024-01-26 15:32:12.338581   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:32:12.338634   => 2. Autotest with Bid = Bid:11.03.03.00_07-en.gb.NoReg from row finished
+
+2024-01-26 15:32:12.338717   3. Run check_results =>
+2024-01-26 15:32:12.338732   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-03_Trend_Trading/US_11-03-03_Trend_Trading_test.py::TestTrendTrading::test_07_button_get_it_on_google_play[Chrome--ae-NoReg-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+======================= 1 skipped, 6 deselected in 1.18s =======================
+
+2024-01-26 15:32:12.338860   => Текущий тест: 1 skipped
+
+2024-01-26 15:32:12.338871   => 3. check_results finished
+
+2024-01-26 15:32:12.339010   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:32:12.731510   => 4. One row check results into Google Sheet Bugs Report fixed

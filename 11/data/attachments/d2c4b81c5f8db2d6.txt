@@ -1,0 +1,142 @@
+
+2024-01-26 15:53:48.918508   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:53:49.814600   worker_id = master
+
+2024-01-26 15:53:49.814618   0. Allure grouping v4
+
+
+2024-01-26 15:53:49.814807   START PRECONDITIONS =>
+
+2024-01-26 15:53:51.511979   Load page https://capital.com
+
+2024-01-26 15:53:51.512027   {'width': 1280, 'height': 720}
+
+2024-01-26 15:53:51.514730   Set windows position at (0, 0) =>
+
+2024-01-26 15:53:51.664323   Set resolution 1280 * 720 =>
+
+2024-01-26 15:53:51.770549   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:53:56.792131   Капчи нет. Тестим дальше
+
+2024-01-26 15:53:56.792228   Prev. Role: ?
+
+2024-01-26 15:53:56.792241   Run preconditions: set "Auth" Role =>
+2024-01-26 15:53:57.530713   Load page https://capital.com
+
+2024-01-26 15:53:57.778351   => All cookies are deleted
+2024-01-26 15:53:58.646893   Load page https://capital.com
+
+2024-01-26 15:53:58.647141   Step 'Click button [Accept all cookies]'
+2024-01-26 15:54:03.711034   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:54:03.730382   => Button [Accept all cookies] is visible
+2024-01-26 15:54:04.730498   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:54:04.806858   => Button [Accept all cookies] is clickable
+2024-01-26 15:54:04.806902   Click Button [Accept all cookies] =>
+2024-01-26 15:54:04.873288   => Button [Accept all cookies] is clicked
+2024-01-26 15:54:04.873328   => Accepted All Cookies
+
+2024-01-26 15:54:05.373805   Start Autorization
+
+2024-01-26 15:54:05.373968   2. Act
+2024-01-26 15:54:05.373992   Start Click button [Log in] =>
+2024-01-26 15:54:05.383881   BUTTON_LOGIN scroll =>
+2024-01-26 15:54:05.390622   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:54:05.401462   => BUTTON_LOGIN is clickable
+2024-01-26 15:54:05.401530   BUTTON_LOGIN click =>
+2024-01-26 15:54:05.444609   => BUTTON_LOGIN is clicked!
+2024-01-26 15:54:05.444707   => 'Login' form is opened
+2024-01-26 15:54:06.128142   => "login" and "password" are inputted
+2024-01-26 15:54:06.128182   Click [Continue] button on [Login] form =>
+2024-01-26 15:54:06.220669   => [Continue] button on [Login] form is clicked
+2024-01-26 15:54:08.856409   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:54:08.856442   Set timeout = 30
+2024-01-26 15:54:08.856457   Wait until load page with special title =>
+2024-01-26 15:54:08.859610   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:54:08.859632   Is present LOGO on this page? =>
+2024-01-26 15:54:10.434150   => LOGO is visible on this page
+2024-01-26 15:54:10.434244   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:54:11.684124   Current role: Auth
+
+2024-01-26 15:54:11.684177   Prev language: ?
+
+2024-01-26 15:54:11.684191   Run preconditions: set "it" language =>
+
+
+2024-01-26 15:54:11.775400   => Language and Country menu is present
+
+
+2024-01-26 15:54:11.795264   => Language and Country menu is visible
+
+
+2024-01-26 15:54:13.592478   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:54:22.228090   => Current language: it
+
+2024-01-26 15:54:22.228132   Prev country: ?
+
+2024-01-26 15:54:22.228141   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:54:22.259598   => Language and Country menu is present
+
+
+2024-01-26 15:54:22.272940   => Language and Country menu is visible
+
+
+2024-01-26 15:54:24.055520   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:54:26.850347   => Current country: gb
+
+2024-01-26 15:54:26.850381   => THE END PRECONDITIONS
+2024-01-26 15:54:27.362277   => Education menu is present
+2024-01-26 15:54:27.379021   => Education menu is visible
+2024-01-26 15:54:28.653145   => Education menu focus moved
+
+2024-01-26 15:54:30.748719   1. Arrange
+2024-01-26 15:54:30.752177   BUTTON_CREATE_ACCOUNT =>
+2024-01-26 15:54:30.781885   => BUTTON_CREATE_ACCOUNT IS PRESENT
+
+2024-01-26 15:54:30.782062   2. Act
+2024-01-26 15:54:30.789659   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-26 15:54:31.613529   => BUTTON_CREATE_ACCOUNT is clicked
+
+2024-01-26 15:54:31.613839   3. Assert_v4
+2024-01-26 15:54:31.613976   Checking that the trading platform page has opened (v4) =>
+2024-01-26 15:54:41.696301   => Loaded page https://capital.com/it/corsi-online with not https://capital.com/trading/platform/ url
+
+Bug: Bid:11.01.05.00_01-it.gb.Auth
+
+2024-01-26 15:54:41.698851   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:54:41.705799   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:54:42.082975   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:54:42.640707   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:54:42.831573   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:54:42.831642   Bug: Bid:11.01.05.00_01-it.gb.Auth уже существует, но тип бага изменился с 16/01/24 на 10
+
+2024-01-26 15:54:42.832039   Bug: Bid:11.01.05.00_01-it.gb.Auth-10 уже существует
+
+2024-01-26 15:54:42.832177   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:54:43.130681   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:54:43.476087   *** end fixture Browser = teardown ***
+

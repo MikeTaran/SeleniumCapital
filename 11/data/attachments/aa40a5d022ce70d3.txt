@@ -1,0 +1,65 @@
+2024-01-26 15:29:17 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/trade-stocks
+2024-01-26 15:29:17 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x562bb7394f83 <unknown>
+#1 0x562bb704dcf7 <unknown>
+#2 0x562bb709d99e <unknown>
+#3 0x562bb709daa1 <unknown>
+#4 0x562bb70e8d64 <unknown>
+#5 0x562bb70c70dd <unknown>
+#6 0x562bb70e6006 <unknown>
+#7 0x562bb70c6e53 <unknown>
+#8 0x562bb708edd4 <unknown>
+#9 0x562bb70901de <unknown>
+#10 0x562bb7359531 <unknown>
+#11 0x562bb735d455 <unknown>
+#12 0x562bb7345f55 <unknown>
+#13 0x562bb735e0ef <unknown>
+#14 0x562bb732999f <unknown>
+#15 0x562bb7382008 <unknown>
+#16 0x562bb73821d7 <unknown>
+#17 0x562bb7394124 <unknown>
+#18 0x7f028e094ac3 <unknown>
+
+2024-01-26 15:29:22 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/trade-stocks
+2024-01-26 15:29:22 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x562bb7394f83 <unknown>
+#1 0x562bb704dcf7 <unknown>
+#2 0x562bb709d99e <unknown>
+#3 0x562bb709daa1 <unknown>
+#4 0x562bb70e8d64 <unknown>
+#5 0x562bb70c70dd <unknown>
+#6 0x562bb70e6006 <unknown>
+#7 0x562bb70c6e53 <unknown>
+#8 0x562bb708edd4 <unknown>
+#9 0x562bb70901de <unknown>
+#10 0x562bb7359531 <unknown>
+#11 0x562bb735d455 <unknown>
+#12 0x562bb7345f55 <unknown>
+#13 0x562bb735e0ef <unknown>
+#14 0x562bb732999f <unknown>
+#15 0x562bb7382008 <unknown>
+#16 0x562bb73821d7 <unknown>
+#17 0x562bb7394124 <unknown>
+#18 0x7f028e094ac3 <unknown>

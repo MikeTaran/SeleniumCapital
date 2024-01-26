@@ -1,0 +1,154 @@
+
+2024-01-26 14:52:00.051917   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - fr
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 14:52:00.978623   worker_id = master
+
+2024-01-26 14:52:00.978640   0. Allure grouping v4
+
+
+2024-01-26 14:52:00.978827   START PRECONDITIONS =>
+
+2024-01-26 14:52:02.481004   Load page https://capital.com
+
+2024-01-26 14:52:02.481052   {'width': 1280, 'height': 720}
+
+2024-01-26 14:52:02.485725   Set windows position at (0, 0) =>
+
+2024-01-26 14:52:02.600697   Set resolution 1280 * 720 =>
+
+2024-01-26 14:52:02.716409   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 14:52:07.743523   Капчи нет. Тестим дальше
+
+2024-01-26 14:52:07.743615   Prev. Role: ?
+
+2024-01-26 14:52:07.743629   Run preconditions: set "Auth" Role =>
+2024-01-26 14:52:08.387098   Load page https://capital.com
+
+2024-01-26 14:52:08.593022   => All cookies are deleted
+2024-01-26 14:52:09.376151   Load page https://capital.com
+
+2024-01-26 14:52:09.376411   Step 'Click button [Accept all cookies]'
+2024-01-26 14:52:14.409413   Is Visible Button [Accept all cookies]? =>
+2024-01-26 14:52:14.431317   => Button [Accept all cookies] is visible
+2024-01-26 14:52:15.431433   Is clickable Button [Accept all cookies] =>
+2024-01-26 14:52:15.458789   => Button [Accept all cookies] is clickable
+2024-01-26 14:52:15.458833   Click Button [Accept all cookies] =>
+2024-01-26 14:52:15.523671   => Button [Accept all cookies] is clicked
+2024-01-26 14:52:15.523714   => Accepted All Cookies
+
+2024-01-26 14:52:16.024072   Start Autorization
+
+2024-01-26 14:52:16.024203   2. Act
+2024-01-26 14:52:16.024220   Start Click button [Log in] =>
+2024-01-26 14:52:16.033099   BUTTON_LOGIN scroll =>
+2024-01-26 14:52:16.039233   Is BUTTON_LOGIN clickable? =>
+2024-01-26 14:52:16.050378   => BUTTON_LOGIN is clickable
+2024-01-26 14:52:16.050405   BUTTON_LOGIN click =>
+2024-01-26 14:52:16.095922   => BUTTON_LOGIN is clicked!
+2024-01-26 14:52:16.096011   => 'Login' form is opened
+2024-01-26 14:52:16.578820   => "login" and "password" are inputted
+2024-01-26 14:52:16.578865   Click [Continue] button on [Login] form =>
+2024-01-26 14:52:16.698855   => [Continue] button on [Login] form is clicked
+2024-01-26 14:52:19.200009   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 14:52:19.200044   Set timeout = 30
+2024-01-26 14:52:19.200060   Wait until load page with special title =>
+2024-01-26 14:52:19.203284   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 14:52:19.203307   Is present LOGO on this page? =>
+2024-01-26 14:52:20.566215   => LOGO is visible on this page
+2024-01-26 14:52:20.566344   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 14:52:21.644338   Current role: Auth
+
+2024-01-26 14:52:21.644385   Prev language: ?
+
+2024-01-26 14:52:21.644401   Run preconditions: set "fr" language =>
+
+
+2024-01-26 14:52:21.660942   => Language and Country menu is present
+
+
+2024-01-26 14:52:21.736896   => Language and Country menu is visible
+
+
+2024-01-26 14:52:23.521479   => Focus is moved on Language and Country menu 
+
+2024-01-26 14:52:25.372801   => Current language: fr
+
+2024-01-26 14:52:25.372842   Prev country: ?
+
+2024-01-26 14:52:25.372852   Run preconditions: set "gb" country =>
+
+
+2024-01-26 14:52:25.405863   => Language and Country menu is present
+
+
+2024-01-26 14:52:25.423716   => Language and Country menu is visible
+
+
+2024-01-26 14:52:27.205068   => Focus is moved on Language and Country menu 
+
+2024-01-26 14:52:29.465408   => Current country: gb
+
+2024-01-26 14:52:29.465450   => THE END PRECONDITIONS
+
+2024-01-26 14:52:29.465494   1. Cur URL = https://capital.com/fr?country=gb
+
+2024-01-26 14:52:29.479661   2. Link = https://capital.com/fr
+2024-01-26 14:52:30.217949   Load page https://capital.com/fr
+2024-01-26 14:52:30.729202   => Education menu is present
+2024-01-26 14:52:30.754630   => Education menu is visible
+2024-01-26 14:52:32.035945   => Education menu focus moved
+
+2024-01-26 14:52:33.965797   1. Arrange
+2024-01-26 14:52:33.979332   BUTTON_ON_VER_BANNER is visible? =>
+2024-01-26 14:52:34.009205   => BUTTON_ON_VER_BANNER is visible on the page!
+2024-01-26 14:52:34.009460   Start Checking that form [Sign up] popped up on the page =>
+2024-01-26 14:52:39.545687   '[Sign up]' form was not popped up
+
+2024-01-26 14:52:39.545864   2. Act
+2024-01-26 14:52:39.545878   BUTTON_ON_VER_BANNER is present? =>
+2024-01-26 14:52:39.556914   => BUTTON_ON_VER_BANNER is present on the page!
+2024-01-26 14:52:39.556948   BUTTON_ON_VER_BANNER scroll =>
+2024-01-26 14:52:45.461238   => BUTTON_ON_VER_BANNER clicked!
+2024-01-26 14:52:45.461358   For Vertical banner [type-id=221] Trading platform should be open in Demo Mode =>
+
+2024-01-26 14:52:45.461583   3. Assert_v4
+2024-01-26 14:52:45.461748   Checking that the trading platform page has opened (v4) =>
+2024-01-26 14:52:47.790752   => Current page title: Trading Platform | Capital.com
+2024-01-26 14:52:47.790987   Checking that the Trading platform LOGO is present on the page =>
+2024-01-26 14:52:48.941395   Checking that the Trading platform opened in DEMO mode =>
+
+Bug: Bid:11.02.03.00_10-fr.gb.Auth
+
+2024-01-26 14:53:05.536317   Проверка бага в таблице ретеста  =>
+
+2024-01-26 14:53:05.542581   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:53:06.104459   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:53:06.650523   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:53:07.164690   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:53:07.164789   Bug: Bid:11.02.03.00_10-fr.gb.Auth уже существует, но тип бага изменился с 23/01/24 на 11
+
+2024-01-26 14:53:07.165446   Bug: Bid:11.02.03.00_10-fr.gb.Auth-11 уже существует
+
+2024-01-26 14:53:07.165659   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:53:07.621142   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:53:07.964633   *** end fixture Browser = teardown ***
+

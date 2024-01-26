@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 15:39:08.303168   0. Get Values row =>
+2024-01-26 15:39:08.303197   Row # = 980
+2024-01-26 15:39:08.303207   Row Values = 
+['Bid:11.01.07.01_03-en.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.07.01', '_03', 'en', 'gb', 'FCA', 'Auth', 'https://capital.com/gamma-squeeze-definition', 'Education', 'Glossary of trading terms / child', '', '', '', '11', 'Bug # 11. Trading platform is opened in not DEMO mode', '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:39:08.303289   1. Run pretest =>
+
+2024-01-26 15:39:08.303302   row_loc = 
+['Bid:11.01.07.01_03-en.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.07.01', '_03', 'en', 'gb', 'FCA', 'Auth', 'https://capital.com/gamma-squeeze-definition', 'Education', 'Glossary of trading terms / child', '', '', '', '11', 'Bug # 11. Trading platform is opened in not DEMO mode', '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:39:08.303316   => 1. Pretest finished
+
+2024-01-26 15:39:08.303381   2. Run run_pytest with Bid = Bid:11.01.07.01_03-en.gb.Auth from row =>
+
+2024-01-26 15:39:08.303394   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:39:08.303405   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang= --country=gb --role=Auth --tpi_link=https://capital.com/gamma-squeeze-definition -m test_03 -v \tests/US_11_Education/US_11-01-07_Glossary/US_11-01-07-01_Glossary_of_trading_terms_test.py
+
+2024-01-26 15:39:45.771581   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:39:45.771632   => 2. Autotest with Bid = Bid:11.01.07.01_03-en.gb.Auth from row finished
+
+2024-01-26 15:39:45.771716   3. Run check_results =>
+2024-01-26 15:39:45.771736   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 5 items / 4 deselected / 1 selected
+
+tests/US_11_Education/US_11-01-07_Glossary/US_11-01-07-01_Glossary_of_trading_terms_test.py::TestGlossaryItems::test_03[https://capital.com/gamma-squeeze-definition-Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+====================== 1 skipped, 4 deselected in 36.63s =======================
+
+2024-01-26 15:39:45.771942   => Текущий тест: 1 skipped
+
+2024-01-26 15:39:45.771966   => 3. check_results finished
+
+2024-01-26 15:39:45.772177   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:39:46.149956   => 4. One row check results into Google Sheet Bugs Report fixed

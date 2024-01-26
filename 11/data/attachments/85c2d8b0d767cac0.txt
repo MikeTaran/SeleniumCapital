@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 16:09:00.929335   0. Get Values row =>
+2024-01-26 16:09:00.929375   Row # = 1386
+2024-01-26 16:09:00.929386   Row Values = 
+['Bid:11.01.03.00_04-es.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.03.00', '_04', 'es', 'gb', 'FCA', 'Auth', '', 'Education', 'CFD trading guide', '', '', '', '12', 'Bug # 12. Trading platform is opened in not LIVE mode', '', '', '', '15/01/24', 'passed']
+
+2024-01-26 16:09:00.929475   1. Run pretest =>
+
+2024-01-26 16:09:00.929496   row_loc = 
+['Bid:11.01.03.00_04-es.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.03.00', '_04', 'es', 'gb', 'FCA', 'Auth', '', 'Education', 'CFD trading guide', '', '', '', '12', 'Bug # 12. Trading platform is opened in not LIVE mode', '', '', '', '15/01/24', 'passed']
+
+2024-01-26 16:09:00.929520   => 1. Pretest finished
+
+2024-01-26 16:09:00.929633   2. Run run_pytest with Bid = Bid:11.01.03.00_04-es.gb.Auth from row =>
+
+2024-01-26 16:09:00.929655   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 16:09:00.929668   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=gb --role=Auth -m test_04 -v \tests/US_11_Education/US_11-01-03_cfd_trading_guide/us_11-01-03-00_cfd_trading_guide_test.py
+
+2024-01-26 16:09:40.919644   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 16:09:40.919696   => 2. Autotest with Bid = Bid:11.01.03.00_04-es.gb.Auth from row finished
+
+2024-01-26 16:09:40.919785   3. Run check_results =>
+2024-01-26 16:09:40.919810   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 5 items / 4 deselected / 1 selected
+
+tests/US_11_Education/US_11-01-03_cfd_trading_guide/us_11-01-03-00_cfd_trading_guide_test.py::TestCFDTradingGuide::test_04_block_steps_trading_button_create_your_account[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] PASSED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+======================= 1 passed, 4 deselected in 39.18s =======================
+
+2024-01-26 16:09:40.920002   => Текущий тест: 1 passed
+
+2024-01-26 16:09:40.920074   => 3. check_results finished
+
+2024-01-26 16:09:40.920315   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:09:41.354252   => 4. One row check results into Google Sheet Bugs Report fixed

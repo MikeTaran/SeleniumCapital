@@ -1,0 +1,139 @@
+
+2024-01-26 15:59:39.039158   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:59:40.090988   worker_id = master
+
+2024-01-26 15:59:40.091011   0. Allure grouping v4
+
+
+2024-01-26 15:59:40.091275   START PRECONDITIONS =>
+
+2024-01-26 15:59:41.795901   Load page https://capital.com
+
+2024-01-26 15:59:41.795950   {'width': 1280, 'height': 720}
+
+2024-01-26 15:59:41.799443   Set windows position at (0, 0) =>
+
+2024-01-26 15:59:41.907657   Set resolution 1280 * 720 =>
+
+2024-01-26 15:59:42.022920   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:59:47.034155   Капчи нет. Тестим дальше
+
+2024-01-26 15:59:47.034238   Prev. Role: ?
+
+2024-01-26 15:59:47.034250   Run preconditions: set "Auth" Role =>
+2024-01-26 15:59:47.745850   Load page https://capital.com
+
+2024-01-26 15:59:48.048060   => All cookies are deleted
+2024-01-26 15:59:48.984233   Load page https://capital.com
+
+2024-01-26 15:59:48.984483   Step 'Click button [Accept all cookies]'
+2024-01-26 15:59:54.037177   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:59:54.062178   => Button [Accept all cookies] is visible
+2024-01-26 15:59:55.062287   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:59:55.084242   => Button [Accept all cookies] is clickable
+2024-01-26 15:59:55.084271   Click Button [Accept all cookies] =>
+2024-01-26 15:59:55.143823   => Button [Accept all cookies] is clicked
+2024-01-26 15:59:55.143864   => Accepted All Cookies
+
+2024-01-26 15:59:55.644277   Start Autorization
+
+2024-01-26 15:59:55.644410   2. Act
+2024-01-26 15:59:55.644430   Start Click button [Log in] =>
+2024-01-26 15:59:55.659858   BUTTON_LOGIN scroll =>
+2024-01-26 15:59:55.664390   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:59:55.679844   => BUTTON_LOGIN is clickable
+2024-01-26 15:59:55.679872   BUTTON_LOGIN click =>
+2024-01-26 15:59:55.733700   => BUTTON_LOGIN is clicked!
+2024-01-26 15:59:55.733798   => 'Login' form is opened
+2024-01-26 15:59:56.252057   => "login" and "password" are inputted
+2024-01-26 15:59:56.252101   Click [Continue] button on [Login] form =>
+2024-01-26 15:59:56.388618   => [Continue] button on [Login] form is clicked
+2024-01-26 15:59:59.166832   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:59:59.166871   Set timeout = 30
+2024-01-26 15:59:59.166892   Wait until load page with special title =>
+2024-01-26 15:59:59.170013   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:59:59.170041   Is present LOGO on this page? =>
+2024-01-26 16:00:00.910795   => LOGO is visible on this page
+2024-01-26 16:00:00.910880   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 16:00:03.296546   Current role: Auth
+
+2024-01-26 16:00:03.296591   Prev language: ?
+
+2024-01-26 16:00:03.296604   Run preconditions: set "es" language =>
+
+
+2024-01-26 16:00:03.400024   => Language and Country menu is present
+
+
+2024-01-26 16:00:03.425022   => Language and Country menu is visible
+
+
+2024-01-26 16:00:05.209866   => Focus is moved on Language and Country menu 
+
+2024-01-26 16:00:06.929165   => Current language: es
+
+2024-01-26 16:00:06.929202   Prev country: ?
+
+2024-01-26 16:00:06.929212   Run preconditions: set "gb" country =>
+
+
+2024-01-26 16:00:06.935481   => Language and Country menu is present
+
+
+2024-01-26 16:00:06.968882   => Language and Country menu is visible
+
+
+2024-01-26 16:00:08.740702   => Focus is moved on Language and Country menu 
+
+2024-01-26 16:00:10.706391   => Current country: gb
+
+2024-01-26 16:00:10.706436   => THE END PRECONDITIONS
+
+2024-01-26 16:00:10.706489   1. Arrange
+2024-01-26 16:00:15.622713   Load page https://capital.com/es/swing-trading
+2024-01-26 16:00:15.622760   Is visible BUTTON_GET_IT_ON_GOOGLE_PLAY? =>
+2024-01-26 16:00:15.644639   => BUTTON_GET_IT_ON_GOOGLE_PLAY is visible on the page!
+
+2024-01-26 16:00:15.644858   2. Act
+2024-01-26 16:00:15.716051   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-26 16:00:15.852948   => BUTTON_GET_IT_ON_GOOGLE_PLAY IS CLICKED
+
+2024-01-26 16:00:15.853183   3. Assert_v0
+2024-01-26 16:00:15.853263   Checking that the Google Play page has opened
+
+Bug: Bid:11.03.01.01_07-es.gb.Auth
+
+2024-01-26 16:00:17.744142   Проверка бага в таблице ретеста  =>
+
+2024-01-26 16:00:17.749811   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:00:18.139330   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:00:18.531692   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:00:18.704558   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:00:18.704629   Bug: Bid:11.03.01.01_07-es.gb.Auth уже существует, но тип бага изменился с 15/01/24 на 03
+
+2024-01-26 16:00:18.705020   Bug: Bid:11.03.01.01_07-es.gb.Auth-03 уже существует
+
+2024-01-26 16:00:18.705159   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 16:00:19.080363   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 16:00:19.392574   *** end fixture Browser = teardown ***
+

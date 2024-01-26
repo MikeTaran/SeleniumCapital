@@ -1,0 +1,102 @@
+
+2024-01-26 15:49:08.072107   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:49:09.100379   worker_id = master
+
+2024-01-26 15:49:09.100404   0. Allure grouping v4
+
+
+2024-01-26 15:49:09.100669   START PRECONDITIONS =>
+
+2024-01-26 15:49:10.596259   Load page https://capital.com
+
+2024-01-26 15:49:10.596297   {'width': 1280, 'height': 720}
+
+2024-01-26 15:49:10.600647   Set windows position at (0, 0) =>
+
+2024-01-26 15:49:10.755500   Set resolution 1280 * 720 =>
+
+2024-01-26 15:49:10.862256   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:49:15.912113   Капчи нет. Тестим дальше
+
+2024-01-26 15:49:15.912233   Prev. Role: ?
+
+2024-01-26 15:49:15.912254   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:49:16.878527   Load page https://capital.com
+
+2024-01-26 15:49:17.145768   => All cookies are deleted
+2024-01-26 15:49:17.952783   Load page https://capital.com
+
+2024-01-26 15:49:17.953045   Step 'Click button [Accept all cookies]'
+2024-01-26 15:49:23.002585   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:49:23.021122   => Button [Accept all cookies] is visible
+2024-01-26 15:49:24.021242   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:49:24.046601   => Button [Accept all cookies] is clickable
+2024-01-26 15:49:24.046649   Click Button [Accept all cookies] =>
+2024-01-26 15:49:24.128597   => Button [Accept all cookies] is clicked
+2024-01-26 15:49:24.128644   => Accepted All Cookies
+
+2024-01-26 15:49:24.628999   Start Autorization
+
+2024-01-26 15:49:24.629164   2. Act
+2024-01-26 15:49:24.629183   Start Click button [Log in] =>
+2024-01-26 15:49:24.646359   BUTTON_LOGIN scroll =>
+2024-01-26 15:49:24.658617   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:49:24.687105   => BUTTON_LOGIN is clickable
+2024-01-26 15:49:24.687147   BUTTON_LOGIN click =>
+2024-01-26 15:49:24.822865   => BUTTON_LOGIN is clicked!
+2024-01-26 15:49:24.822992   => 'Login' form is opened
+2024-01-26 15:49:25.637922   => "login" and "password" are inputted
+2024-01-26 15:49:25.637968   Click [Continue] button on [Login] form =>
+2024-01-26 15:49:25.738351   => [Continue] button on [Login] form is clicked
+2024-01-26 15:49:28.445411   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:49:28.445445   Set timeout = 30
+2024-01-26 15:49:28.445460   Wait until load page with special title =>
+2024-01-26 15:49:28.449150   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:49:28.449176   Is present LOGO on this page? =>
+2024-01-26 15:49:29.934728   => LOGO is visible on this page
+2024-01-26 15:49:29.934842   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:49:31.079622   Start DeAuthorisation
+2024-01-26 15:49:31.079757   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 15:49:31.159213   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 15:49:32.432433   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 15:49:32.432481   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 15:49:32.453948   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 15:49:32.453991   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 15:49:33.318384   => User panel [My account] is opened
+
+2024-01-26 15:49:33.318593   Start Click [Logout] button:
+2024-01-26 15:49:33.318609   BUTTON_LOGOUT is present? =>
+2024-01-26 15:49:33.326840   => BUTTON_LOGOUT is present
+2024-01-26 15:49:33.326864   Is visible BUTTON_LOGOUT? =>
+2024-01-26 15:49:33.340865   BUTTON_LOGOUT is clickable? =>
+2024-01-26 15:49:33.353772   BUTTON_LOGOUT click =>
+2024-01-26 15:49:33.405631   => BUTTON_LOGOUT is clicked
+
+2024-01-26 15:49:33.405768   Current role: NoAuth
+
+2024-01-26 15:49:33.405785   Prev language: ?
+
+2024-01-26 15:49:33.405797   Run preconditions: set "it" language =>
+
+
+2024-01-26 15:49:33.431603   => Language and Country menu is present
+
+
+2024-01-26 15:49:33.444832   => Language and Country menu is visible
+
+2024-01-26 15:49:39.763258   *** end fixture Browser = teardown ***
+

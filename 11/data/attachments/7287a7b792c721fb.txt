@@ -1,0 +1,118 @@
+
+2024-01-26 15:45:16.678104   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - NoReg
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:45:17.598386   worker_id = master
+
+2024-01-26 15:45:17.598402   0. Allure grouping v4
+
+
+2024-01-26 15:45:17.598594   START PRECONDITIONS =>
+
+2024-01-26 15:45:19.262817   Load page https://capital.com
+
+2024-01-26 15:45:19.262864   {'width': 1280, 'height': 720}
+
+2024-01-26 15:45:19.265312   Set windows position at (0, 0) =>
+
+2024-01-26 15:45:19.376363   Set resolution 1280 * 720 =>
+
+2024-01-26 15:45:19.500471   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:45:24.554068   Капчи нет. Тестим дальше
+
+2024-01-26 15:45:24.554167   Prev. Role: ?
+
+2024-01-26 15:45:24.554179   Run preconditions: set "NoReg" Role =>
+2024-01-26 15:45:25.340977   Load page https://capital.com
+
+2024-01-26 15:45:25.587701   => All cookies are deleted
+2024-01-26 15:45:26.331264   Load page https://capital.com
+
+2024-01-26 15:45:26.331500   Step 'Click button [Accept all cookies]'
+2024-01-26 15:45:31.367865   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:45:31.396251   => Button [Accept all cookies] is visible
+2024-01-26 15:45:32.396376   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:45:32.421652   => Button [Accept all cookies] is clickable
+2024-01-26 15:45:32.421691   Click Button [Accept all cookies] =>
+2024-01-26 15:45:32.486734   => Button [Accept all cookies] is clicked
+2024-01-26 15:45:32.486776   => Accepted All Cookies
+
+2024-01-26 15:45:32.986965   Current role: NoReg
+
+2024-01-26 15:45:32.987007   Prev language: ?
+
+2024-01-26 15:45:32.987017   Run preconditions: set "it" language =>
+
+
+2024-01-26 15:45:33.000755   => Language and Country menu is present
+
+
+2024-01-26 15:45:33.019207   => Language and Country menu is visible
+
+
+2024-01-26 15:45:34.794725   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:45:38.402023   => Current language: it
+
+2024-01-26 15:45:38.402063   Prev country: ?
+
+2024-01-26 15:45:38.402073   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:45:38.427071   => Language and Country menu is present
+
+
+2024-01-26 15:45:38.438392   => Language and Country menu is visible
+
+
+2024-01-26 15:45:40.210700   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:45:42.762028   => Current country: gb
+
+2024-01-26 15:45:42.762084   => THE END PRECONDITIONS
+
+2024-01-26 15:45:42.762149   1. Arrange
+2024-01-26 15:45:43.782827   Load page https://capital.com/it/trading-di-posizione
+2024-01-26 15:45:43.782876   Is visible BUTTON_GET_IT_ON_GOOGLE_PLAY? =>
+2024-01-26 15:45:43.819337   => BUTTON_GET_IT_ON_GOOGLE_PLAY is visible on the page!
+
+2024-01-26 15:45:43.819504   2. Act
+2024-01-26 15:45:43.829106   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-26 15:45:43.949739   => BUTTON_GET_IT_ON_GOOGLE_PLAY IS CLICKED
+
+2024-01-26 15:45:43.950015   3. Assert_v0
+2024-01-26 15:45:43.950116   Checking that the Google Play page has opened
+
+Bug: Bid:11.03.01.01_07-it.gb.NoReg
+
+2024-01-26 15:45:46.319847   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:45:46.327607   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:45:46.757103   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:45:47.147048   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:45:47.462668   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:45:47.462742   Bug: Bid:11.03.01.01_07-it.gb.NoReg уже существует, но тип бага изменился с 16/01/24 на 03
+
+2024-01-26 15:45:47.463147   Bug: Bid:11.03.01.01_07-it.gb.NoReg-03 уже существует
+
+2024-01-26 15:45:47.463291   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:45:47.773700   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:45:48.099544   *** end fixture Browser = teardown ***
+

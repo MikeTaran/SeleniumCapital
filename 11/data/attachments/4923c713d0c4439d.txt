@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 15:32:17.002977   0. Get Values row =>
+2024-01-26 15:32:17.003047   Row # = 951
+2024-01-26 15:32:17.003069   Row Values = 
+['Bid:11.03.03.00_04-en.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.03.00', '_04', 'en', 'gb', 'FCA', 'NoAuth', '', 'Education', 'Trend Trading', '', '', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:32:17.003234   1. Run pretest =>
+
+2024-01-26 15:32:17.003260   row_loc = 
+['Bid:11.03.03.00_04-en.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.03.00', '_04', 'en', 'gb', 'FCA', 'NoAuth', '', 'Education', 'Trend Trading', '', '', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:32:17.003286   => 1. Pretest finished
+
+2024-01-26 15:32:17.003401   2. Run run_pytest with Bid = Bid:11.03.03.00_04-en.gb.NoAuth from row =>
+
+2024-01-26 15:32:17.003425   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:32:17.003446   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang= --country=gb --role=NoAuth -m test_04 -v \tests/US_11_Education/US_11-03-03_Trend_Trading/US_11-03-03_Trend_Trading_test.py
+
+2024-01-26 15:32:19.159703   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:32:19.159765   => 2. Autotest with Bid = Bid:11.03.03.00_04-en.gb.NoAuth from row finished
+
+2024-01-26 15:32:19.159833   3. Run check_results =>
+2024-01-26 15:32:19.159845   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-03_Trend_Trading/US_11-03-03_Trend_Trading_test.py::TestTrendTrading::test_04_button_try_demo_main_banner[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+======================= 1 skipped, 6 deselected in 1.23s =======================
+
+2024-01-26 15:32:19.159990   => Текущий тест: 1 skipped
+
+2024-01-26 15:32:19.160001   => 3. check_results finished
+
+2024-01-26 15:32:19.160139   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:32:19.353978   => 4. One row check results into Google Sheet Bugs Report fixed

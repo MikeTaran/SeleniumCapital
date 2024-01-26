@@ -1,0 +1,111 @@
+
+2024-01-26 15:39:09.204599   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - 
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:39:10.163728   worker_id = master
+
+2024-01-26 15:39:10.163746   0. Allure grouping v4
+
+
+2024-01-26 15:39:10.163930   START PRECONDITIONS =>
+
+2024-01-26 15:39:11.898219   Load page https://capital.com
+
+2024-01-26 15:39:11.898265   {'width': 1280, 'height': 720}
+
+2024-01-26 15:39:11.901090   Set windows position at (0, 0) =>
+
+2024-01-26 15:39:12.010266   Set resolution 1280 * 720 =>
+
+2024-01-26 15:39:12.152254   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:39:17.179236   Капчи нет. Тестим дальше
+
+2024-01-26 15:39:17.179334   Prev. Role: ?
+
+2024-01-26 15:39:17.179347   Run preconditions: set "Auth" Role =>
+2024-01-26 15:39:18.016729   Load page https://capital.com
+
+2024-01-26 15:39:18.231061   => All cookies are deleted
+2024-01-26 15:39:18.997686   Load page https://capital.com
+
+2024-01-26 15:39:18.997927   Step 'Click button [Accept all cookies]'
+2024-01-26 15:39:24.032297   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:39:24.061491   => Button [Accept all cookies] is visible
+2024-01-26 15:39:25.061636   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:39:25.090496   => Button [Accept all cookies] is clickable
+2024-01-26 15:39:25.090539   Click Button [Accept all cookies] =>
+2024-01-26 15:39:25.159013   => Button [Accept all cookies] is clicked
+2024-01-26 15:39:25.159057   => Accepted All Cookies
+
+2024-01-26 15:39:25.659431   Start Autorization
+
+2024-01-26 15:39:25.659559   2. Act
+2024-01-26 15:39:25.659575   Start Click button [Log in] =>
+2024-01-26 15:39:25.668500   BUTTON_LOGIN scroll =>
+2024-01-26 15:39:25.675707   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:39:25.687153   => BUTTON_LOGIN is clickable
+2024-01-26 15:39:25.687189   BUTTON_LOGIN click =>
+2024-01-26 15:39:25.734039   => BUTTON_LOGIN is clicked!
+2024-01-26 15:39:25.734123   => 'Login' form is opened
+2024-01-26 15:39:26.268967   => "login" and "password" are inputted
+2024-01-26 15:39:26.269011   Click [Continue] button on [Login] form =>
+2024-01-26 15:39:26.377198   => [Continue] button on [Login] form is clicked
+2024-01-26 15:39:29.148369   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:39:29.148413   Set timeout = 30
+2024-01-26 15:39:29.148436   Wait until load page with special title =>
+2024-01-26 15:39:29.151722   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:39:29.151753   Is present LOGO on this page? =>
+2024-01-26 15:39:30.446233   => LOGO is visible on this page
+2024-01-26 15:39:30.446322   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:39:31.791689   Current role: Auth
+
+2024-01-26 15:39:31.791741   Prev language: ?
+
+2024-01-26 15:39:31.791756   Run preconditions: set "en" language =>
+
+
+2024-01-26 15:39:31.805496   => Language and Country menu is present
+
+
+2024-01-26 15:39:31.848554   => Language and Country menu is visible
+
+
+2024-01-26 15:39:33.632083   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:39:35.298799   => Current language: en
+
+2024-01-26 15:39:35.298833   Prev country: ?
+
+2024-01-26 15:39:35.298842   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:39:35.324740   => Language and Country menu is present
+
+
+2024-01-26 15:39:35.335952   => Language and Country menu is visible
+
+
+2024-01-26 15:39:37.108823   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:39:39.981080   => Current country: gb
+
+2024-01-26 15:39:39.981132   => THE END PRECONDITIONS
+
+2024-01-26 15:39:39.981170   1. Arrange
+2024-01-26 15:39:39.981183   Button 'try_free_demo' under video banner =>
+2024-01-26 15:39:45.558069   => BUTTON_UNDER_VIDEO_BANNER is not present on the DOM of a page after 5 sec
+
+2024-01-26 15:39:45.662551   *** end fixture Browser = teardown ***
+

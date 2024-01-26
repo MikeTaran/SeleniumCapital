@@ -1,0 +1,49 @@
+
+
+
+2024-01-26 15:40:22.779134   0. Get Values row =>
+2024-01-26 15:40:22.779163   Row # = 982
+2024-01-26 15:40:22.779173   Row Values = 
+['Bid:11.01.05.00_01-en.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.05.00', '_01', 'en', 'gb', 'FCA', 'Auth', '', 'Education', 'Trading courses', 'On Main banner click Button [Start Trading]', 'On Main banner click Button [Start Trading]', '', '10', 'Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in Live mode(timeout=30c)', '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:40:22.779252   1. Run pretest =>
+
+2024-01-26 15:40:22.779265   row_loc = 
+['Bid:11.01.05.00_01-en.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.05.00', '_01', 'en', 'gb', 'FCA', 'Auth', '', 'Education', 'Trading courses', 'On Main banner click Button [Start Trading]', 'On Main banner click Button [Start Trading]', '', '10', 'Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in Live mode(timeout=30c)', '', '', '', '19/01/24', 'skipped']
+
+2024-01-26 15:40:22.779279   => 1. Pretest finished
+
+2024-01-26 15:40:22.779342   2. Run run_pytest with Bid = Bid:11.01.05.00_01-en.gb.Auth from row =>
+
+2024-01-26 15:40:22.779354   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:40:22.779365   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang= --country=gb --role=Auth -m test_01 -v \tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py
+
+2024-01-26 15:40:24.667093   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:40:24.667147   => 2. Autotest with Bid = Bid:11.01.05.00_01-en.gb.Auth from row finished
+
+2024-01-26 15:40:24.667226   3. Run check_results =>
+2024-01-26 15:40:24.667242   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 3 items / 2 deselected / 1 selected
+
+tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py::TestTradingCourses::test_01_create_account_button[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] SKIPPED [100%]
+
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+======================= 1 skipped, 2 deselected in 1.14s =======================
+
+2024-01-26 15:40:24.667374   => Текущий тест: 1 skipped
+
+2024-01-26 15:40:24.667386   => 3. check_results finished
+
+2024-01-26 15:40:24.667530   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:40:24.843810   => 4. One row check results into Google Sheet Bugs Report fixed

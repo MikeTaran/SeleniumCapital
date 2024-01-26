@@ -1,0 +1,445 @@
+
+2024-01-26 14:47:31.370792   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+
+2024-01-26 14:47:39.063616   *** start fixture gs = ... ***
+
+
+2024-01-26 14:47:39.634689   1. get_row_values from 4 row =>
+2024-01-26 14:47:39.946467   => row values = 
+[['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '6:09:43']]
+
+2024-01-26 14:47:39.946516   => 1. Get row values from 4 row finished
+
+2024-01-26 14:47:39.947168   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:47:40.300761   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:47:40.300848   Добавление нового столбца =>
+
+2024-01-26 14:47:41.229763   => Новый столбец добавлен
+
+2024-01-26 14:47:45.600570   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:47:46.044829   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:47:46.775846   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:47:47.414624   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:47:47.414857   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:47:47.730474   => 4. One row check results into Google Sheet Bugs Report fixed
+
+
+
+2024-01-26 14:47:48.228682   0. Get Values row =>
+2024-01-26 14:47:48.228723   Row # = 106
+2024-01-26 14:47:48.228733   Row Values = 
+['Bid:11.02.03.01_10-ro.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.03.01', '_10', 'ro', 'gb', 'FCA', 'NoAuth', 'https://capital.com/ro/trade-platinum', 'Education', 'Commodities trading L1', '', '', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '25/01/24']
+
+2024-01-26 14:47:48.228825   1. Run pretest =>
+
+2024-01-26 14:47:48.228838   row_loc = 
+['Bid:11.02.03.01_10-ro.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.03.01', '_10', 'ro', 'gb', 'FCA', 'NoAuth', 'https://capital.com/ro/trade-platinum', 'Education', 'Commodities trading L1', '', '', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '25/01/24']
+
+2024-01-26 14:47:48.228853   => 1. Pretest finished
+
+2024-01-26 14:47:48.228932   2. Run run_pytest with Bid = Bid:11.02.03.01_10-ro.gb.NoAuth from row =>
+
+2024-01-26 14:47:48.228946   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 14:47:48.228959   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=ro --country=gb --role=NoAuth --tpi_link=https://capital.com/ro/trade-platinum -m test_10 -v \tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py
+
+2024-01-26 14:48:49.670597   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 14:48:49.670682   => 2. Autotest with Bid = Bid:11.02.03.01_10-ro.gb.NoAuth from row finished
+
+2024-01-26 14:48:49.670757   3. Run check_results =>
+2024-01-26 14:48:49.670782   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 10 items / 9 deselected / 1 selected
+
+tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py::TestCommoditiesTrading::test_10_block_vert_banner_button[https://capital.com/ro/trade-platinum-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestCommoditiesTrading.test_10_block_vert_banner_button[https://capital.com/ro/trade-platinum-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <us_11-02-03-01_Commodities_trading_test.TestCommoditiesTrading object at 0x7f92f71a6210>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="d26281d9ae68bae7701b018143c53808")>
+cur_language = 'ro', cur_country = 'gb', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+cur_item_link = 'https://capital.com/ro/trade-platinum'
+
+    @allure.step("Start test of button in block [Vertical banner]")
+    # @pytest.mark.skip(reason="Skipped for debugging")
+    @pytest.mark.test_10
+    def test_10_block_vert_banner_button(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password,
+            cur_item_link):
+        """
+                Check the [Button] on the Vertical side banner at the bottom of the page.
+                For "Authorized user" role:
+                The trading platform page is opened depend on the banner [type-id]:
+                        Live mode if the banner in the Live mode banners list
+                        Demo mode if the banner in the Demo mode banners list
+                """
+    
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.03", "Education > Menu item [Commodities trading]",
+            ".01_10", "Testing button in block [Vertical banner]")
+    
+        check_language(cur_language)
+        if cur_language in [""]:
+            Common().skip_test_for_language(cur_language)
+    
+        page_conditions = Conditions(d, "")
+        page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        # банеры должны открываться в Demo mode for US_00
+        banner00_ver_tpd = []
+        # банеры должны открываться в Live mode for US_00
+        banner00_ver_tp = []
+        # банеры должны открываться в Demo mode for US_01
+        banner01_ver_tpd = ['251', '253', '380', '168', '222', '393']
+        # банеры должны открываться в Live mode for US_01
+        banner01_ver_tp = ['198', '293', '381', '391', '426']
+    
+        test_element = ButtonOnVerticalBanner(d, cur_item_link, bid)
+>       test_element.full_test_with_tpi(
+            d, cur_language, cur_country, cur_role, cur_item_link,
+            banner00_ver_tpd, banner00_ver_tp, banner01_ver_tpd, banner01_ver_tp)
+
+tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py:312: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/ButtonOnVerticalBanner.py:40: in full_test_with_tpi
+    test_element.assert_login(d, cur_language, link)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.Elements.AssertClass.AssertClass object at 0x7f92f7b60dd0>
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="d26281d9ae68bae7701b018143c53808")>
+cur_language = 'ro', cur_link = 'https://capital.com/ro/trade-platinum'
+
+    @allure.step('Checking that "Login" form or page opened')
+    def assert_login(self, d, cur_language, cur_link):
+        """Method Assert Login form or page"""
+        print(f"\n{datetime.now()}   3. Assert_Login_v0")
+        self.page_signup_login = SignupLogin(d, cur_link)
+        if self.page_signup_login.should_be_login_form():
+            self.page_signup_login.close_login_form()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_login_page():
+            self.page_signup_login.close_login_page()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_trading_platform_login_form(cur_language):
+            self.page_signup_login.close_trading_platform_login_form()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_signup_form(cur_language):
+            del self.page_signup_login
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '05', self.link)
+>           assert False, "Bug # 05. Opened a 'Sign up' form instead of a 'Login'"
+E           AssertionError: Bug # 05. Opened a 'Sign up' form instead of a 'Login'
+
+pages/Elements/AssertClass.py:69: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 14:47:49.076217   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - ro
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 14:47:50.001254   worker_id = master
+
+2024-01-26 14:47:50.001271   0. Allure grouping v4
+
+
+2024-01-26 14:47:50.001516   START PRECONDITIONS =>
+
+2024-01-26 14:47:53.172326   Load page https://capital.com
+
+2024-01-26 14:47:53.172366   {'width': 1280, 'height': 720}
+
+2024-01-26 14:47:53.177868   Set windows position at (0, 0) =>
+
+2024-01-26 14:47:53.656320   Set resolution 1280 * 720 =>
+
+2024-01-26 14:47:53.761167   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 14:47:58.810118   Капчи нет. Тестим дальше
+
+2024-01-26 14:47:58.810243   Prev. Role: ?
+
+2024-01-26 14:47:58.810266   Run preconditions: set "NoAuth" Role =>
+2024-01-26 14:47:59.358187   Load page https://capital.com
+
+2024-01-26 14:47:59.782962   => All cookies are deleted
+2024-01-26 14:48:00.893133   Load page https://capital.com
+
+2024-01-26 14:48:00.893351   Step 'Click button [Accept all cookies]'
+2024-01-26 14:48:05.922577   Is Visible Button [Accept all cookies]? =>
+2024-01-26 14:48:05.954121   => Button [Accept all cookies] is visible
+2024-01-26 14:48:06.954246   Is clickable Button [Accept all cookies] =>
+2024-01-26 14:48:06.976855   => Button [Accept all cookies] is clickable
+2024-01-26 14:48:06.976894   Click Button [Accept all cookies] =>
+2024-01-26 14:48:07.068067   => Button [Accept all cookies] is clicked
+2024-01-26 14:48:07.068111   => Accepted All Cookies
+
+2024-01-26 14:48:07.568490   Start Autorization
+
+2024-01-26 14:48:07.568622   2. Act
+2024-01-26 14:48:07.568640   Start Click button [Log in] =>
+2024-01-26 14:48:07.582063   BUTTON_LOGIN scroll =>
+2024-01-26 14:48:07.585902   Is BUTTON_LOGIN clickable? =>
+2024-01-26 14:48:07.600599   => BUTTON_LOGIN is clickable
+2024-01-26 14:48:07.600634   BUTTON_LOGIN click =>
+2024-01-26 14:48:07.656953   => BUTTON_LOGIN is clicked!
+2024-01-26 14:48:07.657041   => 'Login' form is opened
+2024-01-26 14:48:08.461453   => "login" and "password" are inputted
+2024-01-26 14:48:08.461498   Click [Continue] button on [Login] form =>
+2024-01-26 14:48:08.621382   => [Continue] button on [Login] form is clicked
+2024-01-26 14:48:11.563428   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 14:48:11.563470   Set timeout = 30
+2024-01-26 14:48:11.563491   Wait until load page with special title =>
+2024-01-26 14:48:11.566500   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 14:48:11.566523   Is present LOGO on this page? =>
+2024-01-26 14:48:13.002667   => LOGO is visible on this page
+2024-01-26 14:48:13.002761   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 14:48:14.440897   Start DeAuthorisation
+2024-01-26 14:48:14.441018   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 14:48:14.453819   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 14:48:15.764566   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 14:48:15.764610   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 14:48:15.785116   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 14:48:15.785156   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 14:48:16.625805   => User panel [My account] is opened
+
+2024-01-26 14:48:16.626019   Start Click [Logout] button:
+2024-01-26 14:48:16.626043   BUTTON_LOGOUT is present? =>
+2024-01-26 14:48:16.639524   => BUTTON_LOGOUT is present
+2024-01-26 14:48:16.639568   Is visible BUTTON_LOGOUT? =>
+2024-01-26 14:48:16.656925   BUTTON_LOGOUT is clickable? =>
+2024-01-26 14:48:16.672811   BUTTON_LOGOUT click =>
+2024-01-26 14:48:16.739829   => BUTTON_LOGOUT is clicked
+
+2024-01-26 14:48:16.739988   Current role: NoAuth
+
+2024-01-26 14:48:16.740017   Prev language: ?
+
+2024-01-26 14:48:16.740033   Run preconditions: set "ro" language =>
+
+
+2024-01-26 14:48:16.770715   => Language and Country menu is present
+
+
+2024-01-26 14:48:16.787680   => Language and Country menu is visible
+
+
+2024-01-26 14:48:18.986541   => Focus is moved on Language and Country menu 
+
+2024-01-26 14:48:22.883685   => Current language: ro
+
+2024-01-26 14:48:22.883727   Prev country: ?
+
+2024-01-26 14:48:22.883737   Run preconditions: set "gb" country =>
+
+
+2024-01-26 14:48:22.889585   => Language and Country menu is present
+
+
+2024-01-26 14:48:22.917298   => Language and Country menu is visible
+
+
+2024-01-26 14:48:24.699321   => Focus is moved on Language and Country menu 
+
+2024-01-26 14:48:27.067778   => Current country: gb
+
+2024-01-26 14:48:27.067817   => THE END PRECONDITIONS
+
+2024-01-26 14:48:27.067851   1. Arrange
+2024-01-26 14:48:30.584818   Load page https://capital.com/ro/trade-platinum
+2024-01-26 14:48:30.584869   BUTTON_ON_VER_BANNER is visible? =>
+2024-01-26 14:48:30.605087   => BUTTON_ON_VER_BANNER is visible on the page!
+2024-01-26 14:48:30.605301   Start Checking that form [Sign up] popped up on the page =>
+2024-01-26 14:48:36.168914   '[Sign up]' form was not popped up
+
+2024-01-26 14:48:36.169122   2. Act
+2024-01-26 14:48:36.169140   BUTTON_ON_VER_BANNER is present? =>
+2024-01-26 14:48:36.184625   => BUTTON_ON_VER_BANNER is present on the page!
+2024-01-26 14:48:36.184663   BUTTON_ON_VER_BANNER scroll =>
+2024-01-26 14:48:36.313314   => BUTTON_ON_VER_BANNER clicked!
+
+2024-01-26 14:48:36.313574   3. Assert_Login_v0
+2024-01-26 14:48:36.313687   Check that 'Login' form is opened
+2024-01-26 14:48:41.856546   'Login' form not opened
+2024-01-26 14:48:41.859860   'Login' page not opened
+2024-01-26 14:48:47.375173   'Login' form on trading platform not opened
+2024-01-26 14:48:47.375376   Start step Check that [Sign up] form is opened
+2024-01-26 14:48:47.388216   'Sign up' form opened
+2024-01-26 14:48:47.388240   Assert SIGNUP_HEADER =>
+2024-01-26 14:48:47.401720   Assert SIGNUP_REF_LOGIN =>
+2024-01-26 14:48:47.414939   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2024-01-26 14:48:47.428047   => SIGNUP_PRIVACY_POLICY_ALL
+2024-01-26 14:48:47.428068   => 'Signup' form is checked
+
+Bug: Bid:11.02.03.01_10-ro.gb.NoAuth
+
+2024-01-26 14:48:47.428127   Проверка бага в таблице ретеста  =>
+
+2024-01-26 14:48:47.433475   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:48:47.950606   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:48:48.479493   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:48:48.804791   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 14:48:48.804871   Bug: Bid:11.02.03.01_10-ro.gb.NoAuth уже существует, но тип бага изменился с 25/01/24 на 05
+
+2024-01-26 14:48:48.805280   Bug: Bid:11.02.03.01_10-ro.gb.NoAuth-05 уже существует
+
+2024-01-26 14:48:48.805450   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:48:49.256764   => 4. One row check results into Google Sheet Bugs Report fixed
+------------------------------ Captured log call -------------------------------
+2024-01-26 14:48:36 ERROR Elements not present after 0.5 seconds on page: https://capital.com/ro/trade-platinum
+2024-01-26 14:48:36 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x563ea4e26f83 <unknown>
+#1 0x563ea4adfcf7 <unknown>
+#2 0x563ea4b2f99e <unknown>
+#3 0x563ea4b2faa1 <unknown>
+#4 0x563ea4b7ad64 <unknown>
+#5 0x563ea4b590dd <unknown>
+#6 0x563ea4b78006 <unknown>
+#7 0x563ea4b58e53 <unknown>
+#8 0x563ea4b20dd4 <unknown>
+#9 0x563ea4b221de <unknown>
+#10 0x563ea4deb531 <unknown>
+#11 0x563ea4def455 <unknown>
+#12 0x563ea4dd7f55 <unknown>
+#13 0x563ea4df00ef <unknown>
+#14 0x563ea4dbb99f <unknown>
+#15 0x563ea4e14008 <unknown>
+#16 0x563ea4e141d7 <unknown>
+#17 0x563ea4e26124 <unknown>
+#18 0x7fbb35294ac3 <unknown>
+
+2024-01-26 14:48:41 ERROR Elements not present after 0.5 seconds on page: https://capital.com/ro/trade-platinum
+2024-01-26 14:48:41 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x563ea4e26f83 <unknown>
+#1 0x563ea4adfcf7 <unknown>
+#2 0x563ea4b2f99e <unknown>
+#3 0x563ea4b2faa1 <unknown>
+#4 0x563ea4b7ad64 <unknown>
+#5 0x563ea4b590dd <unknown>
+#6 0x563ea4b78006 <unknown>
+#7 0x563ea4b58e53 <unknown>
+#8 0x563ea4b20dd4 <unknown>
+#9 0x563ea4b221de <unknown>
+#10 0x563ea4deb531 <unknown>
+#11 0x563ea4def455 <unknown>
+#12 0x563ea4dd7f55 <unknown>
+#13 0x563ea4df00ef <unknown>
+#14 0x563ea4dbb99f <unknown>
+#15 0x563ea4e14008 <unknown>
+#16 0x563ea4e141d7 <unknown>
+#17 0x563ea4e26124 <unknown>
+#18 0x7fbb35294ac3 <unknown>
+
+2024-01-26 14:48:47 ERROR Elements not present after 0.5 seconds on page: https://capital.com/ro/trade-platinum
+2024-01-26 14:48:47 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x563ea4e26f83 <unknown>
+#1 0x563ea4adfcf7 <unknown>
+#2 0x563ea4b2f99e <unknown>
+#3 0x563ea4b2faa1 <unknown>
+#4 0x563ea4b7ad64 <unknown>
+#5 0x563ea4b590dd <unknown>
+#6 0x563ea4b78006 <unknown>
+#7 0x563ea4b58e53 <unknown>
+#8 0x563ea4b20dd4 <unknown>
+#9 0x563ea4b221de <unknown>
+#10 0x563ea4deb531 <unknown>
+#11 0x563ea4def455 <unknown>
+#12 0x563ea4dd7f55 <unknown>
+#13 0x563ea4df00ef <unknown>
+#14 0x563ea4dbb99f <unknown>
+#15 0x563ea4e14008 <unknown>
+#16 0x563ea4e141d7 <unknown>
+#17 0x563ea4e26124 <unknown>
+#18 0x7fbb35294ac3 <unknown>
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 14:48:49.596449   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py::TestCommoditiesTrading::test_10_block_vert_banner_button[https://capital.com/ro/trade-platinum-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-02-03_Commodities_trading/us_11-02-03-01_Commodities_trading_test.py::TestCommoditiesTrading::test_10_block_vert_banner_button[https://capital.com/ro/trade-platinum-Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 05. Opened a 'Sign up' form instead of a 'Login'
+============ 1 failed, 9 deselected, 1 warning in 60.71s (0:01:00) =============
+
+2024-01-26 14:48:49.671379   => Текущий тест: 1 failed
+
+2024-01-26 14:48:49.672622   => 3. check_results finished
+
+2024-01-26 14:48:49.672774   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 14:48:49.993497   => 4. One row check results into Google Sheet Bugs Report fixed

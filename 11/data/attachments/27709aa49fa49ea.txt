@@ -1,0 +1,128 @@
+
+2024-01-26 15:48:59.369931   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - it
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:49:00.256159   worker_id = master
+
+2024-01-26 15:49:00.256176   0. Allure grouping v4
+
+
+2024-01-26 15:49:00.256362   START PRECONDITIONS =>
+
+2024-01-26 15:49:01.876946   Load page https://capital.com
+
+2024-01-26 15:49:01.876996   {'width': 1280, 'height': 720}
+
+2024-01-26 15:49:01.878673   Set windows position at (0, 0) =>
+
+2024-01-26 15:49:01.985586   Set resolution 1280 * 720 =>
+
+2024-01-26 15:49:02.091543   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:49:07.145872   Капчи нет. Тестим дальше
+
+2024-01-26 15:49:07.145959   Prev. Role: ?
+
+2024-01-26 15:49:07.145972   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:49:07.958079   Load page https://capital.com
+
+2024-01-26 15:49:08.228135   => All cookies are deleted
+2024-01-26 15:49:09.196523   Load page https://capital.com
+
+2024-01-26 15:49:09.196811   Step 'Click button [Accept all cookies]'
+2024-01-26 15:49:14.254282   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:49:14.280731   => Button [Accept all cookies] is visible
+2024-01-26 15:49:15.280860   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:49:15.321806   => Button [Accept all cookies] is clickable
+2024-01-26 15:49:15.321840   Click Button [Accept all cookies] =>
+2024-01-26 15:49:15.411903   => Button [Accept all cookies] is clicked
+2024-01-26 15:49:15.411939   => Accepted All Cookies
+
+2024-01-26 15:49:15.912328   Start Autorization
+
+2024-01-26 15:49:15.912481   2. Act
+2024-01-26 15:49:15.912504   Start Click button [Log in] =>
+2024-01-26 15:49:15.928716   BUTTON_LOGIN scroll =>
+2024-01-26 15:49:15.936283   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:49:15.952746   => BUTTON_LOGIN is clickable
+2024-01-26 15:49:15.952783   BUTTON_LOGIN click =>
+2024-01-26 15:49:15.995640   => BUTTON_LOGIN is clicked!
+2024-01-26 15:49:15.995730   => 'Login' form is opened
+2024-01-26 15:49:16.658080   => "login" and "password" are inputted
+2024-01-26 15:49:16.658118   Click [Continue] button on [Login] form =>
+2024-01-26 15:49:16.767160   => [Continue] button on [Login] form is clicked
+2024-01-26 15:49:19.568609   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:49:19.568641   Set timeout = 30
+2024-01-26 15:49:19.568656   Wait until load page with special title =>
+2024-01-26 15:49:19.571527   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:49:19.571549   Is present LOGO on this page? =>
+2024-01-26 15:49:21.020463   => LOGO is visible on this page
+2024-01-26 15:49:21.020548   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:49:22.016538   Start DeAuthorisation
+2024-01-26 15:49:22.016696   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 15:49:22.035926   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 15:49:23.366816   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 15:49:23.366859   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 15:49:23.387804   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 15:49:23.387840   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 15:49:24.229600   => User panel [My account] is opened
+
+2024-01-26 15:49:24.229877   Start Click [Logout] button:
+2024-01-26 15:49:24.229902   BUTTON_LOGOUT is present? =>
+2024-01-26 15:49:24.241125   => BUTTON_LOGOUT is present
+2024-01-26 15:49:24.241155   Is visible BUTTON_LOGOUT? =>
+2024-01-26 15:49:24.254848   BUTTON_LOGOUT is clickable? =>
+2024-01-26 15:49:24.268335   BUTTON_LOGOUT click =>
+2024-01-26 15:49:24.341159   => BUTTON_LOGOUT is clicked
+
+2024-01-26 15:49:24.341263   Current role: NoAuth
+
+2024-01-26 15:49:24.341277   Prev language: ?
+
+2024-01-26 15:49:24.341292   Run preconditions: set "it" language =>
+
+
+2024-01-26 15:49:24.374009   => Language and Country menu is present
+
+
+2024-01-26 15:49:24.393912   => Language and Country menu is visible
+
+
+2024-01-26 15:49:26.185953   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:49:27.910101   => Current language: it
+
+2024-01-26 15:49:27.910148   Prev country: ?
+
+2024-01-26 15:49:27.910164   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:49:27.917158   => Language and Country menu is present
+
+
+2024-01-26 15:49:27.928344   => Language and Country menu is visible
+
+
+2024-01-26 15:49:29.702746   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:49:32.120770   => Current country: gb
+
+2024-01-26 15:49:32.120810   => THE END PRECONDITIONS
+
+2024-01-26 15:49:32.120843   1. Arrange_v0
+2024-01-26 15:49:32.745376   Load page https://capital.com/it/la-tua-guida-al-trading-eur-cad
+2024-01-26 15:49:37.770517   => BUTTON_START_TRADING is not present on the page!
+
+2024-01-26 15:49:37.859979   *** end fixture Browser = teardown ***
+

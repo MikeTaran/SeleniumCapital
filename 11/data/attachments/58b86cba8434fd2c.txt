@@ -1,0 +1,316 @@
+
+
+
+2024-01-26 15:42:49.335886   0. Get Values row =>
+2024-01-26 15:42:49.335928   Row # = 1010
+2024-01-26 15:42:49.335938   Row Values = 
+['Bid:11.01.05.00_01-nl.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.05.00', '_01', 'nl', 'gb', 'FCA', 'Auth', '', 'Education', 'Trading courses', 'On Main banner click Button [Start Trading]', 'On Main banner click Button [Start Trading]', '', '10', 'Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in Live mode(timeout=30c)', '', '', '', '17/01/24', 'failed']
+
+2024-01-26 15:42:49.336053   1. Run pretest =>
+
+2024-01-26 15:42:49.336067   row_loc = 
+['Bid:11.01.05.00_01-nl.gb.Auth', 'Ubuntu 22.04', 'Chrome', '11.01.05.00', '_01', 'nl', 'gb', 'FCA', 'Auth', '', 'Education', 'Trading courses', 'On Main banner click Button [Start Trading]', 'On Main banner click Button [Start Trading]', '', '10', 'Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in Live mode(timeout=30c)', '', '', '', '17/01/24', 'failed']
+
+2024-01-26 15:42:49.336081   => 1. Pretest finished
+
+2024-01-26 15:42:49.336153   2. Run run_pytest with Bid = Bid:11.01.05.00_01-nl.gb.Auth from row =>
+
+2024-01-26 15:42:49.336165   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:42:49.336177   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=nl --country=gb --role=Auth -m test_01 -v \tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py
+
+2024-01-26 15:43:37.938228   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:43:37.938285   => 2. Autotest with Bid = Bid:11.01.05.00_01-nl.gb.Auth from row finished
+
+2024-01-26 15:43:37.938369   3. Run check_results =>
+2024-01-26 15:43:37.938397   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 3 items / 2 deselected / 1 selected
+
+tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py::TestTradingCourses::test_01_create_account_button[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestTradingCourses.test_01_create_account_button[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-01-05-00_Trading_courses_test.TestTradingCourses object at 0x7fc091877850>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="4f2b7653da898dde5eeed10712af2362")>
+cur_language = 'nl', cur_country = 'gb', cur_role = 'Auth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+
+    @allure.step("Start test_11.01.05_01 button [Create account] in the block 'Our courses'.")
+    @pytest.mark.test_01
+    def test_01_create_account_button(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
+        """
+        Check: Block 'Our courses' -> button [Create account]
+        Language: All. License: All. Role: All
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.01.05", "Education > Menu Item [Trading courses]",
+            ".00_01", "Testing button [Create account] in block [Our courses]")
+    
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+    
+        if cur_language in ["ar"]:
+            Common().skip_test_for_language(cur_language)
+    
+        page_conditions = Conditions(d, "")
+        link = page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        page_menu = MenuSection(d, link)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
+        link = page_menu.sub_menu_trading_courses_move_focus_click(d, cur_language)
+    
+        test_element = ButtonCreateAccountBlockOurCourses(d, link, bid)
+>       test_element.full_test(d, cur_language, cur_country, cur_role, link)
+
+tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/Elements/ButtonCreateAccountBlockOurCourses.py:28: in full_test
+    test_element.assert_trading_platform_v4(d, link)
+pages/Elements/AssertClass.py:127: in assert_trading_platform_v4
+    self.page_trading.should_be_trading_platform_page_v4(d, cur_link, tpd, tpi, trade_instrument)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.Capital.Trading_platform.trading_platform.TradingPlatform object at 0x7fc0917c1350>
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="4f2b7653da898dde5eeed10712af2362")>
+cur_link = 'https://capital.com/nl/online-finance-courses', tpd = False
+tpi = False, trade_instrument = ''
+
+    @allure.step("Checking that the trading platform page has opened - ver 4")
+    def should_be_trading_platform_page_v4(self, d, cur_link, tpd, tpi, trade_instrument):
+        """
+        Check if the trading platform page for the corresponding trade instrument is opened
+        Args:
+            d: Webdriver
+            cur_link: Link in the list of 3 random items and start page of the sidebar
+            tpd: open Trade platform in Demo mode (True). Live mode (False)
+            tpi: open Trade platform for corresponding trade instrument (False)
+            trade_instrument: corresponding trade instrument (False)
+        """
+        print(f"{datetime.now()}   Checking that the trading platform page has opened (v4) =>")
+        platform_url = data["PLATFORM_URL/"]
+        cur_url = self.browser.current_url
+        # if self.wait_for_target_url(platform_url, 15):
+        if self.wait_for_target_url(platform_url, 10):
+    
+            self.should_be_page_title_v2(data["PAGE_TITLE"])
+            self.should_be_platform_logo()
+            if tpd:
+                self.should_be_platform_demo_mode(d, cur_link)
+                print(f"{datetime.now()}   => The page with {cur_url} url was opened in DEMO mode")
+            else:
+                self.should_be_platform_live_mode(d, cur_link)
+                print(f"{datetime.now()}   => The page with {cur_url} url was opened in lIVE mode")
+            if tpi:
+                print(f"{datetime.now()}   => Opened page with {cur_url} url for corresponding trading"
+                      f" instrument '{trade_instrument}'")
+                self.should_be_corresponding_trading_instrument(cur_url, trade_instrument)
+    
+            assert True, 'Trading platform with title "Trading Platform | Capital.com" opened'
+            self.open_page()
+        else:
+            if tpd:
+                print(f"{datetime.now()}   => Loaded page {self.browser.current_url} with not {platform_url} url")
+                # проверка бага для ретеста
+                print(f'\nBug: {self.bid}')
+                retest_table_fill(self.bid, '09', self.link)
+                assert False, (f"Bug # 9. Loaded page with {cur_url} url, but expected the Trading platform in"
+                               f"Demo mode(timeout=15c)")
+            else:
+                print(f"{datetime.now()}   => Loaded page {self.browser.current_url} with not {platform_url} url")
+                # проверка бага для ретеста
+                print(f'\nBug: {self.bid}')
+                retest_table_fill(self.bid, '10', self.link)
+>               assert False, (f"Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in"
+                               f"Live mode(timeout=15c)")
+E               AssertionError: Bug # 10. Loaded page with https://capital.com/nl/online-finance-courses url, but expected the Trading platform inLive mode(timeout=15c)
+
+pages/Capital/Trading_platform/trading_platform.py:126: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 15:42:50.215259   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - nl
+Current country of trading - gb
+
+
+
+Current test role - Auth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:42:51.147556   worker_id = master
+
+2024-01-26 15:42:51.147573   0. Allure grouping v4
+
+
+2024-01-26 15:42:51.147770   START PRECONDITIONS =>
+
+2024-01-26 15:42:53.134471   Load page https://capital.com
+
+2024-01-26 15:42:53.134519   {'width': 1280, 'height': 720}
+
+2024-01-26 15:42:53.138214   Set windows position at (0, 0) =>
+
+2024-01-26 15:42:53.244891   Set resolution 1280 * 720 =>
+
+2024-01-26 15:42:53.354504   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:42:58.368569   Капчи нет. Тестим дальше
+
+2024-01-26 15:42:58.368656   Prev. Role: ?
+
+2024-01-26 15:42:58.368668   Run preconditions: set "Auth" Role =>
+2024-01-26 15:42:59.158070   Load page https://capital.com
+
+2024-01-26 15:42:59.356155   => All cookies are deleted
+2024-01-26 15:43:00.289720   Load page https://capital.com
+
+2024-01-26 15:43:00.289982   Step 'Click button [Accept all cookies]'
+2024-01-26 15:43:05.321802   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:43:05.342854   => Button [Accept all cookies] is visible
+2024-01-26 15:43:06.342981   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:43:06.384780   => Button [Accept all cookies] is clickable
+2024-01-26 15:43:06.384834   Click Button [Accept all cookies] =>
+2024-01-26 15:43:06.475134   => Button [Accept all cookies] is clicked
+2024-01-26 15:43:06.475182   => Accepted All Cookies
+
+2024-01-26 15:43:06.975552   Start Autorization
+
+2024-01-26 15:43:06.975676   2. Act
+2024-01-26 15:43:06.975692   Start Click button [Log in] =>
+2024-01-26 15:43:06.987062   BUTTON_LOGIN scroll =>
+2024-01-26 15:43:06.991158   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:43:07.008584   => BUTTON_LOGIN is clickable
+2024-01-26 15:43:07.008630   BUTTON_LOGIN click =>
+2024-01-26 15:43:07.057455   => BUTTON_LOGIN is clicked!
+2024-01-26 15:43:07.057543   => 'Login' form is opened
+2024-01-26 15:43:07.590811   => "login" and "password" are inputted
+2024-01-26 15:43:07.590856   Click [Continue] button on [Login] form =>
+2024-01-26 15:43:07.728493   => [Continue] button on [Login] form is clicked
+2024-01-26 15:43:10.404523   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:43:10.404568   Set timeout = 30
+2024-01-26 15:43:10.404590   Wait until load page with special title =>
+2024-01-26 15:43:10.407620   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:43:10.407644   Is present LOGO on this page? =>
+2024-01-26 15:43:11.790811   => LOGO is visible on this page
+2024-01-26 15:43:11.790920   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:43:12.926762   Current role: Auth
+
+2024-01-26 15:43:12.926809   Prev language: ?
+
+2024-01-26 15:43:12.926825   Run preconditions: set "nl" language =>
+
+
+2024-01-26 15:43:12.937167   => Language and Country menu is present
+
+
+2024-01-26 15:43:12.969434   => Language and Country menu is visible
+
+
+2024-01-26 15:43:14.749433   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:43:16.906731   => Current language: nl
+
+2024-01-26 15:43:16.906771   Prev country: ?
+
+2024-01-26 15:43:16.906780   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:43:16.933204   => Language and Country menu is present
+
+
+2024-01-26 15:43:16.951027   => Language and Country menu is visible
+
+
+2024-01-26 15:43:18.733384   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:43:21.037757   => Current country: gb
+
+2024-01-26 15:43:21.037810   => THE END PRECONDITIONS
+2024-01-26 15:43:21.552744   => Education menu is present
+2024-01-26 15:43:21.575899   => Education menu is visible
+2024-01-26 15:43:22.847905   => Education menu focus moved
+
+2024-01-26 15:43:24.551690   1. Arrange
+2024-01-26 15:43:24.554950   BUTTON_CREATE_ACCOUNT =>
+2024-01-26 15:43:24.589029   => BUTTON_CREATE_ACCOUNT IS PRESENT
+
+2024-01-26 15:43:24.589229   2. Act
+2024-01-26 15:43:24.597369   1 checking element(s) with current CSS locator is(are) present(s) on this page
+2024-01-26 15:43:25.756073   => BUTTON_CREATE_ACCOUNT is clicked
+
+2024-01-26 15:43:25.756389   3. Assert_v4
+2024-01-26 15:43:25.756542   Checking that the trading platform page has opened (v4) =>
+2024-01-26 15:43:35.846634   => Loaded page https://capital.com/nl/online-finance-courses with not https://capital.com/trading/platform/ url
+
+Bug: Bid:11.01.05.00_01-nl.gb.Auth
+
+2024-01-26 15:43:35.849481   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:43:35.855361   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:43:36.408160   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:43:36.987937   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:43:37.169118   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:43:37.169197   Bug: Bid:11.01.05.00_01-nl.gb.Auth уже существует, но тип бага изменился с 17/01/24 на 10
+
+2024-01-26 15:43:37.169634   Bug: Bid:11.01.05.00_01-nl.gb.Auth-10 уже существует
+
+2024-01-26 15:43:37.169792   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:43:37.496217   => 4. One row check results into Google Sheet Bugs Report fixed
+------------------------------ Captured log call -------------------------------
+2024-01-26 15:43:35 ERROR Elements not present after 0.5 seconds on page: https://capital.com/nl/online-finance-courses
+2024-01-26 15:43:35 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 497, in wait_for_target_url
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message:
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 15:43:37.846498   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py::TestTradingCourses::test_01_create_account_button[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-01-05_Trading_courses/US_11-01-05-00_Trading_courses_test.py::TestTradingCourses::test_01_create_account_button[Chrome--ae-Auth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 10. Loaded page with https://capital.com/nl/online-finance-courses url, but expected the Trading platform inLive mode(timeout=15c)
+================= 1 failed, 2 deselected, 1 warning in 47.78s ==================
+
+2024-01-26 15:43:37.938823   => Текущий тест: 1 failed
+
+2024-01-26 15:43:37.939789   => 3. check_results finished
+
+2024-01-26 15:43:37.939953   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:43:38.124795   => 4. One row check results into Google Sheet Bugs Report fixed

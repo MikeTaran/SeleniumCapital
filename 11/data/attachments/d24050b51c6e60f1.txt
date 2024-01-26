@@ -1,0 +1,367 @@
+
+
+
+2024-01-26 15:55:51.432249   0. Get Values row =>
+2024-01-26 15:55:51.432274   Row # = 1358
+2024-01-26 15:55:51.432283   Row Values = 
+['Bid:11.03.07.00_02-es.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.07.00', '_02', 'es', 'gb', 'FCA', 'NoAuth', '', 'Education', 'What is a margin?', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '15/01/24', 'failed']
+
+2024-01-26 15:55:51.432361   1. Run pretest =>
+
+2024-01-26 15:55:51.432374   row_loc = 
+['Bid:11.03.07.00_02-es.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.03.07.00', '_02', 'es', 'gb', 'FCA', 'NoAuth', '', 'Education', 'What is a margin?', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '15/01/24', 'failed']
+
+2024-01-26 15:55:51.432388   => 1. Pretest finished
+
+2024-01-26 15:55:51.432449   2. Run run_pytest with Bid = Bid:11.03.07.00_02-es.gb.NoAuth from row =>
+
+2024-01-26 15:55:51.432462   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:55:51.432473   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=es --country=gb --role=NoAuth -m test_02 -v \tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py
+
+2024-01-26 15:56:41.639668   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:56:41.639713   => 2. Autotest with Bid = Bid:11.03.07.00_02-es.gb.NoAuth from row finished
+
+2024-01-26 15:56:41.639779   3. Run check_results =>
+2024-01-26 15:56:41.639800   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 6 items / 5 deselected / 1 selected
+
+tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py::TestWhatIsMargin::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestWhatIsMargin.test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-03-07_What_is_a_margin_test.TestWhatIsMargin object at 0x7fc08b083310>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="46a95c514bb0b7ab508940db5ad96527")>
+cur_language = 'es', cur_country = 'gb', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+
+    @allure.step("Start test of button [Try demo] on Main banner")
+    @pytest.mark.test_02
+    def test_02_main_banner_try_demo_button(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
+        """
+        Check: Button [Try demo] on Main banner
+        Language: All. License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.03.07", "Education > Menu item [What is a margin?]",
+            ".00_02", "Testing button [Try demo] on Main banner")
+    
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+    
+        link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
+    
+        test_element = MainBannerTryDemo(d, link)
+        test_element.arrange_(d, link)
+    
+        if not test_element.element_click():
+            pytest.fail("Testing element is not clicked")
+    
+        test_element = AssertClass(d, link, bid)
+        match cur_role:
+            case "NoReg":
+                test_element.assert_signup(d, cur_language, link)
+            case "NoAuth":
+>               test_element.assert_login(d, cur_language, link)
+
+tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pages.Elements.AssertClass.AssertClass object at 0x7fc08b09fb90>
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="46a95c514bb0b7ab508940db5ad96527")>
+cur_language = 'es', cur_link = 'https://capital.com/es/margin-trading'
+
+    @allure.step('Checking that "Login" form or page opened')
+    def assert_login(self, d, cur_language, cur_link):
+        """Method Assert Login form or page"""
+        print(f"\n{datetime.now()}   3. Assert_Login_v0")
+        self.page_signup_login = SignupLogin(d, cur_link)
+        if self.page_signup_login.should_be_login_form():
+            self.page_signup_login.close_login_form()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_login_page():
+            self.page_signup_login.close_login_page()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_trading_platform_login_form(cur_language):
+            self.page_signup_login.close_trading_platform_login_form()
+            del self.page_signup_login
+        elif self.page_signup_login.should_be_signup_form(cur_language):
+            del self.page_signup_login
+            print(f'\nBug: {self.bid}')
+            retest_table_fill(self.bid, '05', self.link)
+>           assert False, "Bug # 05. Opened a 'Sign up' form instead of a 'Login'"
+E           AssertionError: Bug # 05. Opened a 'Sign up' form instead of a 'Login'
+
+pages/Elements/AssertClass.py:69: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 15:55:52.201457   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - es
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:55:53.086173   worker_id = master
+
+2024-01-26 15:55:53.086190   0. Allure grouping v4
+
+
+2024-01-26 15:55:53.086382   START PRECONDITIONS =>
+
+2024-01-26 15:55:54.757450   Load page https://capital.com
+
+2024-01-26 15:55:54.757495   {'width': 1280, 'height': 720}
+
+2024-01-26 15:55:54.759692   Set windows position at (0, 0) =>
+
+2024-01-26 15:55:54.868927   Set resolution 1280 * 720 =>
+
+2024-01-26 15:55:54.977850   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:55:59.989173   Капчи нет. Тестим дальше
+
+2024-01-26 15:55:59.989265   Prev. Role: ?
+
+2024-01-26 15:55:59.989278   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:56:01.495938   Load page https://capital.com
+
+2024-01-26 15:56:01.657264   => All cookies are deleted
+2024-01-26 15:56:02.536669   Load page https://capital.com
+
+2024-01-26 15:56:02.536924   Step 'Click button [Accept all cookies]'
+2024-01-26 15:56:07.545658   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:56:07.567198   => Button [Accept all cookies] is visible
+2024-01-26 15:56:08.567314   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:56:08.591164   => Button [Accept all cookies] is clickable
+2024-01-26 15:56:08.591197   Click Button [Accept all cookies] =>
+2024-01-26 15:56:08.647846   => Button [Accept all cookies] is clicked
+2024-01-26 15:56:08.647938   => Accepted All Cookies
+
+2024-01-26 15:56:09.148280   Start Autorization
+
+2024-01-26 15:56:09.148377   2. Act
+2024-01-26 15:56:09.148391   Start Click button [Log in] =>
+2024-01-26 15:56:09.157062   BUTTON_LOGIN scroll =>
+2024-01-26 15:56:09.161203   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:56:09.176229   => BUTTON_LOGIN is clickable
+2024-01-26 15:56:09.176256   BUTTON_LOGIN click =>
+2024-01-26 15:56:09.235244   => BUTTON_LOGIN is clicked!
+2024-01-26 15:56:09.235347   => 'Login' form is opened
+2024-01-26 15:56:09.862730   => "login" and "password" are inputted
+2024-01-26 15:56:09.862769   Click [Continue] button on [Login] form =>
+2024-01-26 15:56:09.971154   => [Continue] button on [Login] form is clicked
+2024-01-26 15:56:12.618969   Start check that the Trading platform page is loaded and LOGO is present on it =>
+2024-01-26 15:56:12.619003   Set timeout = 30
+2024-01-26 15:56:12.619019   Wait until load page with special title =>
+2024-01-26 15:56:12.622432   => Page with title "Trading Platform | Capital.com" is loaded
+2024-01-26 15:56:12.622453   Is present LOGO on this page? =>
+2024-01-26 15:56:13.954650   => LOGO is visible on this page
+2024-01-26 15:56:13.954731   -> "Capital.com" logo is present on trading platform page
+
+2024-01-26 15:56:14.922066   Start DeAuthorisation
+2024-01-26 15:56:14.922200   1. BUTTON_MY_ACCOUNT is present? =>
+2024-01-26 15:56:14.936852   => BUTTON_MY_ACCOUNT is present on this page
+2024-01-26 15:56:16.265452   => Move to BUTTON_MY_ACCOUNT
+2024-01-26 15:56:16.265496   2. BUTTON_MY_ACCOUNT is clickable? =>
+2024-01-26 15:56:16.284725   => BUTTON_MY_ACCOUNT is clickable
+2024-01-26 15:56:16.284754   BUTTON_MY_ACCOUNT Click =>
+2024-01-26 15:56:17.108867   => User panel [My account] is opened
+
+2024-01-26 15:56:17.109067   Start Click [Logout] button:
+2024-01-26 15:56:17.109083   BUTTON_LOGOUT is present? =>
+2024-01-26 15:56:17.116676   => BUTTON_LOGOUT is present
+2024-01-26 15:56:17.116702   Is visible BUTTON_LOGOUT? =>
+2024-01-26 15:56:17.127645   BUTTON_LOGOUT is clickable? =>
+2024-01-26 15:56:17.137770   BUTTON_LOGOUT click =>
+2024-01-26 15:56:17.192745   => BUTTON_LOGOUT is clicked
+
+2024-01-26 15:56:17.192884   Current role: NoAuth
+
+2024-01-26 15:56:17.192907   Prev language: ?
+
+2024-01-26 15:56:17.192921   Run preconditions: set "es" language =>
+
+
+2024-01-26 15:56:17.223983   => Language and Country menu is present
+
+
+2024-01-26 15:56:17.239339   => Language and Country menu is visible
+
+
+2024-01-26 15:56:19.017362   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:56:20.693546   => Current language: es
+
+2024-01-26 15:56:20.693584   Prev country: ?
+
+2024-01-26 15:56:20.693594   Run preconditions: set "gb" country =>
+
+
+2024-01-26 15:56:20.703878   => Language and Country menu is present
+
+
+2024-01-26 15:56:20.719409   => Language and Country menu is visible
+
+
+2024-01-26 15:56:22.500728   => Focus is moved on Language and Country menu 
+
+2024-01-26 15:56:24.736358   => Current country: gb
+
+2024-01-26 15:56:24.736397   => THE END PRECONDITIONS
+2024-01-26 15:56:25.250258   => Education menu is present
+2024-01-26 15:56:25.267458   => Education menu is visible
+2024-01-26 15:56:26.550176   => Education menu focus moved
+
+
+2024-01-26 15:56:28.696711   => 'What is a margin?' menu click
+
+2024-01-26 15:56:28.703561   1. Arrange_v0
+2024-01-26 15:56:28.706488   BUTTON_TRY_DEMO is visible? =>
+2024-01-26 15:56:28.740605   => BUTTON_TRY_DEMO is visible on the page!
+
+2024-01-26 15:56:28.740764   2. Act_v0
+2024-01-26 15:56:28.740779   BUTTON_TRY_DEMO is present? =>
+2024-01-26 15:56:28.749970   => BUTTON_TRY_DEMO is present on the page!
+2024-01-26 15:56:28.749994   BUTTON_TRY_DEMO scroll =>
+2024-01-26 15:56:28.803795   => BUTTON_TRY_DEMO clicked!
+
+2024-01-26 15:56:28.804008   3. Assert_Login_v0
+2024-01-26 15:56:28.804082   Check that 'Login' form is opened
+2024-01-26 15:56:34.332076   'Login' form not opened
+2024-01-26 15:56:34.335489   'Login' page not opened
+2024-01-26 15:56:39.894490   'Login' form on trading platform not opened
+2024-01-26 15:56:39.894659   Start step Check that [Sign up] form is opened
+2024-01-26 15:56:39.911044   'Sign up' form opened
+2024-01-26 15:56:39.911067   Assert SIGNUP_HEADER =>
+2024-01-26 15:56:39.924725   Assert SIGNUP_REF_LOGIN =>
+2024-01-26 15:56:39.937995   Assert SIGNUP_PRIVACY_POLICY_ALL_2 =>
+2024-01-26 15:56:39.951273   => SIGNUP_PRIVACY_POLICY_ALL
+2024-01-26 15:56:39.951295   => 'Signup' form is checked
+
+Bug: Bid:11.03.07.00_02-es.gb.NoAuth
+
+2024-01-26 15:56:39.951346   Проверка бага в таблице ретеста  =>
+
+2024-01-26 15:56:39.957489   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:56:40.378168   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:56:40.776506   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:56:40.966776   => 4. One row check results into Google Sheet Bugs Report fixed
+
+2024-01-26 15:56:40.966859   Bug: Bid:11.03.07.00_02-es.gb.NoAuth уже существует, но тип бага изменился с 15/01/24 на 05
+
+2024-01-26 15:56:40.967338   Bug: Bid:11.03.07.00_02-es.gb.NoAuth-05 уже существует
+
+2024-01-26 15:56:40.967484   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:56:41.271208   => 4. One row check results into Google Sheet Bugs Report fixed
+------------------------------ Captured log call -------------------------------
+2024-01-26 15:56:34 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/margin-trading
+2024-01-26 15:56:34 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x557f3a6bbf83 <unknown>
+#1 0x557f3a374cf7 <unknown>
+#2 0x557f3a3c499e <unknown>
+#3 0x557f3a3c4aa1 <unknown>
+#4 0x557f3a40fd64 <unknown>
+#5 0x557f3a3ee0dd <unknown>
+#6 0x557f3a40d006 <unknown>
+#7 0x557f3a3ede53 <unknown>
+#8 0x557f3a3b5dd4 <unknown>
+#9 0x557f3a3b71de <unknown>
+#10 0x557f3a680531 <unknown>
+#11 0x557f3a684455 <unknown>
+#12 0x557f3a66cf55 <unknown>
+#13 0x557f3a6850ef <unknown>
+#14 0x557f3a65099f <unknown>
+#15 0x557f3a6a9008 <unknown>
+#16 0x557f3a6a91d7 <unknown>
+#17 0x557f3a6bb124 <unknown>
+#18 0x7f5d25694ac3 <unknown>
+
+2024-01-26 15:56:39 ERROR Elements not present after 0.5 seconds on page: https://capital.com/es/margin-trading
+2024-01-26 15:56:39 ERROR 
+Traceback (most recent call last):
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 82, in inner_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/SeleniumCapital/SeleniumCapital/pages/base_page.py", line 293, in element_is_visible
+    return Wait(self.browser, timeout).until(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x557f3a6bbf83 <unknown>
+#1 0x557f3a374cf7 <unknown>
+#2 0x557f3a3c499e <unknown>
+#3 0x557f3a3c4aa1 <unknown>
+#4 0x557f3a40fd64 <unknown>
+#5 0x557f3a3ee0dd <unknown>
+#6 0x557f3a40d006 <unknown>
+#7 0x557f3a3ede53 <unknown>
+#8 0x557f3a3b5dd4 <unknown>
+#9 0x557f3a3b71de <unknown>
+#10 0x557f3a680531 <unknown>
+#11 0x557f3a684455 <unknown>
+#12 0x557f3a66cf55 <unknown>
+#13 0x557f3a6850ef <unknown>
+#14 0x557f3a65099f <unknown>
+#15 0x557f3a6a9008 <unknown>
+#16 0x557f3a6a91d7 <unknown>
+#17 0x557f3a6bb124 <unknown>
+#18 0x7f5d25694ac3 <unknown>
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 15:56:41.565166   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py::TestWhatIsMargin::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-03-07_What_is_a_margin/US_11-03-07_What_is_a_margin_test.py::TestWhatIsMargin::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - AssertionError: Bug # 05. Opened a 'Sign up' form instead of a 'Login'
+================= 1 failed, 5 deselected, 1 warning in 49.50s ==================
+
+2024-01-26 15:56:41.640295   => Текущий тест: 1 failed
+
+2024-01-26 15:56:41.641391   => 3. check_results finished
+
+2024-01-26 15:56:41.641526   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:56:41.811992   => 4. One row check results into Google Sheet Bugs Report fixed

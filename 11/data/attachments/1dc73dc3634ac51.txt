@@ -1,0 +1,196 @@
+
+
+
+2024-01-26 15:41:38.342882   0. Get Values row =>
+2024-01-26 15:41:38.342911   Row # = 547
+2024-01-26 15:41:38.342921   Row Values = 
+['Bid:11.02.02.00_02-de.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.02.00', '_02', 'de', 'gb', 'FCA', 'NoAuth', '', 'Education', 'Shares trading', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '23/01/24', 'failed']
+
+2024-01-26 15:41:38.343003   1. Run pretest =>
+
+2024-01-26 15:41:38.343016   row_loc = 
+['Bid:11.02.02.00_02-de.gb.NoAuth', 'Ubuntu 22.04', 'Chrome', '11.02.02.00', '_02', 'de', 'gb', 'FCA', 'NoAuth', '', 'Education', 'Shares trading', 'Click Main banner > Button [Try demo]', 'Click Main banner > Button [Try demo]', '', '05', "Bug # 05. Opened a 'Sign up' form instead of a 'Login'", '', '', '', '23/01/24', 'failed']
+
+2024-01-26 15:41:38.343030   => 1. Pretest finished
+
+2024-01-26 15:41:38.343092   2. Run run_pytest with Bid = Bid:11.02.02.00_02-de.gb.NoAuth from row =>
+
+2024-01-26 15:41:38.343105   2.2. Run poetry run pytest ... in subprocess =>
+
+2024-01-26 15:41:38.343116   Run command: 
+poetry run pytest --retest=True --browser_name=Chrome --lang=de --country=gb --role=NoAuth -m test_02 -v \tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-00_Shares_trading_test.py
+
+2024-01-26 15:42:36.804699   => 2.2. pytest ... as subprocess finished
+
+2024-01-26 15:42:36.804751   => 2. Autotest with Bid = Bid:11.02.02.00_02-de.gb.NoAuth from row finished
+
+2024-01-26 15:42:36.804821   3. Run check_results =>
+2024-01-26 15:42:36.804842   test_results: 
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0 -- /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.7', 'Platform': 'Linux-6.2.0-1018-azure-x86_64-with-glibc2.35', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.3.0'}, 'Plugins': {'metadata': '3.0.0', 'timeout': '2.2.0', 'html': '4.1.1', 'xdist': '3.5.0', 'allure-pytest': '2.13.2'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-11-jdk-amd64'}
+rootdir: /home/runner/work/SeleniumCapital/SeleniumCapital
+configfile: pytest.ini
+plugins: metadata-3.0.0, timeout-2.2.0, html-4.1.1, xdist-3.5.0, allure-pytest-2.13.2
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-00_Shares_trading_test.py::TestSharesTrading::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestSharesTrading.test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] _
+
+self = <US_11-02-02-00_Shares_trading_test.TestSharesTrading object at 0x7f88e1f80110>
+worker_id = 'master'
+d = <selenium.webdriver.chrome.webdriver.WebDriver (session="d938f8c769153b8f421daea32729fc55")>
+cur_language = 'de', cur_country = 'gb', cur_role = 'NoAuth'
+cur_login = 'aqa.tomelo.an@gmail.com', cur_password = 'iT9Vgqi6d$fiZ*Z'
+
+    @allure.step("Start test of button [Try demo] on Main banner")
+    # @pytest.mark.skip(reason="Skipped for debugging")
+    @pytest.mark.test_02
+    def test_02_main_banner_try_demo_button(
+            self, worker_id, d, cur_language, cur_country, cur_role, cur_login, cur_password):
+        """
+        Check: Button [Try demo] on Main banner
+        Language: All (Except: EL, HU, NL). License: All.
+        """
+        bid = build_dynamic_arg_v4(
+            d, worker_id, cur_language, cur_country, cur_role,
+            "11.02.02", "Education > Menu item [Shares trading]",
+            ".00_02", "Testing button [Try demo] on Main banner")
+    
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+    
+        check_language(cur_language)
+    
+        page_conditions = Conditions(d, "")
+>       main_page_link = page_conditions.preconditions(
+            d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
+
+tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-00_Shares_trading_test.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pages/conditions.py:96: in preconditions
+    self.to_do_authorisation(d, host, cur_login, cur_password)
+pages/conditions.py:202: in to_do_authorisation
+    wait.until(EC.title_is("Trading Platform | Capital.com"))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="d938f8c769153b8f421daea32729fc55")>
+method = <function title_is.<locals>._predicate at 0x7f88e1f9ccc0>, message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -> T:
+        """Calls the method provided with the driver as an argument until the \
+        return value does not evaluate to ``False``.
+    
+        :param method: callable(WebDriver)
+        :param message: optional message for :exc:`TimeoutException`
+        :returns: the result of the last call to `method`
+        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            time.sleep(self._poll)
+            if time.monotonic() > end_time:
+                break
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+../../../.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException
+---------------------------- Captured stdout setup -----------------------------
+
+2024-01-26 15:41:39.245183   *** autouse fixture Chrome ***
+
+{'width': 1280, 'height': 720}
+Current test language - de
+Current country of trading - gb
+
+
+
+Current test role - NoAuth
+Current login - aqa.tomelo.an@gmail.com
+Current login - iT9Vgqi6d$fiZ*Z
+----------------------------- Captured stdout call -----------------------------
+{'width': 1280, 'height': 720}
+
+2024-01-26 15:41:40.164309   worker_id = master
+
+2024-01-26 15:41:40.164333   0. Allure grouping v4
+
+
+2024-01-26 15:41:40.166008   START PRECONDITIONS =>
+
+2024-01-26 15:41:41.710160   Load page https://capital.com
+
+2024-01-26 15:41:41.710209   {'width': 1280, 'height': 720}
+
+2024-01-26 15:41:41.714542   Set windows position at (0, 0) =>
+
+2024-01-26 15:41:41.831481   Set resolution 1280 * 720 =>
+
+2024-01-26 15:41:41.939798   => Resolution seted {'width': 1280, 'height': 720}
+
+2024-01-26 15:41:46.979382   Капчи нет. Тестим дальше
+
+2024-01-26 15:41:46.979475   Prev. Role: ?
+
+2024-01-26 15:41:46.979487   Run preconditions: set "NoAuth" Role =>
+2024-01-26 15:41:47.863339   Load page https://capital.com
+
+2024-01-26 15:41:48.071537   => All cookies are deleted
+2024-01-26 15:41:48.942888   Load page https://capital.com
+
+2024-01-26 15:41:48.943161   Step 'Click button [Accept all cookies]'
+2024-01-26 15:41:53.989709   Is Visible Button [Accept all cookies]? =>
+2024-01-26 15:41:54.030405   => Button [Accept all cookies] is visible
+2024-01-26 15:41:55.030531   Is clickable Button [Accept all cookies] =>
+2024-01-26 15:41:55.055391   => Button [Accept all cookies] is clickable
+2024-01-26 15:41:55.055424   Click Button [Accept all cookies] =>
+2024-01-26 15:41:55.124226   => Button [Accept all cookies] is clicked
+2024-01-26 15:41:55.124271   => Accepted All Cookies
+
+2024-01-26 15:41:55.624689   Start Autorization
+
+2024-01-26 15:41:55.624829   2. Act
+2024-01-26 15:41:55.624848   Start Click button [Log in] =>
+2024-01-26 15:41:55.637380   BUTTON_LOGIN scroll =>
+2024-01-26 15:41:55.641115   Is BUTTON_LOGIN clickable? =>
+2024-01-26 15:41:55.654383   => BUTTON_LOGIN is clickable
+2024-01-26 15:41:55.654407   BUTTON_LOGIN click =>
+2024-01-26 15:41:55.696333   => BUTTON_LOGIN is clicked!
+2024-01-26 15:41:55.696415   => 'Login' form is opened
+2024-01-26 15:41:56.274516   => "login" and "password" are inputted
+2024-01-26 15:41:56.274570   Click [Continue] button on [Login] form =>
+2024-01-26 15:41:56.384046   => [Continue] button on [Login] form is clicked
+--------------------------- Captured stdout teardown ---------------------------
+
+2024-01-26 15:42:36.727410   *** end fixture Browser = teardown ***
+
+=============================== warnings summary ===============================
+tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-00_Shares_trading_test.py::TestSharesTrading::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z]
+  /home/runner/.cache/pypoetry/virtualenvs/testcapitalcompyse-cIj6ROMf-py3.11/lib/python3.11/site-packages/pytest_html/plugin.py:133: DeprecationWarning: The 'report.extra' attribute is deprecated and will be removed in a future release, use 'report.extras' instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///home/runner/work/SeleniumCapital/SeleniumCapital/report/report.html -
+=========================== short test summary info ============================
+FAILED tests/US_11_Education/US_11-02-02_Shares_trading/US_11-02-02-00_Shares_trading_test.py::TestSharesTrading::test_02_main_banner_try_demo_button[Chrome--ae-NoAuth-aqa.tomelo.an@gmail.com-iT9Vgqi6d$fiZ*Z] - selenium.common.exceptions.TimeoutException: Message:
+================= 1 failed, 6 deselected, 1 warning in 57.64s ==================
+
+2024-01-26 15:42:36.805110   => Текущий тест: 1 failed
+
+2024-01-26 15:42:36.805793   => 3. check_results finished
+
+2024-01-26 15:42:36.805976   4. Fixing one row check results into Google Sheet Bugs Report =>
+1 cells updated.
+2024-01-26 15:42:37.019012   => 4. One row check results into Google Sheet Bugs Report fixed
