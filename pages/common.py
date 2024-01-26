@@ -12,6 +12,11 @@ from conf import QTY_LINKS
 
 class Common:
 
+	def skip_if_eng_lang_and_fca_license(self, cur_language, cur_country):
+		if cur_country == "gb" and cur_language == "":
+			pytest.skip("Current menu item is not present in Education menu for current parameters")
+
+
 	def check_language_in_list_and_skip_if_present(self, cur_language, list_languages):
 		if cur_language in list_languages:
 			pytest.skip(f"This test is not for '{cur_language}' language")
@@ -78,6 +83,7 @@ class Common:
 			print(f"{datetime.now()}   The test coverage = {count_out / count_in * 100} %")
 		else:
 			print(f"{datetime.now()}   The test coverage = 0 %")
+
 
 	def generate_cur_item_link_parameter(self, file_name):
 

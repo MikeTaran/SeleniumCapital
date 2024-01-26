@@ -38,6 +38,8 @@ class TestCryptocurrencyTradingPretest:
             "11.02.05", "Education > Menu item [Cryptocurrency trading]",
             ".00_99", "Pretest")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if count == 0:
             pytest.skip("Так надо")
 
@@ -49,7 +51,7 @@ class TestCryptocurrencyTradingPretest:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         page_menu.sub_menu_cryptocurrency_trading_move_focus_click(d, cur_language)
         del page_menu
 

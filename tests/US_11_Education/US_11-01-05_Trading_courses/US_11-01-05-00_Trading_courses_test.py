@@ -38,6 +38,8 @@ class TestTradingCourses:
             "11.01.05", "Education > Menu Item [Trading courses]",
             ".00_01", "Testing button [Create account] in block [Our courses]")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if cur_language in ["ar"]:
             Common().skip_test_for_language(cur_language)
 
@@ -46,7 +48,7 @@ class TestTradingCourses:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         link = page_menu.sub_menu_trading_courses_move_focus_click(d, cur_language)
 
         test_element = ButtonCreateAccountBlockOurCourses(d, link, bid)
@@ -65,6 +67,8 @@ class TestTradingCourses:
             "11.01.05", "Education > Menu Item [Trading courses]",
             ".00_04", "Testing button [1. Create your account] in block [Steps trading]")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if cur_language in ["ar"]:
             Common().skip_test_for_language(cur_language)
 
@@ -73,7 +77,7 @@ class TestTradingCourses:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         link = page_menu.sub_menu_trading_courses_move_focus_click(d, cur_language)
 
         test_element = BlockStepTrading(d, link, bid)
@@ -88,6 +92,8 @@ class TestTradingCourses:
             "11.01.05", "Education > Menu Item [Trading courses]",
             ".00_99", "Pretest for US_11.01.05.01")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if cur_language in ["ar"]:
             Common().skip_test_for_language(cur_language)
 
@@ -99,7 +105,7 @@ class TestTradingCourses:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         page_menu.sub_menu_trading_courses_move_focus_click(d, cur_language)
         del page_menu
 

@@ -2,6 +2,7 @@ import pytest
 import allure
 from datetime import datetime
 
+from pages.common import Common
 from pages.Elements.BlockStepTrading import BlockStepTrading
 from pages.Elements.ButtonDownloadAppStore import ButtonDownloadAppStore
 from pages.Elements.ButtonExploreWebPlatform import ButtonExploreWebPlatform
@@ -28,7 +29,7 @@ class USLink:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
         if not self.user_story_menu_link:
             page_menu = MenuSection(d, main_link)
-            page_menu.menu_education_move_focus(d, cur_language)
+            page_menu.menu_education_move_focus(d, cur_language, cur_country)
             us_link = page_menu.sub_menu_swing_trading_move_focus_click(d, cur_language)
             self.user_story_menu_link = us_link
         return self.user_story_menu_link
@@ -51,6 +52,8 @@ class TestSwingTrading:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_01", "Testing button [Start Trading] on Main banner")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -82,6 +85,8 @@ class TestSwingTrading:
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_02", "Testing button [Try demo] on Main banner")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = MainBannerTryDemo(d, link)
@@ -111,6 +116,8 @@ class TestSwingTrading:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_03", "Testing button [Trade] in Most traded block")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         if cur_country == 'gb':
             pytest.skip("This test is not supported on UK location")
@@ -145,6 +152,8 @@ class TestSwingTrading:
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_04", "Test button [Download on the App Store] in Block \"Sign up and trade smart today!\"")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = ButtonDownloadAppStore(d, link)
@@ -166,6 +175,8 @@ class TestSwingTrading:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_05", "Test button [Get it on Google Play] in Block \"Sign up and trade smart today!\"")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -189,6 +200,8 @@ class TestSwingTrading:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_06", "Testing button [Explore Web Platform] in Block \"Sign up and trade smart today!\"")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -218,6 +231,8 @@ class TestSwingTrading:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.05", "Education > Menu item [Swing Trading]",
             ".00_07", "Testing button [1. Create & verify your account] in Block 'Steps trading'")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 

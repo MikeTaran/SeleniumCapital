@@ -48,7 +48,7 @@ class TestIndicesTradingGuidePreset:
     #         d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
     #
     #     page_menu = MenuSection(d, link)
-    #     page_menu.menu_education_move_focus(d, cur_language)
+    #     page_menu.menu_education_move_focus(d, cur_language, cur_country)
     #     page_menu.sub_menu_indices_trading_move_focus_click(d, cur_language)
     #
     #     file_name = "tests/US_11_Education/US_11-02-06_Indices_trading/list_of_href.txt"
@@ -72,6 +72,8 @@ class TestIndicesTradingGuidePreset:
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role, *test_title)
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         Common().check_language_in_list_and_skip_if_not_present(
             cur_language, ["", "ar", "de", "es", "it", "cn", "ru", "zh"])
 
@@ -80,7 +82,7 @@ class TestIndicesTradingGuidePreset:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         cur_menu_link = page_menu.sub_menu_indices_trading_move_focus_click(d, cur_language)
 
         test_element = MainBannerStartTrading(d, cur_menu_link, bid)
@@ -100,6 +102,8 @@ class TestIndicesTradingGuidePreset:
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role, *test_title)
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         Common().check_language_in_list_and_skip_if_not_present(
             cur_language, ["", "ar", "de", "es", "it", "cn", "ru", "zh"])
 
@@ -108,7 +112,7 @@ class TestIndicesTradingGuidePreset:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         cur_menu_link = page_menu.sub_menu_indices_trading_move_focus_click(d, cur_language)
 
         test_element = MainBannerTryDemo(d, cur_menu_link, bid)
@@ -129,6 +133,8 @@ class TestIndicesTradingGuidePreset:
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role, *test_title)
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         Common().check_language_in_list_and_skip_if_not_present(
             cur_language, ["", "ar", "de", "es", "it", "cn", "ru", "zh"])
 
@@ -139,7 +145,7 @@ class TestIndicesTradingGuidePreset:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         cur_menu_link = page_menu.sub_menu_indices_trading_move_focus_click(d, cur_language)
 
         test_element = ButtonTradeOnWidgetMostTraded(d, cur_menu_link, bid)
@@ -160,6 +166,8 @@ class TestIndicesTradingGuidePreset:
         bid = build_dynamic_arg_v4(
             d, worker_id, cur_language, cur_country, cur_role, *test_title)
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         Common().check_language_in_list_and_skip_if_not_present(
             cur_language, ["", "ar", "de", "es", "it", "cn", "ru", "zh"])
 
@@ -168,7 +176,7 @@ class TestIndicesTradingGuidePreset:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, main_page_link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         cur_menu_link = page_menu.sub_menu_indices_trading_move_focus_click(d, cur_language)
 
         test_element = BlockStepTrading(d, cur_menu_link, bid)
@@ -200,7 +208,7 @@ class TestIndicesTradingGuidePreset:
     #         d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
     #
     #     page_menu = MenuSection(d, link)
-    #     page_menu.menu_education_move_focus(d, cur_language)
+    #     page_menu.menu_education_move_focus(d, cur_language, cur_country)
     #     page_menu.sub_menu_indices_trading_move_focus_click(d, cur_language)
     #
     #     name_file = "tests/US_11_Education/US_11-02-06_Indices_trading/list_of_href.txt"

@@ -13,7 +13,6 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
-import conf
 from pages.base_page import BasePage
 from pages.Menu.menu_locators import (
     Menu1101,
@@ -46,7 +45,7 @@ logger = logging.getLogger()
 class MenuSection(BasePage):
 
     @allure.step('Select "Education" menu, "Spread betting guide" submenu')
-    def open_education_spread_betting_guide_menu(self, d, cur_language, link):
+    def open_education_spread_betting_guide_menu(self, d, cur_language, cur_country, link):
 
         print(f'\n{datetime.now()}   START Open "Education" menu, "Spread betting guide" submenu =>')
         print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
@@ -55,14 +54,14 @@ class MenuSection(BasePage):
             self.link = link
             self.open_page()
 
-        self.menu_education_move_focus(d, cur_language)
+        self.menu_education_move_focus(d, cur_language, cur_country)
         self.sub_menu_spread_betting_guide_move_focus_click(d, cur_language)
 
         print(f"\n{datetime.now()}   3. Cur URL = {d.current_url}")
         return d.current_url
 
     @allure.step('Select "Education" menu, "CFD trading guide" submenu')
-    def open_education_cfd_trading_menu(self, d, cur_language, link):
+    def open_education_cfd_trading_menu(self, d, cur_language, cur_country, link):
 
         print(f'\n{datetime.now()}   START Open "Education" menu, "CFD trading guide" submenu =>')
         print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
@@ -71,14 +70,14 @@ class MenuSection(BasePage):
             self.link = link
             self.open_page()
 
-        self.menu_education_move_focus(d, cur_language)
+        self.menu_education_move_focus(d, cur_language, cur_country)
         self.sub_menu_cfd_trading_guide_move_focus_click(d, cur_language)
 
         print(f"\n{datetime.now()}   3. Cur URL = {d.current_url}")
         return d.current_url
 
     @allure.step('Select "Education" menu, "Forex trading" submenu')
-    def open_education_forex_trading_menu(self, d, cur_language, link):
+    def open_education_forex_trading_menu(self, d, cur_language, cur_country, link):
 
         print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
         print(f"\n{datetime.now()}   2. Link = {link}")
@@ -86,31 +85,31 @@ class MenuSection(BasePage):
             self.link = link
             self.open_page()
 
-        self.menu_education_move_focus(d, cur_language)
+        self.menu_education_move_focus(d, cur_language, cur_country)
         self.sub_menu_forex_trading_move_focus_click(d, cur_language)
 
         print(f"\n{datetime.now()}   3. Cur URL = {d.current_url}")
         return d.current_url
 
-    def open_education_shares_trading_menu(self, d, cur_language, link):
+    def open_education_shares_trading_menu(self, d, cur_language, cur_country, link):
 
         print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
         print(f"\n{datetime.now()}   2. Link = {link}")
         if not self.current_page_is(link):
             self.link = link
             self.open_page()
-        self.menu_education_move_focus(d, cur_language)
+        self.menu_education_move_focus(d, cur_language, cur_country)
         cur_menu_link = self.sub_menu_shares_trading_move_focus_click(d, cur_language)
         return cur_menu_link
 
-    def open_education_commodities_trading_menu(self, d, cur_language, link):
+    def open_education_commodities_trading_menu(self, d, cur_language, cur_country, link):
 
         print(f"\n{datetime.now()}   1. Cur URL = {d.current_url}")
         print(f"\n{datetime.now()}   2. Link = {link}")
         if not self.current_page_is(link):
             self.link = link
             self.open_page()
-        self.menu_education_move_focus(d, cur_language)
+        self.menu_education_move_focus(d, cur_language, cur_country)
         cur_menu_link = self.sub_menu_commodities_trading_move_focus_click(d, cur_language)
         return cur_menu_link
 
@@ -136,47 +135,51 @@ class MenuSection(BasePage):
         # print(f"\n\n{datetime.now()}   => Language and Country menu is clickable")
         #
 
-        menu = d.find_element(*MenuLanguageAndCountry.MENU_LANGUAGE_AND_COUNTRY)  # not Glossary
+        # menu = d.find_element(*MenuLanguageAndCountry.MENU_LANGUAGE_AND_COUNTRY)    # not Glossary
+        time.sleep(1)
         ActionChains(d) \
-            .move_to_element(menu) \
+            .move_to_element(d.find_element(*MenuLanguageAndCountry.MENU_LANGUAGE_AND_COUNTRY)) \
             .pause(0.5) \
             .perform()
-        del menu
+        # del menu
 
         print(f"\n\n{datetime.now()}   => Focus is moved on Language and Country menu ")
 
     @allure.step(f"{datetime.now()}.   Click 'Education' menu section.")
-    def menu_education_move_focus(self, d, test_language):
+    def menu_education_move_focus(self, d, test_language, test_country):
         ed_menu_locator = None
-        match test_language:
-            case "":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_EN_LEARN_TO_TRADE
-            case "ar":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_AR_LEARN_TO_TRADE
-            case "de":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_DE_LEARN_TO_TRADE
-            case "el":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_EL_LEARN_TO_TRADE
-            case "es":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_ES_LEARN_TO_TRADE
-            case "fr":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_FR_LEARN_TO_TRADE
-            case "it":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_IT_LEARN_TO_TRADE
-            case "hu":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_HU_LEARN_TO_TRADE
-            case "nl":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_NL_LEARN_TO_TRADE
-            case "pl":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_PL_LEARN_TO_TRADE
-            case "ro":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_RO_LEARN_TO_TRADE
-            case "ru":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_RU_LEARN_TO_TRADE
-            case "zh":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_ZH_LEARN_TO_TRADE
-            case "cn":
-                ed_menu_locator = MenuUS11Education.SUB_MENU_CN_LEARN_TO_TRADE
+        if test_language == "" and test_country == "gb":
+            ed_menu_locator = MenuUS11Education.SUB_MENU_EN_GB_LEARN_TO_TRADE
+        else:
+            match test_language:
+                case "":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_EN_LEARN_TO_TRADE
+                case "ar":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_AR_LEARN_TO_TRADE
+                case "de":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_DE_LEARN_TO_TRADE
+                case "el":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_EL_LEARN_TO_TRADE
+                case "es":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_ES_LEARN_TO_TRADE
+                case "fr":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_FR_LEARN_TO_TRADE
+                case "it":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_IT_LEARN_TO_TRADE
+                case "hu":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_HU_LEARN_TO_TRADE
+                case "nl":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_NL_LEARN_TO_TRADE
+                case "pl":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_PL_LEARN_TO_TRADE
+                case "ro":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_RO_LEARN_TO_TRADE
+                case "ru":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_RU_LEARN_TO_TRADE
+                case "zh":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_ZH_LEARN_TO_TRADE
+                case "cn":
+                    ed_menu_locator = MenuUS11Education.SUB_MENU_CN_LEARN_TO_TRADE
 
         time.sleep(0.5)
         menu = d.find_elements(*ed_menu_locator)
@@ -202,7 +205,7 @@ class MenuSection(BasePage):
         print(f"{datetime.now()}   => Education menu focus moved")
 
     @allure.step(f"{datetime.now()}.   Click 'learning hub' menu section.")
-    def sub_menu_learning_hub_move_focus_click(self, d, test_language):
+    def sub_menu_learning_hub_move_focus_click(self, d, test_language, test_country):
         sub_menu = None
         match test_language:
             case "":
@@ -371,63 +374,66 @@ class MenuSection(BasePage):
         return d.current_url
 
     @allure.step(f"{datetime.now()}.   Click 'Basics_of_trading' hyperlink.")
-    def sub_menu_basics_of_trading_move_focus_click(self, d, test_language):
+    def sub_menu_basics_of_trading_move_focus_click(self, d, test_language, test_country):
         sub_menu = list()
-        match test_language:
-            case "":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_EN_ITEM_BASICS_OF_TRADING)
-            case "de":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_DE_ITEM_BASICS_OF_TRADING)
-            case "ru":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_RU_ITEM_BASICS_OF_TRADING)
-            case "bg":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_BG_ITEM_BASICS_OF_TRADING)
-            case "cs":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_CS_ITEM_BASICS_OF_TRADING)
-            case "fr":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_FR_ITEM_BASICS_OF_TRADING)
-            case "ar":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_AR_ITEM_BASICS_OF_TRADING)
-            case "et":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_ET_ITEM_BASICS_OF_TRADING)
-            case "da":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_DA_ITEM_BASICS_OF_TRADING)
-            case "el":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_EL_ITEM_BASICS_OF_TRADING)
-            case "es":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_ES_ITEM_BASICS_OF_TRADING)
-            case "hr":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_HR_ITEM_BASICS_OF_TRADING)
-            case "it":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_IT_ITEM_BASICS_OF_TRADING)
-            case "lv":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_LV_ITEM_BASICS_OF_TRADING)
-            case "hu":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_HU_ITEM_BASICS_OF_TRADING)
-            case "nl":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_NL_ITEM_BASICS_OF_TRADING)
-            case "pl":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_PL_ITEM_BASICS_OF_TRADING)
-            case "pt":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_PT_ITEM_BASICS_OF_TRADING)
-            case "ro":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_RO_ITEM_BASICS_OF_TRADING)
-            case "sk":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_SK_ITEM_BASICS_OF_TRADING)
-            case "sl":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_SL_ITEM_BASICS_OF_TRADING)
-            case "fi":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_FI_ITEM_BASICS_OF_TRADING)
-            case "sv":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_SV_ITEM_BASICS_OF_TRADING)
-            case "vi":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_VI_ITEM_BASICS_OF_TRADING)
-            case "zh":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_ZH_ITEM_BASICS_OF_TRADING)
-            case "lt":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_LT_ITEM_BASICS_OF_TRADING)
-            case "cn":
-                sub_menu = d.find_elements(*Menu1101.SUB_MENU_CN_ITEM_BASICS_OF_TRADING)
+        if test_country == "gb":
+            pass
+        else:
+            match test_language:
+                case "":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_EN_ITEM_BASICS_OF_TRADING)
+                case "de":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_DE_ITEM_BASICS_OF_TRADING)
+                case "ru":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_RU_ITEM_BASICS_OF_TRADING)
+                case "bg":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_BG_ITEM_BASICS_OF_TRADING)
+                case "cs":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_CS_ITEM_BASICS_OF_TRADING)
+                case "fr":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_FR_ITEM_BASICS_OF_TRADING)
+                case "ar":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_AR_ITEM_BASICS_OF_TRADING)
+                case "et":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_ET_ITEM_BASICS_OF_TRADING)
+                case "da":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_DA_ITEM_BASICS_OF_TRADING)
+                case "el":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_EL_ITEM_BASICS_OF_TRADING)
+                case "es":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_ES_ITEM_BASICS_OF_TRADING)
+                case "hr":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_HR_ITEM_BASICS_OF_TRADING)
+                case "it":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_IT_ITEM_BASICS_OF_TRADING)
+                case "lv":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_LV_ITEM_BASICS_OF_TRADING)
+                case "hu":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_HU_ITEM_BASICS_OF_TRADING)
+                case "nl":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_NL_ITEM_BASICS_OF_TRADING)
+                case "pl":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_PL_ITEM_BASICS_OF_TRADING)
+                case "pt":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_PT_ITEM_BASICS_OF_TRADING)
+                case "ro":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_RO_ITEM_BASICS_OF_TRADING)
+                case "sk":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_SK_ITEM_BASICS_OF_TRADING)
+                case "sl":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_SL_ITEM_BASICS_OF_TRADING)
+                case "fi":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_FI_ITEM_BASICS_OF_TRADING)
+                case "sv":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_SV_ITEM_BASICS_OF_TRADING)
+                case "vi":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_VI_ITEM_BASICS_OF_TRADING)
+                case "zh":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_ZH_ITEM_BASICS_OF_TRADING)
+                case "lt":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_LT_ITEM_BASICS_OF_TRADING)
+                case "cn":
+                    sub_menu = d.find_elements(*Menu1101.SUB_MENU_CN_ITEM_BASICS_OF_TRADING)
 
         if len(sub_menu) == 0:
             pytest.skip(f"For test language '{test_language}' "

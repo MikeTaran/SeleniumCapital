@@ -1,16 +1,18 @@
 .DS_Store
 __pycache__
 __init__.py
-/.idea/
+.idea/
 /.pytest_cache/
-/.run/
-/.venv/
+.run/
+.venv/
+.venv310/
+.venv311/
+.venv312/
 /.vscode/
 /.zed/
 /allure-report/
 /allure-results/
 /report/
-
 # /*/__pycache__/
 # /*/*/__pycache__/
 # /*/*/*/__pycache__/
@@ -29,11 +31,11 @@ __init__.py
 # /tests/Markets/__pycache__/
 
 tests/ReTests/temp.py
+tests/ReTests/cookies
+tests/ReTests/temp
 tests/ReTests/allure-report/
 tests/ReTests/allure-results/
 tests/ReTests/report/
-tests/ReTests/cookies/
-tests/ReTests/temp/
 tests/ReTests/tests/ReTests/
 tests/ReTests/token.json
 #tests/ReTests/credentials.json
@@ -76,3 +78,4 @@ tests/hwinfo_example.py
 qr_image.png
 geckodriver.log
 qodana.yaml
+poetry.lock

@@ -116,10 +116,10 @@ class ButtonsOnPageLocators:
     TYPE_FI_INDICES = (By.CSS_SELECTOR, "")
 
     # Tabs
-    TAB_TRADING_ITEM_MOST_TRADED = (By.CSS_SELECTOR, "div.main__tab--wrap > div > a:nth-child(1)")
-    TAB_TRADING_ITEM_TOP_RISERS = (By.CSS_SELECTOR, "div.main__tab--wrap > div > a:nth-child(2)")
-    TAB_TRADING_ITEM_TOP_FALLERS = (By.CSS_SELECTOR, "div.main__tab--wrap > div > a:nth-child(3)")
-    TAB_TRADING_ITEM_MOST_VOLATILE = (By.CSS_SELECTOR, "div.main__tab--wrap > div > a:nth-child(4)")
+    TAB_TRADING_ITEM_MOST_TRADED = (By.CSS_SELECTOR, '[data-id="mosttraded"]')
+    TAB_TRADING_ITEM_TOP_RISERS = (By.CSS_SELECTOR, '[data-id="risers"]')
+    TAB_TRADING_ITEM_TOP_FALLERS = (By.CSS_SELECTOR, '[data-id="fallers"]')
+    TAB_TRADING_ITEM_MOST_VOLATILE = (By.CSS_SELECTOR, '[data-id="volatile"]')
     # Item name
     SPAN_TRADING_ITEM_MOST_TRADED = (By.CSS_SELECTOR, ".table-tools.catTabs.tab-mosttraded > table > "
                                                       "tbody > tr > td.name > a > span.table-tools__title")
@@ -141,6 +141,8 @@ class ButtonsOnPageLocators:
 
     BUTTON_TRADING_SELL_MOST_VOLATILE = (By.CSS_SELECTOR, ".tab-volatile > table > tbody > tr > td:nth-child(3) > a")
     BUTTON_TRADING_BUY_MOST_VOLATILE = (By.CSS_SELECTOR, ".tab-volatile > table > tbody > tr > td:nth-child(5) > a")
+
+    BUTTON_TRADING_SHOW_ALL = (By.CSS_SELECTOR, ".tab-mosttraded > p > .btnShowMore")
 
     BUTTON_ON_STICKY_BAR = (By.CSS_SELECTOR, "div.encStickyBar > div > a")
     BUTTON_SIGNUP_LOGIN = (By.CSS_SELECTOR, "a[href='/trading/signup'][class*='__cp_b'][class*='ln-auto']")

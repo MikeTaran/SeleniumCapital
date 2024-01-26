@@ -29,8 +29,8 @@ FIREFOX_WINDOW_HEIGHT = "--height=720"
 SAFARI_WINDOW_SIZES = (1280, 720)
 # SAFARI_WINDOW_SIZES = (1920, 1080)
 
-# BROWSER_HEADLESS = True  # not visible
-BROWSER_HEADLESS = False  # visible
+BROWSER_HEADLESS = True  # not visible
+# BROWSER_HEADLESS = False  # visible
 
 # options parameters
 CHROMIUM_HEADLESS = "--headless=new"  # not visible

@@ -16,7 +16,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
-from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.by import By
 from allure_commons.types import AttachmentType
 
 import conf
@@ -86,8 +86,8 @@ def cur_role(request):
 @pytest.fixture(
     scope="class",
     params=[
-        # "",  # "en" - 21 us
-        "es",  # 20 us
+        "",  # "en" - 21 us
+        # "es",  # 20 us
         # "de",  # 15 us
         # "it",  # 15 us
         # "ru",  # 15 us
@@ -234,7 +234,7 @@ def d(request):
         raise Exception('driver is not found')
 
     # Установка максимального тайм-аута загрузки страницы
-    d.set_page_load_timeout(35)
+    d.set_page_load_timeout(60)
 
     yield d
 
@@ -278,7 +278,7 @@ def init_remote_driver_chrome():
 
     print(driver.get_window_size())
     driver.implicitly_wait(5)
-    # driver.set_script_timeout(20000)
+    driver.set_script_timeout(20000)
 
     return driver
 
@@ -349,7 +349,10 @@ def pytest_runtest_makereport(item, call):
         feature_request = item.funcargs["request"]
         driver = feature_request.getfixturevalue("d")
         xfail = hasattr(report, "wasxfail")
+
         if (report.skipped and xfail) or (report.failed and not xfail):
+            # Добавлен скриншот для пропущенных тестов
+        # if (report.skipped and xfail) or (report.failed and not xfail) or (report.skipped and not xfail):
             report_dir = os.path.dirname(item.config.option.htmlpath)
             len_dir = len(os.path.dirname(item.nodeid))
             file_name = report.nodeid[len_dir:].replace("::", "_")[1:] + ".png"
@@ -361,7 +364,7 @@ def pytest_runtest_makereport(item, call):
 
             # driver.set_window_size(s("Width"), s("Height"))
             # driver.find_element(By.TAG_NAME, "body").screenshot(destination_file)
-            driver.save_screenshot(destination_file)      # необходимо для корректной работы ретестов
+            driver.save_screenshot(destination_file)  # необходимо для корректной работы ретестов
             allure.attach(
                 driver.get_screenshot_as_png(),
                 name="Screenshot",

@@ -2,6 +2,7 @@ import pytest
 import allure
 from datetime import datetime
 
+from pages.common import Common
 from pages.Elements.BlockStepTrading import BlockStepTrading
 from pages.Elements.ButtonFreeDemoOnHorizontalBanner import ButtonFreeDemoOnHorizontalBanner
 from pages.Elements.ButtonInBanner import ButtonInBanner
@@ -27,7 +28,7 @@ class USLink:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
         if not self.user_story_menu_link:
             page_menu = MenuSection(d, main_link)
-            page_menu.menu_education_move_focus(d, cur_language)
+            page_menu.menu_education_move_focus(d, cur_language, cur_country)
             us_link = page_menu.sub_menu_what_is_a_margin_move_focus_click(d, cur_language)
             self.user_story_menu_link = us_link
         return self.user_story_menu_link
@@ -50,6 +51,8 @@ class TestWhatIsMargin:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.07", "Education > Menu item [What is a margin?]",
             ".00_01", "Testing button [Start Trading] on Main banner")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
@@ -81,6 +84,8 @@ class TestWhatIsMargin:
             "11.03.07", "Education > Menu item [What is a margin?]",
             ".00_02", "Testing button [Try demo] on Main banner")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         link = self.us_link.get_us_link(d, cur_language, cur_country, cur_role, cur_login, cur_password)
 
         test_element = MainBannerTryDemo(d, link)
@@ -110,6 +115,8 @@ class TestWhatIsMargin:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.07", "Education > Menu item [What is a margin?]",
             ".00_03", "Testing button [Trade] in Most traded block")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         if cur_country == 'gb':
             pytest.skip("This test is not supported on UK location")
@@ -144,6 +151,8 @@ class TestWhatIsMargin:
             "11.03.07", "Education > Menu item [What is a margin?]",
             ".00_04", "Testing button [1. Create & verify your account] in Block 'Steps trading'")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if cur_language not in ['', "de", "es", "cn"]:
             pytest.skip(f"This test is not for {cur_language} language")
 
@@ -175,6 +184,8 @@ class TestWhatIsMargin:
             "11.03.07", "Education > Menu item [What is a margin?]",
             ".00_05", "Testing button [Create account] in Block 'Open a trading account in less than 3 minutes'")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if cur_language in ["", "cn"]:
             pytest.skip(f"This test is not for {'en' if cur_language == '' else cur_language} language")
 
@@ -205,6 +216,8 @@ class TestWhatIsMargin:
             d, worker_id, cur_language, cur_country, cur_role,
             "11.03.07", "Education > Menu item [What is a margin?]",
             ".00_06", "Testing button [Try Free Demo] in Block 'Want a test drive?'")
+
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
 
         if cur_language in ["", "cn"]:
             pytest.skip(f"This test is not for {'en' if cur_language == '' else cur_language} language")

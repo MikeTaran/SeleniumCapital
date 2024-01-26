@@ -44,6 +44,8 @@ class TestGlossaryOfTradingTerms:
             "11.01.07", "Education > Menu item [Glossary of trading terms]",
             ".00_01", "Testing button [1. Create your account] in block [Steps trading]")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if cur_language not in ["", "de", "el", "es", "fr", "it", "hu", "nl", "pl", "ro", "ru", "zh"]:
             pytest.skip(f"This test-case is not for {cur_language} language")
 
@@ -52,7 +54,7 @@ class TestGlossaryOfTradingTerms:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         link = page_menu.sub_menu_glossary_move_focus_click(d, cur_language)
 
         test_element = BlockStepTrading(d, link)
@@ -82,6 +84,8 @@ class TestGlossaryOfTradingTerms:
             "11.01.07", "Education > Menu item [Glossary of trading terms]",
             ".00_99", "Pretest for US_11.01.07.01")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         if count == 0:
             pytest.skip("The list of Glossary of trading terms links is already created")
 
@@ -93,7 +97,7 @@ class TestGlossaryOfTradingTerms:
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
         page_menu.sub_menu_glossary_move_focus_click(d, cur_language)
         del page_menu
 

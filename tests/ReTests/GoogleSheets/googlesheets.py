@@ -25,8 +25,8 @@ class GoogleSheet:
     SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
     # The ID and range of a spreadsheet.
-    # SPREADSHEET_ID = "1jG0hdjrUdjMFBYHXyBKRGbBwV0ICxfBPaBkgB98Nuuk"
-    SPREADSHEET_ID = "1wNZwaZE0KPgeBQ40QdDxJCRMnVyr3gS8NbzFZwOtRWk"     # copy for debugging
+    SPREADSHEET_ID = "1jG0hdjrUdjMFBYHXyBKRGbBwV0ICxfBPaBkgB98Nuuk"
+    # SPREADSHEET_ID = "1XyKqXEib1-2ZlpEXnr85--XhHZSPOODWkQJe5XW0YbA"     # copy for debugging
     SHEET_NAME = 'BugsReport'
     SHEET_ID = '540090404'
     service = None
@@ -132,7 +132,7 @@ class GoogleSheet:
     @allure.step("Get row values from ... row")
     def get_row_values(self, end_row=5):
         print(f"\n{datetime.now()}   1. get_row_values from {end_row} row =>")
-        range_name = f"{self.SHEET_NAME}!A{end_row}:P{end_row}"
+        range_name = f"{self.SHEET_NAME}!A{end_row}:V{end_row}"
         # Call the Sheets API
         sheet = self.service.spreadsheets()
         result = (
@@ -147,7 +147,7 @@ class GoogleSheet:
         return values
 
     def get_all_row_values(self, start_row=5):
-        range_name = f"{self.SHEET_NAME}!A{start_row}:P"
+        range_name = f"{self.SHEET_NAME}!A{start_row}:V"
         # Call the Sheets API
         sheet = self.service.spreadsheets()
         result = (

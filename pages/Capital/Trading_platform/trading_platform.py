@@ -22,7 +22,6 @@ from tests.ReTests.ReTest_table_fill import retest_table_fill
 
 class TradingPlatform(BasePage):
     @allure.step("Checking that the trading platform page has opened")
-    # @profile(precision=3)
     def should_be_trading_platform_page(self, d, link):
         """Check if the page is open"""
         print(f"{datetime.now()}   Checking that the trading platform page has opened")
@@ -93,7 +92,8 @@ class TradingPlatform(BasePage):
         print(f"{datetime.now()}   Checking that the trading platform page has opened (v4) =>")
         platform_url = data["PLATFORM_URL/"]
         cur_url = self.browser.current_url
-        if self.wait_for_target_url(platform_url, 15):
+        # if self.wait_for_target_url(platform_url, 15):
+        if self.wait_for_target_url(platform_url, 10):
 
             self.should_be_page_title_v2(data["PAGE_TITLE"])
             self.should_be_platform_logo()
@@ -117,14 +117,14 @@ class TradingPlatform(BasePage):
                 print(f'\nBug: {self.bid}')
                 retest_table_fill(self.bid, '09', self.link)
                 assert False, (f"Bug # 9. Loaded page with {cur_url} url, but expected the Trading platform in"
-                               f"Demo mode(timeout=30c)")
+                               f"Demo mode(timeout=15c)")
             else:
                 print(f"{datetime.now()}   => Loaded page {self.browser.current_url} with not {platform_url} url")
                 # проверка бага для ретеста
                 print(f'\nBug: {self.bid}')
                 retest_table_fill(self.bid, '10', self.link)
                 assert False, (f"Bug # 10. Loaded page with {cur_url} url, but expected the Trading platform in"
-                               f"Live mode(timeout=30c)")
+                               f"Live mode(timeout=15c)")
 
     @allure.step("Checking that the trading platform page has opened with selected item and operation")
     def should_be_trading_platform_with_sel_item_and_operation(self, sel_item, sel_operation, demo=False):
@@ -134,7 +134,9 @@ class TradingPlatform(BasePage):
         platform_url = data["PLATFORM_DEMO_URL"] if demo else data["PLATFORM_URL"]
         # print(platform_url)
         # print(self.wait_for_change_url(platform_url, 120))
-        if self.wait_for_target_url(platform_url, 60):
+        # if self.wait_for_target_url(platform_url, 60):
+        # if self.wait_for_target_url(platform_url, 30):
+        if self.wait_for_target_url(platform_url, 15):
             print(f"{datetime.now()}   => Opened page with {self.browser.current_url} url. Expected: {platform_url} ")
             self.should_be_page_title_v2(data["PAGE_TITLE"])
             self.should_be_platform_logo()
@@ -152,14 +154,16 @@ class TradingPlatform(BasePage):
         """Check that the Capital.com Logo is present"""
         """Check if the app title"""
         print(f"{datetime.now()}   Checking that the Trading platform LOGO is present on the page =>")
-        assert self.element_is_visible(TopBarLocators.LOGO, 30), \
+        # assert self.element_is_visible(TopBarLocators.LOGO, 30), \
+        assert self.element_is_visible(TopBarLocators.LOGO, 15), \
             "Trading platform LOGO is not present on the page"
 
     @allure.step("Check if the trading platform opened in DEMO mode")
     def should_be_platform_demo_mode(self, d, cur_link):
         """Check that Trading platform opened in Demo mode"""
         print(f"{datetime.now()}   Checking that the Trading platform opened in DEMO mode =>")
-        if not self.element_is_visible(TopBarLocators.MODE_DEMO, 30):
+        # if not self.element_is_visible(TopBarLocators.MODE_DEMO, 30):
+        if not self.element_is_visible(TopBarLocators.MODE_DEMO, 15):
             # проверка бага для ретеста
             print(f'\nBug: {self.bid}')
             retest_table_fill(self.bid, '11', self.link)
@@ -169,7 +173,8 @@ class TradingPlatform(BasePage):
     def should_be_platform_live_mode(self, d, cur_link):
         """Check that Trading platform opened in Live mode"""
         print(f"{datetime.now()}   Checking that the Trading platform opened in LIVE mode =>")
-        if not self.element_is_visible(TopBarLocators.MODE_LIVE, 30):
+        # if not self.element_is_visible(TopBarLocators.MODE_LIVE, 30):
+        if not self.element_is_visible(TopBarLocators.MODE_LIVE, 15):
             # проверка бага для ретеста
             print(f'\nBug: {self.bid}')
             retest_table_fill(self.bid, '12', self.link)
@@ -186,7 +191,8 @@ class TradingPlatform(BasePage):
         if self.current_page_url_contain_the(tp_data["SIGNUP_URL"]):
             print(f"{datetime.now()}   'Sign up' page opened on the Trading Platform")
             print(f"{datetime.now()}   SIGNUP_FRAME =>")
-            assert self.element_is_visible(TPSignupFormLocators.SIGNUP_FRAME, 30), \
+            # assert self.element_is_visible(TPSignupFormLocators.SIGNUP_FRAME, 30), \
+            assert self.element_is_visible(TPSignupFormLocators.SIGNUP_FRAME, 15), \
                 f"{datetime.now()}   The layout of the 'SignUp' page has not visible"
 
             print(f"{datetime.now()}   INPUT_EMAIL =>")
@@ -218,7 +224,8 @@ class TradingPlatform(BasePage):
             print(f"{datetime.now()}   => 'Log in' page opened on the Trading Platform")
 
             print(f"{datetime.now()}   LOGIN_FRAME =>")
-            assert self.element_is_visible(TPSignupFormLocators.LOGIN_FRAME, 30), \
+            # assert self.element_is_visible(TPSignupFormLocators.LOGIN_FRAME, 30), \
+            assert self.element_is_visible(TPSignupFormLocators.LOGIN_FRAME, 15), \
                 f"{datetime.now()}   The layout of the 'Login' page has changed"
 
             print(f"{datetime.now()}   INPUT_EMAIL =>")

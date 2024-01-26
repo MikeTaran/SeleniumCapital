@@ -17,6 +17,7 @@ class MenuUS11Education:
     SUB_MENU_DA_LEARN_TO_TRADE = (By.CSS_SELECTOR, ".cc-header a[href='https://capital.com/da/learn-to-trade']")
     SUB_MENU_DE_LEARN_TO_TRADE = (By.CSS_SELECTOR, ".cc-header a[href='https://capital.com/de/learn-to-trade']")
     SUB_MENU_EL_LEARN_TO_TRADE = (By.CSS_SELECTOR, ".cc-header a[href='https://capital.com/el/learn-to-trade']")
+    SUB_MENU_EN_GB_LEARN_TO_TRADE = (By.CSS_SELECTOR, "#header a[href='/en-gb/learn']")
     SUB_MENU_EN_LEARN_TO_TRADE = (By.CSS_SELECTOR, ".cc-header a[href='https://capital.com/learn-to-trade']")
     SUB_MENU_ES_LEARN_TO_TRADE = (By.CSS_SELECTOR, ".cc-header a[href='https://capital.com/es/learn-to-trade']")
     SUB_MENU_ET_LEARN_TO_TRADE = (By.CSS_SELECTOR, ".cc-header a[href='https://capital.com/et/learn-to-trade']")

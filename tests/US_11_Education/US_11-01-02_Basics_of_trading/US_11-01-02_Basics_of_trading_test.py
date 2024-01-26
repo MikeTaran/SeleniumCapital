@@ -1,5 +1,7 @@
 import allure
 import pytest
+
+from pages.common import Common
 from pages.Menu.menu import MenuSection
 from pages.Elements.BlockStepTrading import BlockStepTrading
 from tests.build_dynamic_arg import build_dynamic_arg_v4
@@ -24,13 +26,15 @@ class TestBasicsOfTrading:
             "11.01.02", "Education > Menu Item [The basics of trading]",
             ".00_01", "Testing button [1. Create your account] in block [Steps trading]")
 
+        Common().skip_if_eng_lang_and_fca_license(cur_language, cur_country)
+
         page_conditions = Conditions(d, "")
         link = page_conditions.preconditions(
             d, CapitalComPageSrc.URL, "", cur_language, cur_country, cur_role, cur_login, cur_password)
 
         page_menu = MenuSection(d, link)
-        page_menu.menu_education_move_focus(d, cur_language)
-        cur_page_url = page_menu.sub_menu_basics_of_trading_move_focus_click(d, cur_language)
+        page_menu.menu_education_move_focus(d, cur_language, cur_country)
+        cur_page_url = page_menu.sub_menu_basics_of_trading_move_focus_click(d, cur_language, cur_country)
 
         test_element = BlockStepTrading(d, cur_page_url, bid)
         test_element.full_test_with_tpi(d, cur_language, cur_country, cur_role, cur_page_url)

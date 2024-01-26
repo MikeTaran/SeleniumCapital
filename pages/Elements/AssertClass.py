@@ -77,7 +77,7 @@ class AssertClass(BasePage):
         elif self.page_signup_login.should_be_trading_platform_signup_form(cur_language):
             del self.page_signup_login
             print(f'\nBug: {self.bid}')
-            retest_table_fill(self.bid, '07', self,link)
+            retest_table_fill(self.bid, '07', self.link)
             assert False, "Bug # 07. Opened a 'Sign up' form on trading platform instead of a 'Login'"
             # pytest.fail("Bug # 07. Opened a 'Sign up' form on trading platform instead of a 'Login'", False)
         else:
@@ -94,7 +94,8 @@ class AssertClass(BasePage):
         self.platform_url = "https://capital.com/trading/platform/"
         # self.platform_url = "https://capital.com/trading/platform"
         self.page_trading = TradingPlatform(d)
-        self.page_trading.should_be_trading_platform_page_v2(d, self.platform_url)
+        # self.page_trading.should_be_trading_platform_page_v2(d, self.platform_url)
+        self.page_trading.should_be_trading_platform_page_v3()
         del self.page_trading
 
     @allure.step('Checking that "Trading platform" page opened - ver 2')
@@ -125,12 +126,12 @@ class AssertClass(BasePage):
         self.page_trading = TradingPlatform(d, cur_link, self.bid)
         self.page_trading.should_be_trading_platform_page_v4(d, cur_link, tpd, tpi, trade_instrument)
 
-    @allure.step('Checking that "Trading platform" page opened with corresponding trading instrument - ver 5')
-    def assert_trading_platform_with_selected_item_and_operation(self, cur_link, sel_item, sel_operation):
-        print(f"\n{datetime.now()}   3. Assert_v5")
-        self.page_trading = TradingPlatform(self.browser, cur_link)
-        self.page_trading.should_be_trading_platform_with_sel_item_and_operation(sel_item, sel_operation)
-
+    # @allure.step('Checking that "Trading platform" page opened with corresponding trading instrument - ver 5')
+    # def assert_trading_platform_with_selected_item_and_operation(self, cur_link, sel_item, sel_operation):
+    #     print(f"\n{datetime.now()}   3. Assert_v5")
+    #     self.page_trading = TradingPlatform(self.browser, cur_link)
+    #     self.page_trading.should_be_trading_platform_with_sel_item_and_operation(sel_item, sel_operation)
+    #
     @allure.step('Checking that "Trading platform" page opened in demo mode')
     def assert_trading_platform_demo(self, d):
         print(f"\n{datetime.now()}   3. Assert_v0")

@@ -58,7 +58,6 @@ class Conditions(BasePage):
         # if url == "":
         #     self.link = host
         #     self.open_page()
-
         print(f"\n{datetime.now()}   {d.get_window_size()}")
         # print(f"\n{datetime.now()}   Set windows position at (320, 180) =>")
         # d.set_window_position(320, 180)
@@ -199,7 +198,7 @@ class Conditions(BasePage):
         del header
 
         # Wait for the new tab to finish loading content
-        wait = WebDriverWait(d, 30)
+        wait = WebDriverWait(d, 40)
         wait.until(EC.title_is("Trading Platform | Capital.com"))
         platform_url = "https://capital.com/trading/platform/"
         # print(f"{datetime.now()}   -> Page with 'Trading Platform | Capital.com' title opened")

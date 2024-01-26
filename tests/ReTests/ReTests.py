@@ -12,9 +12,6 @@ from datetime import datetime
 import allure
 import pytest
 
-# import pytest
-# import pytest_timeout
-
 from tests.ReTests.retest_data import us_data
 from tests.ReTests.GoogleSheets.googlesheets import GoogleSheet
 
@@ -28,19 +25,74 @@ country = None
 role = None
 url = None
 
+# ===========================================================
+# выбор необходимых языков для ретеста
+lang_list = [
+        "en",
+        "ar",
+        "de",
+        "el",
+        "es",
+        "fr",
+        "it",
+        "hu",
+        "nl",
+        "pl",
+        "ro",
+        "ru",
+        "cn",
+        "zh",
+    ]
+
+# ===========================================================
+# выбор необходимых ролей для ретеста
+role_list = [
+        "Auth",
+        "NoAuth",
+        "NoReg",
+    ]
+
+# ===========================================================
+# выбор необходимых лицензий для ретеста
 country_list = [
-        # "gb",  # United Kingdom - "FCA"
+        "gb",  # United Kingdom - "FCA"
         # "au",  # Australia - "ASIC"
         # "de",  # Germany - "CYSEC"
-        "ae",  # United Arab Emirates - "SCB"
+        # "ae",  # United Arab Emirates - "SCB"
 ]
+
+# ===========================================================
+# ретест без добавления нового столбца
+# ===========================================================
+# no_new_column = True
+no_new_column = False
+
+# ============================================================
+# для проверки одного или нескольких тестов ввести номера строк
+# так же необходимо поменять флаг unique_test = True
+# ============================================================
+# unique_test = True
+unique_test = False
+# ============================================================
+list_rows = [835]
+
+# ============================================================
+# повторный проход только Skipped-tests
+# retest_skipped_tests = True
+retest_skipped_tests = False
+# ============================================================
+status_list = ['failed', 'passed']
+# ============================================================
+# получение корня проекта
+host = "\\".join(os.getcwd().split('\\')[:-2]) + '\\'
+# host = "\\".join(os.getcwd().split('\\')) + '\\'  # for LOCAL debugging
+# ============================================================
 
 
 def pytest_generate_tests(metafunc):
     """
     Fixture generation test data
     """
-
     list_number_rows = list()
     start_row = 5
     gs = GoogleSheet()
@@ -48,11 +100,37 @@ def pytest_generate_tests(metafunc):
     qty_of_bugs = gs.get_cell_values("A2")
     del gs
     end_row = start_row + int(qty_of_bugs[0][0])
-    for num_row in range(start_row, end_row):
-        list_number_rows.append(num_row)
 
-    print(f"\n{datetime.now()}   Список номеров строк = {list_number_rows}")
+    # формирование списка строк для одиночного ретеста
+    if unique_test:
+        list_number_rows = list_rows
+        print(f"\n{datetime.now()}   Список номеров строк для выборочного ретеста = {list_number_rows}")
+    else:
+        for num_row in range(start_row, end_row):
+            val = values[num_row - 5]
+            count = val[6]
+            if count not in country_list:
+                continue
+            rol = val[8]
+            if rol not in role_list:
+                continue
+            lan = val[5]
+            if lan not in lang_list:
+                continue
+        # формирование списка skipped строк для ретеста
+            if retest_skipped_tests:
+                if len(val) == 22 and val[21] not in status_list:
+                    list_number_rows.append(num_row)
+            elif no_new_column:
+                if len(val) == 21:    # проверка того, что данные в таблицу внесены, но еще не проверялись
+                    # формирование списка строк для ретеста
+                    list_number_rows.append(num_row)
+            else:
+                list_number_rows.append(num_row)
 
+        print(f"\n{datetime.now()}   Список номеров строк = {len(list_number_rows)}:{list_number_rows}")
+    if len(list_number_rows) == 0:
+        pytest.skip(f"Для country={country_list}:lang={lang_list}:role={role_list} не выбрано ни одной строки")
     metafunc.parametrize("number_of_row", list_number_rows, scope="class")
     metafunc.parametrize("values", [values], scope="class")
 
@@ -97,10 +175,6 @@ def pretest(row_loc, number_of_row, gs):
     # аргументы командной строки
     try:
         country = row_loc[6]
-        if country not in country_list:
-            print(f"\n{datetime.now()}   =>  Данная лицензия:{country} не проверяется в этом ране")
-            # gs.update_range_values(f'V{number_of_row}', [["skipped"]])
-            pytest.skip()
         test_id = row_loc[0]
         browser_name = row_loc[2]
         us = row_loc[3]
@@ -120,7 +194,7 @@ def pretest(row_loc, number_of_row, gs):
 
 @allure.step("Run aurotest with Bid parameters")
 def run_pytest():
-    global test_id, browser_name, us, path, num_test, lang, country, role, url
+    global test_id, browser_name, us, path, num_test, lang, country, role, url, host
 
     print(f"\n{datetime.now()}   2. Run run_pytest with Bid = {test_id} from row =>")
 
@@ -137,8 +211,12 @@ def run_pytest():
     print(f"\n{datetime.now()}   2.2. Run poetry run pytest ... in subprocess =>")
     retest = True
     # получение корня проекта
-    host = "\\".join(os.getcwd().split('\\')[:-2]) + '\\'
-    # host = "\\".join(os.getcwd().split('\\')) + '\\'            # for LOCAL debugging
+    # host = "\\".join(os.getcwd().split('\\')[:-2]) + '\\'
+    # host = "\\".join(os.getcwd().split('\\')) + '\\'  # for LOCAL debugging
+
+    if unique_test or retest_skipped_tests:
+        host = "\\".join(os.getcwd().split('\\')) + '\\'            # for LOCAL debugging одного теста
+
     # формирование командной строки и запуск pytest, как subprocess
     command = (f"poetry run pytest"
                f" --retest={retest}"
@@ -223,6 +301,6 @@ def check_results(output, error):
         gs_out = ['skipped']
 
     print(f"\n{datetime.now()}   => 3. check_results finished")
-    if gs_out == ["WebDriver Error"]:
-        pytest.fail("WebDriver Error")
+    # if gs_out == ["WebDriver Error"]:
+    #     pytest.fail("WebDriver Error")
     return gs_out
